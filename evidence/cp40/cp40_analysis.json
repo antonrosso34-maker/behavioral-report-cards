@@ -1,0 +1,91 @@
+{
+  "panel_id": "CP40-V6",
+  "split_json": "C:\\Users\\Anton\\.lmstudio\\apps\\bionic\\projects\\d49037d8-47f4-5808-9028-c707de117f8f\\workspace\\LLM intagration\\.kilo\\worktrees\\arrow-chronometer\\harness\\architect\\queue\\cp40\\cp40_split.json",
+  "panel_40_sha256_newline": "14161ce8121aa9b75dafb7af443976ff0db233a88e70f22a2789b9ba53df8ffe",
+  "anchor_jsonl": "C:\\Users\\Anton\\.lmstudio\\apps\\bionic\\projects\\d49037d8-47f4-5808-9028-c707de117f8f\\workspace\\LLM intagration\\harness\\results\\cp40\\cp40_anchor.jsonl",
+  "complement_jsonl": "C:\\Users\\Anton\\.lmstudio\\apps\\bionic\\projects\\d49037d8-47f4-5808-9028-c707de117f8f\\workspace\\LLM intagration\\harness\\results\\cp40\\cp40_complement.jsonl",
+  "status_counts": {
+    "anchor": {
+      "fail": 22,
+      "pass": 17,
+      "timeout": 1
+    },
+    "complement": {
+      "fail": 25,
+      "pass": 15
+    }
+  },
+  "missing": {
+    "anchor": [],
+    "complement": []
+  },
+  "invalid": false,
+  "combined": {
+    "group": "combined_40",
+    "n": 40,
+    "anchor_passes": 17,
+    "complement_passes": 15,
+    "union_passes": 18,
+    "delta_union_minus_anchor": 1,
+    "b_union_only": 1,
+    "c_anchor_only": 0,
+    "mcnemar_one_sided_p": 0.5,
+    "mcnemar_two_sided_p": 1.0,
+    "paired_bootstrap_ci95_gain": [
+      0,
+      3
+    ],
+    "decision": "INCONCLUSIVE"
+  },
+  "humaneval": {
+    "group": "humaneval_20",
+    "n": 20,
+    "anchor_passes": 8,
+    "complement_passes": 6,
+    "union_passes": 9,
+    "delta_union_minus_anchor": 1,
+    "b_union_only": 1,
+    "c_anchor_only": 0,
+    "mcnemar_one_sided_p": 0.5,
+    "mcnemar_two_sided_p": 1.0,
+    "paired_bootstrap_ci95_gain": [
+      0,
+      3
+    ],
+    "decision": "INCONCLUSIVE"
+  },
+  "mbpp": {
+    "group": "mbpp_20",
+    "n": 20,
+    "anchor_passes": 9,
+    "complement_passes": 9,
+    "union_passes": 9,
+    "delta_union_minus_anchor": 0,
+    "b_union_only": 0,
+    "c_anchor_only": 0,
+    "mcnemar_one_sided_p": 1.0,
+    "mcnemar_two_sided_p": 1.0,
+    "paired_bootstrap_ci95_gain": [
+      0,
+      0
+    ],
+    "decision": "FAILURE"
+  },
+  "cp1": {
+    "raw_pair_union": 0.45,
+    "global_adjustment": 0.0669,
+    "cp1_global": 0.419895,
+    "nine_config_sensitivity": 0.0689,
+    "cp1_nine": 0.418995,
+    "note": "Adjusted CP@1 uses the raw plus-union rate and the global false-pass adjustment; the 09 certificate is the authority for intervals and scope."
+  },
+  "decision_rule": {
+    "primary": "Combined 40 tasks: pair union vs anchor; exact one-sided McNemar.",
+    "success": "union - anchor >= +4/40 and exact one-sided McNemar p < 0.10, or 95% paired-bootstrap CI lower > 0.",
+    "failure": "union <= anchor.",
+    "precision": "+2/40 all-win p=0.25; +3/40 all-win p=0.125; +4/40 all-win p=0.0625. +2 and +3 are a practical floor, not significance; +2 all-win is inconclusive.",
+    "inconclusive": "otherwise.",
+    "subgroups": "HumanEval 20 and MBPP 20 reported separately; descriptive, not decision-bearing."
+  },
+  "power_caveat": "The 14x60 expected gain is +5/60 = +3.3/40; the 40-task exact McNemar is a screen, not a powered confirmation. The panel is a real-code-benchmark transfer test."
+}

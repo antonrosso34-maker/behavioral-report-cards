@@ -1,0 +1,23 @@
+{
+  "label": "cp40_complement",
+  "arm": "complement",
+  "model": "C:\\Users\\Anton\\.lmstudio\\apps\\bionic\\projects\\d49037d8-47f4-5808-9028-c707de117f8f\\workspace\\LLM intagration\\.kilo\\worktrees\\team-mixed-precision-11b2d5e6a01a29c5\\harness\\mixed\\quants\\mx_q4km_code_attnq_q5k.gguf",
+  "model_sha256": "f03ecc3eeb5f957f1331aae886779730bbaa9f1825d1abd075fa894407760b74",
+  "model_size_mb": 948.24,
+  "split_json": "C:\\Users\\Anton\\.lmstudio\\apps\\bionic\\projects\\d49037d8-47f4-5808-9028-c707de117f8f\\workspace\\LLM intagration\\.kilo\\worktrees\\arrow-chronometer\\harness\\architect\\queue\\cp40\\cp40_split.json",
+  "panel_sha256": "14161ce8121aa9b75dafb7af443976ff0db233a88e70f22a2789b9ba53df8ffe",
+  "backend": "cpu",
+  "threads": 6,
+  "context": 2048,
+  "kv_cache": "f16",
+  "priority": "below-normal",
+  "finished_at": "2026-11-09T20:36:30.654546+00:00",
+  "tasks": 40,
+  "passed": 15,
+  "pass@1": 0.375,
+  "cpu_seconds": 391.0,
+  "wall_seconds": 70.7154,
+  "cpu_seconds_per_correct": 26.0667,
+  "mean_cpu_seconds": 9.775,
+  "mean_wall_seconds": 1.7679
+}

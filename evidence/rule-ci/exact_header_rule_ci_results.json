@@ -1,0 +1,244 @@
+{
+  "rule_id": "EXACT-HEADER-PAIR-01",
+  "analysis": "exact-header rule CI",
+  "alpha": 0.05,
+  "seed": 20261109,
+  "B": 2000,
+  "ci_method": "percentile",
+  "decision_rule": "select the pair with the maximum union of exact pass-set bitsets; ties broken by smaller total size then lexicographic config order",
+  "heldout": {
+    "name": "heldout_14x60",
+    "shape": [
+      14,
+      60
+    ],
+    "header_bytes": 8,
+    "exact": {
+      "best_fixed": 36,
+      "union": 43,
+      "best_union": 41.0,
+      "regret": 0.0,
+      "mae": 0.0,
+      "top3": 1.0
+    },
+    "task_bootstrap": {
+      "B": 2000,
+      "regret_mean": 0.0,
+      "regret_ci95": [
+        0.0,
+        0.0
+      ],
+      "mae_mean": 0.0,
+      "mae_ci95": [
+        0.0,
+        0.0
+      ],
+      "top3_mean": 1.0,
+      "top3_ci95": [
+        1.0,
+        1.0
+      ],
+      "coverage_point_in_ci": 1.0
+    },
+    "config_bootstrap": {
+      "B": 2000,
+      "regret_mean": 0.0,
+      "regret_ci95": [
+        0.0,
+        0.0
+      ],
+      "mae_mean": 0.0,
+      "mae_ci95": [
+        0.0,
+        0.0
+      ],
+      "top3_mean": 1.0,
+      "top3_ci95": [
+        1.0,
+        1.0
+      ],
+      "best_union_mean": 39.723,
+      "best_union_ci95": [
+        37.0,
+        41.0
+      ],
+      "top_pair_frequency": [
+        [
+          [
+            4,
+            12
+          ],
+          809
+        ],
+        [
+          [
+            3,
+            12
+          ],
+          341
+        ],
+        [
+          [
+            1,
+            4
+          ],
+          313
+        ]
+      ],
+      "coverage_point_in_ci": 1.0
+    },
+    "split_half": {
+      "B": 4000,
+      "regret_mean": 1.91,
+      "regret_ci95": [
+        0.0,
+        6.0
+      ],
+      "regret_lt1_frac": 0.15725,
+      "mae_mean": 3.0013956043956043,
+      "mae_ci95": [
+        1.1538461538461537,
+        7.397802197802206
+      ],
+      "mae_rate_mean": 0.10004652014652014,
+      "mae_rate_lt003_frac": 0.0015,
+      "top3_mean": 0.20775,
+      "top3_ci95": [
+        0.0,
+        1.0
+      ],
+      "top3_ge09_frac": 0.20775
+    }
+  },
+  "fresh": {
+    "name": "fresh_12x80",
+    "shape": [
+      12,
+      80
+    ],
+    "header_bytes": 10,
+    "exact": {
+      "best_fixed": 49,
+      "union": 58,
+      "best_union": 56.0,
+      "regret": 0.0,
+      "mae": 0.0,
+      "top3": 1.0
+    },
+    "task_bootstrap": {
+      "B": 2000,
+      "regret_mean": 0.0,
+      "regret_ci95": [
+        0.0,
+        0.0
+      ],
+      "mae_mean": 0.0,
+      "mae_ci95": [
+        0.0,
+        0.0
+      ],
+      "top3_mean": 1.0,
+      "top3_ci95": [
+        1.0,
+        1.0
+      ],
+      "coverage_point_in_ci": 1.0
+    },
+    "config_bootstrap": {
+      "B": 2000,
+      "regret_mean": 0.0,
+      "regret_ci95": [
+        0.0,
+        0.0
+      ],
+      "mae_mean": 0.0,
+      "mae_ci95": [
+        0.0,
+        0.0
+      ],
+      "top3_mean": 1.0,
+      "top3_ci95": [
+        1.0,
+        1.0
+      ],
+      "best_union_mean": 54.842,
+      "best_union_ci95": [
+        52.0,
+        56.0
+      ],
+      "top_pair_frequency": [
+        [
+          [
+            2,
+            4
+          ],
+          822
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          382
+        ],
+        [
+          [
+            2,
+            11
+          ],
+          321
+        ]
+      ],
+      "coverage_point_in_ci": 1.0
+    },
+    "split_half": {
+      "B": 4000,
+      "regret_mean": 1.69875,
+      "regret_ci95": [
+        0.0,
+        4.0
+      ],
+      "regret_lt1_frac": 0.254,
+      "mae_mean": 3.4745,
+      "mae_ci95": [
+        1.0,
+        8.970454545454547
+      ],
+      "mae_rate_mean": 0.0868625,
+      "mae_rate_lt003_frac": 0.06,
+      "top3_mean": 0.079,
+      "top3_ci95": [
+        0.0,
+        1.0
+      ],
+      "top3_ge09_frac": 0.079
+    }
+  },
+  "certificate": {
+    "rule_id": "EXACT-HEADER-PAIR-01",
+    "version": "1.0",
+    "date": "2026-11-09",
+    "alpha": 0.05,
+    "seed": 20261109,
+    "B": 2000,
+    "ci_method": "percentile",
+    "coverage": {
+      "heldout_task_bootstrap": 1.0,
+      "heldout_config_bootstrap": 1.0,
+      "fresh_task_bootstrap": 1.0,
+      "fresh_config_bootstrap": 1.0,
+      "heldout_split_half_top3": 0.20775,
+      "fresh_split_half_top3": 0.079,
+      "heldout_split_half_regret_lt1": 0.15725,
+      "heldout_split_half_mae_rate_lt003": 0.0015,
+      "heldout_split_half_top3_ge09": 0.20775,
+      "fresh_split_half_regret_lt1": 0.254,
+      "fresh_split_half_mae_rate_lt003": 0.06,
+      "fresh_split_half_top3_ge09": 0.079
+    },
+    "scope": "Within-sample exactness is by construction; the 50/50 split-half is the out-of-sample estimate. The out-of-sample bars (<1 task regret, <0.03 MAE rate, >=0.90 top-3) are not met.",
+    "data_sha256": "51a6fd00c719301b49f256da7771ce12bd7969c1a474473123d3593634bfd180",
+    "certificate_sha256": "407f9587c57c99d7a68b90fc741b0ac11559817ce0642df19bc03f4fbbcd8273"
+  },
+  "data_sha256": "51a6fd00c719301b49f256da7771ce12bd7969c1a474473123d3593634bfd180"
+}

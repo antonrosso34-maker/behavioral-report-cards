@@ -1,0 +1,40 @@
+{
+  "release": {
+    "status": "repository-local staging; source repository private/404 at packaging; public archive and DOI pending",
+    "title": "Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary",
+    "version": "V6 draft",
+    "date": "2026-11-10",
+    "authors": "Project Syntactic / architect-predictor team",
+    "license": "No license granted yet; author must specify before public release.",
+    "repository": "https://github.com/antonrosso34-maker/LLM-intagration",
+    "source_evidence_commit": "be038a5bffdceb51af6e4aa09779aee7ec5c6cd3",
+    "bundle_status": "working-tree staging copy; not committed",
+    "doi": null,
+    "doi_status": "pending; no DOI claimed",
+    "archive_target": "user-selected; external archive action",
+    "manifest": {
+      "path": "data/pass-set-header/SHA256SUMS",
+      "hashed_evidence_files": 16,
+      "sha256sums_included": true,
+      "manifest_file_count": 17,
+      "metadata_excluded": [
+        "README.md",
+        "PUBLISH.md",
+        "MANIFEST.md"
+      ]
+    },
+    "paper": "paper/PAPER_DRAFT_V6.md",
+    "scoped_claim": "Exact 8-byte/60-task and 10-byte/80-task pass-set headers for a fixed matrix; within-sample audits and pair/union analysis are exact; the transfer boundary is negative; no model-quality/SOTA/compression/Pareto claim.",
+    "exclusions": [
+      "model weights",
+      "raw model completions",
+      "private or restricted data",
+      "internal agent notes"
+    ],
+    "citation": "Project Syntactic, “Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary,” V6 draft, 2026.",
+    "repository_visibility": "private/404 at packaging; not a public URL",
+    "public_url": null,
+    "source_commit_status": "local object; source repo private/404; not a public URL",
+    "readiness": "RELEASE_READINESS.md"
+  }
+}

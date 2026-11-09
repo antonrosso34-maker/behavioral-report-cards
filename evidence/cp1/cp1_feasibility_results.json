@@ -1,0 +1,272 @@
+{
+  "n_tasks": 60,
+  "n_configs": 8,
+  "pooled_false_pass": {
+    "false": 18,
+    "visible": 269,
+    "rate": 0.06691449814126393,
+    "ci95": [
+      0.04013677379487423,
+      0.103693929236652
+    ]
+  },
+  "private_mutation": {
+    "killed": 202,
+    "total": 202,
+    "score": 1.0,
+    "ci95": [
+      0.9819039564081542,
+      1.0
+    ]
+  },
+  "per_config": {
+    "q3km_code": {
+      "visible_pass": 35,
+      "hidden_pass": 33,
+      "raw_rate": 0.5833333333333334,
+      "hidden_rate": 0.55,
+      "false_pass": 2,
+      "false_pass_rate_given_visible": 0.05714285714285714,
+      "false_pass_ci95": [
+        0.006996763628308793,
+        0.19157140634523886
+      ],
+      "hidden_given_visible": 0.9428571428571428,
+      "global_cp1": 0.5442998760842628,
+      "global_cp1_lb": 0.5228452079452863,
+      "global_cp1_ci95": [
+        0.4256906723796968,
+        0.6641101524090461
+      ],
+      "loo_cp1": 0.5406349206349206,
+      "loo_cp1_ci95": [
+        0.41920634920634925,
+        0.6626984126984127
+      ]
+    },
+    "q3km_code_kv8": {
+      "visible_pass": 38,
+      "hidden_pass": 36,
+      "raw_rate": 0.6333333333333333,
+      "hidden_rate": 0.6,
+      "false_pass": 2,
+      "false_pass_rate_given_visible": 0.05263157894736842,
+      "false_pass_ci95": [
+        0.006438716715089665,
+        0.17749059034795003
+      ],
+      "hidden_given_visible": 0.9473684210526315,
+      "global_cp1": 0.5909541511771995,
+      "global_cp1_lb": 0.5676605114834538,
+      "global_cp1_ci95": [
+        0.4749973404255319,
+        0.7070063694267517
+      ],
+      "loo_cp1": 0.5906349206349206,
+      "loo_cp1_ci95": [
+        0.4733333333333334,
+        0.7080952380952381
+      ]
+    },
+    "q4km_code": {
+      "visible_pass": 33,
+      "hidden_pass": 31,
+      "raw_rate": 0.55,
+      "hidden_rate": 0.5166666666666667,
+      "false_pass": 2,
+      "false_pass_rate_given_visible": 0.06060606060606061,
+      "false_pass_ci95": [
+        0.007425837742259526,
+        0.20226431252660376
+      ],
+      "hidden_given_visible": 0.9393939393939394,
+      "global_cp1": 0.5131970260223049,
+      "global_cp1_lb": 0.49296833891984143,
+      "global_cp1_ci95": [
+        0.395735803904319,
+        0.6354578025477706
+      ],
+      "loo_cp1": 0.5073015873015874,
+      "loo_cp1_ci95": [
+        0.38730158730158737,
+        0.6311190476190475
+      ]
+    },
+    "q5ks_none": {
+      "visible_pass": 35,
+      "hidden_pass": 33,
+      "raw_rate": 0.5833333333333334,
+      "hidden_rate": 0.55,
+      "false_pass": 2,
+      "false_pass_rate_given_visible": 0.05714285714285714,
+      "false_pass_ci95": [
+        0.006996763628308793,
+        0.19157140634523886
+      ],
+      "hidden_given_visible": 0.9428571428571428,
+      "global_cp1": 0.5442998760842628,
+      "global_cp1_lb": 0.5228452079452863,
+      "global_cp1_ci95": [
+        0.42248699740463047,
+        0.6639415188470066
+      ],
+      "loo_cp1": 0.5406349206349206,
+      "loo_cp1_ci95": [
+        0.4187301587301588,
+        0.6611111111111111
+      ]
+    },
+    "q8_0_none": {
+      "visible_pass": 35,
+      "hidden_pass": 33,
+      "raw_rate": 0.5833333333333334,
+      "hidden_rate": 0.55,
+      "false_pass": 2,
+      "false_pass_rate_given_visible": 0.05714285714285714,
+      "false_pass_ci95": [
+        0.006996763628308793,
+        0.19157140634523886
+      ],
+      "hidden_given_visible": 0.9428571428571428,
+      "global_cp1": 0.5442998760842628,
+      "global_cp1_lb": 0.5228452079452863,
+      "global_cp1_ci95": [
+        0.4234476059761827,
+        0.6653390164561804
+      ],
+      "loo_cp1": 0.5406349206349206,
+      "loo_cp1_ci95": [
+        0.4184126984126984,
+        0.6628571428571429
+      ]
+    },
+    "q3km_none": {
+      "visible_pass": 27,
+      "hidden_pass": 25,
+      "raw_rate": 0.45,
+      "hidden_rate": 0.4166666666666667,
+      "false_pass": 2,
+      "false_pass_rate_given_visible": 0.07407407407407407,
+      "false_pass_ci95": [
+        0.009100072942306288,
+        0.24289834684562714
+      ],
+      "hidden_given_visible": 0.9259259259259259,
+      "global_cp1": 0.41988847583643124,
+      "global_cp1_lb": 0.40333773184350663,
+      "global_cp1_ci95": [
+        0.29884996762182287,
+        0.5462884141085708
+      ],
+      "loo_cp1": 0.4285714285714286,
+      "loo_cp1_ci95": [
+        0.30714285714285716,
+        0.5547619047619048
+      ]
+    },
+    "q4ks_code": {
+      "visible_pass": 31,
+      "hidden_pass": 28,
+      "raw_rate": 0.5166666666666667,
+      "hidden_rate": 0.4666666666666667,
+      "false_pass": 3,
+      "false_pass_rate_given_visible": 0.0967741935483871,
+      "false_pass_ci95": [
+        0.02041986268779314,
+        0.2575390646277353
+      ],
+      "hidden_given_visible": 0.9032258064516129,
+      "global_cp1": 0.48209417596034704,
+      "global_cp1_lb": 0.46309146989439653,
+      "global_cp1_ci95": [
+        0.3601550387596899,
+        0.6085987261146497
+      ],
+      "loo_cp1": 0.49246031746031743,
+      "loo_cp1_ci95": [
+        0.37103174603174605,
+        0.6174801587301585
+      ]
+    },
+    "q5km_none": {
+      "visible_pass": 35,
+      "hidden_pass": 32,
+      "raw_rate": 0.5833333333333334,
+      "hidden_rate": 0.5333333333333333,
+      "false_pass": 3,
+      "false_pass_rate_given_visible": 0.08571428571428572,
+      "false_pass_ci95": [
+        0.018037639814199532,
+        0.23057501865896343
+      ],
+      "hidden_given_visible": 0.9142857142857143,
+      "global_cp1": 0.5442998760842628,
+      "global_cp1_lb": 0.5228452079452863,
+      "global_cp1_ci95": [
+        0.4234529320987655,
+        0.6634969325153374
+      ],
+      "loo_cp1": 0.5424603174603174,
+      "loo_cp1_ci95": [
+        0.4190476190476191,
+        0.6642857142857143
+      ]
+    }
+  },
+  "rankings": {
+    "raw_top": "q3km_code_kv8",
+    "hidden_top": "q3km_code_kv8",
+    "global_cp1_top": "q3km_code_kv8",
+    "global_lb_top": "q3km_code_kv8",
+    "loo_cp1_top": "q3km_code_kv8",
+    "raw_vs_hidden": {
+      "spearman": 0.9617692030835674,
+      "spearman_p": 0.0001357198880445896,
+      "kendall": 0.938083151964686,
+      "kendall_p": 0.0026782649293014917
+    },
+    "raw_vs_global_cp1": {
+      "spearman": 1.0,
+      "spearman_p": 0.0,
+      "kendall": 1.0,
+      "kendall_p": 0.0017618222057855417
+    },
+    "raw_vs_global_lb": {
+      "spearman": 1.0,
+      "spearman_p": 0.0,
+      "kendall": 1.0,
+      "kendall_p": 0.0017618222057855417
+    },
+    "raw_vs_loo_cp1": {
+      "spearman": 0.9617692030835674,
+      "spearman_p": 0.0001357198880445896,
+      "kendall": 0.938083151964686,
+      "kendall_p": 0.0026782649293014917
+    },
+    "loo_vs_hidden": {
+      "spearman": 0.8500000000000001,
+      "spearman_p": 0.007516757812499979,
+      "kendall": 0.76,
+      "kendall_p": 0.01285779408237169
+    },
+    "global_cp1_vs_hidden": {
+      "spearman": 0.9617692030835674,
+      "spearman_p": 0.0001357198880445896,
+      "kendall": 0.938083151964686,
+      "kendall_p": 0.0026782649293014917
+    }
+  },
+  "certificate_40": {
+    "expected_false_events_at_6_9pct": 2.6765799256505574,
+    "expected_visible_at_50pct": 20,
+    "exact_ci_if_3_of_40": [
+      0.015742179851041524,
+      0.20386474873289903
+    ],
+    "exact_ci_if_2_of_40": [
+      0.00611364659934668,
+      0.16919686395941766
+    ],
+    "note": "A 40-task certificate estimates the global false-pass rate with a wide CI; it cannot separate the per-config false-pass rates (5.3-9.7%) or change the global CP@1 ranking, which is a constant multiple of raw pass@1."
+  }
+}

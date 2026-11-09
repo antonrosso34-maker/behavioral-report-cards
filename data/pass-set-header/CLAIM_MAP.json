@@ -1,0 +1,108 @@
+{
+  "no_orphan_claims": true,
+  "orphan_claims": [],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Exact pass-set headers are lossless: 8 bytes for 60 tasks and 10 bytes for 80 tasks; decoding reproduces every source pass bit.",
+      "status": "SUPPORTED",
+      "artifacts": [
+        "headers_heldout_14x60.bin",
+        "headers_heldout_14x60.json",
+        "headers_fresh_12x80.bin",
+        "headers_fresh_12x80.json",
+        "pass_matrix_heldout_14x60.csv",
+        "pass_matrix_fresh_12x80.csv"
+      ],
+      "evidence": "exact_roundtrip=true for all 14x60 and 12x80 cells",
+      "artifact_sha256": {
+        "headers_heldout_14x60.bin": "7caed93594c0dc9d50e6c8e5e0489512e74adaa8781b179ad9da9b05ee2a5a56",
+        "headers_heldout_14x60.json": "2c499006387c37ffdc92f62216826b66841859db987555f171f8184e35eae064",
+        "headers_fresh_12x80.bin": "6c44557c65fd7e96df131dcd8df8d2b52c730961595760995429c0f5d28e9352",
+        "headers_fresh_12x80.json": "cf8f94319fe2494f2eff27551a846680bf20ef3614403ccdac5fcf92e322da57",
+        "pass_matrix_heldout_14x60.csv": "806b0cd76f399eed2523b3e52574d8afe01d586228b80773e22b009bf879bc8b",
+        "pass_matrix_fresh_12x80.csv": "907a1fd15ecbe57b1302b2d41b0d4d2f8bce6c1586612527b4ebb584bfd27aec"
+      }
+    },
+    {
+      "id": "C2",
+      "claim": "The exact header selects the true best pair: 41/60 on heldout and 56/80 on fresh.",
+      "status": "SUPPORTED",
+      "artifacts": [
+        "pair_unions_heldout_14x60.csv",
+        "pair_unions_fresh_12x80.csv",
+        "headers_heldout_14x60.json",
+        "headers_fresh_12x80.json"
+      ],
+      "evidence": "heldout best pair ['q3km_code_kvq8_0_preplus', 'mx_q4km_code_attnq_q5k_plus'] = 41/60; fresh best pair ['mx2_aq6_q3ks_plus', 'mx_q3km_code_gateup_q4k_plus'] = 56/80",
+      "artifact_sha256": {
+        "pair_unions_heldout_14x60.csv": "8a2d11730e2e5cba9d6764893230851e332e8f2b2ff85320eae23fb7b2c2dc4e",
+        "pair_unions_fresh_12x80.csv": "6879afa7e40fb87ca906b487ffd8502bf9e819f955d450de3279a1c2229257bd",
+        "headers_heldout_14x60.json": "2c499006387c37ffdc92f62216826b66841859db987555f171f8184e35eae064",
+        "headers_fresh_12x80.json": "cf8f94319fe2494f2eff27551a846680bf20ef3614403ccdac5fcf92e322da57"
+      }
+    },
+    {
+      "id": "C3",
+      "claim": "MinHash-512 is a secondary approximation: 0.00 regret / 0.0079 union MAE / 1.00 top-3 on 14x60; 0.04 / 0.0056 / 0.99 on 12x80.",
+      "status": "SUPPORTED_SECONDARY",
+      "artifacts": [
+        "minhash_secondary.json"
+      ],
+      "evidence": "pass_set_sketch_output.json minhash_512 cells",
+      "artifact_sha256": {
+        "minhash_secondary.json": "11494960b899a28e923bd7096187b4ed9192bbf46c0879655af27e4896a27104"
+      }
+    },
+    {
+      "id": "C4",
+      "claim": "The MinHash-512 storage claim is 2,048 bytes as uint32 (4,096 as int64), not 64 bytes; the 64-byte claim is retracted.",
+      "status": "CORRECTED",
+      "artifacts": [
+        "minhash_secondary.json"
+      ],
+      "evidence": "512 31-bit minima x 4 bytes",
+      "artifact_sha256": {
+        "minhash_secondary.json": "11494960b899a28e923bd7096187b4ed9192bbf46c0879655af27e4896a27104"
+      }
+    },
+    {
+      "id": "C5",
+      "claim": "Bloom is worse than MinHash at the same bit budget on these small pass sets.",
+      "status": "SUPPORTED_SECONDARY",
+      "artifacts": [
+        "minhash_secondary.json"
+      ],
+      "evidence": "pass_set_sketch_output.json bloom cells",
+      "artifact_sha256": {
+        "minhash_secondary.json": "11494960b899a28e923bd7096187b4ed9192bbf46c0879655af27e4896a27104"
+      }
+    },
+    {
+      "id": "C6",
+      "claim": "The header is set-level only; task-level routing remains at chance.",
+      "status": "SUPPORTED_SCOPE",
+      "artifacts": [
+        "headers_heldout_14x60.json"
+      ],
+      "evidence": "IDX-SET-01 fresh result: LOTO AUC 0.5612; do not claim a task router",
+      "artifact_sha256": {
+        "headers_heldout_14x60.json": "2c499006387c37ffdc92f62216826b66841859db987555f171f8184e35eae064"
+      }
+    },
+    {
+      "id": "C7",
+      "claim": "The exact header plus the certificate layer is reproducible from repository-backed artifacts.",
+      "status": "SUPPORTED",
+      "artifacts": [
+        "build_manifest.py",
+        "CERTIFICATES.json"
+      ],
+      "evidence": "build_manifest.py regenerates all headers and hashes",
+      "artifact_sha256": {
+        "build_manifest.py": "1b7d045a8c253543233cd7f8ec3764153554788aa14db3a4bab4dd0b49f14a32",
+        "CERTIFICATES.json": "03301e65d015a20ae0550ec38baf56d613ce5d981b9becfc9b2861d30c65227e"
+      }
+    }
+  ]
+}

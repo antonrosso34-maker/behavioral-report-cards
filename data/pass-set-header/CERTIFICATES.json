@@ -1,0 +1,138 @@
+{
+  "rule_certificate": {
+    "id": "EXACT-HEADER-01",
+    "claim": "Exact pass-set headers are lossless and select the true best pair on the existing 14x60 and 12x80 matrices.",
+    "pre_registered_rule": {
+      "encoding": "8 bytes for 60 tasks; 10 bytes for 80 tasks; LSB-first; unused high bits zero",
+      "success": "decoded header equals the source pass matrix for every config/task; pair union from headers equals source pair union",
+      "failure": "any bit mismatch, hash mismatch, or task-list mismatch",
+      "scope": "existing 14x60 heldout and 12x80 fresh matrices; no new scored run"
+    },
+    "observed": {
+      "heldout": {
+        "configs": 14,
+        "tasks": 60,
+        "header_bytes": 8,
+        "best_pair": [
+          "q3km_code_kvq8_0_preplus",
+          "mx_q4km_code_attnq_q5k_plus"
+        ],
+        "best_pair_union": 41,
+        "best_fixed": 36,
+        "oracle_union": 43,
+        "exact_roundtrip": true
+      },
+      "fresh": {
+        "configs": 12,
+        "tasks": 80,
+        "header_bytes": 10,
+        "best_pair": [
+          "mx2_aq6_q3ks_plus",
+          "mx_q3km_code_gateup_q4k_plus"
+        ],
+        "best_pair_union": 56,
+        "best_fixed": 49,
+        "oracle_union": 58,
+        "exact_roundtrip": true
+      }
+    },
+    "decision": "SUCCESS",
+    "replay": "python harness/architect/queue/evidence/pass-set-header/build_manifest.py"
+  },
+  "task_certificate": {
+    "heldout": {
+      "n_tasks": 60,
+      "task_list_sha256_newline": "a5e68d95e7adf158d7b0617a154aff68c714ca2a9008343980c6a0af07bcff3f",
+      "task_list_sha256_json": "94a1721121b80d3fec8d0cd3f0db06e5d167ae7d581b2401228c873210b7c809",
+      "source": "C:\\Users\\Anton\\.lmstudio\\apps\\bionic\\projects\\d49037d8-47f4-5808-9028-c707de117f8f\\workspace\\LLM intagration\\.kilo\\worktrees\\arrow-chronometer\\harness\\architect\\data\\paired.csv",
+      "source_sha256": "51a6fd00c719301b49f256da7771ce12bd7969c1a474473123d3593634bfd180"
+    },
+    "fresh": {
+      "n_tasks": 80,
+      "task_list_sha256_newline": "d74bea0d57a90e969ccec1e679ea06796d263a761b2db4d083a260770193d4f8",
+      "task_list_sha256_json": "1f985425f431d3b23e41004ce75713f07d32f2cab1f7a97715777691dc496e7c",
+      "source": "C:\\Users\\Anton\\.lmstudio\\apps\\bionic\\projects\\d49037d8-47f4-5808-9028-c707de117f8f\\workspace\\LLM intagration\\.kilo\\worktrees\\arrow-chronometer\\harness\\architect\\data\\paired.csv",
+      "source_sha256": "51a6fd00c719301b49f256da7771ce12bd7969c1a474473123d3593634bfd180"
+    }
+  },
+  "claim_certificates": [
+    {
+      "id": "C1",
+      "claim": "Exact pass-set headers are lossless: 8 bytes for 60 tasks and 10 bytes for 80 tasks; decoding reproduces every source pass bit.",
+      "status": "SUPPORTED",
+      "artifacts": [
+        "headers_heldout_14x60.bin",
+        "headers_heldout_14x60.json",
+        "headers_fresh_12x80.bin",
+        "headers_fresh_12x80.json",
+        "pass_matrix_heldout_14x60.csv",
+        "pass_matrix_fresh_12x80.csv"
+      ],
+      "evidence": "exact_roundtrip=true for all 14x60 and 12x80 cells"
+    },
+    {
+      "id": "C2",
+      "claim": "The exact header selects the true best pair: 41/60 on heldout and 56/80 on fresh.",
+      "status": "SUPPORTED",
+      "artifacts": [
+        "pair_unions_heldout_14x60.csv",
+        "pair_unions_fresh_12x80.csv",
+        "headers_heldout_14x60.json",
+        "headers_fresh_12x80.json"
+      ],
+      "evidence": "heldout best pair ['q3km_code_kvq8_0_preplus', 'mx_q4km_code_attnq_q5k_plus'] = 41/60; fresh best pair ['mx2_aq6_q3ks_plus', 'mx_q3km_code_gateup_q4k_plus'] = 56/80"
+    },
+    {
+      "id": "C3",
+      "claim": "MinHash-512 is a secondary approximation: 0.00 regret / 0.0079 union MAE / 1.00 top-3 on 14x60; 0.04 / 0.0056 / 0.99 on 12x80.",
+      "status": "SUPPORTED_SECONDARY",
+      "artifacts": [
+        "minhash_secondary.json"
+      ],
+      "evidence": "pass_set_sketch_output.json minhash_512 cells"
+    },
+    {
+      "id": "C4",
+      "claim": "The MinHash-512 storage claim is 2,048 bytes as uint32 (4,096 as int64), not 64 bytes; the 64-byte claim is retracted.",
+      "status": "CORRECTED",
+      "artifacts": [
+        "minhash_secondary.json"
+      ],
+      "evidence": "512 31-bit minima x 4 bytes"
+    },
+    {
+      "id": "C5",
+      "claim": "Bloom is worse than MinHash at the same bit budget on these small pass sets.",
+      "status": "SUPPORTED_SECONDARY",
+      "artifacts": [
+        "minhash_secondary.json"
+      ],
+      "evidence": "pass_set_sketch_output.json bloom cells"
+    },
+    {
+      "id": "C6",
+      "claim": "The header is set-level only; task-level routing remains at chance.",
+      "status": "SUPPORTED_SCOPE",
+      "artifacts": [
+        "headers_heldout_14x60.json"
+      ],
+      "evidence": "IDX-SET-01 fresh result: LOTO AUC 0.5612; do not claim a task router"
+    },
+    {
+      "id": "C7",
+      "claim": "The exact header plus the certificate layer is reproducible from repository-backed artifacts.",
+      "status": "SUPPORTED",
+      "artifacts": [
+        "build_manifest.py",
+        "CERTIFICATES.json"
+      ],
+      "evidence": "build_manifest.py regenerates all headers and hashes"
+    }
+  ],
+  "verifier_certificate": {
+    "verifier": "harness/architect/data/paired.csv plus-test labels",
+    "source_sha256": "51a6fd00c719301b49f256da7771ce12bd7969c1a474473123d3593634bfd180",
+    "timeout_rule": "not applicable: labels are existing; no new tests",
+    "note": "The exact header is an encoding result over existing pass/fail cells, not a new evaluation."
+  }
+}

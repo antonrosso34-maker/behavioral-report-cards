@@ -1,0 +1,157 @@
+{
+  "dataset": "fresh_12x80",
+  "source": "C:\\Users\\Anton\\.lmstudio\\apps\\bionic\\projects\\d49037d8-47f4-5808-9028-c707de117f8f\\workspace\\LLM intagration\\.kilo\\worktrees\\arrow-chronometer\\harness\\architect\\data\\paired.csv",
+  "source_sha256": "51a6fd00c719301b49f256da7771ce12bd7969c1a474473123d3593634bfd180",
+  "n_configs": 12,
+  "n_tasks": 80,
+  "header_bytes_per_config": 10,
+  "bit_order": "LSB-first: task i -> byte i//8, bit i%8; unused high bits are zero",
+  "task_list_sha256_newline": "d74bea0d57a90e969ccec1e679ea06796d263a761b2db4d083a260770193d4f8",
+  "task_list_sha256_json": "1f985425f431d3b23e41004ce75713f07d32f2cab1f7a97715777691dc496e7c",
+  "matrix_sha256_canonical": "b36397fcd5ef49c4757b31ec28932179fb943ead67e64a55905019300719f1e2",
+  "header_bin_sha256": "6c44557c65fd7e96df131dcd8df8d2b52c730961595760995429c0f5d28e9352",
+  "header_bin_bytes": 120,
+  "best_fixed": 49,
+  "oracle_union": 58,
+  "best_pair": [
+    "mx2_aq6_q3ks_plus",
+    "mx_q3km_code_gateup_q4k_plus"
+  ],
+  "best_pair_union": 56,
+  "best_pair_rate": 0.7,
+  "exact_roundtrip": true,
+  "configs": [
+    {
+      "config_name": "mx2_aq5_attnk5_plus",
+      "config_key": "qwen2.5-coder-1.5b|5fc986e021d3bc68|f16|cpu|1",
+      "full_sha256": "5fc986e021d3bc686603f00ed4dc80387b62348e1e19656d1fe7252406e39c70",
+      "size_mb": 804.95,
+      "base": "q3km",
+      "calibration": "unknown",
+      "plus_test": 1,
+      "pass_count": 49,
+      "header_hex": "e0f9db43dbe1b1dbb7ba"
+    },
+    {
+      "config_name": "mx2_aq5_q3ks_plus",
+      "config_key": "qwen2.5-coder-1.5b|99cf5eb7358027b8|f16|cpu|1",
+      "full_sha256": "99cf5eb7358027b86a095f2f31ddd51547bba77c8b2f6c072437be419e99013c",
+      "size_mb": 741.94,
+      "base": "q3ks",
+      "calibration": "unknown",
+      "plus_test": 1,
+      "pass_count": 47,
+      "header_hex": "e6fddb23d3f0b1d3b728"
+    },
+    {
+      "config_name": "mx2_aq6_q3ks_plus",
+      "config_key": "qwen2.5-coder-1.5b|7fe6c14d18f64746|f16|cpu|1",
+      "full_sha256": "7fe6c14d18f64746a77262550853171a5465f8958482f75b69d034162bdd7e5c",
+      "size_mb": 750.3,
+      "base": "q3ks",
+      "calibration": "unknown",
+      "plus_test": 1,
+      "pass_count": 48,
+      "header_hex": "e6fddf43d3f0b19337aa"
+    },
+    {
+      "config_name": "mx_q3km_code_attnq_q5k_plus",
+      "config_key": "qwen2.5-coder-1.5b|ae6412f35e48eccd|f16|cpu|1",
+      "full_sha256": "ae6412f35e48eccd2e1682980c5840eb141ef5b58fc542266a70cc68606c042a",
+      "size_mb": 802.24,
+      "base": "q3km",
+      "calibration": "code",
+      "plus_test": 1,
+      "pass_count": 47,
+      "header_hex": "e0f95b43cbe1b1dbb7ba"
+    },
+    {
+      "config_name": "mx_q3km_code_gateup_q4k_plus",
+      "config_key": "qwen2.5-coder-1.5b|5415d48fe261d180|f16|cpu|1",
+      "full_sha256": "5415d48fe261d18076bd10b63dce080975e11964b363188bc1c2207ea3de5480",
+      "size_mb": 883.62,
+      "base": "q3km",
+      "calibration": "code",
+      "plus_test": 1,
+      "pass_count": 46,
+      "header_hex": "e2e1db27d3e0b1cbf739"
+    },
+    {
+      "config_name": "mx_q4km_code_attnq_q5k_plus",
+      "config_key": "qwen2.5-coder-1.5b|f03ecc3eeb5f957f|f16|cpu|1",
+      "full_sha256": "f03ecc3eeb5f957f1331aae886779730bbaa9f1825d1abd075fa894407760b74",
+      "size_mb": 948.24,
+      "base": "q4km",
+      "calibration": "code",
+      "plus_test": 1,
+      "pass_count": 44,
+      "header_hex": "e2e1db27d3e0b1cbb738"
+    },
+    {
+      "config_name": "q3km_code_plus",
+      "config_key": "qwen2.5-coder-1.5b|fbc80466f48cffb1|f16|cpu|1",
+      "full_sha256": "fbc80466f48cffb16a1c869bd6a7789895af98b17f176b35f1630b26ce512ceb",
+      "size_mb": 786.0,
+      "base": "q3km",
+      "calibration": "code",
+      "plus_test": 1,
+      "pass_count": 45,
+      "header_hex": "e2f95b43cbe1b1cbb738"
+    },
+    {
+      "config_name": "q3km_code_preplus",
+      "config_key": "qwen2.5-coder-1.5b|fbc80466f48cffb1|f16|cpu|0",
+      "full_sha256": "fbc80466f48cffb16a1c869bd6a7789895af98b17f176b35f1630b26ce512ceb",
+      "size_mb": 786.0,
+      "base": "q3km",
+      "calibration": "code",
+      "plus_test": 0,
+      "pass_count": 44,
+      "header_hex": "e2f95b03cbe1b1cbb738"
+    },
+    {
+      "config_name": "q3km_none_plus",
+      "config_key": "qwen2.5-coder-1.5b|06673dfdde81a2e3|f16|cpu|1",
+      "full_sha256": "06673dfdde81a2e376bf2639db8d1634afe889cffd511e4cbdfced92224472a5",
+      "size_mb": 786.0,
+      "base": "q3km",
+      "calibration": "none",
+      "plus_test": 1,
+      "pass_count": 44,
+      "header_hex": "e2e9db43d2e0b1cbb7b8"
+    },
+    {
+      "config_name": "q3ks_code_plus",
+      "config_key": "qwen2.5-coder-1.5b|d41b8c0cc619b064|f16|cpu|1",
+      "full_sha256": "d41b8c0cc619b0646d693ce7a17bc0def20374ddecf51b030dfcc70eadfa1283",
+      "size_mb": 725.69,
+      "base": "q3ks",
+      "calibration": "code",
+      "plus_test": 1,
+      "pass_count": 47,
+      "header_hex": "e6f9db63d3e0b193b7b8"
+    },
+    {
+      "config_name": "q4km_code_plus",
+      "config_key": "qwen2.5-coder-1.5b|8aaee8e6e4346201|f16|cpu|1",
+      "full_sha256": "8aaee8e6e4346201baf983161afe58bc6f5a3c62ef431fc55a34dc676b604f91",
+      "size_mb": 940.37,
+      "base": "q4km",
+      "calibration": "code",
+      "plus_test": 1,
+      "pass_count": 44,
+      "header_hex": "e2e1db27d3e0b1cbb738"
+    },
+    {
+      "config_name": "q4ks_code_plus",
+      "config_key": "qwen2.5-coder-1.5b|2019ebc1048df16b|f16|cpu|1",
+      "full_sha256": "2019ebc1048df16bbf667e672c7f54f75aa6d667329f7b4614b83bd4a9f0e3bb",
+      "size_mb": 896.75,
+      "base": "q4ks",
+      "calibration": "code",
+      "plus_test": 1,
+      "pass_count": 45,
+      "header_hex": "e0e9db27d3e0b1cbf738"
+    }
+  ]
+}

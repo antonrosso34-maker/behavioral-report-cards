@@ -1,0 +1,73 @@
+{
+  "status": "SECONDARY_APPROXIMATION",
+  "method": "MinHash",
+  "storage": {
+    "k": 512,
+    "encoding": "uint32 minima",
+    "bytes_per_config": 2048,
+    "int64_bytes_per_config": 4096,
+    "note": "The earlier 64-byte claim is retracted. 512 31-bit minima = 2048 bytes as uint32; the exact header is the primary artifact."
+  },
+  "heldout": {
+    "regret_mean": 0.0,
+    "regret_p2.5": 0.0,
+    "regret_p97.5": 0.0,
+    "regret_zero_frac": 1.0,
+    "mae_mean": 0.47300761373391237,
+    "mae_rate_mean": 0.007883460228898539,
+    "mae_p2.5": 0.22849935008555144,
+    "mae_p97.5": 0.847618298770371,
+    "mae_bar_frac": 1.0,
+    "top3_frac": 1.0,
+    "sel_union_mean": 41.0,
+    "best_est_error_mean": 0.8192273794715939,
+    "both_bar_frac": 1.0
+  },
+  "fresh": {
+    "regret_mean": 0.045,
+    "regret_p2.5": 0.0,
+    "regret_p97.5": 1.0,
+    "regret_zero_frac": 0.965,
+    "mae_mean": 0.44815797761081766,
+    "mae_rate_mean": 0.005601974720135221,
+    "mae_p2.5": 0.21719246365667672,
+    "mae_p97.5": 0.7723194233870223,
+    "mae_bar_frac": 1.0,
+    "top3_frac": 0.995,
+    "sel_union_mean": 55.955,
+    "best_est_error_mean": 0.6849914776118383,
+    "both_bar_frac": 0.965
+  },
+  "heldout_minhash_256": {
+    "regret_mean": 0.0,
+    "regret_p2.5": 0.0,
+    "regret_p97.5": 0.0,
+    "regret_zero_frac": 1.0,
+    "mae_mean": 0.561851028623728,
+    "mae_rate_mean": 0.009364183810395468,
+    "mae_p2.5": 0.28690104462391863,
+    "mae_p97.5": 1.053870032016238,
+    "mae_bar_frac": 1.0,
+    "top3_frac": 1.0,
+    "sel_union_mean": 41.0,
+    "best_est_error_mean": 0.9728778435020979,
+    "both_bar_frac": 1.0
+  },
+  "fresh_minhash_256": {
+    "regret_mean": 0.195,
+    "regret_p2.5": 0.0,
+    "regret_p97.5": 2.0,
+    "regret_zero_frac": 0.855,
+    "mae_mean": 0.5946468150438153,
+    "mae_rate_mean": 0.007433085188047692,
+    "mae_p2.5": 0.2920123962643304,
+    "mae_p97.5": 1.065240337305855,
+    "mae_bar_frac": 1.0,
+    "top3_frac": 0.97,
+    "sel_union_mean": 55.805,
+    "best_est_error_mean": 0.8718840350917586,
+    "both_bar_frac": 0.855
+  },
+  "source": "C:\\Users\\Anton\\.lmstudio\\apps\\bionic\\projects\\d49037d8-47f4-5808-9028-c707de117f8f\\workspace\\LLM intagration\\.kilo\\worktrees\\arrow-chronometer\\harness\\architect\\agents\\04_routing\\pass_set_sketch_output.json",
+  "source_sha256": "0cd19203320c9a5998a24e6a386857ef6f16ba85da5ac4a65ddb65389a244141"
+}

@@ -1,0 +1,23 @@
+{
+  "label": "cp40_anchor",
+  "arm": "anchor",
+  "model": "C:\\Users\\Anton\\.lmstudio\\apps\\bionic\\projects\\d49037d8-47f4-5808-9028-c707de117f8f\\workspace\\LLM intagration\\harness\\models\\Qwen2.5-Coder-1.5B-Instruct\\quants\\q3km_code.gguf",
+  "model_sha256": "fbc80466f48cffb16a1c869bd6a7789895af98b17f176b35f1630b26ce512ceb",
+  "model_size_mb": 786.0,
+  "split_json": "C:\\Users\\Anton\\.lmstudio\\apps\\bionic\\projects\\d49037d8-47f4-5808-9028-c707de117f8f\\workspace\\LLM intagration\\.kilo\\worktrees\\arrow-chronometer\\harness\\architect\\queue\\cp40\\cp40_split.json",
+  "panel_sha256": "14161ce8121aa9b75dafb7af443976ff0db233a88e70f22a2789b9ba53df8ffe",
+  "backend": "cpu",
+  "threads": 6,
+  "context": 2048,
+  "kv_cache": "q8_0",
+  "priority": "below-normal",
+  "finished_at": "2026-11-09T20:35:00.154970+00:00",
+  "tasks": 40,
+  "passed": 17,
+  "pass@1": 0.425,
+  "cpu_seconds": 448.172,
+  "wall_seconds": 82.8236,
+  "cpu_seconds_per_correct": 26.3631,
+  "mean_cpu_seconds": 11.2043,
+  "mean_wall_seconds": 2.0706
+}

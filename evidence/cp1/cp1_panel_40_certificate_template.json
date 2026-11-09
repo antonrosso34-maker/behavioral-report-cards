@@ -1,0 +1,157 @@
+{
+  "certificate_id": "CP1-PANEL-40-01",
+  "version": "1.0",
+  "status": "TEMPLATE",
+  "panel": {
+    "id": "CP1-PANEL-40",
+    "n_tasks": 40,
+    "split": {
+      "he_plus_unused": 20,
+      "mbpp_plus_unused": 20,
+      "task_ids": "harness/architect/queue/cp40/cp40_task_ids.json (40 IDs; panel_40_sha256_newline 14161ce8121aa9b75dafb7af443976ff0db233a88e70f22a2789b9ba53df8ffe)",
+      "merkle_root": "bd1c8f8aaa39b6eefaca46705a2c93c5dbc23f58667c2fef4c48db0f1885bda6",
+      "sha256": "14161ce8121aa9b75dafb7af443976ff0db233a88e70f22a2789b9ba53df8ffe",
+      "source": "harness/architect/queue/cp40/cp40_split.json",
+      "freshness": "frozen 2026-11-09T20:18:21Z; remaining MBPP+ sealed",
+      "overlap_check": [
+        "HumanEval heldout/dev: 0 overlap",
+        "PROBE-02-V14 120-task slice: 0 overlap"
+      ],
+      "mbpp_pool": "20 selected from the 80-task MBPP+ pool (200-task draw minus the PROBE-02-V14 120-task slice); remaining 60 sealed; 2-task reserve untouched",
+      "remaining_mbpp_60_sha256": "88a0a1e913c0c9c1664804be6f5d6c93cd3c564fde2837e22e1c556c62d1f54d"
+    },
+    "calibration_split": {
+      "heldout": "14x60",
+      "fresh": "12x80"
+    },
+    "arms": [
+      {
+        "role": "anchor",
+        "config": "q3km_code_kvq8_0_preplus",
+        "sha256": "fbc80466f48cffb16a1c869bd6a7789895af98b17f176b35f1630b26ce512ceb",
+        "size_mib": 786.0
+      },
+      {
+        "role": "complement",
+        "config": "mx_q4km_code_attnq_q5k_plus",
+        "sha256": "f03ecc3eeb5f957f1331aae886779730bbaa9f1825d1abd075fa894407760b74",
+        "size_mib": 948.24
+      }
+    ],
+    "generations": 80,
+    "visible": "base HumanEval/MBPP tests",
+    "hidden": "full plus tests",
+    "generation_settings": "6 CPU threads; ctx 2048; temperature 0; top_p 1; seed 0; max 512; batch/ubatch 512",
+    "scoring": "all plus tests; 30 s timeout; timeouts and truncations count as failures; request errors above 10% invalidate the run; no post-hoc task deletion",
+    "run": {
+      "command": "cmd /c start \"\" /BELOWNORMAL /B pwsh -NoProfile -ExecutionPolicy Bypass -File \"harness\\architect\\queue\\cp40\\run_cp40_lowprio.ps1\"",
+      "lock_branch": "architect-cp40",
+    "port": 8140,
+    "port_env": "CP40_PORT",
+    "port_note": "default 8140; 8140 was active at preparation, set CP40_PORT=8141 or wait; verify with python harness/team/scripts/eval_lock.py status",
+    "priority": "BelowNormal",
+      "status": "PREPARED_NOT_LAUNCHED"
+    }
+  },
+  "false_pass_certificate": {
+    "eight_config": {
+      "false": 18,
+      "visible": 269,
+      "rate": 0.0669,
+      "ci95": [
+        0.0401,
+        0.1037
+      ]
+    },
+    "nine_config": {
+      "false": 21,
+      "visible": 305,
+      "rate": 0.0689,
+      "ci95": [
+        0.0431,
+        0.1033
+      ]
+    },
+    "private": {
+      "killed": 202,
+      "total": 202,
+      "score": 1.0,
+      "lower_bound": 0.9817,
+      "note": "0.982 rounded"
+    },
+    "panel_diagnostic": {
+      "false": null,
+      "visible": null,
+      "rate": null,
+      "ci95": null
+    },
+    "scope": "within-sample/matrix-level; not an out-of-sample guarantee; not conformal coverage"
+  },
+  "cp1": {
+    "formula": "CP@1 = (1/40) * sum_i y_i * s_i; y_i = pair-union visible pass; s_i = 1 - false-pass rate",
+    "global_adjustment": 0.0669,
+    "nine_config_sensitivity": 0.0689,
+    "anchor": {
+      "raw_union": null,
+      "adjusted_cp1": null,
+      "ci95": null
+    },
+    "pair": {
+      "raw_union": null,
+      "adjusted_cp1": null,
+      "ci95": null
+    },
+    "hidden_pair_union": null,
+    "loo_cp1": null,
+    "interval_note": "exact Clopper-Pearson for raw union; exact false-pass CI; conservative product interval; paired task bootstrap for the paired gain"
+  },
+  "selection_coverage": {
+    "source_14x60": 1.0,
+    "source_14x60_ci95": [
+      0.982,
+      1.0
+    ],
+    "source_12x80": 0.965,
+    "source_12x80_ci95": [
+      0.929,
+      0.986
+    ],
+    "panel_transfer_coverage": null,
+    "note": "pair pre-selected; no new top-1 selection; the 90% figure is source selection coverage at alpha=0.10, not CP@1"
+  },
+  "mcnemar": {
+    "b": null,
+    "c": null,
+    "n_discordant": null,
+    "gain_tasks": null,
+    "gain_rate": null,
+    "exact_one_sided_p": null,
+    "exact_two_sided_p": null,
+    "paired_bootstrap_ci95": null,
+    "success_rule": "pair union >= anchor +4/40 and exact one-sided McNemar p<0.10, or 95% CI lower >0; +2/40 is the practical-gain floor, not a significance threshold",
+    "failure_rule": "pair union <= anchor",
+    "precision_note": "+2/40 all-win has exact one-sided p=0.25; +3/40 all-win p=0.125; +4/40 all-win p=0.0625. +2/40 is a practical-gain floor, not a significance threshold; a +2/40 all-win result is INCONCLUSIVE under the pre-registered rule."
+  },
+  "decision": "PENDING",
+  "power_caveat": "40-task screen; 14x60 expected gain +3.3/40; MDE ~20 pp; not a confirmatory test",
+  "provenance": {
+    "commands": null,
+    "environment": null,
+    "run_id": null,
+    "scored_by": null,
+    "lock": null,
+    "port": null,
+    "timestamp": null
+  },
+  "approval": {
+    "status": "PENDING_LEAD",
+    "approved_by": null,
+    "window_id": null
+  },
+  "outcome": {
+    "status": "PENDING",
+    "recorded_at": null,
+    "result_path": null,
+    "summary": ""
+  }
+}

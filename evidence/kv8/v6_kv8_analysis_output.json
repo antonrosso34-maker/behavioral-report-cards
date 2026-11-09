@@ -1,0 +1,177 @@
+{
+  "n14": 60,
+  "n12": 80,
+  "n13": 80,
+  "kv8_pass": {
+    "he_dev": 23,
+    "mbpp_dev": 22
+  },
+  "best_fixed_14": 36,
+  "union_14": 43,
+  "best_fixed_12": 49,
+  "union_12": 58,
+  "best_fixed_13": 49,
+  "union_13": 58,
+  "best_pair_13": {
+    "a": "mx2_aq6_q3ks_plus",
+    "b": "mx_q3km_code_gateup_q4k_plus",
+    "union": 56.0
+  },
+  "best_pair_14": {
+    "a": "q3km_code_kvq8_0_preplus",
+    "b": "mx_q4km_code_attnq_q5k_plus",
+    "union": 41.0
+  },
+  "split_half_13": {
+    "regret": {
+      "mean": 1.726,
+      "p2.5": 0.0,
+      "p97.5": 4.0,
+      "frac": null
+    },
+    "mae_tasks": {
+      "mean": 3.3833076923076923,
+      "p2.5": 1.0384615384615388,
+      "p97.5": 8.85961538461538,
+      "frac": null
+    },
+    "mae_rate": {
+      "mean": 0.08458269230769233,
+      "p2.5": 0.02596153846153847,
+      "p97.5": 0.22149038461538448,
+      "frac": null
+    },
+    "top3": {
+      "mean": 0.121,
+      "p2.5": 0.0,
+      "p97.5": 1.0,
+      "frac": 0.121
+    },
+    "cp1": {
+      "mean": 0.051,
+      "p2.5": 0.0,
+      "p97.5": 1.0,
+      "frac": 0.051
+    },
+    "full_best_selected": {
+      "mean": 0.4325,
+      "p2.5": 0.0,
+      "p97.5": 1.0,
+      "frac": 0.4325
+    }
+  },
+  "cross": [
+    {
+      "source": "14x60",
+      "target": "13x80",
+      "common_configs": 13,
+      "selected_pair": [
+        "q3km_code_kvq8_0_preplus",
+        "mx_q4km_code_attnq_q5k_plus"
+      ],
+      "selected_union": 49.0,
+      "selected_rate": 0.6125,
+      "oracle_pair": [
+        "mx_q3km_code_gateup_q4k_plus",
+        "mx2_aq6_q3ks_plus"
+      ],
+      "oracle_union": 56.0,
+      "oracle_rate": 0.7,
+      "regret": 7.0,
+      "mae_rate": 0.05785256410256409,
+      "mae_tasks": 4.628205128205128,
+      "top3": 0.0,
+      "target_best_selected": 0.0,
+      "source_oracle_pair": [
+        "q3km_code_kvq8_0_preplus",
+        "mx_q4km_code_attnq_q5k_plus"
+      ],
+      "source_oracle_union": 41.0,
+      "source_oracle_rate": 0.6833333333333333
+    },
+    {
+      "source": "13x80",
+      "target": "14x60",
+      "common_configs": 13,
+      "selected_pair": [
+        "mx2_aq6_q3ks_plus",
+        "mx_q3km_code_gateup_q4k_plus"
+      ],
+      "selected_union": 34.0,
+      "selected_rate": 0.5666666666666667,
+      "oracle_pair": [
+        "mx_q4km_code_attnq_q5k_plus",
+        "q3km_code_kvq8_0_preplus"
+      ],
+      "oracle_union": 41.0,
+      "oracle_rate": 0.6833333333333333,
+      "regret": 7.0,
+      "mae_rate": 0.05785256410256409,
+      "mae_tasks": 3.4711538461538454,
+      "top3": 0.0,
+      "target_best_selected": 0.0,
+      "source_oracle_pair": [
+        "mx2_aq6_q3ks_plus",
+        "mx_q3km_code_gateup_q4k_plus"
+      ],
+      "source_oracle_union": 56.0,
+      "source_oracle_rate": 0.7
+    },
+    {
+      "source": "14x60",
+      "target": "12x80",
+      "common_configs": 12,
+      "selected_pair": [
+        "q3km_code_preplus",
+        "mx_q4km_code_attnq_q5k_plus"
+      ],
+      "selected_union": 48.0,
+      "selected_rate": 0.6,
+      "oracle_pair": [
+        "mx_q3km_code_gateup_q4k_plus",
+        "mx2_aq6_q3ks_plus"
+      ],
+      "oracle_union": 56.0,
+      "oracle_rate": 0.7,
+      "regret": 8.0,
+      "mae_rate": 0.06300505050505051,
+      "mae_tasks": 5.040404040404041,
+      "top3": 0.0,
+      "target_best_selected": 0.0,
+      "source_oracle_pair": [
+        "q3km_code_preplus",
+        "mx_q4km_code_attnq_q5k_plus"
+      ],
+      "source_oracle_union": 39.0,
+      "source_oracle_rate": 0.65
+    },
+    {
+      "source": "12x80",
+      "target": "14x60",
+      "common_configs": 12,
+      "selected_pair": [
+        "mx2_aq6_q3ks_plus",
+        "mx_q3km_code_gateup_q4k_plus"
+      ],
+      "selected_union": 34.0,
+      "selected_rate": 0.5666666666666667,
+      "oracle_pair": [
+        "mx_q4km_code_attnq_q5k_plus",
+        "q3km_code_preplus"
+      ],
+      "oracle_union": 39.0,
+      "oracle_rate": 0.65,
+      "regret": 5.0,
+      "mae_rate": 0.0630050505050505,
+      "mae_tasks": 3.78030303030303,
+      "top3": 0.0,
+      "target_best_selected": 0.0,
+      "source_oracle_pair": [
+        "mx2_aq6_q3ks_plus",
+        "mx_q3km_code_gateup_q4k_plus"
+      ],
+      "source_oracle_union": 56.0,
+      "source_oracle_rate": 0.7
+    }
+  ]
+}

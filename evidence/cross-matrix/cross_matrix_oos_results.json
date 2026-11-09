@@ -1,0 +1,312 @@
+{
+  "rule_id": "EXACT-HEADER-CROSS-01",
+  "alpha": 0.05,
+  "seed": 20261109,
+  "B": 2000,
+  "ci_method": "percentile",
+  "common_configs": [
+    "q3km_none_plus",
+    "q4km_code_plus",
+    "q4ks_code_plus",
+    "q3km_code_preplus",
+    "q3km_code_plus",
+    "mx_q3km_code_attnq_q5k_plus",
+    "mx_q3km_code_gateup_q4k_plus",
+    "mx2_aq5_q3ks_plus",
+    "mx2_aq6_q3ks_plus",
+    "mx2_aq5_attnk5_plus",
+    "mx_q4km_code_attnq_q5k_plus",
+    "q3ks_code_plus"
+  ],
+  "full_14x60": {
+    "shape": [
+      14,
+      60
+    ],
+    "best_pair": [
+      "q3km_code_kvq8_0_preplus",
+      "mx_q4km_code_attnq_q5k_plus"
+    ],
+    "best_union": 41.0,
+    "missing_from_12x80": [
+      "q3km_code_kvq8_0_preplus"
+    ]
+  },
+  "full_12x80": {
+    "shape": [
+      12,
+      80
+    ],
+    "best_pair": [
+      "mx2_aq6_q3ks_plus",
+      "mx_q3km_code_gateup_q4k_plus"
+    ],
+    "best_union": 56.0
+  },
+  "14x60_to_12x80": {
+    "point": {
+      "selected_pair_idx": [
+        3,
+        10
+      ],
+      "selected_pair": [
+        "q3km_code_preplus",
+        "mx_q4km_code_attnq_q5k_plus"
+      ],
+      "source_union": 39.0,
+      "source_best_union": 39.0,
+      "target_oracle_idx": [
+        6,
+        8
+      ],
+      "target_oracle_pair": [
+        "mx_q3km_code_gateup_q4k_plus",
+        "mx2_aq6_q3ks_plus"
+      ],
+      "target_oracle_union": 56.0,
+      "selected_target_union": 48.0,
+      "regret": 8.0,
+      "union_mae_rate": 0.06300505050505051,
+      "union_mae_tasks_raw": 16.196969696969695,
+      "top3": 0.0,
+      "source_top3": [
+        [
+          3,
+          10
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          6
+        ]
+      ]
+    },
+    "bootstrap": {
+      "combined": {
+        "B": 2000,
+        "regret_mean": 5.249,
+        "regret_ci95": [
+          0.0,
+          13.0
+        ],
+        "mae_rate_mean": 0.08941481721981721,
+        "mae_rate_ci95": [
+          0.03115038029100529,
+          0.21146205357142855
+        ],
+        "top3_mean": 0.0945,
+        "top3_ci95": [
+          0.0,
+          1.0
+        ]
+      },
+      "source": {
+        "B": 2000,
+        "regret_mean": 6.5585,
+        "regret_ci95": [
+          2.0,
+          8.0
+        ],
+        "mae_rate_mean": 0.07829652777777778,
+        "mae_rate_ci95": [
+          0.032446338383838376,
+          0.17476641414141403
+        ],
+        "top3_mean": 0.003,
+        "top3_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "target": {
+        "B": 2000,
+        "regret_mean": 8.539,
+        "regret_ci95": [
+          3.0,
+          15.0
+        ],
+        "mae_rate_mean": 0.07426082702020201,
+        "mae_rate_ci95": [
+          0.03099747474747475,
+          0.1555018939393939
+        ],
+        "top3_mean": 0.002,
+        "top3_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "config": {
+        "B": 2000,
+        "regret_mean": 5.719,
+        "regret_ci95": [
+          1.0,
+          8.0
+        ],
+        "mae_rate_mean": 0.06298679879148629,
+        "mae_rate_ci95": [
+          0.04360714285714284,
+          0.08388888888888889
+        ],
+        "top3_mean": 0.02,
+        "top3_ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "12x80_to_14x60": {
+    "point": {
+      "selected_pair_idx": [
+        6,
+        8
+      ],
+      "selected_pair": [
+        "mx_q3km_code_gateup_q4k_plus",
+        "mx2_aq6_q3ks_plus"
+      ],
+      "source_union": 56.0,
+      "source_best_union": 56.0,
+      "target_oracle_idx": [
+        3,
+        10
+      ],
+      "target_oracle_pair": [
+        "q3km_code_preplus",
+        "mx_q4km_code_attnq_q5k_plus"
+      ],
+      "target_oracle_union": 39.0,
+      "selected_target_union": 34.0,
+      "regret": 5.0,
+      "union_mae_rate": 0.06300505050505051,
+      "union_mae_tasks_raw": 16.196969696969695,
+      "top3": 0.0,
+      "source_top3": [
+        [
+          6,
+          8
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          8,
+          9
+        ]
+      ]
+    },
+    "bootstrap": {
+      "combined": {
+        "B": 2000,
+        "regret_mean": 4.4465,
+        "regret_ci95": [
+          0.0,
+          11.0
+        ],
+        "mae_rate_mean": 0.0879346896043771,
+        "mae_rate_ci95": [
+          0.031097470238095233,
+          0.198690476190476
+        ],
+        "top3_mean": 0.1065,
+        "top3_ci95": [
+          0.0,
+          1.0
+        ]
+      },
+      "source": {
+        "B": 2000,
+        "regret_mean": 4.6405,
+        "regret_ci95": [
+          2.0,
+          6.0
+        ],
+        "mae_rate_mean": 0.0742077967171717,
+        "mae_rate_ci95": [
+          0.030997474747474735,
+          0.15075757575757576
+        ],
+        "top3_mean": 0.0,
+        "top3_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "target": {
+        "B": 2000,
+        "regret_mean": 5.805,
+        "regret_ci95": [
+          1.0,
+          12.0
+        ],
+        "mae_rate_mean": 0.07779387626262625,
+        "mae_rate_ci95": [
+          0.03181186868686869,
+          0.1745138888888888
+        ],
+        "top3_mean": 0.0205,
+        "top3_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "config": {
+        "B": 2000,
+        "regret_mean": 3.888,
+        "regret_ci95": [
+          1.0,
+          6.0
+        ],
+        "mae_rate_mean": 0.0634357941017316,
+        "mae_rate_ci95": [
+          0.043452380952380944,
+          0.08497792658730154
+        ],
+        "top3_mean": 0.036,
+        "top3_ci95": [
+          0.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "certificate": {
+    "rule_id": "EXACT-HEADER-CROSS-01",
+    "version": "1.0",
+    "date": "2026-11-09",
+    "alpha": 0.05,
+    "seed": 20261109,
+    "B": 2000,
+    "ci_method": "percentile",
+    "common_configs": [
+      "q3km_none_plus",
+      "q4km_code_plus",
+      "q4ks_code_plus",
+      "q3km_code_preplus",
+      "q3km_code_plus",
+      "mx_q3km_code_attnq_q5k_plus",
+      "mx_q3km_code_gateup_q4k_plus",
+      "mx2_aq5_q3ks_plus",
+      "mx2_aq6_q3ks_plus",
+      "mx2_aq5_attnk5_plus",
+      "mx_q4km_code_attnq_q5k_plus",
+      "q3ks_code_plus"
+    ],
+    "full_14x60_best_pair": [
+      "q3km_code_kvq8_0_preplus",
+      "mx_q4km_code_attnq_q5k_plus"
+    ],
+    "full_14x60_missing_from_12x80": [
+      "q3km_code_kvq8_0_preplus"
+    ],
+    "scope": "Cross-matrix test on the 12 common configs. The full 14x60 best pair is not evaluable on 12x80 because one config is absent.",
+    "data_sha256": "51a6fd00c719301b49f256da7771ce12bd7969c1a474473123d3593634bfd180",
+    "certificate_sha256": "6c045220bf7b4a73cafd363ecbdec8b046255bab0e5ebfa5c7ae6a86b551f320"
+  },
+  "data_sha256": "51a6fd00c719301b49f256da7771ce12bd7969c1a474473123d3593634bfd180"
+}

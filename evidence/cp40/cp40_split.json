@@ -1,0 +1,250 @@
+{
+  "panel_id": "CP40-V6",
+  "created_at": "2026-11-09T20:18:21Z",
+  "selection_seed": 20261109,
+  "selection_rule": "One random.Random(20261109) stream: sample 20 from sorted humaneval.unused (64), then sample 20 from sorted mbpp.unused minus the probe02_v14 120-task slice (80); sort each selection. The remaining 60 MBPP+ tasks stay sealed; the 2-task reserve is untouched.",
+  "counts": {
+    "humaneval": 20,
+    "mbpp": 20,
+    "total": 40
+  },
+  "tasks": [
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/0"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/100"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/107"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/111"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/115"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/116"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/119"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/133"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/134"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/135"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/139"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/149"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/154"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/158"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/43"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/49"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/77"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/83"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/91"
+    },
+    {
+      "dataset": "humaneval",
+      "split": "unused",
+      "task_id": "HumanEval/99"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/18"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/259"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/287"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/310"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/311"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/390"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/420"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/455"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/554"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/562"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/593"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/599"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/608"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/612"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/624"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/63"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/70"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/739"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/786"
+    },
+    {
+      "dataset": "mbpp",
+      "split": "unused",
+      "task_id": "Mbpp/88"
+    }
+  ],
+  "remaining_sealed": {
+    "mbpp": 60,
+    "mbpp_ids_sha256_newline": "88a0a1e913c0c9c1664804be6f5d6c93cd3c564fde2837e22e1c556c62d1f54d",
+    "humaneval_unused_remaining": 44,
+    "reserve": 2
+  },
+  "parents": {
+    "splits_json_sha256": "dd5cd10676843ac3e8ebf2a7ed7190db0421aa3ee1c821ea4009824e8624d12d",
+    "stage2_mbpp_parent_sha256": "657da3bcc98e41ca35bd7bca6478bc3702aa4a30a6461bb78d055d14cec16d27",
+    "stage2_mbpp_parent_count": 200,
+    "probe02_v14_slice_sha256": "6cc354f4bcb2d7d8b549e250e9b1e01a4066ef14b61f31a76a82d82e6bb628cf",
+    "probe02_v14_slice_count": 120
+  },
+  "hashes": {
+    "humaneval_20_sha256_newline": "e003541f38f71cf83ecf751a67509b8565c09ba41e2a418c7988df93d4af88e4",
+    "humaneval_20_sha256_json": "922b7ec391482cb0a3fd016d459abba7ce8f50d3f553e0a71fbab5d93994630b",
+    "mbpp_20_sha256_newline": "305629b901dbb721a0a71b609e655b444c4ff46530043de4ea971936a4904896",
+    "mbpp_20_sha256_json": "4d1ccbdecc0fac5db79ef53d53060d2b0b8c8768f8296932aaf33286c67e37ca",
+    "panel_40_sha256_newline": "14161ce8121aa9b75dafb7af443976ff0db233a88e70f22a2789b9ba53df8ffe",
+    "panel_40_sha256_json": "85bc108b2b9115d44b7c7447ca541db50153ade04711f34b823175a04ec35c88",
+    "remaining_mbpp_60_sha256_newline": "88a0a1e913c0c9c1664804be6f5d6c93cd3c564fde2837e22e1c556c62d1f54d",
+    "merkle_root": "bd1c8f8aaa39b6eefaca46705a2c93c5dbc23f58667c2fef4c48db0f1885bda6"
+  },
+  "models": {
+    "q3km_code_kvq8_0_preplus": "fbc80466f48cffb16a1c869bd6a7789895af98b17f176b35f1630b26ce512ceb",
+    "mx_q4km_code_attnq_q5k_plus": "f03ecc3eeb5f957f1331aae886779730bbaa9f1825d1abd075fa894407760b74"
+  },
+  "decision_rule": {
+    "primary": "Combined 40 tasks: pair union vs anchor; exact one-sided McNemar.",
+    "success": "union - anchor >= +4/40 and exact one-sided McNemar p < 0.10, or 95% paired-bootstrap CI lower > 0.",
+    "failure": "union <= anchor.",
+    "precision": "+2/40 all-win p=0.25; +3/40 all-win p=0.125; +4/40 all-win p=0.0625. +2 and +3 are a practical floor, not significance; +2 all-win is inconclusive.",
+    "inconclusive": "otherwise.",
+    "subgroups": "HumanEval 20 and MBPP 20 reported separately; descriptive, not decision-bearing."
+  },
+  "power_caveat": "The 14x60 expected gain is +5/60 = +3.3/40; the 40-task exact McNemar is a screen, not a powered confirmation. The panel is a real-code-benchmark transfer test.",
+  "status": "FROZEN; NOT RUN"
+}
