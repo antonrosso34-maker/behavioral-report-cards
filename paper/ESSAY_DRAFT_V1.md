@@ -1,6 +1,6 @@
 # Behavioral Report Cards: 8 Bytes, 91 Answers, and the Boundary That Made Us Honest
 
-**TL;DR.** Eight bytes can store the pass set of a 60-task coding benchmark. That buys exact pair and union queries, exact report cards, and 91 answers in under a second. It does not buy a selector: the exact header fails to transfer to a split, a new matrix, a new task set, or a second model family. This essay is the story of the build, the demo, the results, and the boundary—structured after real hackathon winner papers (see Structure notes).
+**TL;DR.** Eight bytes can store the pass set of a 60-task coding benchmark. That buys exact pair and union queries, exact report cards, and 91 answers without model calls. It does not buy a selector: the exact header fails to transfer to a split, a new matrix, a new task set, or a second model family. This essay is the story of the build, the demo, the results, and the boundary—structured after real hackathon winner papers (see Structure notes).
 
 ## 1. The problem
 
@@ -16,7 +16,7 @@ The primitive is a behavioral pass-set header: a bitset of 60 tasks in 8 bytes, 
 
 On top of the bitset we built three things:
 
-- a **report card** that answers all 91 pair/union queries for the 14×60 matrix from the stored 8-byte headers, without re-running the 14 configurations (840 generations), in under a second;
+- a **report card** that answers all 91 pair/union queries for the 14×60 matrix from the stored 8-byte headers, without re-running the 14 configurations (840 generations), without model calls;
 - a **certificate layer** (Rule CI, CP@1, exact-pair and cross-matrix certificates) that records what the header does and does not prove;
 - a **public bundle**: manifest 17/17, staged bundle 79/79, SHA256SUMS, and the release repo `behavioral-report-cards`;
 - a **750 MB Hugging Face contender**: `AntonROSSO/qwen2.5-coder-1.5b-mx2-aq6-q3ks` (Apache-2.0; SHA256 `7fe6c14d…`).
@@ -39,14 +39,14 @@ The header is 256×/204.8× smaller than MinHash-512 (14×60/12×80) and 8×/6.4
 
 ## 5. The results
 
-Within the observed matrix, the header is exact and cheap: 0.00 regret, 0.0000 MAE, 1.00 top-3, best pairs 41/60 and 56/80, 91 queries in under a second.
+Within the observed matrix, the header is exact and cheap: 0.00 regret, 0.0000 MAE, 1.00 top-3, best pairs 41/60 and 56/80, 91 queries without model calls.
 
 The boundary is the real result:
 
 - **Split-half:** 1.91/1.70 regret, 3.00/3.47 MAE, 0.208/0.079 top-3; config stability 40.5%/41.1%. The out-of-sample bars are not met.
 - **Cross-matrix:** 48/80 vs 56/80 and 34/60 vs 39/60 common-config; a KV8-inclusive 13×80 matrix adds **0** union.
 - **CP40 panel:** anchor 17/40, complement 15/40, union 18/40 (+1), one-sided exact McNemar p=0.5, CI [0,3], **INCONCLUSIVE**; the MBPP subgroup is flat.
-- **Gemma second family:** storage replicates exactly (5 B/40, 8 B/60; 0.00/0.00/1.00), but transfer does not replicate numerically (selection coverage 0.176/0/0; CP@1 not computed; target-best 0/6).
+- **Gemma second family:** storage replicates exactly (5 B/40, 8 B/60; 0.00/0.00/1.00), but transfer does not replicate numerically (selection coverage 0.572/0.507/0.276 (`full_best_selected`); the source `cp1` 0.176/0/0 is not CP@1; CP@1 not computed; target-best 0/6).
 - **External selectors:** within-sample the exact header is unbeatable; out of sample MinHash and random projection can beat it on some metrics; L1 is worse; **no selector transfers the target-best**.
 
 The honest summary: the header is a storage and audit artifact. It is not a selector.
@@ -61,7 +61,7 @@ A late review caught re-introduced CP@1/selection-coverage mislabels and a CP40 
 
 ## 7. Reproducibility
 
-The public release is live at `https://github.com/antonrosso34-maker/behavioral-report-cards` (main `461e7eb`: data, evidence, paper, README, SHA256SUMS; no weights, raw completions, or personal data). The source repository is `https://github.com/antonrosso34-maker/LLM-intagration` (main `11b7abb`, branch `team/architect-predictor` `be038a5…`). The 750.3 MiB contender is on Hugging Face at `https://huggingface.co/AntonROSSO/qwen2.5-coder-1.5b-mx2-aq6-q3ks` (Apache-2.0; SHA256 `7fe6c14d…`). The release SHA256SUMS are the audit trail; the DOI is pending.
+The public release is live at `https://github.com/antonrosso34-maker/behavioral-report-cards` (main `0c0d138`: data, evidence, paper, README, SHA256SUMS; no weights, raw completions, or personal data). The source repository is `https://github.com/antonrosso34-maker/LLM-intagration` (main `11b7abb`, branch `team/architect-predictor` `be038a5…`). The 750.3 MiB contender is on Hugging Face at `https://huggingface.co/AntonROSSO/qwen2.5-coder-1.5b-mx2-aq6-q3ks` (Apache-2.0; SHA256 `7fe6c14d…`). The release SHA256SUMS are the audit trail; the DOI is pending.
 
 ## 8. Takeaways
 
@@ -86,3 +86,5 @@ This work was built by an 11-agent research team (variance, threshold, proxy gap
 ## Structure notes
 
 This essay borrows the structure of real hackathon winner papers: the MIT LLM Hackathon 1st place write-up (architecture → demo-backward → result; https://samanvya.dev/blog/mit-llm-hackathon-first-place), the Strong Compute ARC AGI2 1st place write-up (what the benchmark is → approach → results; https://words.strongcompute.com/p/how-closedai-won-strong-computes), the Kaggle solution write-up rubric (context → overview → details → sources; https://www.kaggle.com/solution-write-up-documentation), the def/acc Hackathon standard template (abstract → hypothesis → architecture → development path → limitations), the Climate Data Hackathon 1st place write-up (strategy → results → takeaways; https://ai-mission.eu/blog/hackathon-3-nightwalkers/), and the Text-to-Manim 1st place write-up (introduction → problem → results; https://words.strongcompute.com/p/text-to-manim-generating-visual-explanations). This synthesis—hook/TL;DR, problem, approach, demo, results, what didn't work, reproducibility, takeaways, team—is the skeleton above. The six sources share problem → approach → results; the TL;DR, demo, team, and Sources sections are additions, not a claimed intersection.
+
+
