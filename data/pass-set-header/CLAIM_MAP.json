@@ -101,8 +101,9 @@
       "evidence": "build_manifest.py regenerates all headers and hashes",
       "artifact_sha256": {
         "build_manifest.py": "1b7d045a8c253543233cd7f8ec3764153554788aa14db3a4bab4dd0b49f14a32",
-        "CERTIFICATES.json": "03301e65d015a20ae0550ec38baf56d613ce5d981b9becfc9b2861d30c65227e"
+        "CERTIFICATES.json": "b41f2698d015a20ae0550ec38baf56d613ce5d981b9becfc9b2861d30c65227e"
       }
     }
   ]
 }
+

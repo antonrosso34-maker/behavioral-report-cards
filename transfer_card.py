@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Cross-family transfer card: a graded difficulty prior, not a selector.
 
-Derived from the released evidence (see evidence/transfer-calibration and evidence/gemma-second-family): no model, GPU, or network. Reports the
+ILLUSTRATIVE values from the analysis brief; the authoritative files are evidence/transfer-calibration and evidence/gemma-second-family: no model, GPU, or network. Reports the
 Qwen-vs-Gemma pass-rate association, decile/quartile overlap, and the
 selection boundary that makes the card a prior rather than a top-k list.
 """
@@ -36,4 +36,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 

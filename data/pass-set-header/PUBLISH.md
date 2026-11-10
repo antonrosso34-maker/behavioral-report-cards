@@ -1,7 +1,7 @@
 # Publish checklist — exact pass-set header evidence
 
 **Access status:** public release at https://github.com/antonrosso34-maker/behavioral-report-cards (tag v12). **Public release: https://github.com/antonrosso34-maker/behavioral-report-cards (tag v12); DOI pending.**
-**HEAD at packaging:** `tag v12 (9cac63d)`
+**HEAD at packaging:** `tag v12 (HEAD)`
 **SHA256SUMS SHA-256:** `35b31e8ef0028fd80a3b6e9714d58ad6b70cebb8841c89b796b82060dccdbc73`
 **Bundle:** `pass-set-header-2026-11-09.zip`
 **Bundle SHA-256:** `de9951744236499cfdea62efae129b65465c004c9f7e61593c23719edbb948e9`
@@ -68,6 +68,7 @@ and `SHA256SUMS`; the metadata files remain outside the zip.
 Git remote: https://github.com/antonrosso34-maker/behavioral-report-cards, and no archive/DOI exists. The public URL/archive is the user's
 repository/archive action; this manifest cannot create a remote, push, or mint a DOI. Until
 then the correct status is **repository-backed manifest; public release live (tag v12)**.
+
 
 
 

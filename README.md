@@ -47,7 +47,7 @@ cd ../.. && sha256sum -c SHA256SUMS
 - The within-sample zero is **exact by construction** for the observed pass set; it is not an out-of-sample predictor.
 - **Transfer is negative:** split-half 14×60/12×80 gives 1.91/1.70-task regret, 3.00/3.47-task union MAE, 0.208/0.079 top-3; cross-matrix gives 5–8-task regret; KV8-inclusive 13×80 adds **0** union (regret 7, top-3 0); the CP40 panel gives anchor 17/40, complement 15/40, union 18/40 (+1), exact one-sided p=0.5, paired CI [0,3], **INCONCLUSIVE**; MBPP subgroup 0 gain (**failure**); CP@1 0.4199/0.4190; 1 anchor timeout.
 - **External-selector nuance:** within-sample the exact header is unbeatable; out-of-sample MinHash-512 beats it on the 12×80 split-half (1.45/3.26/0.150/0.120 vs 1.70/3.45/0.080/0.047), random projection beats it on 12×80→14×60 regret/MAE (4 vs 5; 0.0323 vs 0.0630) but not top-3/CP@1; the learned L1 selector is worse; cross-matrix no selector transfers.
-- The exact-header CP@1 is **0.6376/0.6532** (raw pair union 0.686/0.700; selection coverage 1.000/0.965 separate). The 40-task panel CP@1 is 0.4199/0.4190.
+- The exact-header CP@1 is **0.6376/0.6532** (raw pair union 0.683/0.700; selection coverage 1.000/0.965 separate). The 40-task panel CP@1 is 0.4199/0.4190.
 - The 8 B and 10 B headers are per-matrix sizes (60 vs 80 tasks), not an ablation.
 - No model-quality, SOTA, compression, or Pareto claim; models and raw generations are not included.
 
@@ -63,6 +63,7 @@ cd ../.. && sha256sum -c SHA256SUMS
 License: CC BY 4.0 (text/data/evidence) + MIT (scripts); model weights Apache-2.0. See `LICENSE`. The model weights are not included; only SHA-256 references. Public benchmark task IDs and pass/fail matrices are included; raw model completions are not. No private or restricted data is included.
 
 **Citation (placeholder):** Project Syntactic, “Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary,” V12 draft, 2026. See `RELEASE_METADATA.md` for the release status; no DOI is claimed yet.
+
 
 
 
