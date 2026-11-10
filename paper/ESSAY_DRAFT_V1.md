@@ -35,7 +35,7 @@ For each configuration \(c\), the pass set \(P_c\) is the set of probes it passe
 
 Because the header is the pass set, the oracle pair and union are available without prediction. The certificate layer binds the exactness (EXACT-HEADER-PAIR-01) and the boundary (EXACT-HEADER-CROSS-01), and CP@1 gives a false-pass-adjusted pass@1 point estimate (0.6376/0.6532; upper-false-pass sensitivity 0.612/0.627). Selection coverage—whether the selected pair is the true best—is reported separately, never as CP@1.
 
-The header is 256×/204.8× smaller than MinHash-512 (14×60/12×80) and 8×/6.4× smaller than Bloom-512. MinHash matches the 14×60 selected-pair count, regret, and top-3 (12×80 top-3 0.99, selection coverage 0.965) but not exactness (union MAE 0.0079), and costs 2,048 bytes.
+The header is 256×/204.8× smaller than MinHash-512 (14×60/12×80) and 8×/6.4× smaller than Bloom-512. MinHash matches the 14×60 selected-pair count, regret, and top-3 (12×80 top-3 0.9955, selection coverage 0.965) but not exactness (union MAE 0.0079), and costs 2,048 bytes.
 
 ## 5. The results
 
@@ -57,7 +57,7 @@ The CP40 panel was the honest result: +1 task, one-sided p=0.5, overall INCONCLU
 
 The second family failed numerically: Gemma stores exactly but does not transfer. The external selectors did not transfer the target-best. A candidate repository/agentic benchmark (REPO-COMP-40: 40 tasks, 2 configs, 80 agent runs, 3 B discovery/5 B full header) is designed and pre-registered, but **not run**—it needs an authorized scored run, and we do not report it as evidence.
 
-A late review caught re-introduced CP@1/selection-coverage mislabels and a CP40 status contradiction. We fixed those: CP@1 is a point estimate with a 95% lower bound, Gemma reports selection coverage only, Bloom-512 gets its CP@1, and CP40 is one-sided/INCONCLUSIVE everywhere.
+A late review caught re-introduced CP@1/selection-coverage mislabels and a CP40 status contradiction. We fixed those: CP@1 is a point estimate; 0.612/0.627 is the upper-false-pass sensitivity, not a confidence bound, Gemma reports selection coverage only, Bloom-512 gets its CP@1, and CP40 is one-sided/INCONCLUSIVE everywhere.
 
 ## 7. Reproducibility
 
@@ -86,6 +86,9 @@ This work was built by an 11-agent research team (variance, threshold, proxy gap
 ## Structure notes
 
 This essay borrows the structure of real hackathon winner papers: the MIT LLM Hackathon 1st place write-up (architecture → demo-backward → result; https://samanvya.dev/blog/mit-llm-hackathon-first-place), the Strong Compute ARC AGI2 1st place write-up (what the benchmark is → approach → results; https://words.strongcompute.com/p/how-closedai-won-strong-computes), the Kaggle solution write-up rubric (context → overview → details → sources; https://www.kaggle.com/solution-write-up-documentation), the def/acc Hackathon standard template (abstract → hypothesis → architecture → development path → limitations), the Climate Data Hackathon 1st place write-up (strategy → results → takeaways; https://ai-mission.eu/blog/hackathon-3-nightwalkers/), and the Text-to-Manim 1st place write-up (introduction → problem → results; https://words.strongcompute.com/p/text-to-manim-generating-visual-explanations). This synthesis—hook/TL;DR, problem, approach, demo, results, what didn't work, reproducibility, takeaways, team—is the skeleton above. The six sources share problem → approach → results; the TL;DR, demo, team, and Sources sections are additions, not a claimed intersection.
+
+
+
 
 
 

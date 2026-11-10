@@ -12,7 +12,7 @@ from itertools import combinations
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-EVIDENCE = HERE.parent / "evidence" / "pass-set-header"
+EVIDENCE = HERE.parent / "pass-set-header"
 META = EVIDENCE / "headers_heldout_14x60.json"
 HEADERS = EVIDENCE / "headers_heldout_14x60.bin"
 TASKS = EVIDENCE / "task_ids_heldout_14x60.txt"
@@ -237,3 +237,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

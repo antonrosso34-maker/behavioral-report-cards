@@ -1,6 +1,6 @@
 # Behavioral Report Cards, Not Selectors — V12 Public Evidence
 
-This repository is the **V12 public release (data, evidence, paper)** for the paper **Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary** (the V6 successor to the behavioral-report-card draft). It is a clean subset of the research tree: it contains the frozen data, certificates, analysis outputs, paper drafts/design inputs, and the reproducer/demo scripts needed to verify the claims. It contains **no model weights, no raw model completions, no private/restricted data, and no internal agent notes**.
+This repository is the **V12 public release (data, evidence, paper)** for the paper **Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary** (the V6 successor to the behavioral-report-card draft). It is a clean subset of the research tree: it contains the frozen data, certificates, analysis outputs, paper drafts/design inputs, and the reproducer/demo scripts needed to verify the claims. It contains **no model weights, no raw model completions, no private/restricted data, and no internal agent notes**.
 
 ## Scoped claim
 
@@ -63,6 +63,7 @@ cd ../.. && sha256sum -c SHA256SUMS
 License: to be specified by the author (the model weights are Apache-2.0; this release is the evidence/paper artifact). The model weights are not included; only SHA-256 references. Public benchmark task IDs and pass/fail matrices are included; raw model completions are not. No private or restricted data is included.
 
 **Citation (placeholder):** Project Syntactic, “Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary,” V12 draft, 2026. See `RELEASE_METADATA.md` for the release status; no DOI is claimed yet.
+
 
 
 

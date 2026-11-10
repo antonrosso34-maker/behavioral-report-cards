@@ -72,8 +72,8 @@ Gemma E2B (5 configs: q3_mix, google_qat_q4_0, gp1_qat_requant, udq4_k_xl, udq2_
 
 | Representation | Size/config | Tasks | Pair regret | Union MAE | Top-3 | Best pair union | Selection coverage [95% CI] | CP@1 | Verdict |
 |---|---:|---:|---:|---:|---:|---:|---|---|---|
-| **Exact bitset (14×60)** | **8 B** | 60 | **0.00** | **0.0000** | **1.00** | **41/60** | 1.000 [0.982, 1.000] | **0.6376** | verifies 0.05/0.10 |
-| **Exact bitset (12×80)** | **10 B** | 80 | **0.00** | **0.0000** | **1.00** | **56/80** | 1.000 [0.982, 1.000] | **0.6532** | verifies 0.05/0.10 |
+| **Exact bitset (14×60)** | **8 B** | 60 | **0.00** | **0.0000** | **1.00** | **41/60** | 1.000 by construction | **0.6376** | verifies 0.05/0.10 |
+| **Exact bitset (12×80)** | **10 B** | 80 | **0.00** | **0.0000** | **1.00** | **56/80** | 1.000 by construction | **0.6532** | verifies 0.05/0.10 |
 | MinHash-512 (14×60) | 2,048 B | 60 | 0.00 | 0.0079 | 1.00 | 41.0 mean | 1.000 [0.982, 1.000] | 0.6376 | regret+MAE 100% |
 | MinHash-512 (12×80) | 2,048 B | 80 | 0.045 | 0.0056 | 0.99 | 55.955 mean | 0.965 [0.929, 0.986] | 0.6526 | regret+MAE 96.5% |
 | Bloom-512 (14×60) | 512 bits | 60 | 0.245 | 0.0222 | 0.95 | — | 0.905 [0.856, 0.942] | 0.6338 | regret+MAE 71% |
@@ -102,7 +102,7 @@ Config stability: best-pair union 39.72 [37, 41]/54.84 [52, 56]; top-pair freque
 | **14×60→13×80 (KV8)** | — | **49/80** | **56/80** (13-config) | **7.0** | **0.0579** | **0.0** | — | — | — |
 | **13×80→14×60 (KV8)** | — | **34/60** | **41/60** (13-config target) | **7.0** | **0.0579** | **0.0** | — | — | — |
 
-**Notes.** 39/60 and 41/60 are best-pair unions on different compatible sets, 56/80 the source best-pair. The all-config oracle union is 58/80 and 43/60, so the selected-vs-all-config regret is 10 (48 vs 58) and 9 (34 vs 43); the table's regret is vs the best-pair oracle. Target-oracle point top-3 is 0.0; bootstrap 0.095/0.106, far below 0.90. KV8 adds 0 union; boundary unchanged.
+**Notes.** 39/60 and 41/60 are best-pair unions on different compatible sets, 56/80 the source best-pair. The all-config oracle union is 58/80 and 43/60, so the selected-vs-all-config regret is 10 (48 vs 58) and 9 (34 vs 43); the table's regret is vs the best-pair oracle. Target-oracle point top-3 is 0.0; bootstrap 0.095/0.106, far below 0.90. KV8 adds 0 oracle/best-pair union (+1 selected union); boundary unchanged.
 
 ### 4.4 CP40 40-task panel
 
@@ -146,6 +146,12 @@ Behavioral report cards, not selectors. An 8-byte bitset holds 60 tasks; a 10-by
 - CP@1 certificate: `harness/architect/agents/09_benchmark/CP1_FEASIBILITY.md`; false-pass 18/269 = 6.69% [4.01, 10.37], 21/305 = 6.89% [4.31, 10.33], private 202/202 killed, LB 0.982; exact header CP@1 0.6376/0.6532; raw union 0.683/0.700; selection coverage 1.000 by construction (the 200-seed interval is for sketch comparators).
 - New V6 evidence: `agents/04_routing/GEMMA_SECOND_FAMILY.md`, `V6_KV8_ANALYSIS.md`, `EXTERNAL_SELECTOR_BASELINE.md`; `agents/05_power/TRANSFER_CALIBRATION.md`; `agents/09_benchmark/CP1_PANEL_40_CERTIFICATE.md`; `harness/architect/queue/cp40/CP40_PLAN.md`.
 - References: GPTQ (Frantar et al., arXiv:2210.17323, https://arxiv.org/abs/2210.17323); AWQ (Lin et al., arXiv:2306.00978, https://arxiv.org/abs/2306.00978); SpQR (Dettmers et al., arXiv:2306.03078); AMQ (arXiv:2509.12019, https://arxiv.org/abs/2509.12019); CompressionBench (arXiv:2611.06858, https://arxiv.org/abs/2611.06858); LLM-KICK (arXiv:2310.01382, https://arxiv.org/abs/2310.01382); ACBench (arXiv:2505.19433, https://arxiv.org/abs/2505.19433); HumanEval+ (Liu et al., arXiv:2305.01210); SWE-bench (Jimenez et al., arXiv:2310.06770); Report Cards (Yang et al., arXiv:2409.00844, NeurIPS 2024 SoLaR workshop spotlight); Evaluating Quantized LLMs (Li et al., ICML 2024, PMLR 235:28480-28524, arXiv:2402.18158); pass@1 (Chen et al., arXiv:2107.03374); MinHash (Broder, 1997, "On the resemblance and containment of documents"); Bloom filter (Bloom, 1970, CACM 13(7)); Qwen2.5-Coder (arXiv:2409.12186); Gemma 4 E2B (Google DeepMind, 2025; `MODEL_CARD.md`).
+
+
+
+
+
+
 
 
 

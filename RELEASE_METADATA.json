@@ -1,14 +1,14 @@
 {
   "release": {
     "status": "public release at https://github.com/antonrosso34-maker/behavioral-report-cards (tag v12); source repository private/404 at packaging; public archive and DOI pending",
-    "title": "Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary",
+    "title": "Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary",
     "version": "V12 draft",
     "date": "2026-11-10",
     "authors": "Project Syntactic / architect-predictor team",
     "license": "No license granted yet; author must specify before public release.",
     "repository": "https://github.com/antonrosso34-maker/LLM-intagration",
     "source_evidence_commit": "be038a5bffdceb51af6e4aa09779aee7ec5c6cd3",
-    "bundle_status": "public in the release repository; main 1eeb80d (tag v12)",
+    "bundle_status": "public in the release repository; main b06d2b9 (tag v12)",
     "doi": null,
     "doi_status": "pending; no DOI claimed",
     "archive_target": "user-selected; external archive action",
@@ -31,13 +31,14 @@
       "private or restricted data",
       "internal agent notes"
     ],
-    "citation": "Project Syntactic, “Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary,” V12 draft, 2026.",
+    "citation": "Project Syntactic, “Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary,” V12 draft, 2026.",
     "repository_visibility": "private/404 at packaging; not a public URL",
     "public_url": "https://github.com/antonrosso34-maker/behavioral-report-cards",
     "source_commit_status": "local object; source repo private/404; not a public URL",
     "readiness": "RELEASE_READINESS.md"
   }
 }
+
 
 
 
