@@ -2,7 +2,7 @@ SPDX-License-Identifier: CC-BY-4.0 AND MIT
 
 This release is dual-licensed:
 - The paper, data, evidence and documentation are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/legalcode
-- The scripts (report_card.py, build_manifest.py, cp40_analysis.py, freeze_cp40.py, run_cp40.py) are licensed under the MIT License:
+- The scripts (all Python scripts in the release (report_card.py, build_manifest.py, cp40_analysis.py, freeze_cp40.py, run_cp40.py, audit_demo.py, portfolio_demo.py, transfer_card.py)) are licensed under the MIT License:
 
 MIT License
 
@@ -27,3 +27,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 The model weights at https://huggingface.co/AntonROSSO/qwen2.5-coder-1.5b-mx2-aq6-q3ks are Apache-2.0 under the base Qwen2.5-Coder-1.5B-Instruct license.
+
