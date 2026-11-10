@@ -75,8 +75,7 @@ regenerates the MinHash secondary output. Verify with `sha256sum -c SHA256SUMS` 
 
 ## 6. Missing artifacts
 
-- The **40-task CP@1 panel** task IDs and Merkle root are **not** in this manifest; the panel is
-  a future run and must commit its own split before execution.
+- The **40-task CP@1 panel** was run on 2026-11-09 (see `harness/results/cp40/cp40_analysis.md` and the CP40 certificate); its task IDs and Merkle root are in the CP40 plan/analysis, not this manifest; the remaining 60 MBPP+ stay sealed.
 - No full model SHA-256 is missing for the 14 heldout / 12 fresh configs. The `mx2_*` SHAs were
   computed from the local GGUF files; `q3km_code_kvq8_0_preplus` shares the `q3km_code` weights
   (same full SHA) and differs only by KV cache.

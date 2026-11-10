@@ -21,7 +21,7 @@ The **transfer boundary is negative**: split-half, cross-matrix, the KV8-inclusi
 - `evidence/external-selector/` — external selector baseline (MD, JSON, script).
 - `evidence/kv8/` — KV8-inclusive cross-matrix plan/analysis/split/summaries.
 - `evidence/cp40/` — CP40 20+20 panel plan/split/hashes/analysis/summaries.
-- `paper/` — `PAPER_DRAFT_V6.md` (current), `PAPER_DRAFT_V5.md`, `PAPER_DRAFT_V6_INPUT.md`, `NEXT_PAPER_INPUT.md`, `NEXT_PAPER_BRIEF.md`.
+- `paper/` — `PAPER_DRAFT_V12.md` (current), `ESSAY_DRAFT_V1.md`, `PAPER_DRAFT_V6.md`, `PAPER_DRAFT_V5.md`, `PAPER_DRAFT_V6_INPUT.md`, `NEXT_PAPER_INPUT.md`, `NEXT_PAPER_BRIEF.md`.
 - `RELEASE_METADATA.md` / `RELEASE_METADATA.json` — DOI/release metadata; `RELEASE_READINESS.md` — verification and pending items.
 - `README.md`, `SHA256SUMS`.
 
@@ -38,8 +38,8 @@ cd ../.. && sha256sum -c SHA256SUMS
 
 - Manifest zip (release asset): `pass-set-header-2026-11-09.zip`, SHA-256 `de9951744236499cfdea62efae129b65465c004c9f7e61593c23719edbb948e9`.
 - Manifest `SHA256SUMS` SHA-256: `35b31e8ef0028fd80a3b6e9714d58ad6b70cebb8841c89b796b82060dccdbc73`.
-- Source evidence commit: `be038a5bffdceb51af6e4aa09779aee7ec5c6cd3` (local object). The source repository was **private/404 at packaging**; this is not a public URL.
-- **Provenance status:** the source repo is private/404; the nested manifest's `Git remote: none configured` refers to the bridge worktree. This staged bundle is repository-local; no public URL or DOI is claimed. Public release is pending the author's push/archive action.
+- Source evidence commit: `be038a5bffdceb51af6e4aa09779aee7ec5c6cd3` (local object). The source repository is **private/404** (not a public URL); this repository is the public release at `https://github.com/antonrosso34-maker/behavioral-report-cards`.
+- **Provenance status:** the public release is this repository (`https://github.com/antonrosso34-maker/behavioral-report-cards`, main `461e7eb`); the source repo is private/404; the nested manifest's `Git remote: none configured` refers to the bridge worktree. The DOI is pending.
 - The public bundle hash is in `SHA256SUMS`; the release zip SHA is reported with the release asset.
 
 ## Scope and limitations
@@ -60,6 +60,7 @@ cd ../.. && sha256sum -c SHA256SUMS
 
 ## License and status
 
-No license has been granted by this bundle; the author will specify the license before public release. The model weights are not included; only SHA-256 references. Public benchmark task IDs and pass/fail matrices are included; raw model completions are not. No private or restricted data is included.
+License: to be specified by the author (the model weights are Apache-2.0; this release is the evidence/paper artifact). The model weights are not included; only SHA-256 references. Public benchmark task IDs and pass/fail matrices are included; raw model completions are not. No private or restricted data is included.
 
 **Citation (placeholder):** Project Syntactic, “Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary,” V6 draft, 2026. See `RELEASE_METADATA.md` for the release status; no DOI is claimed yet.
+
