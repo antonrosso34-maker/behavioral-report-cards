@@ -8,7 +8,7 @@
     "license": "No license granted yet; author must specify before public release.",
     "repository": "https://github.com/antonrosso34-maker/LLM-intagration",
     "source_evidence_commit": "be038a5bffdceb51af6e4aa09779aee7ec5c6cd3",
-    "bundle_status": "public in the release repository; main 735db0d",
+    "bundle_status": "public in the release repository; main 69163c9 (tag v12)",
     "doi": null,
     "doi_status": "pending; no DOI claimed",
     "archive_target": "user-selected; external archive action",
@@ -38,3 +38,4 @@
     "readiness": "RELEASE_READINESS.md"
   }
 }
+

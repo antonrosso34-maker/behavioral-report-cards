@@ -1,6 +1,6 @@
 # Release metadata — behavioral-report-cards V6
 
-**Status:** public release at `https://github.com/antonrosso34-maker/behavioral-report-cards` (main `735db0d`); source repository **private/404**; DOI pending.
+**Status:** public release at `https://github.com/antonrosso34-maker/behavioral-report-cards` (main `69163c9` (tag v12)); source repository **private/404**; DOI pending.
 **Title:** Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary
 **Version:** V6 draft (2026-11-10)
 **Authors:** Project Syntactic / architect-predictor team
@@ -8,7 +8,7 @@
 release. Do not treat this bundle as licensed for reuse until then.
 **Repository reference (private/404; not a public URL):** https://github.com/antonrosso34-maker/LLM-intagration
 **Source evidence commit (local object):** `be038a5bffdceb51af6e4aa09779aee7ec5c6cd3`; source repo private/404; not a public URL
-**Bundle status:** committed in the public release repository (main `735db0d`); DOI pending.
+**Bundle status:** committed in the public release repository (main `69163c9` (tag v12)); DOI pending.
 **DOI:** pending; no DOI is claimed.
 **Archive target:** user-selected (institutional repository, Zenodo, OSF, or equivalent); the
 external archive action belongs to the user.
@@ -44,6 +44,7 @@ included. Model files are referenced by SHA-256 only.
 
 Project Syntactic, “Store the Pass Set, Not the Selector: Exact Behavioral Headers and the
 Transfer Boundary,” V6 draft, 2026.
+
 
 
 
