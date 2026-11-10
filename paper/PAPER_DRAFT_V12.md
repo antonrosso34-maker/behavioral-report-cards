@@ -1,10 +1,10 @@
 # Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary
 
-**Status:** V12 draft for red-team. The report card is exact for the observed pass set; the transfer boundary is negative; no model-quality/SOTA claim. Analysis/design; no scored run in this draft.
+**Status:** V12 draft for red-team. The report card is exact for the observed pass set; the transfer boundary is negative; no model-quality/SOTA claim. The CP40 panel was executed and is reported as inconclusive; no new scored run was made for the header.
 
 ## Abstract
 
-For a fixed evaluation matrix, quantization configuration selection is usually driven by weight error or perplexity, but deployment is judged by which tasks a configuration passes. The pass set is small enough to store exactly: 60 tasks in 8 bytes, 80 in 10. We turn it into a behavioral report card: within the observed matrix, pair and union queries are exact (0.00 regret, 0.0000 MAE, 1.00 top-3; CP@1 0.6376 (14×60) / 0.6532 (12×80), point; the 0.612/0.627 values are upper-false-pass sensitivity, not a joint interval; selection coverage 1.000 by construction (the 200-seed interval is for sketch comparators); raw union 0.683/0.700). The best pairs are 41/60 and 56/80; the report card shows a complement passing 31/60 alone contributes only 5 unique tasks, so the pair gain is 5, not 31.
+Quantization selection is usually driven by weight error or perplexity, but deployment is judged by which tasks a configuration passes. The pass set stores exactly in 8 bytes for 60 tasks, 10 for 80. Within the observed matrix, pair and union queries are exact (0.00 regret, 0.0000 MAE, 1.00 top-3; CP@1 0.6376/0.6532, point; 0.612/0.627 is upper-false-pass sensitivity; selection coverage 1.000 by construction). The best pairs are 41/60 and 56/80; a 31/60 complement contributes only 5 unique tasks, so the gain is 5, not 31.
 
 The exactness does not transfer: split-half 1.91/1.70 regret, 3.00/3.47 MAE, 0.208/0.079 top-3; cross-matrix 48/80 vs 56/80 and 34/60 vs 39/60 common-config; KV8-inclusive 13×80 adds 0 union; the CP40 panel is inconclusive (union 18/40 vs 17/40, p=0.5; MBPP subgroup failure); Gemma storage replicates exactly but transfer does not. External sketches can beat the exact header on some out-of-sample metrics, but no selector transfers the target-best. The report card is the contribution; the exact header is not a selector. The claim is exact storage/audit for the observed matrix and an auditable transfer boundary, not near-oracle out-of-sample selection.
 
@@ -60,7 +60,7 @@ The exact representation is a bitset: **60 tasks = 8 bytes** (4 padding bits), *
 
 ### 3.5 Use case: behavioral report card
 
-For a fixed evaluation matrix, the header is a behavioral report card: the 8/10-byte bitset is the pass set, so audits and pair/union queries are exact and cheap. On the 14×60 matrix, the best pair is `q3km_code_kvq8_0_preplus + mx_q4km_code_attnq_q5k_plus` at 41/60; the complement passes 31/60 alone but only 5 of its passes are outside the baseline, so the pair gain is **5, not 31**; a standalone rank overstates it by 26 tasks. The report card answers all 91 pairwise queries from the stored 8-byte headers without re-running the 14 configurations (840 generations); the local runtime is a local observation (~1 s; no timing artifact is released) (`report_card.py`). The header is not a selector; for a new matrix, the certificate says selection is not transferable. A proposed next test (not evidence) is a repository/agentic benchmark (REPO-COMP-40: 40 repo tasks, 20 discovery + 20 confirmation, 2 configs, 80 agent runs; 3 B discovery / 5 B full header; pair gain ≥2; public-test false-accept ≤0.10).
+For a fixed evaluation matrix, the header is a behavioral report card: the 8/10-byte bitset is the pass set, so audits and pair/union queries are exact and cheap. On the 14×60 matrix, the best pair is `q3km_code_kvq8_0_preplus + mx_q4km_code_attnq_q5k_plus` at 41/60; the complement passes 31/60 alone but only 5 of its passes are outside the baseline, so the pair gain is **5, not 31**; a standalone rank overstates it by 26 tasks. The report card answers all 91 pairwise queries from the stored 8-byte headers without re-running the 14 configurations (840 generations); the ~1 s runtime is a local observation, no timing artifact (`report_card.py`). The header is not a selector; for a new matrix, selection is not transferable. A proposed next test (not evidence): REPO-COMP-40 (40 repo tasks, 20+20 split, 2 configs, 80 runs; 3 B/5 B header; gain ≥2; false-accept ≤0.10).
 
 ### 3.6 Second family
 
@@ -106,7 +106,7 @@ Config stability: best-pair union 39.72 [37, 41]/54.84 [52, 56]; top-pair freque
 
 ### 4.4 CP40 40-task panel
 
-The panel uses 20 HumanEval+ + 20 MBPP+ unused (SHA `14161ce8…`); the remaining 60 MBPP+ stay sealed. Anchor 17/40, complement 15/40, union 18/40 (**+1**); b=1, c=0 (c=0 structural); one-sided exact McNemar p=0.5 (two-sided 1.0); CI [0,3] (seed 20261109); **INCONCLUSIVE**. HumanEval +1; MBPP 0 gain, **FAILURE**. CP@1 0.4199 global / 0.4190 nine; one timeout counted as failure. The panel is a screen.
+The panel: 20 HumanEval+ + 20 MBPP+ unused (SHA `14161ce8…`); 60 MBPP+ sealed. Anchor 17/40, complement 15/40, union 18/40 (**+1**); b=1, c=0 structural; one-sided McNemar p=0.5; CI [0,3] (seed 20261109); **INCONCLUSIVE**. HumanEval +1; MBPP 0 gain, **FAILURE**. CP@1 0.4199/0.4190; one timeout counted as failure. A screen.
 
 ### 4.5 Gemma second family
 
@@ -114,11 +114,11 @@ Gemma 4 E2B, 5 configs (he_dev 40, he_heldout 60, MBPP 60): exact headers 5 B/40
 
 ### 4.6 External selector
 
-Within-sample, the exact header is unbeatable; MinHash-512 (2,048 B) ties the 14×60 selected-pair count/regret/top-3, not exactness (union MAE 0.0079), and is 256× larger. On the external-selector split (seed 20261109), the exact header is 1.70/3.45/0.080/0.047 and MinHash 1.45/3.26/0.150/0.120; Table 4.2 uses the full split. Random projection beats it on 12×80→14×60 regret/MAE (4 vs 5) but not top-3/selection coverage (no CP@1 certificate); L1 worse; no selector transfers the target-best. The exact header is a storage/audit artifact.
+Within-sample the exact header is unbeatable; MinHash-512 (2,048 B) ties the 14×60 selected-pair count/regret/top-3, not exactness (union MAE 0.0079), at 256× the size. On the external split (seed 20261109) the exact header is 1.70/3.45/0.080/0.047 and MinHash 1.45/3.26/0.150/0.120; Table 4.2 uses the full split. Random projection wins 12×80→14×60 regret/MAE (4 vs 5) but not top-3/selection coverage; no selector transfers the target-best. The header is a storage/audit artifact.
 
 ### 4.7 What the result says
 
-The result is a **report-card** claim: exact within the observed matrix, not out-of-sample; the boundary tables/certificate detect the rest. MinHash is the within-sample fallback; Bloom/random projection fail.
+The claim is a **report card**: exact within the observed matrix, not out-of-sample; the boundary tables/certificate record the rest. MinHash is the within-sample fallback; Bloom/random projection fail.
 
 ## 5. Negative results as motivation
 
@@ -131,7 +131,7 @@ The V2 negative result motivates the storage question; the exact header makes it
 
 ## 7. Limitations
 
-The exactness is for the observed pass set only. Split-half 1.91/1.70 regret, 3.00/3.47 MAE, 0.208/0.079 top-3; cross-matrix/KV8/Gemma fail; CP40 inconclusive (MBPP subgroup flat); 8/10 B are per-matrix sizes. MinHash 100%/96.5% (top-3 1.00/0.99, coverage 1.000/0.965, CP@1 0.6376/0.6526); Bloom 71%/47%. The artifacts are public (GitHub release and Hugging Face model); DOI pending.
+The exactness is for the observed pass set only. Split-half 1.91/1.70 regret, 3.00/3.47 MAE, 0.208/0.079 top-3; cross-matrix/KV8/Gemma fail; CP40 inconclusive (MBPP flat); 8/10 B are per-matrix sizes. MinHash 100%/96.5% (top-3 1.00/0.99, coverage 1.000/0.965, CP@1 0.6376/0.6526); Bloom 71%/47%. Artifacts are public; DOI pending.
 
 ## 8. Conclusion
 
@@ -140,12 +140,21 @@ Behavioral report cards, not selectors. An 8-byte bitset holds 60 tasks; a 10-by
 ## Artifacts and references
 
 - Prior negative result: `paper/PAPER_DRAFT_V2.md`, private external critique (not released).
-- Evidence: the manifest is `data/pass-set-header/` (**16 hashed evidence files + `SHA256SUMS` = 17 files**; manifest zip `de995174…`, manifest `SHA256SUMS` `35b31e8e…`); the public release bundle is the 83-file release tree (`SHA256SUMS` at the repo root); the release repo has the V12/essay (`behavioral-report-cards`, main (tag v12)). **Provenance: the source repository is private/404: `https://github.com/antonrosso34-maker/LLM-intagration` (main `a3bb980`, branch `team/architect-predictor` `be038a5…`); the public release is `https://github.com/antonrosso34-maker/behavioral-report-cards` (main (tag v12), data/evidence/paper); the Hugging Face model is `https://huggingface.co/AntonROSSO/qwen2.5-coder-1.5b-mx2-aq6-q3ks` (Apache-2.0, 750.3 MiB, SHA256 `7fe6c14d…`); the staged bundle is the copy above; no DOI is claimed.** 7 claims, no orphans; exact headers 8 B/60 and 10 B/80, lossless; MinHash 2,048 B (64-byte retracted); best pair 41/60 heldout, 56/80 fresh; Rule certificate EXACT-HEADER-01; task routing at chance (LOTO AUC 0.5612).
+- Evidence: the manifest is `data/pass-set-header/` (**16 hashed evidence files + `SHA256SUMS` = 17 files**; manifest zip `de995174…`, manifest `SHA256SUMS` `35b31e8e…`); the public release bundle is the 83-file release tree (`SHA256SUMS` at the repo root); the release repo has the V12/essay (`behavioral-report-cards`, main `9cac63d` (tag v12); release `SHA256SUMS` `8d3eaa3a…`). **Provenance: the source repository is private/404: `https://github.com/antonrosso34-maker/LLM-intagration` (main `a3bb980`, branch `team/architect-predictor` `be038a5…`); the public release is `https://github.com/antonrosso34-maker/behavioral-report-cards` (main `9cac63d` (tag v12), data/evidence/paper); the Hugging Face model is `https://huggingface.co/AntonROSSO/qwen2.5-coder-1.5b-mx2-aq6-q3ks` (Apache-2.0; 786,749,856 bytes = 750.3 MiB; the HF card says 750.3 MB decimal); the staged bundle is the copy above; no DOI is claimed.** 7 claims, no orphans; exact headers 8 B/60 and 10 B/80, lossless; MinHash 2,048 B (64-byte retracted); best pair 41/60 heldout, 56/80 fresh; Rule certificate EXACT-HEADER-01; task routing at chance (LOTO AUC 0.5612).
 - Rule certificate: EXACT-HEADER-PAIR-01, \(\alpha = 0.05\), seed 20261109, \(B = 2000\), SHA-256 407f9587c57c99d7a68b90fc741b0ac11559817ce0642df19bc03f4fbbcd8273.
 - Cross-matrix certificate: EXACT-HEADER-CROSS-01, \(\alpha = 0.05\), seed 20261109, \(B = 2000\), SHA-256 6c045220bf7b4a73cafd363ecbdec8b046255bab0e5ebfa5c7ae6a86b551f320.
 - CP@1 certificate: `evidence/cp1/CP1_FEASIBILITY.md`; false-pass 18/269 = 6.69% [4.01, 10.37], 21/305 = 6.89% [4.31, 10.33], private 202/202 killed, LB 0.982; exact header CP@1 0.6376/0.6532; raw union 0.683/0.700; selection coverage 1.000 by construction (the 200-seed interval is for sketch comparators).
 - New V6 evidence: `evidence/gemma-second-family/GEMMA_SECOND_FAMILY.md`, `evidence/kv8/V6_KV8_ANALYSIS.md`, `evidence/external-selector/EXTERNAL_SELECTOR_BASELINE.md`; `evidence/transfer-calibration/TRANSFER_CALIBRATION.md`; `evidence/cp40/cp40_analysis.md (completed panel)`; `evidence/cp40/CP40_PLAN.md`.
-- References: GPTQ (Frantar et al., arXiv:2210.17323, https://arxiv.org/abs/2210.17323); AWQ (Lin et al., arXiv:2306.00978, https://arxiv.org/abs/2306.00978); SpQR (Dettmers et al., arXiv:2306.03078); AMQ (arXiv:2509.12019, https://arxiv.org/abs/2509.12019); CompressionBench (arXiv:2611.06858, https://arxiv.org/abs/2611.06858); LLM-KICK (arXiv:2310.01382, https://arxiv.org/abs/2310.01382); ACBench (arXiv:2505.19433, https://arxiv.org/abs/2505.19433); HumanEval+ (Liu et al., arXiv:2305.01210); SWE-bench (Jimenez et al., arXiv:2310.06770); Report Cards (Yang et al., arXiv:2409.00844, NeurIPS 2024 SoLaR workshop spotlight); Evaluating Quantized LLMs (Li et al., ICML 2024, PMLR 235:28480-28524, arXiv:2402.18158); pass@1 (Chen et al., arXiv:2107.03374); MinHash (Broder, 1997, "On the resemblance and containment of documents"); Bloom filter (Bloom, 1970, CACM 13(7)); Qwen2.5-Coder (arXiv:2409.12186); Gemma 4 E2B (Google DeepMind, 2025; `MODEL_CARD.md`).
+- References: GPTQ (Frantar et al., 2022, arXiv:2210.17323); AWQ (Lin et al., 2023, arXiv:2306.00978); SpQR (Dettmers et al., 2023, arXiv:2306.03078); AMQ (2025, arXiv:2509.12019); CompressionBench (2026, arXiv:2611.06858); LLM-KICK (2023, arXiv:2310.01382); ACBench (2025, arXiv:2505.19433); HumanEval+ (Liu et al., 2023, arXiv:2305.01210); SWE-bench (Jimenez et al., 2023, arXiv:2310.06770); Report Cards (Yang et al., NeurIPS 2024 SoLaR, arXiv:2409.00844); Evaluating Quantized LLMs (Li et al., ICML 2024, PMLR 235:28480-28524); pass@1 (Chen et al., 2021, arXiv:2107.03374); MinHash (Broder, 1997); Bloom filter (Bloom, 1970, CACM 13(7)); Qwen2.5-Coder (2024, arXiv:2409.12186); Gemma 4 E2B (Google DeepMind, 2026, arXiv:2607.02770).
+
+
+
+
+
+
+
+
+
 
 
 

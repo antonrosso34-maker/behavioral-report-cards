@@ -18,8 +18,9 @@ archive and DOI pending. Public URL: https://github.com/antonrosso34-maker/behav
   configured` refers to the bridge worktree; it does not contradict the private/404 source
   repository status.
 
-**One-line verdict:** Release-ready staging; V12 paper included; 17/17 manifest; DOI/license: CC BY 4.0 + MIT (set)/
-public copy pending.
+**One-line verdict:** Public release live (tag v12); V12 paper included; 17/17 manifest; DOI/license: CC BY 4.0 + MIT (set)/
+public release live (tag v12).
+
 
 
 

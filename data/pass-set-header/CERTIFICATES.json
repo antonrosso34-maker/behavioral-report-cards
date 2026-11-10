@@ -37,7 +37,7 @@
       }
     },
     "decision": "SUCCESS",
-    "replay": "python harness/architect/queue/evidence/pass-set-header/build_manifest.py"
+    "replay": "python data/pass-set-header/build_manifest.py"
   },
   "task_certificate": {
     "heldout": {
@@ -136,3 +136,4 @@
     "note": "The exact header is an encoding result over existing pass/fail cells, not a new evaluation."
   }
 }
+

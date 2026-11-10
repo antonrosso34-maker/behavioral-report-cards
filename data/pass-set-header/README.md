@@ -1,8 +1,8 @@
 # Pass-set header evidence (repository-backed)
 
-**Access status:** public release at https://github.com/antonrosso34-maker/behavioral-report-cards (tag v12). No URL or DOI is claimed.
+**Access status:** public release at https://github.com/antonrosso34-maker/behavioral-report-cards (tag v12). Public release: https://github.com/antonrosso34-maker/behavioral-report-cards (tag v12); DOI pending.
 **Git remote:** none configured (`git remote -v` empty)
-**HEAD:** `11b7abbf59e03c3cdc26e4e008c3e3ea7b218668`
+**HEAD:** `tag v12 (9cac63d)`
 **Manifest commit status:** committed in the public release (tag v12)
 **SHA256SUMS SHA-256:** `35b31e8ef0028fd80a3b6e9714d58ad6b70cebb8841c89b796b82060dccdbc73`
 **Bundle:** `pass-set-header-2026-11-09.zip`
@@ -21,8 +21,9 @@ newline hashes match the files. This changed `SHA256SUMS` and the bundle. The ea
 **Demo.** `harness/architect/queue/report-card-demo/` contains `REPORT_CARD_DEMO.md`,
 `report_card.py`, `report_card.json`, and `REPORT_CARD.md`.
 
-This directory is a repository-backed evidence manifest, not yet a public artifact. The
+This directory is a repository-backed evidence manifest, public release (tag v12). The
 manifest records exact pass-set headers for the existing 14×60 and 12×80 matrices, plus the
 MinHash-512 secondary approximation (2,048 B as uint32; the 64-byte claim is retracted). No
 scored run, server, lock, GPU, new session, or commit was used to build it.
+
 
