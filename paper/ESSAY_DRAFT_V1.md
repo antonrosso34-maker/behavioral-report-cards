@@ -18,7 +18,7 @@ On top of the bitset we built three things:
 
 - a **report card** that answers all 91 pair/union queries for the 14×60 matrix from the stored 8-byte headers, without re-running the 14 configurations (840 generations), without model calls;
 - a **certificate layer** (Rule CI, CP@1, exact-pair and cross-matrix certificates) that records what the header does and does not prove;
-- a **public bundle**: manifest 17/17, staged bundle 79/79, SHA256SUMS, and the release repo `behavioral-report-cards`;
+- a **public bundle**: manifest 17/17, release 83 files, SHA256SUMS, and the release repo `behavioral-report-cards`;
 - a **750 MB Hugging Face candidate**: `AntonROSSO/qwen2.5-coder-1.5b-mx2-aq6-q3ks` (Apache-2.0; SHA256 `7fe6c14d…`).
 
 The key demo number is not the exactness. It is the complement: a configuration that passes 31/60 alone contributes only **5** unique tasks outside the anchor, so the pair gain is 5, not 31. A standalone ranking overstates its contribution by 26 tasks.
@@ -86,6 +86,7 @@ This work was built by an 11-agent research team (variance, threshold, proxy gap
 ## Structure notes
 
 This essay borrows the structure of real hackathon winner papers: the MIT LLM Hackathon 1st place write-up (architecture → demo-backward → result; https://samanvya.dev/blog/mit-llm-hackathon-first-place), the Strong Compute ARC AGI2 1st place write-up (what the benchmark is → approach → results; https://words.strongcompute.com/p/how-closedai-won-strong-computes), the Kaggle solution write-up rubric (context → overview → details → sources; https://www.kaggle.com/solution-write-up-documentation), the def/acc Hackathon standard template (abstract → hypothesis → architecture → development path → limitations), the Climate Data Hackathon 1st place write-up (strategy → results → takeaways; https://ai-mission.eu/blog/hackathon-3-nightwalkers/), and the Text-to-Manim 1st place write-up (introduction → problem → results; https://words.strongcompute.com/p/text-to-manim-generating-visual-explanations). This synthesis—hook/TL;DR, problem, approach, demo, results, what didn't work, reproducibility, takeaways, team—is the skeleton above. The six sources share problem → approach → results; the TL;DR, demo, team, and Sources sections are additions, not a claimed intersection.
+
 
 
 
