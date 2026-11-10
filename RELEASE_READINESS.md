@@ -1,9 +1,9 @@
 # Release readiness — V12 bundle
 
-**Status:** public release at https://github.com/antonrosso34-maker/behavioral-report-cards (main 236d4de); source repository **private/404 at packaging**; public
+**Status:** public release at https://github.com/antonrosso34-maker/behavioral-report-cards (main 1eeb80d); source repository **private/404 at packaging**; public
 archive and DOI pending. Public URL: https://github.com/antonrosso34-maker/behavioral-report-cards or DOI is claimed.
 
-- **V6 paper:** `paper/PAPER_DRAFT_V6.md` present.
+- **V12 paper:** `paper/PAPER_DRAFT_V6.md` present.
 - **Manifest:** `data/pass-set-header/SHA256SUMS` has 16 hashed evidence files; with
   `SHA256SUMS` itself the manifest is **17/17**. `README.md`, `PUBLISH.md`, and `MANIFEST.md`
   are metadata and excluded from the hash list.
@@ -18,7 +18,8 @@ archive and DOI pending. Public URL: https://github.com/antonrosso34-maker/behav
   configured` refers to the bridge worktree; it does not contradict the private/404 source
   repository status.
 
-**One-line verdict:** Release-ready staging; V6 paper included; 17/17 manifest; DOI/license/
+**One-line verdict:** Release-ready staging; V12 paper included; 17/17 manifest; DOI/license/
 public copy pending.
+
 
 

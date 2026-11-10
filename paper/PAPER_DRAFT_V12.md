@@ -55,7 +55,7 @@ The exact representation is a bitset: **60 tasks = 8 bytes** (4 padding bits), *
 - **Probe passport.** Per-probe identity and execution record.
 - **claim.cert.** Claim text, scope, estimand, point estimate, 95% CI, sign convention, evidence pointers, verifier, expiry.
 - **Rule CI.** Bootstrap CI over tasks and configurations for the selection rule.
-- **CP@1.** Certified pass@1 point estimate: the false-pass-adjusted value \(\mathrm{CP@1}=(1/N)\sum_i y_i s_i\) (0.9331 multiplier), with a 95% lower bound 0.612/0.627 (0.8963 multiplier) and the global certificate. It is within-sample/matrix-level, not conformal, not out-of-sample. Selection coverage (top-1 pair = true best) is 1.000 by construction (the 200-seed interval is for sketch comparators), separate from CP@1. **In this paper every table labels the two separately; selection coverage is never called CP@1, including the external-selector tables.**
+- **CP@1.** Certified pass@1 point estimate: the false-pass-adjusted value \(\mathrm{CP@1}=(1/N)\sum_i y_i s_i\) (0.9331 multiplier), with 0.612/0.627 as upper-false-pass sensitivity (0.8963 multiplier) and the global certificate. It is within-sample/matrix-level, not conformal, not out-of-sample. Selection coverage (top-1 pair = true best) is 1.000 by construction (the 200-seed interval is for sketch comparators), separate from CP@1. **In this paper every table labels the two separately; selection coverage is never called CP@1, including the external-selector tables.**
 - **Rule certificates.** EXACT-HEADER-PAIR-01 and EXACT-HEADER-CROSS-01 bind the exactness and the split-half/cross-matrix boundaries.
 
 ### 3.5 Use case: behavioral report card
@@ -146,6 +146,7 @@ Behavioral report cards, not selectors. An 8-byte bitset holds 60 tasks; a 10-by
 - CP@1 certificate: `harness/architect/agents/09_benchmark/CP1_FEASIBILITY.md`; false-pass 18/269 = 6.69% [4.01, 10.37], 21/305 = 6.89% [4.31, 10.33], private 202/202 killed, LB 0.982; exact header CP@1 0.6376/0.6532; raw union 0.683/0.700; selection coverage 1.000 by construction (the 200-seed interval is for sketch comparators).
 - New V6 evidence: `agents/04_routing/GEMMA_SECOND_FAMILY.md`, `V6_KV8_ANALYSIS.md`, `EXTERNAL_SELECTOR_BASELINE.md`; `agents/05_power/TRANSFER_CALIBRATION.md`; `agents/09_benchmark/CP1_PANEL_40_CERTIFICATE.md`; `harness/architect/queue/cp40/CP40_PLAN.md`.
 - References: GPTQ (Frantar et al., arXiv:2210.17323, https://arxiv.org/abs/2210.17323); AWQ (Lin et al., arXiv:2306.00978, https://arxiv.org/abs/2306.00978); SpQR (Dettmers et al., arXiv:2306.03078); AMQ (arXiv:2509.12019, https://arxiv.org/abs/2509.12019); CompressionBench (arXiv:2611.06858, https://arxiv.org/abs/2611.06858); LLM-KICK (arXiv:2310.01382, https://arxiv.org/abs/2310.01382); ACBench (arXiv:2505.19433, https://arxiv.org/abs/2505.19433); HumanEval+ (Liu et al., arXiv:2305.01210); SWE-bench (Jimenez et al., arXiv:2310.06770); Report Cards (Yang et al., arXiv:2409.00844, NeurIPS 2024 SoLaR workshop spotlight); Evaluating Quantized LLMs (Li et al., ICML 2024, PMLR 235:28480-28524, arXiv:2402.18158); pass@1 (Chen et al., arXiv:2107.03374); MinHash (Broder, 1997, "On the resemblance and containment of documents"); Bloom filter (Bloom, 1970, CACM 13(7)); Qwen2.5-Coder (arXiv:2409.12186); Gemma 4 E2B (Google DeepMind, 2025; `MODEL_CARD.md`).
+
 
 
 

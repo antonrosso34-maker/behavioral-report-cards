@@ -19,7 +19,7 @@ The learned selector uses only public, pre-run task features: dataset (HumanEval
 
 ## 2. Within-sample
 
-| matrix | selector | regret | union MAE | top-3 | CP@1 |
+| matrix | selector | regret | union MAE | top-3 | selection coverage |
 |---|---|---:|---:|---:|---:|
 | 14×60 | **exact header (8 B)** | **0.00** | **0.0000** | **1.00** | **1.000** |
 | 14×60 | MinHash-512 (2,048 B) | 0.00 | 0.0079 | 1.00 | 1.000 |
@@ -38,7 +38,7 @@ The learned selector uses only public, pre-run task features: dataset (HumanEval
 
 Two hundred random 50/50 splits; select on one half, evaluate on the other. Regret and MAE are in tasks; MAE rate is tasks / test size. The exact header and sketches select by their training-half union estimate; the learned selector predicts per-task pass probabilities and selects the pair with the highest predicted union.
 
-| matrix | selector | regret | MAE tasks (rate) | top-3 | CP@1 |
+| matrix | selector | regret | MAE tasks (rate) | top-3 | selection coverage |
 |---|---|---:|---:|---:|---:|
 | 14×60 | exact header | **1.90** | 3.06 (0.1019) | **0.204** | **0.000** |
 | 14×60 | MinHash-512 | 2.10 | 3.08 (0.1028) | 0.185 | 0.005 |
@@ -51,11 +51,11 @@ Two hundred random 50/50 splits; select on one half, evaluate on the other. Regr
 | 12×80 | random projection | 1.49 | 3.97 (0.0992) | 0.220 | 0.160 |
 | 12×80 | learned L1 | 3.04 | 11.44 (0.2859) | 0.075 | 0.035 |
 
-**A selector beats the exact header on the 12×80 split-half.** MinHash-512 has lower regret (1.45 vs 1.70), lower MAE (3.26 vs 3.45 tasks; 0.0814 vs 0.0863), higher top-3 (0.150 vs 0.080), and higher CP@1 (0.120 vs 0.047). The exact header's training-half union selection overfits the 30-task half; the sketch's noise regularizes it. The random projection also beats the exact header on regret/top-3/CP@1 for 12×80 but has worse MAE (3.97 vs 3.45). On the 14×60 split-half, the exact header is best on regret and top-3; CP@1 is 0.000 for the exact header and Bloom, 0.005 for MinHash. MinHash/Bloom have slightly higher regret and similar MAE. The learned selector is worse than the exact header and the sketches on both matrices.
+**A selector beats the exact header on the 12×80 split-half.** MinHash-512 has lower regret (1.45 vs 1.70), lower MAE (3.26 vs 3.45 tasks; 0.0814 vs 0.0863), higher top-3 (0.150 vs 0.080), and higher selection coverage (0.120 vs 0.047). The exact header's training-half union selection overfits the 30-task half; the sketch's noise regularizes it. The random projection also beats the exact header on regret/top-3/selection coverage for 12×80 but has worse MAE (3.97 vs 3.45). On the 14×60 split-half, the exact header is best on regret and top-3; selection coverage is 0.000 for the exact header and Bloom, 0.005 for MinHash. MinHash/Bloom have slightly higher regret and similar MAE. The learned selector is worse than the exact header and the sketches on both matrices.
 
 ## 4. Cross-matrix (12 common configs)
 
-| direction | selector | regret | MAE rate (tasks) | top-3 | CP@1 |
+| direction | selector | regret | MAE rate (tasks) | top-3 | selection coverage |
 |---|---|---:|---:|---:|---:|
 | 14×60→12×80 | exact header | 8 | 0.0630 (5.04) | 0 | 0 |
 | 14×60→12×80 | MinHash-512 | 8 | 0.0617 (4.93) | 0 | 0 |
@@ -68,17 +68,17 @@ Two hundred random 50/50 splits; select on one half, evaluate on the other. Regr
 | 12×80→14×60 | random projection | **4** | **0.0323 (1.94)** | 0 | 0 |
 | 12×80→14×60 | learned L1 | 7 | 0.3350 (20.10) | 0 | 0 |
 
-**No selector changes the cross-matrix boundary.** The target-best pair is never in the predicted top-3 and is never selected (top-3 0, CP@1 0) for every selector and both directions. The random projection reduces regret on 12×80→14×60 (4 vs 5) and MAE (0.0323 vs 0.0630), but it does not find the target-best pair; it also has worse MAE on 14×60→12×80 (0.1134 vs 0.0630). MinHash-512 and Bloom-512 slightly reduce MAE but not regret/top-3/CP@1. The learned selector is worse on both directions (regret 7/7, MAE 0.2521/0.3350).
+**No selector changes the cross-matrix boundary.** The target-best pair is never in the predicted top-3 and is never selected (top-3 0, selection coverage 0) for every selector and both directions. The random projection reduces regret on 12×80→14×60 (4 vs 5) and MAE (0.0323 vs 0.0630), but it does not find the target-best pair; it also has worse MAE on 14×60→12×80 (0.1134 vs 0.0630). MinHash-512 and Bloom-512 slightly reduce MAE but not regret/top-3/selection coverage. The learned selector is worse on both directions (regret 7/7, MAE 0.2521/0.3350).
 
 ## 5. Verdict
 
-**Within-sample, the exact header is unbeatable: 0.00 regret, 0.0000 MAE, 1.00 top-3, CP@1 1.000 at 8/10 B. No selector beats it or ties it except MinHash-512 at 2,048 B, which ties the 14×60 exactness but is 256× larger.**
+**Within-sample, the exact header is unbeatable: 0.00 regret, 0.0000 MAE, 1.00 top-3, selection coverage 1.000 at 8/10 B. No selector beats it or ties it except MinHash-512 at 2,048 B, which ties the 14×60 exactness but is 256× larger.**
 
-**Out-of-sample, the boundary is not absolute.** MinHash-512 beats the exact header on the 12×80 split-half on all four metrics (regret 1.45 vs 1.70; MAE 3.26 vs 3.45 tasks; top-3 0.150 vs 0.080; CP@1 0.120 vs 0.047). The random projection at matched 8/10 B beats the exact header on 12×80→14×60 regret/MAE (4 vs 5; 0.0323 vs 0.0630) but not top-3/CP@1. The exact header remains best on the 14×60 split-half on regret and top-3 (CP@1 is 0.000 for the exact header and Bloom, 0.005 for MinHash), and the learned selector is worse than the exact header everywhere.
+**Out-of-sample, the boundary is not absolute.** MinHash-512 beats the exact header on the 12×80 split-half on all four metrics (regret 1.45 vs 1.70; MAE 3.26 vs 3.45 tasks; top-3 0.150 vs 0.080; selection coverage 0.120 vs 0.047). The random projection at matched 8/10 B beats the exact header on 12×80→14×60 regret/MAE (4 vs 5; 0.0323 vs 0.0630) but not top-3/selection coverage. The exact header remains best on the 14×60 split-half on regret and top-3 (selection coverage is 0.000 for the exact header and Bloom, 0.005 for MinHash), and the learned selector is worse than the exact header everywhere.
 
 **The V6 cross-matrix conclusion is unchanged:** no selector selects the target-best pair or puts it in the top-3 in either direction. The exact header's exactness is a within-sample storage property; the transfer boundary survives the external baselines. The only boundary change is the 12×80 split-half, where MinHash-512's 2 KB sketch regularizes the training-half overfit and beats the 8/10 B exact header; this is a quantitative out-of-sample nuance, not a cross-matrix rescue.
 
-**Top number:** **MinHash-512 beats the exact header on the 12×80 split-half: regret 1.45 vs 1.70, MAE 3.26 vs 3.45 tasks (0.0814 vs 0.0863), top-3 0.150 vs 0.080, CP@1 0.120 vs 0.047; but no selector beats the exact header within-sample (0/0/1/1) or changes the cross-matrix target-best failure (all selectors top-3/CP@1 0/0).**
+**Top number:** **MinHash-512 beats the exact header on the 12×80 split-half: regret 1.45 vs 1.70, MAE 3.26 vs 3.45 tasks (0.0814 vs 0.0863), top-3 0.150 vs 0.080, selection coverage 0.120 vs 0.047; but no selector beats the exact header within-sample (0/0/1/1) or changes the cross-matrix target-best failure (all selectors top-3/selection coverage 0/0).**
 
 ## 6. Caveats
 
@@ -91,3 +91,4 @@ Two hundred random 50/50 splits; select on one half, evaluate on the other. Regr
 ## 7. Reproduction
 
 `external_selector.py` reads the 14×60 and 12×80 matrices, builds the 14 public features, fits the L1 logistic per configuration, and writes `external_selector_output.json` / `external_selector_output.txt`. The exact-header and sketch within-sample numbers are from `exact_header_output.json`; the split-half and cross-matrix sketch numbers are from the same script's out-of-sample extension.
+
