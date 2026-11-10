@@ -8,7 +8,7 @@
     "license": "No license granted yet; author must specify before public release.",
     "repository": "https://github.com/antonrosso34-maker/LLM-intagration",
     "source_evidence_commit": "be038a5bffdceb51af6e4aa09779aee7ec5c6cd3",
-    "bundle_status": "working-tree staging copy; not committed",
+    "bundle_status": "public in the release repository; main 735db0d",
     "doi": null,
     "doi_status": "pending; no DOI claimed",
     "archive_target": "user-selected; external archive action",
@@ -33,7 +33,7 @@
     ],
     "citation": "Project Syntactic, “Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary,” V6 draft, 2026.",
     "repository_visibility": "private/404 at packaging; not a public URL",
-    "public_url": null,
+    "public_url": "https://github.com/antonrosso34-maker/behavioral-report-cards",
     "source_commit_status": "local object; source repo private/404; not a public URL",
     "readiness": "RELEASE_READINESS.md"
   }

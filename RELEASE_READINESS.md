@@ -1,7 +1,7 @@
 # Release readiness — V6 bundle
 
-**Status:** repository-local staging; source repository **private/404 at packaging**; public
-archive and DOI pending. No public URL or DOI is claimed.
+**Status:** public release at https://github.com/antonrosso34-maker/behavioral-report-cards (main 735db0d); source repository **private/404 at packaging**; public
+archive and DOI pending. Public URL: https://github.com/antonrosso34-maker/behavioral-report-cards or DOI is claimed.
 
 - **V6 paper:** `paper/PAPER_DRAFT_V6.md` present.
 - **Manifest:** `data/pass-set-header/SHA256SUMS` has 16 hashed evidence files; with
@@ -20,3 +20,4 @@ archive and DOI pending. No public URL or DOI is claimed.
 
 **One-line verdict:** Release-ready staging; V6 paper included; 17/17 manifest; DOI/license/
 public copy pending.
+
