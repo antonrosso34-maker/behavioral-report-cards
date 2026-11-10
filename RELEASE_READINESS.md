@@ -14,12 +14,13 @@ archive and DOI pending. Public URL: https://github.com/antonrosso34-maker/behav
   `evidence/cp40/CP40_PLAN_PRE_RUN_2026-11-09.md`; `evidence/cp40/CP40_PLAN.md` is the
   completed-status pointer to `cp40_analysis.md`/`cp40_analysis.json` and the CP@1
   certificate.
-- **Pending:** DOI, license, public copy/commit. The nested manifest's `Git remote: none
+- **Pending:** DOI, license: CC BY 4.0 + MIT (set), public copy/commit. The nested manifest's `Git remote: none
   configured` refers to the bridge worktree; it does not contradict the private/404 source
   repository status.
 
-**One-line verdict:** Release-ready staging; V12 paper included; 17/17 manifest; DOI/license/
+**One-line verdict:** Release-ready staging; V12 paper included; 17/17 manifest; DOI/license: CC BY 4.0 + MIT (set)/
 public copy pending.
+
 
 
 

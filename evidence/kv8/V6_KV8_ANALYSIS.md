@@ -19,7 +19,7 @@ The KV8 run is `q3km_code` with `q8_0` KV: HumanEval dev **23/40 (57.5%)**, MBPP
 
 ## 2. Within-sample exactness
 
-The exact header is the pass-set bitset: **10 B per configuration for 80 tasks**. Within the observed 13×80 matrix, pair/union selection is exact by construction: **0.00 regret, 0.0000 MAE, 1.00 top-3, CP@1 1.000**. The storage claim is unchanged; KV8 simply adds one 10 B row.
+The exact header is the pass-set bitset: **10 B per configuration for 80 tasks**. Within the observed 13×80 matrix, pair/union selection is exact by construction: **0.00 regret, 0.0000 MAE, 1.00 top-3, selection coverage 1.000**. The storage claim is unchanged; KV8 simply adds one 10 B row.
 
 ## 3. Split-half on 13×80
 
@@ -59,9 +59,9 @@ In the 13×80→14×60 direction, the selected pair is the same `mx2_aq6 + gateu
 
 ## 5. Verdict
 
-**The KV8-inclusive boundary does not change the V6 conclusion.** The exact header remains exact within the observed 13×80 matrix (10 B/config, 0.00 regret, 0.0000 MAE, 1.00 top-3, CP@1 1.000), but transfer still fails:
+**The KV8-inclusive boundary does not change the V6 conclusion.** The exact header remains exact within the observed 13×80 matrix (10 B/config, 0.00 regret, 0.0000 MAE, 1.00 top-3, selection coverage 1.000), but transfer still fails:
 
-- **Split-half:** 1.73 tasks regret, 3.38 tasks MAE (0.0846), top-3 0.121, CP@1 0.051. The exact header does not make the selection rule out-of-sample exact.
+- **Split-half:** 1.73 tasks regret, 3.38 tasks MAE (0.0846), top-3 0.121, selection coverage 0.051. The exact header does not make the selection rule out-of-sample exact.
 - **Cross-matrix:** target-best pair selected **0/2** KV8-inclusive directions; top-3 **0/2**; regret **7 tasks** in both; MAE **0.0579**. The source-selected pair is never the target best.
 - **KV8 adds zero union:** the 13×80 union is 58/80 and the best pair is 56/80, identical to the 12×80 matrix. KV8 is not a complementarity source on these tasks.
 - **The only numerical improvement** is the 14×60→13×80 source pair: 49/80 vs 48/80, regret 8→7, MAE 0.0630→0.0579. The 13×80→14×60 selected union is unchanged at 34/60; the full oracle is 41/60 instead of 39/60, so regret rises 5→7. The full oracle is harder, not easier.
@@ -79,3 +79,4 @@ In the 13×80→14×60 direction, the selected pair is the same `mx2_aq6 + gateu
 ## 7. Reproduction
 
 `v6_kv8_analysis.py` reads `paired.csv` and the two KV8 JSONLs, verifies the 80 task IDs, builds the 13×80 matrix, and writes `v6_kv8_analysis_output.json` / `v6_kv8_analysis_output.txt`. No scored run, server, lock, GPU, new session, or commit was used.
+

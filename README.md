@@ -60,9 +60,10 @@ cd ../.. && sha256sum -c SHA256SUMS
 
 ## License and status
 
-License: to be specified by the author (the model weights are Apache-2.0; this release is the evidence/paper artifact). The model weights are not included; only SHA-256 references. Public benchmark task IDs and pass/fail matrices are included; raw model completions are not. No private or restricted data is included.
+License: CC BY 4.0 (text/data/evidence) + MIT (scripts); model weights Apache-2.0. See `LICENSE`. The model weights are not included; only SHA-256 references. Public benchmark task IDs and pass/fail matrices are included; raw model completions are not. No private or restricted data is included.
 
 **Citation (placeholder):** Project Syntactic, “Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary,” V12 draft, 2026. See `RELEASE_METADATA.md` for the release status; no DOI is claimed yet.
+
 
 
 

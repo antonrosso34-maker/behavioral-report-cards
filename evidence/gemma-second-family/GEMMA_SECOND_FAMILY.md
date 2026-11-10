@@ -31,7 +31,7 @@ The storage result replicates exactly: a 5 B/40 and 8 B/60 bitset stores the obs
 
 Two thousand random 50/50 splits per matrix. Regret and MAE are in tasks; MAE rate is tasks divided by the test size. The Qwen reference is the V4 input's split-half table.
 
-| matrix | n | header | regret mean [2.5, 97.5] | MAE tasks (rate) | top-3 | CP@1 | full-best selected |
+| matrix | n | header | regret mean [2.5, 97.5] | MAE tasks (rate) | top-3 | selection coverage | full-best selected |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Gemma HumanEval dev | 40 | 5 B | 1.36 [0.00, 4.00] | 2.12 (0.1062) | 0.513 | 0.176 | 0.572 |
 | Gemma HumanEval heldout | 60 | 8 B | 0.57 [0.00, 1.00] | 3.02 (0.1007) | 0.969 | 0.000 | 0.507 |
@@ -39,7 +39,7 @@ Two thousand random 50/50 splits per matrix. Regret and MAE are in tasks; MAE ra
 | Qwen 14×60 | 60 | 8 B | 1.91 [0, 6] | 3.00 (0.100) | 0.208 | n/r | n/r |
 | Qwen 12×80 | 80 | 10 B | 1.70 [0, 4] | 3.47 (0.087) | 0.079 | n/r | n/r |
 
-The **out-of-sample boundary replicates**: the exact header does not make the pair-selection rule out-of-sample exact. Gemma's split-half MAE is 2.1–3.0 tasks (0.100–0.106), essentially the same as Qwen's 3.0–3.5 tasks (0.087–0.100). The regret is family-dependent: Gemma heldout 0.57 tasks is lower than Qwen's 1.7–1.9; MBPP 1.59 is in the Qwen range. The top-3 is the most variable: Gemma heldout 0.969 is high, MBPP 0.050 is low, dev 0.513 is intermediate. CP@1 is 0.000 on both 60-task Gemma splits, meaning the selected pair is never the exact best pair even when the best pair is in the top-3. The Gemma split-half full-best-selected fraction is 0.276–0.572. The Qwen V4 input's 0.405/0.411 is a configuration-resample metric, not a split-half metric; the two are not directly comparable.
+The **out-of-sample boundary replicates**: the exact header does not make the pair-selection rule out-of-sample exact. Gemma's split-half MAE is 2.1–3.0 tasks (0.100–0.106), essentially the same as Qwen's 3.0–3.5 tasks (0.087–0.100). The regret is family-dependent: Gemma heldout 0.57 tasks is lower than Qwen's 1.7–1.9; MBPP 1.59 is in the Qwen range. The top-3 is the most variable: Gemma heldout 0.969 is high, MBPP 0.050 is low, dev 0.513 is intermediate. selection coverage is 0.000 on both 60-task Gemma splits, meaning the selected pair is never the exact best pair even when the best pair is in the top-3. The Gemma split-half full-best-selected fraction is 0.276–0.572. The Qwen V4 input's 0.405/0.411 is a configuration-resample metric, not a split-half metric; the two are not directly comparable.
 
 ## 4. Cross-matrix boundary
 
@@ -79,3 +79,4 @@ The **transfer failure replicates in the decisive sense**: the source-selected p
 ## 7. Reproduction
 
 `gemma_second_family.py` reads the five JSONLs per split, verifies the pass counts against `gemma_complementarity.json`, and writes `gemma_second_family_output.json` and `gemma_second_family_output.txt`. No scored run, server, lock, GPU, new session, or commit was used.
+

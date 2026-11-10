@@ -1,7 +1,7 @@
 # CP@1 40-task panel — SUPERSEDED PRE-RUN TEMPLATE (see evidence/cp40/cp40_analysis.md)
 
 **Date:** 2026-11-09
-**Status:** SUPERSEDED pre-run template; the completed run is evidence/cp40/cp40_analysis.md, server, eval lock, GPU work,
+**Status:** SUPERSEDED pre-run template; the completed run is evidence/cp40/cp40_analysis.md.
 new session, or commit. The panel is a low-priority V6 transfer test; the 14×60/12×80
 matrices remain the primary evidence.
 **Bridge source:** `harness/architect/queue/EVIDENCE_MANIFEST_PLAN.md` §7; public manifest
@@ -212,4 +212,5 @@ or wait until 8140 is free. Verify with `python harness/team/scripts/eval_lock.p
 The certificate must include the bridge split hash, the arm SHA-256 values, the run
 command, the environment, and the verifier version. No model, server, lock, GPU, new
 session, or commit was used to write this plan; the lead launches the run.
+
 
