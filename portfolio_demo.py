@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Two-config portfolio demo and certified uncertainty bands.
+"""Two-config oracle-union analysis and Wilson uncertainty bands.
 
 Uses the released pass-set headers/evidence only: no model, GPU, or network.
-Shows the Gemma UD-Q4 + complement portfolio gain and the 91-answer
+Shows the Gemma UD-Q4 + complement oracle-union upper bound and the 91-answer
 uncertainty bands that make "do not select" the honest rule.
 """
 from __future__ import annotations
@@ -46,12 +46,13 @@ def main() -> None:
     print("certified uncertainty bands (95% and Bonferroni-91):")
     for label, p, lo, hi, blo, bhi in bands():
         print(f"  {label}: {p:.4f} 95% [{lo:.4f}, {hi:.4f}] Bonferroni-91 [{blo:.4f}, {bhi:.4f}]")
-    print("two-config portfolio (existing evidence; no scored run):")
+    print("two-config oracle-union upper bound (not a deployable selection; no scored run):")
     for split, pair, single, union, gain in portfolio():
         print(f"  {split}: {pair} = {union} vs {single} alone (+{gain})")
-    print("rule: a two-config deployment that includes UD-Q4 beats UD-Q4 alone; single-config beats are not claimed.")
+    print("rule: these are oracle unions; the target-best pair is not selectable out of sample (see §4.5/§6).")
     print("honest rule: do not select; the bands and reliability (18x60 r=0.231, MDS 0.54%/0.60%) support the boundary.")
 
 
 if __name__ == "__main__":
     main()
+

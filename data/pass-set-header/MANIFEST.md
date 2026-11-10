@@ -5,7 +5,7 @@
 **Git remote:** https://github.com/antonrosso34-maker/behavioral-report-cards (tag v12)
 **HEAD:** tag v12
 **Manifest commit status:** committed in the public release (tag v12)
-**SHA256SUMS SHA-256:** `35b31e8ef0028fd80a3b6e9714d58ad6b70cebb8841c89b796b82060dccdbc73`. `SHA256SUMS` covers every file except `MANIFEST.md` and
+**SHA256SUMS SHA-256:** `9fda40d1f0028fd80a3b6e9714d58ad6b70cebb8841c89b796b82060dccdbc73`. `SHA256SUMS` covers every file except `MANIFEST.md` and
 itself; `MANIFEST.md`, `README.md`, and `PUBLISH.md` are metadata and excluded.
 **Scope:** exact pass-set headers for the existing 14-configuration x 60-task HumanEval
 heldout matrix and the 12-configuration x 80-task fresh matrix (HumanEval dev 40 + MBPP dev
@@ -37,7 +37,7 @@ heldout matrix and the 12-configuration x 80-task fresh matrix (HumanEval dev 40
 | `minhash_secondary.json` | MinHash-512/256 secondary metrics and 2,048 B correction | `11494960b899a28e923bd7096187b4ed9192bbf46c0879655af27e4896a27104` |
 | `CLAIM_MAP.json` | Claim-to-artifact map; no orphan claims | `420da7cb50b2ce3cc683c8c85f47407c34893e1d110d2100ea7fd85a2689ff3d` |
 | `CERTIFICATES.json` | Task, claim, rule, verifier certificates | `b41f26982b3d7942de841eb6dbb75196766d5852874bd21e2e06e359326d8c26` |
-| `SHA256SUMS` | Full hash list | `35b31e8ef0028fd80a3b6e9714d58ad6b70cebb8841c89b796b82060dccdbc73` |
+| `SHA256SUMS` | Full hash list | `9fda40d1f0028fd80a3b6e9714d58ad6b70cebb8841c89b796b82060dccdbc73` |
 
 Task ID files (`task_ids_heldout_14x60.txt/.json`, `task_ids_fresh_12x80.txt/.json`) are
 included; their hashes are in `SHA256SUMS` and in the header metadata.
@@ -88,6 +88,7 @@ regenerates the MinHash secondary output. Verify with `sha256sum -c SHA256SUMS` 
 claim-to-artifact map. It is a **repository-backed manifest**, not yet a public artifact; the
 public archive is pending and no URL/DOI is claimed. The 64-byte-vs-2,048-byte correction is the
 kind of unit/provenance error the manifest is designed to catch.
+
 
 
 
