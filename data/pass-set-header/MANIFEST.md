@@ -1,6 +1,6 @@
 # Repository-backed evidence manifest: exact pass-set headers
 
-**Status:** repository-backed manifest; URL/commit/archive pending. **Not yet a public artifact.**
+**Status:** repository-backed manifest; URL/commit/archive pending. **Public release at https://github.com/antonrosso34-maker/behavioral-report-cards (tag v12).**
 **Access status:** repository-local; public archive pending. No URL or DOI is claimed.
 **Git remote:** none configured (`git remote -v` empty)
 **HEAD:** `11b7abbf59e03c3cdc26e4e008c3e3ea7b218668`
@@ -88,3 +88,4 @@ regenerates the MinHash secondary output. Verify with `sha256sum -c SHA256SUMS` 
 claim-to-artifact map. It is a **repository-backed manifest**, not yet a public artifact; the
 public archive is pending and no URL/DOI is claimed. The 64-byte-vs-2,048-byte correction is the
 kind of unit/provenance error the manifest is designed to catch.
+
