@@ -69,9 +69,10 @@ replacement for frontier coding agents.
 - Official Google QAT Q4_0 is measured; W4A16, AWQ, and GPTQ remain unmeasured.
 - Data/license status is not a blanket redistribution claim.
 - Evaluation is code-centric; SWE tasks are future work.
-- No public repository or submitted Writeup is claimed.
+- Public release: https://github.com/antonrosso34-maker/behavioral-report-cards (tag v12).
 
 ## Provenance and license
 
 The quantized weights are derivatives of Gemma 4 E2B (Google DeepMind, Apache-2.0).
 llama.cpp is MIT. Redistribution must retain the upstream notices in `NOTICE`.
+

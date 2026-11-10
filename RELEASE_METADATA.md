@@ -16,7 +16,7 @@ external archive action belongs to the user.
 ## Bundle contents
 
 - `paper/PAPER_DRAFT_V12.md` — current V12 paper.
-- `paper/PAPER_DRAFT_V5.md`, `paper/PAPER_DRAFT_V12_INPUT.md`, `paper/NEXT_PAPER_INPUT.md`,
+- `paper/PAPER_DRAFT_V5.md`, `paper/PAPER_DRAFT_V6_INPUT.md`, `paper/NEXT_PAPER_INPUT.md`,
   `paper/NEXT_PAPER_BRIEF.md` — prior drafts and design inputs.
 - `data/pass-set-header/` — the 17-file manifest: 16 hashed evidence files + `SHA256SUMS`;
   `README.md`, `PUBLISH.md`, and `MANIFEST.md` are metadata excluded from the hash list.
@@ -44,6 +44,7 @@ included. Model files are referenced by SHA-256 only.
 
 Project Syntactic, “Store the Pass Set, Not the Selector: Exact Behavioral Headers and the
 Transfer Boundary,” V12 draft, 2026.
+
 
 
 

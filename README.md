@@ -36,11 +36,11 @@ cd ../.. && sha256sum -c SHA256SUMS
 
 ## Key hashes and provenance
 
-- Manifest zip (release asset): `pass-set-header-2026-11-09.zip`, SHA-256 `de9951744236499cfdea62efae129b65465c004c9f7e61593c23719edbb948e9`.
+- Manifest zip (staged bundle (not a GitHub release asset)): `pass-set-header-2026-11-09.zip`, SHA-256 `de9951744236499cfdea62efae129b65465c004c9f7e61593c23719edbb948e9`.
 - Manifest `SHA256SUMS` SHA-256: `35b31e8ef0028fd80a3b6e9714d58ad6b70cebb8841c89b796b82060dccdbc73`.
 - Source evidence commit: `be038a5bffdceb51af6e4aa09779aee7ec5c6cd3` (local object). The source repository is **private/404** (not a public URL); this repository is the public release at `https://github.com/antonrosso34-maker/behavioral-report-cards`.
 - **Provenance status:** the public release is this repository (`https://github.com/antonrosso34-maker/behavioral-report-cards`, main (tag v12)); the source repo is private/404; the nested manifest's `Git remote: none configured` refers to the bridge worktree. The DOI is pending.
-- The public bundle hash is in `SHA256SUMS`; the release zip SHA is reported with the release asset.
+- The public bundle hash is in `SHA256SUMS`; the release zip SHA is reported with the staged bundle (not a GitHub release asset).
 
 ## Scope and limitations
 
@@ -63,6 +63,7 @@ cd ../.. && sha256sum -c SHA256SUMS
 License: to be specified by the author (the model weights are Apache-2.0; this release is the evidence/paper artifact). The model weights are not included; only SHA-256 references. Public benchmark task IDs and pass/fail matrices are included; raw model completions are not. No private or restricted data is included.
 
 **Citation (placeholder):** Project Syntactic, “Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary,” V12 draft, 2026. See `RELEASE_METADATA.md` for the release status; no DOI is claimed yet.
+
 
 
 
