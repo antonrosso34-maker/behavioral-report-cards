@@ -16,7 +16,7 @@ The **transfer boundary is negative**: split-half, cross-matrix, the KV8-inclusi
 - `evidence/rule-ci/` — Rule CI (MD, JSON, script).
 - `evidence/cross-matrix/` — cross-matrix OOS (MD, JSON, script).
 - `evidence/transfer-calibration/` — robust/prior selection, negative (MD, JSON, script).
-- `evidence/cp1/` — CP@1 feasibility, exact-header CP@1, 40-task certificate template (MD, JSON, script).
+- `evidence/cp1/` — CP@1 feasibility, exact-header CP@1, 40-task completed analysis (evidence/cp40/cp40_analysis.md) (MD, JSON, script).
 - `evidence/gemma-second-family/` — Gemma E2B second-family evidence (MD, JSON, script).
 - `evidence/external-selector/` — external selector baseline (MD, JSON, script).
 - `evidence/kv8/` — KV8-inclusive cross-matrix plan/analysis/split/summaries.
@@ -63,6 +63,7 @@ cd ../.. && sha256sum -c SHA256SUMS
 License: to be specified by the author (the model weights are Apache-2.0; this release is the evidence/paper artifact). The model weights are not included; only SHA-256 references. Public benchmark task IDs and pass/fail matrices are included; raw model completions are not. No private or restricted data is included.
 
 **Citation (placeholder):** Project Syntactic, “Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary,” V12 draft, 2026. See `RELEASE_METADATA.md` for the release status; no DOI is claimed yet.
+
 
 
 

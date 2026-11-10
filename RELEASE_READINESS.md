@@ -1,6 +1,6 @@
 # Release readiness — V12 bundle
 
-**Status:** public release at https://github.com/antonrosso34-maker/behavioral-report-cards (main 32c29a4); source repository **private/404 at packaging**; public
+**Status:** public release at https://github.com/antonrosso34-maker/behavioral-report-cards (main (tag v12)); source repository **private/404**; public
 archive and DOI pending. Public URL: https://github.com/antonrosso34-maker/behavioral-report-cards or DOI is claimed.
 
 - **V12 paper:** `paper/PAPER_DRAFT_V12.md` present.
@@ -20,6 +20,7 @@ archive and DOI pending. Public URL: https://github.com/antonrosso34-maker/behav
 
 **One-line verdict:** Release-ready staging; V12 paper included; 17/17 manifest; DOI/license/
 public copy pending.
+
 
 
 
