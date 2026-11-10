@@ -1,10 +1,10 @@
 # Repository-backed evidence manifest: exact pass-set headers
 
-**Status:** repository-backed manifest; URL/commit/archive pending. **Public release at https://github.com/antonrosso34-maker/behavioral-report-cards (tag v12).**
-**Access status:** repository-local; public archive pending. No URL or DOI is claimed.
-**Git remote:** none configured (`git remote -v` empty)
-**HEAD:** `11b7abbf59e03c3cdc26e4e008c3e3ea7b218668`
-**Manifest commit status:** working-tree/untracked (not yet committed)
+**Status:** public release at https://github.com/antonrosso34-maker/behavioral-report-cards (tag v12); DOI pending.
+**Access status:** public; DOI pending.
+**Git remote:** https://github.com/antonrosso34-maker/behavioral-report-cards (tag v12)
+**HEAD:** tag v12
+**Manifest commit status:** committed in the public release (tag v12)
 **SHA256SUMS SHA-256:** `35b31e8ef0028fd80a3b6e9714d58ad6b70cebb8841c89b796b82060dccdbc73`. `SHA256SUMS` covers every file except `MANIFEST.md` and
 itself; `MANIFEST.md`, `README.md`, and `PUBLISH.md` are metadata and excluded.
 **Scope:** exact pass-set headers for the existing 14-configuration x 60-task HumanEval
@@ -88,4 +88,5 @@ regenerates the MinHash secondary output. Verify with `sha256sum -c SHA256SUMS` 
 claim-to-artifact map. It is a **repository-backed manifest**, not yet a public artifact; the
 public archive is pending and no URL/DOI is claimed. The 64-byte-vs-2,048-byte correction is the
 kind of unit/provenance error the manifest is designed to catch.
+
 

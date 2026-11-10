@@ -51,7 +51,7 @@ and `SHA256SUMS`; the metadata files remain outside the zip.
    git remote add origin <USER_REPOSITORY_URL>
    git push -u origin <BRANCH>
    ```
-   Do not claim a repository URL until the push succeeds.
+   The public release is live (tag v12).
 
 4. **Archive (user action).**
    Create a release/archive from `pass-set-header-2026-11-09.zip` on the user's chosen
@@ -65,7 +65,8 @@ and `SHA256SUMS`; the metadata files remain outside the zip.
 
 ## External blocker
 
-No git remote is configured, and no archive/DOI exists. The public URL/archive is the user's
+Git remote: https://github.com/antonrosso34-maker/behavioral-report-cards, and no archive/DOI exists. The public URL/archive is the user's
 repository/archive action; this manifest cannot create a remote, push, or mint a DOI. Until
 then the correct status is **repository-backed manifest; public archive pending**.
+
 

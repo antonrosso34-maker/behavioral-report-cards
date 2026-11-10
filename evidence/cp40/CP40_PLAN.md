@@ -11,12 +11,13 @@ sensitivity 0.418995. One anchor timeout; request-error rate below the 10% inval
 threshold.
 
 **Certificate:** `cp40_analysis.md (completed)` and
-`evidence/cp1/cp40_analysis.json (completed)`.
+`evidence/cp40/cp40_analysis.json (completed)`.
 
 **Run provenance:** `cp40_anchor_summary.json`, `cp40_complement_summary.json`; split and
 hashes in `cp40_split.json`, `cp40_hashes.json`, `cp40_merkle.json`. The pre-run plan's
 `NOT RUN` status is historical; the dated artifact preserves the frozen design and the
 precision-corrected +4/40 success rule. The observed +1/40 is inconclusive, not a
 confirmation of transfer.
+
 
 

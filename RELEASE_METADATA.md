@@ -4,7 +4,7 @@
 **Title:** Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary
 **Version:** V12 draft (2026-11-10)
 **Authors:** Project Syntactic / architect-predictor team
-**License:** No license has been granted yet; the author must specify the license before public
+**License:** CC BY 4.0 (paper/data/evidence) + MIT (scripts); model weights Apache-2.0. See `LICENSE`. (Old text removed: were no license before public
 release. Do not treat this bundle as licensed for reuse until then.
 **Repository reference (private/404; not a public URL):** https://github.com/antonrosso34-maker/LLM-intagration
 **Source evidence commit (local object):** `be038a5bffdceb51af6e4aa09779aee7ec5c6cd3`; source repo private/404; not a public URL
@@ -44,6 +44,7 @@ included. Model files are referenced by SHA-256 only.
 
 Project Syntactic, “Store the Pass Set, Not the Selector: Exact Behavioral Headers and the
 Transfer Boundary,” V12 draft, 2026.
+
 
 
 
