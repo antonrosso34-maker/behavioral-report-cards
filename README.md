@@ -1,6 +1,6 @@
 # Behavioral Report Cards, Not Selectors — V12 Public Evidence
 
-This repository is the **staged V6 public evidence bundle** for the paper **Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary** (the V6 successor to the behavioral-report-card draft). It is a clean subset of the research tree: it contains the frozen data, certificates, analysis outputs, paper drafts/design inputs, and the reproducer/demo scripts needed to verify the claims. It contains **no model weights, no raw model completions, no private/restricted data, and no internal agent notes**.
+This repository is the **V12 public release (data, evidence, paper)** for the paper **Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary** (the V6 successor to the behavioral-report-card draft). It is a clean subset of the research tree: it contains the frozen data, certificates, analysis outputs, paper drafts/design inputs, and the reproducer/demo scripts needed to verify the claims. It contains **no model weights, no raw model completions, no private/restricted data, and no internal agent notes**.
 
 ## Scoped claim
 
@@ -39,7 +39,7 @@ cd ../.. && sha256sum -c SHA256SUMS
 - Manifest zip (release asset): `pass-set-header-2026-11-09.zip`, SHA-256 `de9951744236499cfdea62efae129b65465c004c9f7e61593c23719edbb948e9`.
 - Manifest `SHA256SUMS` SHA-256: `35b31e8ef0028fd80a3b6e9714d58ad6b70cebb8841c89b796b82060dccdbc73`.
 - Source evidence commit: `be038a5bffdceb51af6e4aa09779aee7ec5c6cd3` (local object). The source repository is **private/404** (not a public URL); this repository is the public release at `https://github.com/antonrosso34-maker/behavioral-report-cards`.
-- **Provenance status:** the public release is this repository (`https://github.com/antonrosso34-maker/behavioral-report-cards`, main `69163c9` (tag v12)); the source repo is private/404; the nested manifest's `Git remote: none configured` refers to the bridge worktree. The DOI is pending.
+- **Provenance status:** the public release is this repository (`https://github.com/antonrosso34-maker/behavioral-report-cards`, main (tag v12)); the source repo is private/404; the nested manifest's `Git remote: none configured` refers to the bridge worktree. The DOI is pending.
 - The public bundle hash is in `SHA256SUMS`; the release zip SHA is reported with the release asset.
 
 ## Scope and limitations
@@ -53,7 +53,7 @@ cd ../.. && sha256sum -c SHA256SUMS
 
 ## Paper files
 
-- `paper/PAPER_DRAFT_V6.md` — current paper draft (V6).
+- `paper/PAPER_DRAFT_V12.md` — current paper draft (V12); `paper/ESSAY_DRAFT_V1.md` — essay.
 - `paper/PAPER_DRAFT_V5.md` — prior paper draft (V5).
 - `paper/PAPER_DRAFT_V6_INPUT.md` — V6 design input (exact header, boundary, Gemma, KV8, CP40, external selector).
 - `paper/NEXT_PAPER_INPUT.md` and `paper/NEXT_PAPER_BRIEF.md` — the behavioral report-card / deployment-audit paper design.
@@ -62,7 +62,10 @@ cd ../.. && sha256sum -c SHA256SUMS
 
 License: to be specified by the author (the model weights are Apache-2.0; this release is the evidence/paper artifact). The model weights are not included; only SHA-256 references. Public benchmark task IDs and pass/fail matrices are included; raw model completions are not. No private or restricted data is included.
 
-**Citation (placeholder):** Project Syntactic, “Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary,” V6 draft, 2026. See `RELEASE_METADATA.md` for the release status; no DOI is claimed yet.
+**Citation (placeholder):** Project Syntactic, “Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary,” V12 draft, 2026. See `RELEASE_METADATA.md` for the release status; no DOI is claimed yet.
+
+
+
 
 
 
