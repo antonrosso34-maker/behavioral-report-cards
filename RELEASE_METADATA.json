@@ -1,14 +1,14 @@
 {
   "release": {
-    "status": "public release at https://github.com/antonrosso34-maker/behavioral-report-cards (tag v1.1.0); source repository private/404; DOI pending",
-    "title": "Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary",
-    "version": "v1.1.0",
-    "date": "2026-11-10",
-    "authors": "Project Syntactic / architect-predictor team",
+    "status": "public release at https://github.com/antonrosso34-maker/behavioral-report-cards (tag v1.1.1); source repository private/404; DOI pending",
+    "title": "Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries",
+    "version": "v1.1.1",
+    "date": "2026-11-11",
+    "authors": "Anton Rosso",
     "license": "CC BY 4.0 (evidence/paper); MIT (code); model weights Apache-2.0.",
     "repository": "https://github.com/antonrosso34-maker/LLM-intagration",
     "source_evidence_commit": "be038a5bffdceb51af6e4aa09779aee7ec5c6cd3",
-    "bundle_status": "public release v1.1.0 at tag v1.1.0; DOI pending",
+    "bundle_status": "public release v1.1.1 at tag v1.1.1; DOI pending",
     "doi": null,
     "doi_status": "pending; no DOI claimed",
     "archive_target": "user-selected; external archive action",
@@ -31,7 +31,7 @@
       "private or restricted data",
       "internal agent notes"
     ],
-    "citation": "Project Syntactic, \"Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries,\" final paper v1.1.0, 2026.",
+    "citation": "Anton Rosso, \"Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries,\" final paper v1.1.1, 2026.",
     "repository_visibility": "private/404 at packaging; not a public URL",
     "public_url": "https://github.com/antonrosso34-maker/behavioral-report-cards",
     "source_commit_status": "local object; source repo private/404; not a public URL",
@@ -41,18 +41,18 @@
       "path": "paper/FINAL_PAPER_DRAFT_V1.md",
       "title": "Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries",
       "date": "2026-11-11",
-      "status": "final paper v1.1.0; paper body 2,694 words (whitespace; 2,989 stricter); release document + styled HTML + figures; outside the V6 hash manifest",
-      "sha256": "7631275965e833845c747dd620183c9c4edb61729cb6d794ddac5516449cfce2",
+      "status": "final paper v1.1.1; paper body 2,694 words (whitespace; 2,989 stricter); release document + styled HTML + figures; outside the V6 hash manifest",
+      "sha256": "11eeaa5e296a6d83104f362b61a5d9eaf8ec7489e8925dfd030a0f80b75e0513",
       "scope": "pass-set complementarity + two-family Gemma E2B audit; HE pair 42/60 vs 36/60 (p=0.0352; +9.01 pp, p=0.027) at 2.17x; sealed MBPP 40/60 vs 40/60 tie; repair@1 44/60 vs 40/60 (p=0.0625, post-hoc); gp1b dev +5/heldout -2; cross-family 45/60 vs 36/60 (p=0.0059, 1.476x, HE-only); no size-matched single-model win",
-      "citation": "Project Syntactic, \"Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries,\" final paper draft v1, 2026."
+      "citation": "Anton Rosso, \"Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries,\" final paper v1.1.1, 2026."
     },
     "release_document": {
       "markdown": "paper/FINAL_PAPER_RELEASE_V1.md",
-      "markdown_sha256": "4752129a4b56a7082c223210979da88a462941048b42fe92def4f323243bea6e",
+      "markdown_sha256": "739bc80c377de3ce18b77144d9735eda34457d87b5e51b8415b5448b356efd6c",
       "html": "paper/FINAL_PAPER_RELEASE_V1.html",
-      "html_sha256": "4c25c6facbcedb1630422abe5f5ee7a0753ddb6eee1bccdadf38a0192d53b99c",
+      "html_sha256": "d03716d20596e0c09de0294c158767901ffff87be7631a734f72e5d19ea8c01b",
       "paper_body_words": 2989,
-      "status": "full release document + styled HTML; public at tag v1.1.0; DOI pending",
+      "status": "full release document + styled HTML; public at tag v1.1.1; DOI pending",
       "paper_body_words_whitespace": 2694
     },
     "gemma_audit_evidence": {
@@ -61,11 +61,11 @@
       "hashed_files": 23,
       "raw_completions": false,
       "note": "pass matrices, task IDs, sanitized summaries, aggregate statistics",
-      "status": "; public release v1.0.0 at main da40030, tag v1.0.0"
+      "status": "public release v1.1.1 at tag v1.1.1; DOI pending"
     },
     "top_level_sha256sums": {
       "path": "SHA256SUMS.sha256",
-      "sha256": "3a886e8c7ca4151ecc70a91025556699903dcd8d8854815b67739ba62ff3c6f7",
+      "sha256": "613613c70b206772694610b759a8bd1da86f9c2b3f7ce9a7776c30f43d92d98f",
       "file_count": 111
     },
     "figures": [

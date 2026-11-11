@@ -1,6 +1,6 @@
-# Behavioral Report Cards, Not Selectors — V12 Public Evidence + Final Paper v1.1.0
+# Behavioral Report Cards, Not Selectors — V12 Public Evidence + Final Paper v1.1.1
 
-This repository is the **V12 public release (data, evidence, paper)** for the paper **Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary** (the V6 successor to the behavioral-report-card draft), plus the final paper v1.1.0 and the aggregate Gemma E2B audit evidence. It is a clean subset of the research tree: it contains the frozen data, certificates, analysis outputs, paper drafts/design inputs, and the reproducer/demo scripts needed to verify the claims. It contains **no model weights, no raw model completions, no private/restricted data, and no internal agent notes**.
+This repository is the **V12 public release (data, evidence, paper)** for the paper **Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary** (the V6 successor to the behavioral-report-card draft), plus the final paper v1.1.1 and the aggregate Gemma E2B audit evidence. It is a clean subset of the research tree: it contains the frozen data, certificates, analysis outputs, paper drafts/design inputs, and the reproducer/demo scripts needed to verify the claims. It contains **no model weights, no raw model completions, no private/restricted data, and no internal agent notes**.
 
 ## Scoped claim
 
@@ -8,7 +8,7 @@ For a **fixed evaluation matrix**, an 8-byte exact pass-set header (60 tasks) or
 
 The **transfer boundary is negative**: split-half, cross-matrix, the KV8-inclusive 13×80 test, and the 40-task CP40 panel do not confirm out-of-sample selection. The exact header is a **report card, not a selector**. The external-selector baseline adds the nuance that MinHash-512 (2,048 B) can beat the exact header on some split-half metrics and random projection can beat it on some cross-matrix regret/MAE, but **no selector transfers the target-best pair**. CP@1 is certified pass@1 (false-pass-adjusted); selection coverage is a separate estimand.
 
-## Final paper v1.1.0 (2026-11-11)
+## Final paper v1.1.1 (2026-11-11)
 
 `paper/FINAL_PAPER_DRAFT_V1.md` — **Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries.** It uses the report card as an audit primitive and adds the two-family Gemma E2B audit:
 
@@ -17,14 +17,14 @@ The **transfer boundary is negative**: split-half, cross-matrix, the KV8-inclusi
 - Repair@1 development result: **44/60 vs 40/60**, b=4, c=0, **p=0.0625**, post-hoc; old **38/60 vs 35/60**, p=0.1875; fresh confirmation needs k≥4 and has P(≥4)=9.5% under the Qwen proxy.
 - Size-matched `gp1b_2498` (2,492.99 MiB): dev **34/40 vs 29/40** (+5, p=0.0898); heldout **34/60 vs 36/60** (−2, one-sided p=0.8555, two-sided 0.7266); a dev win + heldout near-tie, not a heldout win.
 - Cross-family secondary: `gp1_2629 + q5ks_none` **45/60 vs 36/60**, b=10, c=1, p=0.0059, **1.476×**, HumanEval-only; 11+12 unique tasks; both arms individually lose to Unsloth.
-- **Paper SHA-256:** `7631275965e833845c747dd620183c9c4edb61729cb6d794ddac5516449cfce2`.
-- **Full release document:** `paper/FINAL_PAPER_RELEASE_V1.md` (cover, metadata, full references with URLs/DOIs, appendices, release checklist; SHA-256 `4752129a4b56a7082c223210979da88a462941048b42fe92def4f323243bea6e`).
-- **Styled HTML:** `paper/FINAL_PAPER_RELEASE_V1.html` (print-ready presentation; SHA-256 `4c25c6facbcedb1630422abe5f5ee7a0753ddb6eee1bccdadf38a0192d53b99c`).
+- **Paper SHA-256:** `11eeaa5e296a6d83104f362b61a5d9eaf8ec7489e8925dfd030a0f80b75e0513`.
+- **Full release document:** `paper/FINAL_PAPER_RELEASE_V1.md` (cover, metadata, full references with URLs/DOIs, appendices, release checklist; SHA-256 `739bc80c377de3ce18b77144d9735eda34457d87b5e51b8415b5448b356efd6c`).
+- **Styled HTML:** `paper/FINAL_PAPER_RELEASE_V1.html` (print-ready presentation; SHA-256 `d03716d20596e0c09de0294c158767901ffff87be7631a734f72e5d19ea8c01b`).
 - **Figures:** `paper/figures/fig1_size_pass.svg`, `fig2_cpu_pass.svg`, `fig3_decomposition.svg`, `fig4_pc_effect.svg`.
 
-The paper claims a two-family complementarity audit, not a size-matched single-model win, a generic repair, or a PC@1 win. The final paper v1.1.0 is public and is **outside the V6 hashed bundle**; it is not part of the 17/17 manifest. The aggregate Gemma audit evidence is in `evidence/gemma-audit/` (pass matrices, task IDs, sanitized summaries, `SHA256SUMS`; no raw completions).
+The paper claims a two-family complementarity audit, not a size-matched single-model win, a generic repair, or a PC@1 win. The final paper v1.1.1 is public and is **outside the V6 hashed bundle**; it is not part of the 17/17 manifest. The aggregate Gemma audit evidence is in `evidence/gemma-audit/` (pass matrices, task IDs, sanitized summaries, `SHA256SUMS`; no raw completions).
 
-**Citation:** Project Syntactic, “Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries,” final paper v1.1.0, 2026.
+**Citation:** Anton Rosso, “Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries,” final paper v1.1.1, 2026.
 
 ## Contents
 
@@ -60,8 +60,8 @@ cd evidence/gemma-audit && sha256sum -c SHA256SUMS
 - Manifest zip (staged bundle (not a GitHub release asset)): `pass-set-header-2026-11-09.zip`, SHA-256 `de9951744236499cfdea62efae129b65465c004c9f7e61593c23719edbb948e9`.
 - Manifest `SHA256SUMS` SHA-256: `35b31e8ef0028fd80a3b6e9714d58ad6b70cebb8841c89b796b82060dccdbc73`.
 - Source evidence commit: `be038a5bffdceb51af6e4aa09779aee7ec5c6cd3` (local object). The source repository is **private/404** (not a public URL); this repository is the public release at `https://github.com/antonrosso34-maker/behavioral-report-cards`.
-- **Provenance status:** the public release is this repository (`https://github.com/antonrosso34-maker/behavioral-report-cards`, tag v1.1.0); the source repo is private/404; the nested manifest's `Git remote: https://github.com/antonrosso34-maker/behavioral-report-cards` refers to the bridge worktree. The DOI is pending.
-- Top-level `SHA256SUMS` SHA-256: `3a886e8c7ca4151ecc70a91025556699903dcd8d8854815b67739ba62ff3c6f7` in `SHA256SUMS.sha256` (v1.1.0); the release metadata is outside the hash list.
+- **Provenance status:** the public release is this repository (`https://github.com/antonrosso34-maker/behavioral-report-cards`, tag v1.1.1); the source repo is private/404; the nested manifest's `Git remote: https://github.com/antonrosso34-maker/behavioral-report-cards` refers to the bridge worktree. The DOI is pending.
+- Top-level `SHA256SUMS` SHA-256: `613613c70b206772694610b759a8bd1da86f9c2b3f7ce9a7776c30f43d92d98f` in `SHA256SUMS.sha256` (v1.1.1); the release metadata is outside the hash list.
 
 ## Scope and limitations
 
@@ -74,7 +74,7 @@ cd evidence/gemma-audit && sha256sum -c SHA256SUMS
 
 ## Paper files
 
-- `paper/FINAL_PAPER_DRAFT_V1.md` — final paper v1.1.0 (2026-11-11; outside the V6 hash manifest).
+- `paper/FINAL_PAPER_DRAFT_V1.md` — final paper v1.1.1 (2026-11-11; outside the V6 hash manifest).
 - `paper/PAPER_DRAFT_V12.md` — prior paper draft (V12); `paper/ESSAY_DRAFT_V1.md` — essay.
 - `paper/PAPER_DRAFT_V5.md` — prior paper draft (V5).
 - `paper/PAPER_DRAFT_V6_INPUT.md` — V6 design input (exact header, boundary, Gemma, KV8, CP40, external selector).
@@ -84,7 +84,7 @@ cd evidence/gemma-audit && sha256sum -c SHA256SUMS
 
 License: CC BY 4.0 (text/data/evidence) + MIT (scripts); model weights Apache-2.0. See `LICENSE`. The model weights are not included; only SHA-256 references. Public benchmark task IDs and pass/fail matrices are included; raw model completions are not. No private or restricted data is included.
 
-**Citation:** Project Syntactic, “Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries,” final paper v1.1.0, 2026. Prior: “Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary,” V12 draft, 2026. See `RELEASE_METADATA.md`; DOI pending.
+**Citation:** Anton Rosso, “Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries,” final paper v1.1.1, 2026. Prior: “Behavioral Report Cards, Not Selectors: Exact Pass-Set Headers and the Transfer Boundary,” V12 draft, 2026. See `RELEASE_METADATA.md`; DOI pending.
 
 
 

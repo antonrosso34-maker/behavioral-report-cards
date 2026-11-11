@@ -2,16 +2,16 @@
 
 **Keywords:** quantized code models; pass-set complementarity; transfer boundary; HumanEval; MBPP.
 
-**Release:** v1.1.0 — final paper with figures + aggregate audit evidence
+**Release:** v1.1.1 — final paper with figures + aggregate audit evidence (sole-author correction)
 **Release date:** 2026-11-11
-**Authors:** Project Syntactic / architect-predictor team
+**Authors:** Anton Rosso
 **Affiliation:** Independent research release
-**Paper status:** Final paper v1.1.0; paper body 2,694 words by whitespace (~2,989 by the reviewer's stricter counter); under 3,000; release metadata/appendices excluded
+**Paper status:** Final paper v1.1.1; paper body 2,694 words by whitespace (~2,989 by the reviewer's stricter counter); under 3,000; release metadata/appendices excluded
 **Evidence:** `evidence/gemma-audit/` — 23 hashed files, `SHA256SUMS`; no raw completions
 **License:** CC BY 4.0 (evidence/paper); MIT (code); Apache-2.0 (model weights)
 **DOI:** pending; no DOI claimed
-**Repository:** https://github.com/antonrosso34-maker/behavioral-report-cards (main, tag `v1.1.0`)
-**Paper SHA-256:** `5d62ac560c79e7aa56af5530b9f35e52e144c57b4b1390b33373e4e50403ca95`
+**Repository:** https://github.com/antonrosso34-maker/behavioral-report-cards (main, tag `v1.1.1`)
+**Paper SHA-256:** `11eeaa5e296a6d83104f362b61a5d9eaf8ec7489e8925dfd030a0f80b75e0513`
 **Model:** `AntonROSSO/qwen2.5-coder-1.5b-mx2-aq6-q3ks` (750.3 MB; SHA256 `7fe6c14d…`)
 
 ## Abstract
@@ -208,7 +208,7 @@ Verify the release with `cd evidence/gemma-audit && sha256sum -c SHA256SUMS` and
 | 7 | Size explains the win | gp1b 2,492.99 MiB is 6 MiB smaller; dev +5, heldout −2 | Addressed by the size-matched gp1b claim |
 | 8 | Google QAT is not yours | q3+google 42/60 sealed (+2, p=0.344); q3+gp1 40/60 | Addressed by labeling it a team-led portfolio with Google QAT |
 | 9 | The tests are weak | CP@1 false-pass 18/269 = 6.69% [4.01, 10.37], 21/305 = 6.89%; private 202/202; LB 0.982 | Partially addressed; CP@1 is a lower bound |
-| 10 | The release is not citable/reusable | Public release main/tag `v1.1.0`; source private/404; DOI pending | License resolved (CC BY 4.0 + MIT); DOI pending |
+| 10 | The release is not citable/reusable | Public release main/tag `v1.1.1`; source private/404; DOI pending | License resolved (CC BY 4.0 + MIT); DOI pending |
 
 ## Appendix C — Pre-registration certificate
 
@@ -220,7 +220,7 @@ Verify the release with `cd evidence/gemma-audit && sha256sum -c SHA256SUMS` and
 
 ## Appendix D — Artifact manifest
 
-`evidence/gemma-audit/` contains 23 hashed files: `README.md`, `sealed60_analysis.json`, `sealed60_analysis.md`, four pass matrices (`pass_matrix_{sealed60,old60,he_dev40,he_heldout60}.csv`), four task-ID files, eight sanitized summaries, `repair_summary.json`, `pc_mcnemar_summary.json`, `fresh132_summary.json`, `cross_family_summary.json`, and `SHA256SUMS`. It contains no raw model completions or model weights. The folder is public at tag `v1.1.0`; DOI is pending.
+`evidence/gemma-audit/` contains 23 hashed files: `README.md`, `sealed60_analysis.json`, `sealed60_analysis.md`, four pass matrices (`pass_matrix_{sealed60,old60,he_dev40,he_heldout60}.csv`), four task-ID files, eight sanitized summaries, `repair_summary.json`, `pc_mcnemar_summary.json`, `fresh132_summary.json`, `cross_family_summary.json`, and `SHA256SUMS`. It contains no raw model completions or model weights. The folder is public at tag `v1.1.1`; DOI is pending.
 
 Verify:
 
@@ -278,7 +278,7 @@ The pair's sealed-60 CPU is **358.19 s** (q3 283.63 + gp1 74.56) at **5,432.83 M
 
 **Decision rule.** The pair is worth deploying over a single model only if it beats the best single baseline by **≥+2 net tasks** at **≤1.1× size** and **≤1.1× CPU**. The current pair fails the size/CPU criterion. If "single agental" means a tool-using agent, the existing data has no agentic benchmark; the V12 REPO-COMP-40 design is the appropriate test, and the pair is an ensemble, not an agent.
 
-## Release notes (v1.1.0)
+## Release notes (v1.1.1)
 
 - New title and focus: the pass-set report card is an audit primitive; the two-family complementarity audit is the contribution.
 - Paper body 2,694 words by whitespace (2,989 by the stricter counter); under 3,000; release metadata and appendices are outside the paper body.
@@ -290,7 +290,7 @@ The pair's sealed-60 CPU is **358.19 s** (q3 283.63 + gp1 74.56) at **5,432.83 M
 
 ## Citation
 
-Project Syntactic / architect-predictor team. *Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries.* Final paper draft v1, 2026. https://github.com/antonrosso34-maker/behavioral-report-cards
+Anton Rosso. *Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries.* Final paper v1.1.1, 2026. https://github.com/antonrosso34-maker/behavioral-report-cards
 
 ## License
 
@@ -298,4 +298,4 @@ CC BY 4.0 (evidence/paper); MIT (code); Apache-2.0 (model weights). Raw completi
 
 ## Contact
 
-Project Syntactic / architect-predictor team. Repository issues: https://github.com/antonrosso34-maker/behavioral-report-cards/issues
+Anton Rosso. Repository issues: https://github.com/antonrosso34-maker/behavioral-report-cards/issues

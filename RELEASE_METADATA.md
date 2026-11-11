@@ -1,20 +1,20 @@
-# Release metadata — behavioral-report-cards v1.1.0
+# Release metadata — behavioral-report-cards v1.1.1
 
-**Status:** public release at `https://github.com/antonrosso34-maker/behavioral-report-cards` (tag v1.1.0); source repository **private/404**; DOI pending.
+**Status:** public release at `https://github.com/antonrosso34-maker/behavioral-report-cards` (tag v1.1.1); source repository **private/404**; DOI pending.
 **Title:** Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries
-**Version:** v1.1.0 (2026-11-11)
-**Authors:** Project Syntactic / architect-predictor team
+**Version:** v1.1.1 (2026-11-11)
+**Authors:** Anton Rosso
 **License:** CC BY 4.0 (paper/data/evidence) + MIT (scripts); model weights Apache-2.0. See `LICENSE`.
 **Repository reference (private/404; not a public URL):** https://github.com/antonrosso34-maker/LLM-intagration
 **Source evidence commit (local object):** `be038a5bffdceb51af6e4aa09779aee7ec5c6cd3`; source repo private/404; not a public URL
-**Bundle status:** public release v1.1.0 at tag v1.1.0; DOI pending.
+**Bundle status:** public release v1.1.1 at tag v1.1.1; DOI pending.
 **DOI:** pending; no DOI is claimed.
 **Archive target:** user-selected (institutional repository, Zenodo, OSF, or equivalent); the
 external archive action belongs to the user.
 
 ## Bundle contents
 
-- `paper/FINAL_PAPER_DRAFT_V1.md` — final paper v1.1.0 (paper body 2,694 whitespace / 2,989 stricter); `paper/FINAL_PAPER_RELEASE_V1.md` / `.html` — full release document and presentation.
+- `paper/FINAL_PAPER_DRAFT_V1.md` — final paper v1.1.1 (paper body 2,694 whitespace / 2,989 stricter); `paper/FINAL_PAPER_RELEASE_V1.md` / `.html` — full release document and presentation.
 - `paper/PAPER_DRAFT_V12.md` — prior V12 paper.
 - `paper/PAPER_DRAFT_V5.md`, `paper/PAPER_DRAFT_V6_INPUT.md`, `paper/NEXT_PAPER_INPUT.md`,
   `paper/NEXT_PAPER_BRIEF.md` — prior drafts and design inputs.
@@ -36,20 +36,20 @@ For a fixed evaluation matrix, an 8-byte exact pass-set header (60 tasks) or a 1
 not transfer out-of-sample; the paper reports the transfer boundary. There is no model-quality,
 SOTA, compression, or Pareto claim.
 
-## Final paper v1.1.0 (working draft)
+## Final paper v1.1.1 (working draft)
 
 - **Path:** `paper/FINAL_PAPER_DRAFT_V1.md`
 - **Title:** Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries
 - **Date:** 2026-11-11
-- **Status:** final paper v1.1.0; paper body 2,694 words (whitespace; 2,989 stricter); full release document and styled HTML; outside the V6 hashed bundle.
-- **Paper SHA-256:** `7631275965e833845c747dd620183c9c4edb61729cb6d794ddac5516449cfce2`.
-- **Release document:** `paper/FINAL_PAPER_RELEASE_V1.md` (SHA-256 `4752129a4b56a7082c223210979da88a462941048b42fe92def4f323243bea6e`); **styled HTML:** `paper/FINAL_PAPER_RELEASE_V1.html` (SHA-256 `4c25c6facbcedb1630422abe5f5ee7a0753ddb6eee1bccdadf38a0192d53b99c`).
+- **Status:** final paper v1.1.1; paper body 2,694 words (whitespace; 2,989 stricter); full release document and styled HTML; outside the V6 hashed bundle.
+- **Paper SHA-256:** `11eeaa5e296a6d83104f362b61a5d9eaf8ec7489e8925dfd030a0f80b75e0513`.
+- **Release document:** `paper/FINAL_PAPER_RELEASE_V1.md` (SHA-256 `739bc80c377de3ce18b77144d9735eda34457d87b5e51b8415b5448b356efd6c`); **styled HTML:** `paper/FINAL_PAPER_RELEASE_V1.html` (SHA-256 `d03716d20596e0c09de0294c158767901ffff87be7631a734f72e5d19ea8c01b`).
 - **Scope:** pass-set complementarity + two-family Gemma E2B audit. HumanEval pair 42/60 vs 36/60 (one-sided p=0.0352; partial credit +9.01 pp, p=0.027) at 2.17×; sealed MBPP 40/60 vs 40/60 tie; repair@1 44/60 vs 40/60 (p=0.0625, post-hoc); size-matched `gp1b_2498` dev +5 / heldout −2; cross-family 45/60 vs 36/60 (p=0.0059, 1.476×, HumanEval-only). No size-matched single-model win.
-- **Citation:** Project Syntactic, “Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries,” final paper v1.1.0, 2026.
+- **Citation:** Anton Rosso, “Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries,” final paper v1.1.1, 2026.
 
 ## Checksums
 
-- Top-level `SHA256SUMS` SHA-256: `3a886e8c7ca4151ecc70a91025556699903dcd8d8854815b67739ba62ff3c6f7` in `SHA256SUMS.sha256` (v1.1.0); the release metadata is outside the hash list.
+- Top-level `SHA256SUMS` SHA-256: `613613c70b206772694610b759a8bd1da86f9c2b3f7ce9a7776c30f43d92d98f` in `SHA256SUMS.sha256` (v1.1.1); the release metadata is outside the hash list.
 
 ## Exclusions
 
@@ -58,16 +58,4 @@ included. Model files are referenced by SHA-256 only.
 
 ## Citation (placeholder)
 
-Project Syntactic, “Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries,” final paper v1.1.0, 2026. Prior: “Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary,” V12 draft, 2026.
-
-
-
-
-
-
-
-
-
-
-
-
+Anton Rosso, “Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries,” final paper v1.1.1, 2026. Prior: “Store the Pass Set, Not the Selector: Exact Behavioral Headers and the Transfer Boundary,” V12 draft, 2026.

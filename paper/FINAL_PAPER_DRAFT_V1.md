@@ -1,6 +1,6 @@
 # Pass-Set Complementarity in Quantized Code Models: A Two-Family Audit with Size and Transfer Boundaries
 
-**Authors:** Project Syntactic / architect-predictor team  
+**Authors:** Anton Rosso  
 **Affiliation:** Independent research release  
 **Date:** 2026-11-11  
 **Keywords:** quantized code models; pass-set complementarity; transfer boundary; HumanEval; MBPP.
