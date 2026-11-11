@@ -1,0 +1,11 @@
+{
+  "config_id": "q5ks_none",
+  "model_size_mb": 1047.83,
+  "model_sha256": "5b9fc2f03cd20e8710bae8446864aa2ddfb5563df4865a8676ee17ef0bef1e61",
+  "dataset": "humaneval",
+  "split": "heldout",
+  "task_count": 60,
+  "passed": 33,
+  "pass@1": 0.55,
+  "source_summary": "finalist_q5ks_none_humaneval_heldout_summary.json"
+}

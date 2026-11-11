@@ -1,30 +1,13 @@
-# Release readiness — V12 bundle
+# Release readiness — v1.0.0
 
-**Status:** public release at https://github.com/antonrosso34-maker/behavioral-report-cards (main (tag v12)); source repository **private/404**; public
-archive and DOI pending. Public URL: https://github.com/antonrosso34-maker/behavioral-report-cards or DOI is claimed.
+**Status:** public release at https://github.com/antonrosso34-maker/behavioral-report-cards (tag v1.0.0); source repository **private/404**; DOI pending.
 
-- **V12 paper:** `paper/PAPER_DRAFT_V12.md` present.
-- **Manifest:** `data/pass-set-header/SHA256SUMS` has 16 hashed evidence files; with
-  `SHA256SUMS` itself the manifest is **17/17**. `README.md`, `PUBLISH.md`, and `MANIFEST.md`
-  are metadata and excluded from the hash list.
-- **Top-level:** `SHA256SUMS` verifies every bundle file; the bundle `SHA256SUMS` and zip
-  hashes are reported in the sibling release metadata outside the bundle, to avoid a
-  self-referential hash.
-- **CP40:** the pre-run plan is preserved at
-  `evidence/cp40/CP40_PLAN_PRE_RUN_2026-11-09.md`; `evidence/cp40/CP40_PLAN.md` is the
-  completed-status pointer to `cp40_analysis.md`/`cp40_analysis.json` and the CP@1
-  certificate.
-- **Pending:** DOI, license: CC BY 4.0 + MIT (set), public copy/commit. The nested manifest's `Git remote: none
-  configured` refers to the bridge worktree; it does not contradict the private/404 source
-  repository status.
+- **Final paper:** `paper/FINAL_PAPER_DRAFT_V1.md` present (paper body 2,551 words whitespace / 2,846 stricter; under 3,000).
+- **Release document/HTML:** `paper/FINAL_PAPER_RELEASE_V1.md` (SHA-256 `06d77e0f6eb446c4d7e810f8dfa70ce5ae14409c27f58e477afc32d54f496835`); `paper/FINAL_PAPER_RELEASE_V1.html` (SHA-256 `6a3c9a4823060893a439069412cfa945f6b859a9e086d2f9ff2bf91e0c142bd9`).
+- **Gemma audit evidence:** `evidence/gemma-audit/` present (23 hashed files; `SHA256SUMS`; pass matrices, task IDs, sanitized summaries, aggregate statistics; no raw completions).
+- **V12 prior paper:** `paper/PAPER_DRAFT_V12.md` present.
+- **Manifest:** `data/pass-set-header/SHA256SUMS` has 16 hashed evidence files; with `SHA256SUMS` itself the manifest is **17/17**.
+- **Top-level:** `SHA256SUMS` regenerated for v1.0.0; SHA-256 `1913beed97ea227166bbed3e57ee65ae6a1d34efac61154c4d98b9a8fcbd206e`.
+- **Pending:** DOI. License is CC BY 4.0 (paper/data/evidence) + MIT (scripts); model weights Apache-2.0.
 
-**One-line verdict:** Public release live (tag v12); V12 paper included; 17/17 manifest; DOI/license: CC BY 4.0 + MIT (set)/
-public release live (tag v12).
-
-
-
-
-
-
-
-
+**One-line verdict:** Public release v1.0.0 live; final paper, release document/HTML, and Gemma audit evidence included; 17/17 manifest; DOI pending.

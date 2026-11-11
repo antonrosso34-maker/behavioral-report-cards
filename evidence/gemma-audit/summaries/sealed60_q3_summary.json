@@ -1,0 +1,11 @@
+{
+  "config_id": "q3_mix",
+  "model_size_mb": 2792.09,
+  "model_sha256": "1448b0c3eec5d53c678a8d5325213697b9ef5f387c36336beb269af06ed5505d",
+  "dataset": "mbpp",
+  "split": "heldout",
+  "task_count": 60,
+  "passed": 36,
+  "pass@1": 0.6,
+  "source_summary": "sealed60_q3_summary.json"
+}

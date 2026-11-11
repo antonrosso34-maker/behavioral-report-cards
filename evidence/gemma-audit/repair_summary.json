@@ -1,0 +1,52 @@
+{
+  "sealed_60": {
+    "pair": "q3+gp1",
+    "before": "40/60",
+    "after": "44/60",
+    "b": 4,
+    "c": 0,
+    "one_sided_p": 0.0625,
+    "two_sided_p": 0.125,
+    "post_hoc": true,
+    "note": "4/4 deterministic repairs; 126 requires import builtins"
+  },
+  "old_60": {
+    "pair": "q3+gp1",
+    "before": "34/60",
+    "after": "38/60",
+    "b": 4,
+    "c": 1,
+    "one_sided_p": 0.1875,
+    "two_sided_p": 0.375,
+    "post_hoc": true,
+    "note": "4/5; Mbpp/67 unfixed"
+  },
+  "full_sweep": {
+    "failures": 197,
+    "team_pair_fixes_old": 4,
+    "team_pair_fixes_sealed": 4,
+    "unsloth_fixes": "0/45",
+    "google_fixes": "0/45",
+    "unmatched": "184/197"
+  },
+  "qwen_proxy": {
+    "tasks": 66,
+    "failures": 118,
+    "fixes": 3,
+    "fix_rate": 0.0254,
+    "fixed_task": "Mbpp/59",
+    "operator": "formula_lookup",
+    "note": "Qwen proxy, not a Gemma result"
+  },
+  "fresh_fragility": {
+    "panel_tasks": 68,
+    "required_repairs_k": 4,
+    "required_unsloth_repairs": 0,
+    "P_ge_4_qwen_rate": 0.095,
+    "P_ge_3": 0.2495,
+    "P_ge_2": 0.5185,
+    "futility_screen_32_ge_2": 0.1952,
+    "note": "post-hoc development result; do not lead with it"
+  },
+  "source": "harness/architect/queue/agents/11_bridge/ideas/10_literature.md (sections 10.1-10.7, 10.16)"
+}

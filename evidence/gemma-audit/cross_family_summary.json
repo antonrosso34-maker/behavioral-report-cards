@@ -1,0 +1,27 @@
+{
+  "pair": "gp1_2629 + q5ks_none",
+  "gemma_arm": {
+    "config": "gp1_2629",
+    "pass": "34/60",
+    "size_mb": 2640.74,
+    "sha256": "3a337390dc60998d15e1ca5a6197631d542fd9e8739289f781ea2469fe8202a4"
+  },
+  "qwen_arm": {
+    "config": "q5ks_none",
+    "pass": "33/60",
+    "size_mb": 1047.83,
+    "sha256": "5b9fc2f03cd20e8710bae8446864aa2ddfb5563df4865a8676ee17ef0bef1e61"
+  },
+  "pair_union": "45/60 vs Unsloth 36/60",
+  "b": 10,
+  "c": 1,
+  "one_sided_p": 0.0059,
+  "two_sided_p": 0.0117,
+  "size_ratio": 1.476,
+  "unique_tasks": {
+    "qwen": 11,
+    "gemma": 12
+  },
+  "scope": "HumanEval-only; no MBPP measurement for the Qwen arm; secondary portfolio result",
+  "source": "harness/architect/queue/agents/11_bridge/CAMPAIGN_STATUS.md; 10_literature.md (section 10.15)"
+}

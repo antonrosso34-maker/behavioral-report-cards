@@ -1,0 +1,29 @@
+{
+  "panel": {
+    "mbpp": 68,
+    "humaneval": 64,
+    "total": 132
+  },
+  "freshness": {
+    "campaign_fresh": true,
+    "qwen_scored_he": 64,
+    "qwen_scored_mbpp": 76,
+    "strict_unseen_mbpp": 2,
+    "strict_unseen_he": 0,
+    "note": "64 HE + 76 MBPP stage2_cal tasks were scored by four Qwen2.5-Coder-1.5B configs on 2026-11-08"
+  },
+  "power": {
+    "n": 132,
+    "mde_80_pp": 9.394,
+    "mde_80_tasks": 12.4,
+    "power_plus_2_60": 0.12,
+    "power_plus_6_60": 0.859,
+    "he_64_power_at_plus_6_60_one_sided": 0.5795,
+    "he_64_target_plus_8_tasks_one_sided": 0.828,
+    "mbpp_plus_2_60_one_sided_at_n_132": 0.2,
+    "ni_margin_n_68_pp": -8.16,
+    "ni_margin_n_132_pp": -5.69
+  },
+  "claim": "HE-primary superiority + MBPP non-inferiority; do not claim a +2 MBPP win",
+  "source": "harness/architect/queue/agents/11_bridge/ideas/05_power.md; 10_literature.md (section 10.4)"
+}

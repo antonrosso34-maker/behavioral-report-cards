@@ -1,0 +1,11 @@
+{
+  "config_id": "gp1b_2498",
+  "model_size_mb": 2492.99,
+  "model_sha256": "27e48bc916900823b77dc5a68b7e45964064efe1387c6cf3d2b603435bd6b259",
+  "dataset": "humaneval",
+  "split": "dev",
+  "task_count": 40,
+  "passed": 34,
+  "pass@1": 0.85,
+  "source_summary": "gp1b_dev_summary.json"
+}

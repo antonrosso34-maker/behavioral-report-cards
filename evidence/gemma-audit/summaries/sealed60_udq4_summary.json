@@ -1,0 +1,11 @@
+{
+  "config_id": "udq4_k_xl",
+  "model_size_mb": 2498.98,
+  "model_sha256": "e531007218dfab990486a5de7676a6932d6ea8dea233d1f698d7c21cf8a16889",
+  "dataset": "mbpp",
+  "split": "heldout",
+  "task_count": 60,
+  "passed": 40,
+  "pass@1": 0.6667,
+  "source_summary": "sealed60_udq4_summary.json"
+}

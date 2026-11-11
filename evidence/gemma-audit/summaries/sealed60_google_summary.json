@@ -1,0 +1,11 @@
+{
+  "config_id": "google_qat_q4_0",
+  "model_size_mb": 3194.35,
+  "model_sha256": "fa401b55b07ee70a54c6dae3903c783a6e65064312529ea57175cb5f8dec6634",
+  "dataset": "mbpp",
+  "split": "heldout",
+  "task_count": 60,
+  "passed": 40,
+  "pass@1": 0.6667,
+  "source_summary": "sealed60_google_summary.json"
+}

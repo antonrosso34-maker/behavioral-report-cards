@@ -1,0 +1,79 @@
+{
+  "method": "task-clustered partial-credit McNemar; 30 s timeout; base + plus tests individually",
+  "splits": {
+    "he_heldout_60": {
+      "pair": "42/60 vs 36/60",
+      "pc_pair": 0.783751,
+      "pc_unsloth": 0.693682,
+      "mean_diff_pp": 9.0068,
+      "ci95_pp": [
+        1.3603,
+        17.2729
+      ],
+      "signflip_p_two_sided": 0.0268,
+      "cluster_robust_p": 0.0209,
+      "icc_pair": 0.8233,
+      "icc_unsloth": 0.8531,
+      "n_eff_pair": 72.86,
+      "n_eff_unsloth": 70.31,
+      "truncation_excluded_mean_pp": 5.4722,
+      "truncation_excluded_p": 0.1249
+    },
+    "he_dev_40": {
+      "pair": "31/40 vs 29/40",
+      "pc_pair": 0.872679,
+      "pc_unsloth": 0.791763,
+      "mean_diff_pp": 8.0916,
+      "ci95_pp": [
+        0.6352,
+        17.4245
+      ],
+      "signflip_p_two_sided": 0.0977,
+      "cluster_robust_p": 0.0825,
+      "icc_pair": 0.8926,
+      "icc_unsloth": 0.9613,
+      "n_eff_pair": 44.81,
+      "n_eff_unsloth": 41.61,
+      "truncation_excluded_mean_pp": 3.4443,
+      "truncation_excluded_p": 0.7501
+    },
+    "mbpp_sealed_60": {
+      "pair": "40/60 vs 40/60",
+      "pc_pair": 0.81942,
+      "pc_unsloth": 0.764464,
+      "mean_diff_pp": 5.4956,
+      "ci95_pp": [
+        -2.4113,
+        13.4136
+      ],
+      "signflip_p_two_sided": 0.1851,
+      "cluster_robust_p": 0.1758,
+      "icc_pair": 0.7663,
+      "icc_unsloth": 0.8476,
+      "n_eff_pair": 78.08,
+      "n_eff_unsloth": 70.67,
+      "truncation_excluded_mean_pp": 4.7305,
+      "truncation_excluded_p": 0.2341
+    },
+    "mbpp_old_60": {
+      "pair": "34/60 vs 35/60",
+      "pc_pair": 0.730207,
+      "pc_unsloth": 0.748969,
+      "mean_diff_pp": -1.8762,
+      "ci95_pp": [
+        -10.435,
+        6.3644
+      ],
+      "signflip_p_two_sided": 0.6733,
+      "cluster_robust_p": 0.7136,
+      "icc_pair": 0.7788,
+      "icc_unsloth": 0.7853,
+      "n_eff_pair": 76.84,
+      "n_eff_unsloth": 76.21,
+      "truncation_excluded_mean_pp": -1.6185,
+      "truncation_excluded_p": 0.6653
+    }
+  },
+  "verdict": "task-family-specific: HE robust, MBPP partial-credit dead; not a pass@1 win",
+  "source": "harness/architect/queue/agents/11_bridge/ideas/10_literature.md (sections 10.8, 10.13, 10.14)"
+}

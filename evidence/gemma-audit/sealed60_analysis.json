@@ -1,0 +1,98 @@
+{
+  "panel": "GEM-SEALED60-01",
+  "n_tasks": 60,
+  "status_counts": {
+    "q3_mix": {
+      "pass": 36,
+      "fail": 24
+    },
+    "gp1_qat_requant": {
+      "pass": 35,
+      "fail": 25
+    },
+    "google_qat_q4_0": {
+      "pass": 40,
+      "fail": 20
+    },
+    "udq4_k_xl": {
+      "pass": 40,
+      "fail": 20
+    }
+  },
+  "request_errors": {
+    "q3_mix": 0,
+    "gp1_qat_requant": 0,
+    "google_qat_q4_0": 0,
+    "udq4_k_xl": 0
+  },
+  "invalid": false,
+  "single_passes": {
+    "q3_mix": 36,
+    "gp1_qat_requant": 35,
+    "google_qat_q4_0": 40,
+    "udq4_k_xl": 40
+  },
+  "results": [
+    {
+      "pair": "q3_mix+gp1_qat_requant",
+      "n": 60,
+      "a_passes": 36,
+      "b_passes": 35,
+      "pair_union": 40,
+      "unsloth_passes": 40,
+      "gain_vs_unsloth": 0,
+      "b_pair_only": 4,
+      "c_unsloth_only": 4,
+      "mcnemar_one_sided_p": 0.636719,
+      "mcnemar_two_sided_p": 1.0,
+      "paired_bootstrap_ci95_gain": [
+        -6,
+        6
+      ],
+      "decision": "FAILURE"
+    },
+    {
+      "pair": "q3_mix+google_qat_q4_0",
+      "n": 60,
+      "a_passes": 36,
+      "b_passes": 40,
+      "pair_union": 42,
+      "unsloth_passes": 40,
+      "gain_vs_unsloth": 2,
+      "b_pair_only": 4,
+      "c_unsloth_only": 2,
+      "mcnemar_one_sided_p": 0.34375,
+      "mcnemar_two_sided_p": 0.6875,
+      "paired_bootstrap_ci95_gain": [
+        -3,
+        7
+      ],
+      "decision": "INCONCLUSIVE"
+    },
+    {
+      "pair": "q3_mix+udq4_k_xl",
+      "n": 60,
+      "a_passes": 36,
+      "b_passes": 40,
+      "pair_union": 43,
+      "unsloth_passes": 40,
+      "gain_vs_unsloth": 3,
+      "b_pair_only": 3,
+      "c_unsloth_only": 0,
+      "mcnemar_one_sided_p": 0.125,
+      "mcnemar_two_sided_p": 0.25,
+      "paired_bootstrap_ci95_gain": [
+        0,
+        7
+      ],
+      "decision": "INCONCLUSIVE"
+    }
+  ],
+  "sizes_mib": {
+    "q3_mix": 2792.09,
+    "gp1_qat_requant": 2640.74,
+    "google_qat_q4_0": 3194.35,
+    "udq4_k_xl": 2498.98
+  },
+  "caveat": "Unsloth UD-Q4 is 2,498.98 MiB; the team pair is 5,432.83 MiB (2.17x). A pass-count win is not a size-matched win."
+}
