@@ -2,9 +2,8 @@
 
 **A frozen 20-task audit, an oracle-file control, and a scale boundary**
 
-This is the public release for the Gemma 4 Developer Agent Paper Track submission. It contains the final paper, the audit harness, the frozen splits, aggregate results, and saved model replies.
+This is the public artifact release for the Gemma 4 Developer Agent Paper Track submission. The paper itself is submitted as a Kaggle Writeup; this release contains the audit harness, frozen splits, aggregate results, and saved model replies for verifiability.
 
-- **Paper:** [paper.md](paper.md) · [paper.html](paper.html)
 - **Figure:** [figures/fig1_applicability_semantic.svg](figures/fig1_applicability_semantic.svg)
 - **Frozen split:** [harness/split_20.json](harness/split_20.json)
 - **Fresh split:** [harness/split_fresh_20.json](harness/split_fresh_20.json)
