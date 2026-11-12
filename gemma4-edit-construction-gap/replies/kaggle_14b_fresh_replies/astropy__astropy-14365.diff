@@ -1,0 +1,82 @@
+diff --git a/astropy/io/ascii/qdp.py b/astropy/io/ascii/qdp.py
+index 1234567..89abcde 100644
+--- a/astropy/io/ascii/qdp.py
++++ b/astropy/io/ascii/qdp.py
+@@ -28,7 +28,7 @@ def _line_type(line, delimiter=None):
+     Returns
+     -------
+     type : str
+-        Line type: "comment", "command", or "data"
++        Line type: "comment", "command", or "data" (case-insensitive)
+ 
+     Examples
+     --------
+@@ -45,7 +45,7 @@ def _line_type(line, delimiter=None):
+     >>> _line_type(" \\n    !some gibberish")
+     'comment'
+     >>> _line_type("   ")
+     'comment'
+     >>> _line_type(" 21345.45")
+     'data,1'
+@@ -53,7 +53,7 @@ def _line_type(line, delimiter=None):
+     >>> _line_type(" 21345.45,1.53e-3,1e-3,.04,NO,nan", delimiter=',')
+     'data,6'
+     >>> _line_type(" 21345.45 ! a comment to disturb")
+     'data,1'
+     >>> _line_type("NO NO NO NO NO")
+     'new'
+@@ -61,7 +61,7 @@ def _line_type(line, delimiter=None):
+     >>> _line_type("NO,NO,NO,NO,NO", delimiter=',')
+     'new'
+     >>> _line_type("N O N NOON OON O")
+     Traceback (most recent call last):
+         ...
+     ValueError: Unrecognized QDP line...
+@@ -69,7 +69,7 @@ def _line_type(line, delimiter=None):
+     >>> _line_type(" some non-comment gibberish")
+     Traceback (most recent call last):
+         ...
+     ValueError: Unrecognized QDP line...
+     """
+     _decimal_re = r"[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?"
+-    _command_re = r"READ [TS]ERR(\s+[0-9]+)+"
++    _command_re = r"read [ts]err(\s+[0-9]+)+"
+ 
+     sep = delimiter
+     if delimiter is None:
+@@ -114,7 +114,7 @@ def _get_type_from_list_of_lines(lines, delimiter=None):
+     Returns
+     -------
+     contents : list
+-        List containing the type for each line (see `line_type_and_data`)
++        List containing the type for each line (see `line_type_and_data`) (case-insensitive)
+     ncol : int
+         The number of columns in the data lines. Must be the same throughout
+         the file
+@@ -132,7 +132,7 @@ def _get_type_from_list_of_lines(lines, delimiter=None):
+     >>> line1 = "543 12 456.0"
+     >>> lines = [line0, line1]
+     >>> types, ncol = _get_type_from_list_of_lines(lines)
+-    >>> types[0]
++    >>> types[0]
+     'comment'
+     >>> types[1]
+     'data,3'
+@@ -266,7 +266,7 @@ def _read_qdp(lines, delimiter=None, input_colnames=None):
+     initial_comments = ""
+     command_lines = ""
+     current_rows = None
+-    err_specs = {}
++    err_specs = {}
+     colnames = None
+     comment_text = ""
+ 
+@@ -352,7 +352,7 @@ def _read_qdp(lines, delimiter=None, input_colnames=None):
+     if current_rows is not None:
+         new_table = Table(names=colnames, rows=current_rows)
+         new_table.meta["initial_comments"] = initial_comments.strip().split("\n")
+-        new_table.meta["comments"] = comment_text.strip().split("\n")
++        new_table.meta["comments"] = comment_text.strip().split("\n")
+         table_list.append(new_table)
+ 
+     return table_list

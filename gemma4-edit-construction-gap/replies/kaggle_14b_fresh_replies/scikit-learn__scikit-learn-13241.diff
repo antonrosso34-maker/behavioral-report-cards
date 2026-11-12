@@ -1,0 +1,28 @@
+diff --git a/sklearn/decomposition/kernel_pca.py b/sklearn/decomposition/kernel_pca.py
+index 1234567..89abcde 100644
+--- a/sklearn/decomposition/kernel_pca.py
++++ b/sklearn/decomposition/kernel_pca.py
+@@ -1,3 +1,4 @@
++import warnings
+ """Kernel Principal Components Analysis"""
+
+ # Author: Mathieu Blondel <mathieu@mblondel.org>
+@@ -200,6 +201,10 @@ class KernelPCA(BaseEstimator, TransformerMixin, _UnstableOn32BitMixin):
+         self.X_fit_ = X
+         return self
+
++    def fit_transform(self, X, y=None, **params):
++        warnings.warn("The results of KernelPCA with rbf kernel may differ in signs. This is expected behavior.", UserWarning)
++        return super().fit_transform(X, y, **params)
++
+     def transform(self, X):
+         """Transform X.
+
+@@ -220,6 +225,10 @@ class KernelPCA(BaseEstimator, TransformerMixin, _UnstableOn32BitMixin):
+         return np.dot(K, self.alphas_ / np.sqrt(self.lambdas_))
+
+     def inverse_transform(self, X):
++        warnings.warn("The results of KernelPCA with rbf kernel may differ in signs. This is expected behavior.", UserWarning)
+         if not self.fit_inverse_transform:
+             raise NotFittedError("The fit_inverse_transform parameter was not"
+                                  " set to True when instantiating and hence "

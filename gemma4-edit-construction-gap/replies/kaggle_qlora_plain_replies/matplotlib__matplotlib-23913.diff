@@ -1,0 +1,36 @@
+diff --git a/lib/matplotlib/legend.py b/lib/matplotlib/legend.py
+--- a/lib/matplotlib/legend.py
++++ b/lib/matplotlib/legend.py
+@@ -270,6 +270,7 @@ def __init__(
+         # figure out title font properties:
+         if title_fontsize is not None and title_fontproperties is not None:
+             raise ValueError(
++                "title_fontsize and title_fontproperties can't be specified "
+                 "at the same time. Only use one of them. ")
+         title_prop_fp = FontProperties._from_any(title_fontproperties)
+         if isinstance(title_fontproperties, dict):
+@@ -277,6 +278,7 @@ def __init__(
+             if "size" not in title_fontproperties:
+                 title_fontsize = mpl.rcParams["legend.title_fontsize"]
+                 title_prop_fp.set_size(title_fontsize)
++        elif title_fontsize is not None:
++            title_prop_fp.set_size(title_fontsize)
+         elif not isinstance(title_fontproperties, FontProperties):
+             title_fontsize = mpl.rcParams["legend.title_fontsize"]
+             title_prop_fp.set_size(title_fontsize)
+@@ -284,6 +286,7 @@ def __init__(
+         self.set_title(title, prop=title_prop_fp)
+         self._draggable = None
+ 
++        # set the text color
+         color_getters = {  # getter function depends on line or patch
+             'linecolor':       ['get_color',           'get_facecolor'],
+             'markerfacecolor': ['get_markerfacecolor', 'get_facecolor'],
+@@ -300,6 +303,7 @@ def __init__(
+             for text in self.texts:
+                 text.set_color(color)
+         else:
++            raise ValueError(f"Invalid labelcolor: {labelcolor!r}")
+             raise ValueError(f"Invalid labelcolor: {labelcolor!r}")
+ 
+     def _set_artist_props(self, a):

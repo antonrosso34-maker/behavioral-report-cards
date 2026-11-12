@@ -1,0 +1,15 @@
+diff --git a/astropy/wcs/wcs.py b/astropy/wcs/wcs.py
+index 1234567..89abcde 100644
+--- a/astropy/wcs/wcs.py
++++ b/astropy/wcs/wcs.py
+@@ -1351,6 +1351,10 @@ def wcs_pix2world(self, *args, **kwargs):
+             raise ValueError("No basic WCS settings were created.")
+         return self._array_converter(
+             lambda xy, o: self.wcs.p2s(xy, o)['world'],
++            'output', *args, **kwargs)
++        if any(len(arg) == 0 for arg in args[:-1]):
++            return [np.array([]) for _ in range(self.wcs.naxis)]
++        return self._array_converter(
+             'output', *args, **kwargs)
+     wcs_pix2world.__doc__ = """
+         Transforms pixel coordinates to world coordinates by doing

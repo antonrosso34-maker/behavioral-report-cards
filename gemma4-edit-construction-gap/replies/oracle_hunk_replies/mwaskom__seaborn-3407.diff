@@ -1,0 +1,27 @@
+diff --git a/seaborn/axisgrid.py b/seaborn/axisgrid.py
+--- a/seaborn/axisgrid.py
++++ b/seaborn/axisgrid.py
+@@ -1490,7 +1490,7 @@
+             if self._dropna:
+                 not_na = vector.notna()
+                 if hue is not None:
+                     not_na &= hue.notna()
+                 vector = vector[not_na]
+                 if hue is not None:
+                     hue = hue[not_na]
+ 
+             plot_kwargs.setdefault("hue", hue)
+             plot_kwargs.setdefault("hue_order", self._hue_order)
+             plot_kwargs.setdefault("palette", self._orig_palette)
+             func(x=vector, **plot_kwargs)
+             ax.legend_ = None
+ 
+     def _map_diag_iter_hue(self, func, **kwargs):
+         """Put marginal plot on each diagonal axes, iterating over hue."""
+         # Plot on each of the diagonal axes
+         fixed_color = kwargs.pop("color", None)
+ 
+         for var, ax in zip(self.diag_vars, self.diag_axes):
+-            hue_grouped = self.data[var].groupby(self.hue_vals)
++            hue_grouped = self.data[var].groupby(self.hue_vals)
+```

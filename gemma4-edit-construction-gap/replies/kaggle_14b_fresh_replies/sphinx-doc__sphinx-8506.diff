@@ -1,0 +1,22 @@
+diff --git a/sphinx/domains/std.py b/sphinx/domains/std.py
+index 1234567..89abcde 100644
+--- a/sphinx/domains/std.py
++++ b/sphinx/domains/std.py
+@@ -157,7 +157,7 @@ class Cmdoption(ObjectDescription):
+             logger.warning(__('Malformed option description %r, should '
+                               'look like "opt", "-opt args", "--opt args", '
+                               '"/opt args" or "+opt args"'), potential_option,
+-                            location=signode)
++                            location=signode, type='rst:cmdoption')
+             continue
+         optname, args = m.groups()
+         if count:
+@@ -247,7 +247,7 @@ class Cmdoption(ObjectDescription):
+         if not firstname:
+             raise ValueError
+         return firstname
+-
++    
+     def add_target_and_index(self, firstname: str, sig: str, signode: desc_signature) -> None:
+         currprogram = self.env.ref_context.get('std:program')
+         for optname in signode.get('allnames', []):

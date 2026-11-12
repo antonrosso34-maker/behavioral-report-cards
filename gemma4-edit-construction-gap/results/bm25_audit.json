@@ -1,0 +1,262 @@
+[
+  {
+    "id": "astropy__astropy-12907",
+    "strict": false,
+    "recount": true,
+    "gold_paths": [
+      "astropy/modeling/separable.py"
+    ],
+    "changed_paths": [
+      "astropy/modeling/separable.py"
+    ],
+    "gold_hit": true,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM"
+  },
+  {
+    "id": "astropy__astropy-6938",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "astropy/io/fits/fitsrec.py"
+    ],
+    "changed_paths": [
+      "astropy/io/fits/fitsrec.py"
+    ],
+    "gold_hit": true,
+    "err": "error: patch failed: astropy/io/fits/fitsrec.py:44\nerror: astropy/io/fits/fitsrec.py: patch does not apply\n"
+  },
+  {
+    "id": "django__django-12589",
+    "strict": true,
+    "recount": true,
+    "gold_paths": [
+      "django/db/models/sql/query.py"
+    ],
+    "changed_paths": [
+      "django/db/models/fields/related.py"
+    ],
+    "gold_hit": false,
+    "err": ""
+  },
+  {
+    "id": "django__django-12856",
+    "strict": true,
+    "recount": true,
+    "gold_paths": [
+      "django/db/models/base.py"
+    ],
+    "changed_paths": [
+      "django/db/models/base.py"
+    ],
+    "gold_hit": true,
+    "err": ""
+  },
+  {
+    "id": "matplotlib__matplotlib-25433",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "lib/matplotlib/figure.py"
+    ],
+    "changed_paths": [
+      "lib/matplotlib/widgets.py"
+    ],
+    "gold_hit": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM"
+  },
+  {
+    "id": "matplotlib__matplotlib-23562",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "lib/mpl_toolkits/mplot3d/art3d.py"
+    ],
+    "changed_paths": [
+      "lib/mpl_toolkits/mplot3d/art3d.py"
+    ],
+    "gold_hit": true,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM"
+  },
+  {
+    "id": "mwaskom__seaborn-3407",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "seaborn/axisgrid.py"
+    ],
+    "changed_paths": [
+      "seaborn/axisgrid.py"
+    ],
+    "gold_hit": true,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM"
+  },
+  {
+    "id": "mwaskom__seaborn-3190",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "seaborn/_core/scales.py"
+    ],
+    "changed_paths": [
+      "seaborn/_core/plot.py"
+    ],
+    "gold_hit": false,
+    "err": "error: patch failed: seaborn/_core/plot.py:838\nerror: seaborn/_core/plot.py: patch does not apply\n"
+  },
+  {
+    "id": "pallets__flask-4045",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "src/flask/blueprints.py"
+    ],
+    "changed_paths": [
+      "src/flask/blueprints.py"
+    ],
+    "gold_hit": true,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM"
+  },
+  {
+    "id": "pallets__flask-4992",
+    "strict": true,
+    "recount": true,
+    "gold_paths": [
+      "src/flask/config.py"
+    ],
+    "changed_paths": [
+      "src/flask/config.py"
+    ],
+    "gold_hit": true,
+    "err": ""
+  },
+  {
+    "id": "astropy__astropy-7746",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "astropy/wcs/wcs.py"
+    ],
+    "changed_paths": [
+      "astropy/wcs/wcs.py"
+    ],
+    "gold_hit": true,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM"
+  },
+  {
+    "id": "astropy__astropy-14995",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "astropy/nddata/mixins/ndarithmetic.py"
+    ],
+    "changed_paths": [
+      "astropy/nddata/mixins/ndarithmetic.py"
+    ],
+    "gold_hit": true,
+    "err": "error: patch failed: astropy/nddata/mixins/ndarithmetic.py:104\nerror: astropy/nddata/mixins/ndarithmetic.py: patch does "
+  },
+  {
+    "id": "django__django-11133",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "django/http/response.py"
+    ],
+    "changed_paths": [
+      "django/http/response.py"
+    ],
+    "gold_hit": true,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM"
+  },
+  {
+    "id": "django__django-16816",
+    "strict": true,
+    "recount": true,
+    "gold_paths": [
+      "django/contrib/admin/checks.py"
+    ],
+    "changed_paths": [
+      "django/contrib/admin/utils.py"
+    ],
+    "gold_hit": false,
+    "err": ""
+  },
+  {
+    "id": "matplotlib__matplotlib-23913",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "lib/matplotlib/legend.py"
+    ],
+    "changed_paths": [
+      "lib/matplotlib/axes/_base.py"
+    ],
+    "gold_hit": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM"
+  },
+  {
+    "id": "matplotlib__matplotlib-23563",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "lib/mpl_toolkits/mplot3d/art3d.py"
+    ],
+    "changed_paths": [
+      "lib/mpl_toolkits/mplot3d/art3d.py"
+    ],
+    "gold_hit": true,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM"
+  },
+  {
+    "id": "mwaskom__seaborn-2848",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "seaborn/_oldcore.py"
+    ],
+    "changed_paths": [
+      "seaborn/categorical.py"
+    ],
+    "gold_hit": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM"
+  },
+  {
+    "id": "mwaskom__seaborn-3010",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "seaborn/_stats/regression.py"
+    ],
+    "changed_paths": [
+      "seaborn/_stats/regression.py"
+    ],
+    "gold_hit": true,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM"
+  },
+  {
+    "id": "pallets__flask-5063",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "src/flask/cli.py"
+    ],
+    "changed_paths": [
+      "src/flask/app.py"
+    ],
+    "gold_hit": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM"
+  },
+  {
+    "id": "psf__requests-2674",
+    "strict": false,
+    "recount": false,
+    "gold_paths": [
+      "requests/adapters.py"
+    ],
+    "changed_paths": [
+      "requests/packages/urllib3/exceptions.py"
+    ],
+    "gold_hit": false,
+    "err": "error: patch failed: requests/packages/urllib3/exceptions.py:43\nerror: requests/packages/urllib3/exceptions.py: patch do"
+  }
+]

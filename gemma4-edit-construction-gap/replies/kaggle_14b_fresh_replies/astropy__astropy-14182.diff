@@ -1,0 +1,27 @@
+diff --git a/astropy/io/ascii/rst.py b/astropy/io/ascii/rst.py
+index 1234567..89abcdef 100644
+--- a/astropy/io/ascii/rst.py
++++ b/astropy/io/ascii/rst.py
+@@ -17,6 +17,7 @@
+ from .fixedwidth import (
+     FixedWidth,
+     FixedWidthData,
++    FixedWidthHeader,
+     FixedWidthTwoLineDataSplitter,
+ )
+ 
+@@ -100,6 +101,10 @@ class RST(FixedWidth):
+     def __init__(self):
+         super().__init__(delimiter_pad=None, bookend=False)
+ 
++    def write(self, lines, header_rows=None):
++        if header_rows:
++            lines = [header_rows[0]] + lines + [header_rows[1]]
++        return super().write(lines)
+ 
+     def write(self, lines):
+         lines = super().write(lines)
+@@ -107,7 +112,7 @@ class RST(FixedWidth):
+         lines = [lines[1]] + lines + [lines[1]]
+         return lines
+```

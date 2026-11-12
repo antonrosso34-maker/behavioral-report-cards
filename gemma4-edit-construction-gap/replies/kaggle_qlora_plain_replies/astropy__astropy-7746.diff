@@ -1,0 +1,25 @@
+diff --git a/astropy/wcs/wcs.py b/astropy/wcs/wcs.py
+--- a/astropy/wcs/wcs.py
++++ b/astropy/wcs/wcs.py
+@@ -1270,10 +1270,10 @@ def _return_list_of_arrays(axes, origin):
+                 return (output[:, 0].reshape(axes[0].shape),
+                         output[:, 1].reshape(axes[0].shape))
+             return [output[:, i].reshape(axes[0].shape)
+-                    for i in range(output.shape[1])]
++                    for i in range(output.shape[1])]
+ 
+     def _return_single_array(xy, origin):
+-        if xy.shape[-1] != self.naxis:
++        if xy.shape[-1] != self.naxis or xy.size == 0:
+             raise ValueError(
+                 "When providing two arguments, the array must be "
+                 "of shape (N, {0})".format(self.naxis))
+@@ -1282,7 +1282,7 @@ def _return_single_array(xy, origin):
+             xy = self._denormalize_sky(xy)
+         result = func(xy, origin)
+         if ra_dec_order and sky == 'output':
+-            result = self._normalize_sky(result)
++            result = self._normalize_sky(result) if result.size > 0 else result
+         return result
+ 
+     if len(args) == 2:

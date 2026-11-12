@@ -1,0 +1,20 @@
+diff --git a/seaborn/axisgrid.py b/seaborn/axisgrid.py
+--- a/seaborn/axisgrid.py
++++ b/seaborn/axisgrid.py
+@@ -1442,10 +1442,10 @@ def map_diag(self, func, **kwargs):
+             diag_vars.append(x_var)
+             ax = self.axes[i, j]
+             diag_ax = ax.twinx()
+-            diag_ax.set_axis_off()
+             diag_axes.append(diag_ax)
+ 
+-            # Work around matplotlib bug
+-            # https://github.com/matplotlib/matplotlib/issues/15188
++            # Remove main y axis from density axes in a corner plot
++            if self._corner:
++                ax.yaxis.set_visible(False)
++                if self._despine:
++                    utils.despine(ax=ax, left=True)
+ 
+             # Remove main y axis from density axes in a corner plot
+             if self._corner:

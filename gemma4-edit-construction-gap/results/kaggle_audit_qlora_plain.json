@@ -1,0 +1,306 @@
+{
+  "tag": "qlora_plain",
+  "results": "C:\\Users\\Anton\\AppData\\Local\\Temp\\kilo\\kaggle_qlora_plain_out\\qlora7b_plain\\results.json",
+  "rows": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "gold_file": "astropy/modeling/separable.py",
+      "reply_bytes": 4097,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/astropy__astropy-12907/kaggle_qlora_plain.diff:127\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-6938",
+      "gold_file": "astropy/io/fits/fitsrec.py",
+      "reply_bytes": 605,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": true,
+      "lenient": true,
+      "apply_error": "",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "django__django-12589",
+      "gold_file": "django/db/models/sql/query.py",
+      "reply_bytes": 472,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/django__django-12589/kaggle_qlora_plain.diff:11\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-12856",
+      "gold_file": "django/db/models/base.py",
+      "reply_bytes": 1278,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: django/db/models/base.py:1900\nerror: django/db/models/base.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25433",
+      "gold_file": "lib/matplotlib/figure.py",
+      "reply_bytes": 691,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": true,
+      "lenient": true,
+      "apply_error": "",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23562",
+      "gold_file": "lib/mpl_toolkits/mplot3d/art3d.py",
+      "reply_bytes": 435,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: lib/mpl_toolkits/mplot3d/art3d.py:830\nerror: lib/mpl_toolkits/mplot3d/art3d.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3407",
+      "gold_file": "seaborn/axisgrid.py",
+      "reply_bytes": 792,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/mwaskom__seaborn-3407/kaggle_qlora_plain.diff:21\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3190",
+      "gold_file": "seaborn/_core/scales.py",
+      "reply_bytes": 373,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": true,
+      "lenient": true,
+      "apply_error": "",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "pallets__flask-4045",
+      "gold_file": "src/flask/blueprints.py",
+      "reply_bytes": 5051,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/pallets__flask-4045/kaggle_qlora_plain.diff:50\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pallets__flask-4992",
+      "gold_file": "src/flask/config.py",
+      "reply_bytes": 871,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: src/flask/config.py:110\nerror: src/flask/config.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-7746",
+      "gold_file": "astropy/wcs/wcs.py",
+      "reply_bytes": 1119,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: astropy/wcs/wcs.py:1270\nerror: astropy/wcs/wcs.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-14995",
+      "gold_file": "astropy/nddata/mixins/ndarithmetic.py",
+      "reply_bytes": 994,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/astropy__astropy-14995/kaggle_qlora_plain.diff:19\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-11133",
+      "gold_file": "django/http/response.py",
+      "reply_bytes": 4901,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/django__django-11133/kaggle_qlora_plain.diff:52\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-16816",
+      "gold_file": "django/contrib/admin/checks.py",
+      "reply_bytes": 545,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: django/contrib/admin/checks.py:902\nerror: django/contrib/admin/checks.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23913",
+      "gold_file": "lib/matplotlib/legend.py",
+      "reply_bytes": 1743,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/matplotlib__matplotlib-23913/kaggle_qlora_plain.diff:21\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23563",
+      "gold_file": "lib/mpl_toolkits/mplot3d/art3d.py",
+      "reply_bytes": 1050,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: lib/mpl_toolkits/mplot3d/art3d.py:170\nerror: lib/mpl_toolkits/mplot3d/art3d.py: patch does not apply\nerror: lib/mpl_toolkits/mplot3d/line3d.py: No such file or directory\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-2848",
+      "gold_file": "seaborn/_oldcore.py",
+      "reply_bytes": 859,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: seaborn/_oldcore.py:112\nerror: seaborn/_oldcore.py: patch does not apply\nerror: patch failed: seaborn/_oldcore.py:112\nerror: seaborn/_oldcore.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3010",
+      "gold_file": "seaborn/_stats/regression.py",
+      "reply_bytes": 4372,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/mwaskom__seaborn-3010/kaggle_qlora_plain.diff:25\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pallets__flask-5063",
+      "gold_file": "src/flask/cli.py",
+      "reply_bytes": 4281,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/pallets__flask-5063/kaggle_qlora_plain.diff:39\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "psf__requests-2674",
+      "gold_file": "requests/adapters.py",
+      "reply_bytes": 2240,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: requests/adapters.py:10\nerror: requests/adapters.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    }
+  ]
+}

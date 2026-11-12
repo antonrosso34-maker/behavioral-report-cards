@@ -1,0 +1,605 @@
+{
+  "schema_version": "fresh-split-v1",
+  "split_id": "fresh20_20261112",
+  "seed": 20261112,
+  "created_utc": "2026-11-11T21:59:32Z",
+  "dataset": "princeton-nlp/SWE-bench_Lite",
+  "dataset_split": "test",
+  "dataset_num_rows": 300,
+  "source_decision": {
+    "selected": "SWE-bench Lite (local HuggingFace cache, 300 test rows)",
+    "swe_bench_live": "network-available (SWE-bench-Live/SWE-bench-Live, lastModified 2026-11-03); not cached; different repo set",
+    "swe_rebench": "network-available (nebius/SWE-rebench and V2); not cached; different repo set",
+    "reason": "Hold the benchmark, repo set, prompt, and scorer fixed so the only change is the task split; Live/rebench are reserved for a second-stage freshness test."
+  },
+  "selection": {
+    "algorithm": "Exclude all 20 frozen instance IDs; keep statically valid rows (40-hex base commit, diff-shaped gold and test patches, non-empty FAIL_TO_PASS); drop tasks created before 2014-01-01; drop issues with Jaccard > 0.50 against any frozen issue; per repository, seeded-shuffle candidates in three pools (no file overlap, test-file overlap only, gold-file overlap) and take the first two that validate against GitHub raw file content at the base commit.",
+    "per_repo": 2,
+    "min_created_at": "2014-01-01T00:00:00Z",
+    "repos_in_lite": [
+      "astropy/astropy",
+      "django/django",
+      "matplotlib/matplotlib",
+      "mwaskom/seaborn",
+      "pallets/flask",
+      "psf/requests",
+      "pydata/xarray",
+      "pylint-dev/pylint",
+      "pytest-dev/pytest",
+      "scikit-learn/scikit-learn",
+      "sphinx-doc/sphinx",
+      "sympy/sympy"
+    ],
+    "repos_with_unused_tasks": [
+      "astropy/astropy",
+      "django/django",
+      "matplotlib/matplotlib",
+      "psf/requests",
+      "pydata/xarray",
+      "pylint-dev/pylint",
+      "pytest-dev/pytest",
+      "scikit-learn/scikit-learn",
+      "sphinx-doc/sphinx",
+      "sympy/sympy"
+    ],
+    "repos_represented": [
+      "astropy/astropy",
+      "django/django",
+      "matplotlib/matplotlib",
+      "psf/requests",
+      "pydata/xarray",
+      "pylint-dev/pylint",
+      "pytest-dev/pytest",
+      "scikit-learn/scikit-learn",
+      "sphinx-doc/sphinx",
+      "sympy/sympy"
+    ],
+    "max_issue_jaccard": 0.5,
+    "seed": 20261112
+  },
+  "contamination": {
+    "frozen_split": "harness/architect/queue/repo_comp_40/split_20.json",
+    "frozen_seed": 20261110,
+    "frozen_instance_count": 20,
+    "instance_overlap_count": 0,
+    "repo_overlap": [
+      "astropy/astropy",
+      "django/django",
+      "matplotlib/matplotlib",
+      "psf/requests"
+    ],
+    "new_repos": [
+      "pydata/xarray",
+      "pylint-dev/pylint",
+      "pytest-dev/pytest",
+      "scikit-learn/scikit-learn",
+      "sphinx-doc/sphinx",
+      "sympy/sympy"
+    ],
+    "exhausted_repos": [
+      "mwaskom/seaborn",
+      "pallets/flask"
+    ],
+    "gold_file_overlap_tasks": 0,
+    "gold_file_overlap": {},
+    "test_file_overlap_tasks": 1,
+    "test_file_overlap": {
+      "psf__requests-1963": [
+        "test_requests.py"
+      ]
+    },
+    "max_issue_jaccard_with_frozen": {
+      "value": 0.2464,
+      "fresh_instance_id": "matplotlib__matplotlib-26011",
+      "frozen_instance_id": "matplotlib__matplotlib-23913"
+    },
+    "created_at_floor": "2014-01-01T00:00:00Z",
+    "created_at_min": "2014-03-15T17:42:11Z",
+    "created_at_max": "2023-05-30T13:45:49Z",
+    "created_at_by_year": {
+      "2014": 1,
+      "2016": 1,
+      "2018": 2,
+      "2019": 3,
+      "2020": 5,
+      "2021": 2,
+      "2022": 3,
+      "2023": 3
+    },
+    "all_predate_gemma4": true,
+    "gemma4_reference": {
+      "model_card_created_utc": "2026-03-02T19:58:09Z",
+      "url": "https://huggingface.co/google/gemma-4-E2B-it",
+      "note": "Lite tasks span 2012-2023; this split is 2014-2023; the Gemma 4 model card is 2026-03-02. Temporal contamination cannot be excluded for any Lite task."
+    }
+  },
+  "tasks": [
+    {
+      "instance_id": "astropy__astropy-14182",
+      "repo": "astropy/astropy",
+      "base_commit": "a5917978be39d13cd90b517e1de4e7a539ffaa48",
+      "version": "5.1",
+      "created_at": "2022-12-16T11:13:37Z",
+      "test_patch_sha256": "f2a453dd318ca28281ea0d8240c3b641478ba9846b09a7eb9f2ce84db665a972",
+      "gold_patch_sha256": "1c80b57d515ed4da42842dff56cfec5b5c72fee6a469c9bb33f2f6b59dba0f3c",
+      "test_patch_files": [
+        "astropy/io/ascii/tests/test_rst.py"
+      ],
+      "gold_patch_files": [
+        "astropy/io/ascii/rst.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 9,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "astropy__astropy-14365",
+      "repo": "astropy/astropy",
+      "base_commit": "7269fa3e33e8d02485a647da91a5a2a60a06af61",
+      "version": "5.1",
+      "created_at": "2023-02-06T19:20:34Z",
+      "test_patch_sha256": "70b55ca95da68ba8829a50ffd8aba4ad44d2d2e2539ad6b1cc23a6c59d78f528",
+      "gold_patch_sha256": "42420ff7003feddd01ddde186a66486ab686dc91af2a3155970dea6ca4df63c3",
+      "test_patch_files": [
+        "astropy/io/ascii/tests/test_qdp.py"
+      ],
+      "gold_patch_files": [
+        "astropy/io/ascii/qdp.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 8,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "django__django-13658",
+      "repo": "django/django",
+      "base_commit": "0773837e15bb632afffb6848a58c59a791008fa1",
+      "version": "3.2",
+      "created_at": "2020-11-09T20:50:28Z",
+      "test_patch_sha256": "488a7228a68356e0481c5c8154a4b87eceaf59e0e9edf26e6bb3e192c3c9be79",
+      "gold_patch_sha256": "667081efc6e0e867f91fe6549e1b73d5de3cc02a95d1659d476040c4c96d47f5",
+      "test_patch_files": [
+        "tests/admin_scripts/tests.py"
+      ],
+      "gold_patch_files": [
+        "django/core/management/__init__.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 181,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "django__django-14534",
+      "repo": "django/django",
+      "base_commit": "910ecd1b8df7678f45c3d507dde6bcb1faafa243",
+      "version": "4.0",
+      "created_at": "2021-06-17T15:37:34Z",
+      "test_patch_sha256": "ff52b526106f89d0146265362224f6985210e28429010b92e678fa5e245f9eee",
+      "gold_patch_sha256": "b4a7db211c190cd559d8c553d7f4c029aae2114397af47ac0051fe11e17ef39c",
+      "test_patch_files": [
+        "tests/forms_tests/tests/test_forms.py"
+      ],
+      "gold_patch_files": [
+        "django/forms/boundfield.py"
+      ],
+      "fail_to_pass_count": 2,
+      "pass_to_pass_count": 118,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25332",
+      "repo": "matplotlib/matplotlib",
+      "base_commit": "66ba515e671638971bd11a34cff12c107a437e0b",
+      "version": "3.7",
+      "created_at": "2023-02-26T11:18:40Z",
+      "test_patch_sha256": "f0e67b59b62ed7cebb55efbb0c4f2d2518821a574cb326b8031ff8fedcdaccf6",
+      "gold_patch_sha256": "78c38ea9ff9fda1c9ee826d5689e9d2067c3bf4b5ea94e3c6c1eadba7522354a",
+      "test_patch_files": [
+        "lib/matplotlib/tests/test_pickle.py"
+      ],
+      "gold_patch_files": [
+        "lib/matplotlib/cbook.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 181,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26011",
+      "repo": "matplotlib/matplotlib",
+      "base_commit": "00afcc0c6d4d2e4390338127f05b8f4fdb4e7087",
+      "version": "3.7",
+      "created_at": "2023-05-30T13:45:49Z",
+      "test_patch_sha256": "c42e74d4b161ffccbda48cfe7ed0b32c254da2136a4c84670b882b0c50da2dd7",
+      "gold_patch_sha256": "6204f1fc03ba0c693a683e76ca9e6ca12f70eb7e927c1ab26f60323ebe0d57a9",
+      "test_patch_files": [
+        "lib/matplotlib/tests/test_axes.py"
+      ],
+      "gold_patch_files": [
+        "lib/matplotlib/axis.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 817,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "psf__requests-1963",
+      "repo": "psf/requests",
+      "base_commit": "110048f9837f8441ea536804115e80b69f400277",
+      "version": "2.3",
+      "created_at": "2014-03-15T17:42:11Z",
+      "test_patch_sha256": "d54962cb131f871dcfb26c9d5b4518da0c701fd998915837bec0b3d80d9492a0",
+      "gold_patch_sha256": "deb8b9018ea0271b2b9dc2d883bf5fb0ca9a721ecc9a93718065926fbec4ed74",
+      "test_patch_files": [
+        "test_requests.py"
+      ],
+      "gold_patch_files": [
+        "requests/sessions.py"
+      ],
+      "fail_to_pass_count": 7,
+      "pass_to_pass_count": 112,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [
+        "test_requests.py"
+      ],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "psf__requests-3362",
+      "repo": "psf/requests",
+      "base_commit": "36453b95b13079296776d11b09cab2567ea3e703",
+      "version": "2.10",
+      "created_at": "2016-06-24T13:31:31Z",
+      "test_patch_sha256": "cbb63761e0d50033c347fb0847126632ba4c8848db8bd7f598e21d3998d5c260",
+      "gold_patch_sha256": "23e64f2da841d5d49874221e915a084e9bb1def2fcd6d6a24fd8e7dce71fba8d",
+      "test_patch_files": [
+        "tests/test_requests.py"
+      ],
+      "gold_patch_files": [
+        "requests/utils.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 75,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "pydata__xarray-3364",
+      "repo": "pydata/xarray",
+      "base_commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+      "version": "0.12",
+      "created_at": "2019-10-01T21:15:54Z",
+      "test_patch_sha256": "648f0daea9ee38f4b30f37dff4af749701cf1675d5d916a2ee5a9d3325b9669c",
+      "gold_patch_sha256": "dd7e65a94252a1c6d387e771082a11d8af8cdc23045e987fa2c2e1729b274eb3",
+      "test_patch_files": [
+        "xarray/tests/test_combine.py",
+        "xarray/tests/test_concat.py"
+      ],
+      "gold_patch_files": [
+        "xarray/core/concat.py"
+      ],
+      "fail_to_pass_count": 2,
+      "pass_to_pass_count": 110,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 2,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "pydata__xarray-4094",
+      "repo": "pydata/xarray",
+      "base_commit": "a64cf2d5476e7bbda099b34c40b7be1880dbd39a",
+      "version": "0.12",
+      "created_at": "2020-05-26T00:36:02Z",
+      "test_patch_sha256": "3caf7bfbd1a31fc971a0aff74f090c426939bd36946300c3c5f54c30908ad24b",
+      "gold_patch_sha256": "79eac1b06943072daa994e5fb5e7fc9e5eef5e6c34ea151cb550aa09f2da2b3a",
+      "test_patch_files": [
+        "xarray/tests/test_dataset.py"
+      ],
+      "gold_patch_files": [
+        "xarray/core/dataarray.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 862,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7114",
+      "repo": "pylint-dev/pylint",
+      "base_commit": "397c1703e8ae6349d33f7b99f45b2ccaf581e666",
+      "version": "2.15",
+      "created_at": "2022-07-03T04:36:40Z",
+      "test_patch_sha256": "5888a025fcb1f6a30b86645b104a2ae93d75bada2575af10357bb548af5c3deb",
+      "gold_patch_sha256": "1089cc6d5d8cda7a9b882bf08403e799a317acfa0a82638665df736ea6c3a6c4",
+      "test_patch_files": [
+        "tests/checkers/unittest_imports.py",
+        "tests/lint/unittest_lint.py"
+      ],
+      "gold_patch_files": [
+        "pylint/lint/expand_modules.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 56,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 2,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7993",
+      "repo": "pylint-dev/pylint",
+      "base_commit": "e90702074e68e20dc8e5df5013ee3ecf22139c3e",
+      "version": "2.15",
+      "created_at": "2022-12-27T18:20:50Z",
+      "test_patch_sha256": "4064bfda717e1c876b91b15ece090dd8d0aba30c5df48ca1d98e1ba59064b4a1",
+      "gold_patch_sha256": "a56ae72f6b88f0a03865155b280af1dfa97592074bd5bedc9a91a642801e11d5",
+      "test_patch_files": [
+        "tests/reporters/unittest_reporting.py"
+      ],
+      "gold_patch_files": [
+        "pylint/reporters/text.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 10,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5103",
+      "repo": "pytest-dev/pytest",
+      "base_commit": "10ca84ffc56c2dd2d9dc4bd71b7b898e083500cd",
+      "version": "4.5",
+      "created_at": "2019-04-13T16:17:45Z",
+      "test_patch_sha256": "89740f6cb7127fc954eb9fa2a84e7b6df26e77f18b76bf96b50db5bfb0ba5c86",
+      "gold_patch_sha256": "5b621eb0099e1e4eeb2bcb42f24a48b15b540e46fe23403475890578f546680c",
+      "test_patch_files": [
+        "testing/test_assertrewrite.py"
+      ],
+      "gold_patch_files": [
+        "src/_pytest/assertion/rewrite.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 64,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "pytest-dev__pytest-8365",
+      "repo": "pytest-dev/pytest",
+      "base_commit": "4964b468c83c06971eb743fbc57cc404f760c573",
+      "version": "6.3",
+      "created_at": "2021-02-22T20:26:35Z",
+      "test_patch_sha256": "0164e4bc25dec4af25eac2025b51cfdc426b234640daaa7320e62bb255a8be5d",
+      "gold_patch_sha256": "76ce3f1ddc6897eca565ebe7a5941ebb3072d21e4e78e01aff0a291ab8130944",
+      "test_patch_files": [
+        "testing/test_tmpdir.py"
+      ],
+      "gold_patch_files": [
+        "src/_pytest/tmpdir.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 32,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11040",
+      "repo": "scikit-learn/scikit-learn",
+      "base_commit": "96a02f3934952d486589dddd3f00b40d5a5ab5f2",
+      "version": "0.20",
+      "created_at": "2018-04-28T07:18:33Z",
+      "test_patch_sha256": "fc59843536ebe943a5f698e424994dfc410e3d76b643e5d8ab18cefcdf33a785",
+      "gold_patch_sha256": "d770bda380b128a8d911b61f4694928eba0685d0585a1c7a32f0f28b05aaa7b2",
+      "test_patch_files": [
+        "sklearn/neighbors/tests/test_neighbors.py"
+      ],
+      "gold_patch_files": [
+        "sklearn/neighbors/base.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 44,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13241",
+      "repo": "scikit-learn/scikit-learn",
+      "base_commit": "f8b108d0c6f2f82b2dc4e32a6793f9d9ac9cf2f4",
+      "version": "0.21",
+      "created_at": "2019-02-25T11:27:41Z",
+      "test_patch_sha256": "db2c5ad117b7b0c897629d5c02b473a32e614bb474fa49c54e56611d2c7d12ca",
+      "gold_patch_sha256": "2825299f14cce92b5eafb754814833a328aa4b7568138c555220d34da605385e",
+      "test_patch_files": [
+        "sklearn/decomposition/tests/test_kernel_pca.py",
+        "sklearn/decomposition/tests/test_pca.py"
+      ],
+      "gold_patch_files": [
+        "sklearn/decomposition/kernel_pca.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 54,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 2,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7738",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "c087d717f6ed183dd422359bf91210dc59689d63",
+      "version": "3.1",
+      "created_at": "2020-05-27T16:48:09Z",
+      "test_patch_sha256": "38a4764b28d1030fc5dbea0c334407216e8a467eed5dfb99556b7eb6fd510b3b",
+      "gold_patch_sha256": "3866a1c6c3971beecff7fd55b812932b7d907a8d7cbb06709a1e7a95ab5aab7b",
+      "test_patch_files": [
+        "tests/test_ext_napoleon_docstring.py"
+      ],
+      "gold_patch_files": [
+        "sphinx/ext/napoleon/docstring.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 30,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8506",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "e4bd3bd3ddd42c6642ff779a4f7381f219655c2c",
+      "version": "3.4",
+      "created_at": "2020-11-28T17:28:05Z",
+      "test_patch_sha256": "82e61ce7eb66207b7fe78eb62a22676c15ff28b0c0e19b246efadb8b6bf45c41",
+      "gold_patch_sha256": "a99517671ca1aec8033a000c5212ab6f1a80afe4563e0e8c76889577e67e4a7b",
+      "test_patch_files": [
+        "tests/test_domain_std.py"
+      ],
+      "gold_patch_files": [
+        "sphinx/domains/std.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 14,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "sympy__sympy-15346",
+      "repo": "sympy/sympy",
+      "base_commit": "9ef28fba5b4d6d0168237c9c005a550e6dc27d81",
+      "version": "1.4",
+      "created_at": "2018-10-05T17:25:21Z",
+      "test_patch_sha256": "4ed02cd502b4dcabe3648df667118553c95d07f5c6fd5fa0010a902561e431d1",
+      "gold_patch_sha256": "3d55f27f33e99ccfa8e50658d40b953a852d4394e2e58b770d0a2277e1752e00",
+      "test_patch_files": [
+        "sympy/simplify/tests/test_trigsimp.py"
+      ],
+      "gold_patch_files": [
+        "sympy/simplify/trigsimp.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 22,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 1,
+      "test_patch_new_files": 0
+    },
+    {
+      "instance_id": "sympy__sympy-18199",
+      "repo": "sympy/sympy",
+      "base_commit": "ba80d1e493f21431b4bf729b3e0452cd47eb9566",
+      "version": "1.6",
+      "created_at": "2020-01-01T19:08:59Z",
+      "test_patch_sha256": "db4bdcc155293932ebf3b6817871e3b596710eda869918986e4498d045570287",
+      "gold_patch_sha256": "e47b1071074a4e7773e5001dc973547776afb1870c57e44bdb2efc8dc77d61af",
+      "test_patch_files": [
+        "sympy/ntheory/tests/test_residue.py",
+        "sympy/solvers/tests/test_solveset.py"
+      ],
+      "gold_patch_files": [
+        "sympy/ntheory/residue_ntheory.py"
+      ],
+      "fail_to_pass_count": 1,
+      "pass_to_pass_count": 113,
+      "gold_file_overlap_with_frozen": [],
+      "test_file_overlap_with_frozen": [],
+      "base_commit_valid": true,
+      "test_patch_valid": true,
+      "test_patch_context_ok": true,
+      "test_patch_modified_files": 2,
+      "test_patch_new_files": 0
+    }
+  ],
+  "content_sha256": "dca614062a7c1a00db8c9c13a83171aac74f60bc666b4883be9593d57c39cae2"
+}

@@ -1,0 +1,15 @@
+diff --git a/django/http/response.py b/django/http/response.py
+index 1234567..89abcdef 100644
+--- a/django/http/response.py
++++ b/django/http/response.py
+@@ -300,6 +300,10 @@ class HttpResponse(HttpResponseBase):
+         if hasattr(value, '__iter__') and not isinstance(value, (bytes, str)):
+             content = b''.join(self.make_bytes(chunk) for chunk in value)
+             if hasattr(value, 'close'):
++                try:
++                    value.close()
++                except Exception:
++                    pass
+         else:
+             content = self.make_bytes(value)
+         # Create a list of properly encoded bytestrings to support write().

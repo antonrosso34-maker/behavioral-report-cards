@@ -1,0 +1,14 @@
+diff --git a/django/contrib/admin/checks.py b/django/contrib/admin/checks.py
+--- a/django/contrib/admin/checks.py
++++ b/django/contrib/admin/checks.py
+@@ -902,6 +902,10 @@ def _check_list_display_item(self, obj, item, label):
+                 obj=obj.__class__,
+                 id="admin.E108",
+             )
++        if isinstance(field, models.ManyToManyField) or (
++            getattr(field, "rel", None) and field.rel.field.many_to_one
++        ):
++            return []
+         return []
+ 
+     def _check_list_display_links(self, obj):

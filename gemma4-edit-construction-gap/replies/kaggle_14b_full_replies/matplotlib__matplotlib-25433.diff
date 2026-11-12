@@ -1,0 +1,11 @@
+diff --git a/lib/matplotlib/figure.py b/lib/matplotlib/figure.py
+index 1234567..89abcde 100644
+--- a/lib/matplotlib/figure.py
++++ b/lib/matplotlib/figure.py
+@@ -965,6 +965,7 @@ class Figure(FigureBase):
+         self._axobservers = cbook.CallbackRegistry()
+         self._suptitle = None
+         self._supxlabel = None
++        self._supylabel = None
+         self.stale = True
+```

@@ -1,0 +1,22 @@
+diff --git a/pylint/reporters/text.py b/pylint/reporters/text.py
+index 1234567..89abcdef 100644
+--- a/pylint/reporters/text.py
++++ b/pylint/reporters/text.py
+@@ -203,7 +203,7 @@ def on_set_current_module(self, module: str, filepath: str | None) -> None:
+         template = str(self.linter.config.msg_template or self._template)
+
+         # Return early if the template is the same as the previous one
+-        if template == self._template:
++        if template == self._fixed_template:
+             return
+
+         # Set template to the currently selected template
+@@ -213,7 +213,7 @@ def on_set_current_module(self, module: str, filepath: str | None) -> None:
+         for argument in arguments:
+             if argument[0] not in MESSAGE_FIELDS:
+                 warnings.warn(
+-                    f"Don't recognize the argument '{argument[0]}' in the --msg-template. "
++                    f"Don't recognize the argument '{argument[0]}' in the --msg-template. Are you sure it is supported on the current version of pylint?"
+                 )
+                 template = re.sub(r"\{" + argument[0] + r"(:.*?)?\}", "", template)
+         self._fixed_template = template

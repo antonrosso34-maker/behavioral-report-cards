@@ -1,0 +1,3694 @@
+{
+  "tag": "32b_full",
+  "results": "C:\\Users\\Anton\\AppData\\Local\\Temp\\kilo\\kaggle_32b_out\\results_with_replies.json",
+  "rows": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "gold_file": "astropy/modeling/separable.py",
+      "reply_bytes": 2885,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 1,
+          "detail": {
+            "line": "diff --git a/astropy/modeling/separable.py b/astropy/modeling/separable.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 2,
+          "detail": {
+            "line": "index 7a8b9c1..e2f34d2 100644"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 3,
+          "detail": {
+            "line": "--- a/astropy/modeling/separable.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 4,
+          "detail": {
+            "line": "+++ b/astropy/modeling/separable.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 5,
+          "detail": {
+            "line": "@@ -135,7 +135,7 @@ def _arith_oper(left, right):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 6,
+          "detail": {
+            "line": "     \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 7,
+          "detail": {
+            "line": "     Function corresponding to one of the arithmetic operators"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 8,
+          "detail": {
+            "line": "     ['+', '-'. '*', '/', '**']."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 9,
+          "detail": {
+            "line": "-    "
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 10,
+          "detail": {
+            "line": "+"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 11,
+          "detail": {
+            "line": "     This always returns a nonseparable output."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 13,
+          "detail": {
+            "line": "     Parameters"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 14,
+          "detail": {
+            "line": "@@ -162,7 +162,7 @@ def _arith_oper(left, right):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 15,
+          "detail": {
+            "line": "         raise ModelDefinitionError("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 16,
+          "detail": {
+            "line": "             \"Unsupported operands for arithmetic operator: left (n_inputs={}, \""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 17,
+          "detail": {
+            "line": "             \"n_outputs={}) and right (n_inputs={}, n_outputs={}); \""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 18,
+          "detail": {
+            "line": "-            \"models must have the same n_inputs and the same \""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 19,
+          "detail": {
+            "line": "+            \"models must have the same n_inputs and the same \""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 20,
+          "detail": {
+            "line": "             \"n_outputs for this operator.\".format("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 21,
+          "detail": {
+            "line": "                 left_inputs, left_outputs, right_inputs, right_outputs))"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 23,
+          "detail": {
+            "line": "@@ -201,7 +201,7 @@ def _coord_matrix(model, pos, noutp):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 24,
+          "detail": {
+            "line": "     \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 25,
+          "detail": {
+            "line": "     Create an array representing inputs and outputs of a simple model."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 27,
+          "detail": {
+            "line": "-    The array has a shape (noutp, model.n_inputs)."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 28,
+          "detail": {
+            "line": "+    The array has a shape (noutp, model.n_inputs)."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 30,
+          "detail": {
+            "line": "     Parameters"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 31,
+          "detail": {
+            "line": "     ----------"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 32,
+          "detail": {
+            "line": "@@ -234,7 +234,7 @@ def _coord_matrix(model, pos, noutp):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 33,
+          "detail": {
+            "line": "             mat[i, i] = 1"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 34,
+          "detail": {
+            "line": "         if pos == 'right':"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 35,
+          "detail": {
+            "line": "             mat = np.roll(mat, (noutp - model.n_outputs))"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 36,
+          "detail": {
+            "line": "-    return mat"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 37,
+          "detail": {
+            "line": "+    return mat"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 40,
+          "detail": {
+            "line": " def _cstack(left, right):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 41,
+          "detail": {
+            "line": "@@ -261,7 +261,7 @@ def _cstack(left, right):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 42,
+          "detail": {
+            "line": "     \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 43,
+          "detail": {
+            "line": "     noutp = _compute_n_outputs(left, right)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 45,
+          "detail": {
+            "line": "-    if isinstance(left, Model):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 46,
+          "detail": {
+            "line": "+    if isinstance(left, Model):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 47,
+          "detail": {
+            "line": "         cleft = _coord_matrix(left, 'left', noutp)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 48,
+          "detail": {
+            "line": "     else:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 49,
+          "detail": {
+            "line": "         cleft = np.zeros((noutp, left.shape[1]))"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 50,
+          "detail": {
+            "line": "@@ -294,7 +294,7 @@ def _cdot(left, right):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 51,
+          "detail": {
+            "line": "     \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 52,
+          "detail": {
+            "line": "     Function corresponding to \"|\" operation."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 54,
+          "detail": {
+            "line": "-    Parameters"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 55,
+          "detail": {
+            "line": "+    Parameters"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 56,
+          "detail": {
+            "line": "     ----------"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 57,
+          "detail": {
+            "line": "     left, right : `astropy.modeling.Model` or ndarray"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 58,
+          "detail": {
+            "line": "         If input is of an array, it is the output of `coord_matrix`."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 59,
+          "detail": {
+            "line": "@@ -321,7 +321,7 @@ def _cdot(left, right):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 60,
+          "detail": {
+            "line": "         coords = input"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 61,
+          "detail": {
+            "line": "         return coords"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 63,
+          "detail": {
+            "line": "-    cleft = _n_inputs_outputs(left, 'left')"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 64,
+          "detail": {
+            "line": "+    cleft = _n_inputs_outputs(left, 'left')"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 65,
+          "detail": {
+            "line": "     cright = _n_inputs_outputs(right, 'right')"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 67,
+          "detail": {
+            "line": "     try:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 68,
+          "detail": {
+            "line": "@@ -349,7 +349,7 @@ def _separable(transform):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 69,
+          "detail": {
+            "line": "     \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 70,
+          "detail": {
+            "line": "     Calculate the separability of outputs."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 72,
+          "detail": {
+            "line": "-    Parameters"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 73,
+          "detail": {
+            "line": "+    Parameters"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 74,
+          "detail": {
+            "line": "     ----------"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 75,
+          "detail": {
+            "line": "     transform : `astropy.modeling.Model`"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 76,
+          "detail": {
+            "line": "         A transform (usually a compound model)."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 77,
+          "detail": {
+            "line": "@@ -363,7 +363,7 @@ def _separable(transform):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 78,
+          "detail": {
+            "line": "     if (transform_matrix := transform._calculate_separability_matrix()) is not NotImplemented:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 79,
+          "detail": {
+            "line": "         return transform_matrix"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 80,
+          "detail": {
+            "line": "     elif isinstance(transform, CompoundModel):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 81,
+          "detail": {
+            "line": "-        sepleft = _separable(transform.left)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 82,
+          "detail": {
+            "line": "+        sepleft = _separable(transform.left)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 83,
+          "detail": {
+            "line": "         sepright = _separable(transform.right)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 84,
+          "detail": {
+            "line": "         return _operators[transform.op](sepleft, sepright)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 85,
+          "detail": {
+            "line": "     elif isinstance(transform, Model):"
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: astropy/modeling/separable.py:135\nerror: astropy/modeling/separable.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-6938",
+      "gold_file": "astropy/io/fits/fitsrec.py",
+      "reply_bytes": 503,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 1,
+          "detail": {
+            "line": "diff --git a/astropy/io/fits/fitsrec.py b/astropy/io/fits/fitsrec.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 2,
+          "detail": {
+            "line": "index 3a4b5c6..7d8e9f0 100644"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 3,
+          "detail": {
+            "line": "--- a/astropy/io/fits/fitsrec.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 4,
+          "detail": {
+            "line": "+++ b/astropy/io/fits/fitsrec.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 5,
+          "detail": {
+            "line": "@@ -325,7 +325,7 @@ def _scale_back_ascii(self, col_idx, input_field, output_field):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 6,
+          "detail": {
+            "line": "                 value = value[1:] + '.'"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 8,
+          "detail": {
+            "line": "             output_field[jdx] = value"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 9,
+          "detail": {
+            "line": "-        if 'D' in format:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 10,
+          "detail": {
+            "line": "-            output_field.replace(encode_ascii('E'), encode_ascii('D'))"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 11,
+          "detail": {
+            "line": "+        # if 'D' in format:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 12,
+          "detail": {
+            "line": "+        #     output_field.replace(encode_ascii('E'), encode_ascii('D'))"
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/astropy__astropy-6938/kaggle_32b_full.diff:12\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-12589",
+      "gold_file": "django/db/models/sql/query.py",
+      "reply_bytes": 461,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 1,
+          "detail": {
+            "line": "diff --git a/django/db/models/sql/query.py b/django/db/models/sql/query.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 2,
+          "detail": {
+            "line": "index 1234567890..abcdef1234 100644"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 3,
+          "detail": {
+            "line": "--- a/django/db/models/sql/query.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 4,
+          "detail": {
+            "line": "+++ b/django/db/models/sql/query.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 5,
+          "detail": {
+            "line": "@@ -450,7 +450,7 @@ class Query(BaseExpression):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 6,
+          "detail": {
+            "line": "         if self.group_by is True:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 7,
+          "detail": {
+            "line": "             return self.select"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 8,
+          "detail": {
+            "line": "         elif self.group_by is not None:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 9,
+          "detail": {
+            "line": "-            return self.group_by"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 10,
+          "detail": {
+            "line": "+            return tuple(self.resolve_ref(ref) for ref in self.group_by)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 11,
+          "detail": {
+            "line": "         return ()"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 13,
+          "detail": {
+            "line": "     def get_order_by(self):"
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: django/db/models/sql/query.py:450\nerror: django/db/models/sql/query.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-12856",
+      "gold_file": "django/db/models/base.py",
+      "reply_bytes": 1652,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 1,
+          "detail": {
+            "line": "diff --git a/django/db/models/base.py b/django/db/models/base.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 2,
+          "detail": {
+            "line": "index 3a5e4c8..b2f7c9d 100644"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 3,
+          "detail": {
+            "line": "--- a/django/db/models/base.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 4,
+          "detail": {
+            "line": "+++ b/django/db/models/base.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 5,
+          "detail": {
+            "line": "@@ -264,6 +264,19 @@ class ModelBase(type):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 6,
+          "detail": {
+            "line": "                 if field.name in field_names:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 7,
+          "detail": {
+            "line": "                     raise FieldError("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 8,
+          "detail": {
+            "line": "                         'Local field %r in class %r clashes with field of '"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 9,
+          "detail": {
+            "line": "+                        'the same name from base class %r.' % ("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 10,
+          "detail": {
+            "line": "+                            field.name,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 11,
+          "detail": {
+            "line": "+                            name,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 12,
+          "detail": {
+            "line": "+                            base.__name__,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 13,
+          "detail": {
+            "line": "+                        )"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 14,
+          "detail": {
+            "line": "+                    )"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 15,
+          "detail": {
+            "line": "+                else:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 16,
+          "detail": {
+            "line": "+                    inherited_attributes.add(field.name)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 17,
+          "detail": {
+            "line": "+"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 18,
+          "detail": {
+            "line": "+        # Check for missing fields in UniqueConstraints"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 19,
+          "detail": {
+            "line": "+        for constraint in new_class._meta.constraints:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 20,
+          "detail": {
+            "line": "+            if isinstance(constraint, UniqueConstraint):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 21,
+          "detail": {
+            "line": "+                for field_name in constraint.fields:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 22,
+          "detail": {
+            "line": "+                    if field_name not in field_names:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 23,
+          "detail": {
+            "line": "+                        raise FieldError("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 24,
+          "detail": {
+            "line": "+                            \"Unique constraint on fields %r includes non-existent field(s): %r\" % ("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 25,
+          "detail": {
+            "line": "+                                constraint.fields,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 26,
+          "detail": {
+            "line": "+                                field_name,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 27,
+          "detail": {
+            "line": "+                            )"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 28,
+          "detail": {
+            "line": "+                        )"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 29,
+          "detail": {
+            "line": "+"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 30,
+          "detail": {
+            "line": "+        # Check for clashes between locally declared fields and those"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 31,
+          "detail": {
+            "line": "+        # on the base classes."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 32,
+          "detail": {
+            "line": "+        for field in parent_fields:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 33,
+          "detail": {
+            "line": "+            if field.name in field_names:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 34,
+          "detail": {
+            "line": "+                raise FieldError("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 35,
+          "detail": {
+            "line": "+                    'Local field %r in class %r clashes with field of '"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 36,
+          "detail": {
+            "line": "                     'the same name from base class %r.' % ("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 37,
+          "detail": {
+            "line": "                         field.name,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 38,
+          "detail": {
+            "line": "                         name,"
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/django__django-12856/kaggle_32b_full.diff:38\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25433",
+      "gold_file": "lib/matplotlib/figure.py",
+      "reply_bytes": 726,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 1,
+          "detail": {
+            "line": "diff --git a/lib/matplotlib/figure.py b/lib/matplotlib/figure.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 2,
+          "detail": {
+            "line": "index 1a2b3c4..d5e6f7g 100644"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 3,
+          "detail": {
+            "line": "--- a/lib/matplotlib/figure.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 4,
+          "detail": {
+            "line": "+++ b/lib/matplotlib/figure.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 5,
+          "detail": {
+            "line": "@@ -123,6 +123,10 @@ class FigureBase(Artist):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 6,
+          "detail": {
+            "line": "         self.suppressComposite = None"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 7,
+          "detail": {
+            "line": "         self.set(**kwargs)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 9,
+          "detail": {
+            "line": "+    def redraw_widgets(self):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 10,
+          "detail": {
+            "line": "+        \"\"\"Redraw all widgets in the figure.\"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 11,
+          "detail": {
+            "line": "+        self.canvas.draw_idle()"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 12,
+          "detail": {
+            "line": "+"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 13,
+          "detail": {
+            "line": "     def _get_draw_artists(self, renderer):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 14,
+          "detail": {
+            "line": "         \"\"\"Also runs apply_aspect\"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 15,
+          "detail": {
+            "line": "         artists = self.get_children()"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 16,
+          "detail": {
+            "line": "@@ -234,6 +238,7 @@ class FigureBase(Artist):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 17,
+          "detail": {
+            "line": "             self.subplots_adjust(bottom=bottom)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 18,
+          "detail": {
+            "line": "         self.stale = True"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 20,
+          "detail": {
+            "line": "+        self.redraw_widgets()"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 22,
+          "detail": {
+            "line": "     def get_children(self):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 23,
+          "detail": {
+            "line": "         \"\"\"Get a list of artists contained in the figure.\"\"\""
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: lib/matplotlib/figure.py:234\nerror: lib/matplotlib/figure.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23562",
+      "gold_file": "lib/mpl_toolkits/mplot3d/art3d.py",
+      "reply_bytes": 475,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 1,
+          "detail": {
+            "line": "diff --git a/lib/mpl_toolkits/mplot3d/art3d.py b/lib/mpl_toolkits/mplot3d/art3d.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 2,
+          "detail": {
+            "line": "index 0a2e5c1..b3f4c9d 100644"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 3,
+          "detail": {
+            "line": "--- a/lib/mpl_toolkits/mplot3d/art3d.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 4,
+          "detail": {
+            "line": "+++ b/lib/mpl_toolkits/mplot3d/art3d.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 5,
+          "detail": {
+            "line": "@@ -631,7 +631,7 @@ class Poly3DCollection(PolyCollection):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 7,
+          "detail": {
+            "line": "     def get_facecolors(self):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 8,
+          "detail": {
+            "line": "         return self._facecolors2d"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 9,
+          "detail": {
+            "line": "-    get_facecolor = get_facecolors"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 10,
+          "detail": {
+            "line": "+    get_facecolor = lambda self: self.get_facecolors()"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 12,
+          "detail": {
+            "line": "     def set_edgecolors(self, ec):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 13,
+          "detail": {
+            "line": "         self._edgecolors2d = mcolors.to_rgba_array(ec)"
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: lib/mpl_toolkits/mplot3d/art3d.py:631\nerror: lib/mpl_toolkits/mplot3d/art3d.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3407",
+      "gold_file": "seaborn/axisgrid.py",
+      "reply_bytes": 0,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "no_blocks",
+          "message": "reply contains no FILE/SEARCH/REPLACE blocks"
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3190",
+      "gold_file": "seaborn/_core/scales.py",
+      "reply_bytes": 450,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 1,
+          "detail": {
+            "line": "diff --git a/seaborn/_core/scales.py b/seaborn/_core/scales.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 2,
+          "detail": {
+            "line": "index 3a2c4b1..b3d5f9a 100644"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 3,
+          "detail": {
+            "line": "--- a/seaborn/_core/scales.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 4,
+          "detail": {
+            "line": "+++ b/seaborn/_core/scales.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 5,
+          "detail": {
+            "line": "@@ -348,7 +348,7 @@ class ContinuousBase(Scale):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 6,
+          "detail": {
+            "line": "         vmin, vmax = axis.convert_units((vmin, vmax))"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 7,
+          "detail": {
+            "line": "         a = forward(vmin)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 8,
+          "detail": {
+            "line": "-        b = forward(vmax) - forward(vmin)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 9,
+          "detail": {
+            "line": "+        b = forward(vmax) - forward(vmin) if isinstance(forward(vmax), (int, float)) else 0"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 11,
+          "detail": {
+            "line": "         def normalize(x):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 12,
+          "detail": {
+            "line": "             return (x - a) / b"
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/mwaskom__seaborn-3190/kaggle_32b_full.diff:12\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pallets__flask-4045",
+      "gold_file": "src/flask/blueprints.py",
+      "reply_bytes": 0,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "no_blocks",
+          "message": "reply contains no FILE/SEARCH/REPLACE blocks"
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pallets__flask-4992",
+      "gold_file": "src/flask/config.py",
+      "reply_bytes": 4376,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 1,
+          "detail": {
+            "line": "diff --git a/src/flask/config.py b/src/flask/config.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 2,
+          "detail": {
+            "line": "index 8a5c2f1..b3c4d2a 100644"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 3,
+          "detail": {
+            "line": "--- a/src/flask/config.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 4,
+          "detail": {
+            "line": "+++ b/src/flask/config.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 5,
+          "detail": {
+            "line": "@@ -164,7 +164,7 @@ class Config(dict):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 6,
+          "detail": {
+            "line": "         :param silent: Ignore the file if it doesn't exist."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 7,
+          "detail": {
+            "line": "         :return: ``True`` if the file was loaded successfully."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 9,
+          "detail": {
+            "line": "-        .. versionadded:: 2.0"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 10,
+          "detail": {
+            "line": "+        .. versionchanged:: 2.0"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 11,
+          "detail": {
+            "line": "         \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 12,
+          "detail": {
+            "line": "         filename = os.path.join(self.root_path, filename)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 14,
+          "detail": {
+            "line": "@@ -172,7 +172,7 @@ class Config(dict):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 15,
+          "detail": {
+            "line": "             with open(filename) as f:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 16,
+          "detail": {
+            "line": "                 obj = load(f)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 17,
+          "detail": {
+            "line": "         except OSError as e:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 18,
+          "detail": {
+            "line": "-            if silent and e.errno in (errno.ENOENT, errno.EISDIR):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 19,
+          "detail": {
+            "line": "+            if silent and e.errno in (errno.ENOENT, errno.EISDIR, errno.ENOTDIR):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 20,
+          "detail": {
+            "line": "                 return False"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 22,
+          "detail": {
+            "line": "             e.strerror = f\"Unable to load configuration file ({e.strerror})\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 23,
+          "detail": {
+            "line": "@@ -180,7 +180,7 @@ class Config(dict):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 25,
+          "detail": {
+            "line": "         return self.from_mapping(obj)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 27,
+          "detail": {
+            "line": "-    def from_file("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 28,
+          "detail": {
+            "line": "+    def from_file(self,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 29,
+          "detail": {
+            "line": "         self,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 30,
+          "detail": {
+            "line": "         filename: str,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 31,
+          "detail": {
+            "line": "         load: t.Callable[[t.IO[t.Any]], t.Mapping],"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 32,
+          "detail": {
+            "line": "@@ -188,7 +188,7 @@ class Config(dict):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 33,
+          "detail": {
+            "line": "         silent: bool = False,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 34,
+          "detail": {
+            "line": "     ) -> bool:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 35,
+          "detail": {
+            "line": "         \"\"\"Update the values in the config from a file that is loaded"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 36,
+          "detail": {
+            "line": "-        using the ``load`` parameter. The loaded data is passed to the"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 37,
+          "detail": {
+            "line": "+        using the ``load`` parameter. The loaded data is passed to the"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 38,
+          "detail": {
+            "line": "         :meth:`from_mapping` method."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 40,
+          "detail": {
+            "line": "         .. code-block:: python"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 41,
+          "detail": {
+            "line": "@@ -199,7 +199,7 @@ class Config(dict):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 42,
+          "detail": {
+            "line": "             import toml"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 43,
+          "detail": {
+            "line": "             app.config.from_file(\"config.toml\", load=toml.load)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 45,
+          "detail": {
+            "line": "-        :param filename: The path to the data file. This can be an"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 46,
+          "detail": {
+            "line": "+        :param filename: The path to the data file. This can be an"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 47,
+          "detail": {
+            "line": "             absolute path or relative to the config root path."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 48,
+          "detail": {
+            "line": "         :param load: A callable that takes a file handle and returns a"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 49,
+          "detail": {
+            "line": "             mapping of loaded data from the file."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 50,
+          "detail": {
+            "line": "@@ -207,7 +207,7 @@ class Config(dict):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 51,
+          "detail": {
+            "line": "         :param silent: Ignore the file if it doesn't exist."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 52,
+          "detail": {
+            "line": "         :return: ``True`` if the file was loaded successfully."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 54,
+          "detail": {
+            "line": "-        .. versionadded:: 2.0"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 55,
+          "detail": {
+            "line": "+        .. versionchanged:: 2.0"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 56,
+          "detail": {
+            "line": "         \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 57,
+          "detail": {
+            "line": "         filename = os.path.join(self.root_path, filename)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 59,
+          "detail": {
+            "line": "@@ -215,7 +215,7 @@ class Config(dict):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 60,
+          "detail": {
+            "line": "             with open(filename) as f:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 61,
+          "detail": {
+            "line": "                 obj = load(f)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 62,
+          "detail": {
+            "line": "         except OSError as e:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 63,
+          "detail": {
+            "line": "-            if silent and e.errno in (errno.ENOENT, errno.EISDIR):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 64,
+          "detail": {
+            "line": "+            if silent and e.errno in (errno.ENOENT, errno.EISDIR, errno.ENOTDIR):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 65,
+          "detail": {
+            "line": "                 return False"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 67,
+          "detail": {
+            "line": "             e.strerror = f\"Unable to load configuration file ({e.strerror})\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 68,
+          "detail": {
+            "line": "@@ -223,7 +223,7 @@ class Config(dict):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 70,
+          "detail": {
+            "line": "         return self.from_mapping(obj)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 72,
+          "detail": {
+            "line": "-    def from_file("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 73,
+          "detail": {
+            "line": "+    def from_file(self,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 74,
+          "detail": {
+            "line": "         self,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 75,
+          "detail": {
+            "line": "         filename: str,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 76,
+          "detail": {
+            "line": "         load: t.Callable[[t.IO[t.Any]], t.Mapping],"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 77,
+          "detail": {
+            "line": "@@ -231,7 +231,7 @@ class Config(dict):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 78,
+          "detail": {
+            "line": "         silent: bool = False,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 79,
+          "detail": {
+            "line": "         mode: str = \"r\","
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 80,
+          "detail": {
+            "line": "     ) -> bool:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 81,
+          "detail": {
+            "line": "-        \"\"\"Update the values in the config from a file that is loaded"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 82,
+          "detail": {
+            "line": "+        \"\"\"Update the values in the config from a file that is loaded"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 83,
+          "detail": {
+            "line": "         using the ``load`` parameter. The loaded data is passed to the"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 84,
+          "detail": {
+            "line": "         :meth:`from_mapping` method."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 86,
+          "detail": {
+            "line": "@@ -242,7 +242,7 @@ class Config(dict):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 87,
+          "detail": {
+            "line": "             import toml"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 88,
+          "detail": {
+            "line": "             app.config.from_file(\"config.toml\", load=tomllib.load, mode=\"b\")"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 90,
+          "detail": {
+            "line": "-        :param filename: The path to the data file. This can be an"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 91,
+          "detail": {
+            "line": "+        :param filename: The path to the data file. This can be an"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 92,
+          "detail": {
+            "line": "             absolute path or relative to the config root path."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 93,
+          "detail": {
+            "line": "         :param load: A callable that takes a file handle and returns a"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 94,
+          "detail": {
+            "line": "             mapping of loaded data from the file."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 95,
+          "detail": {
+            "line": "@@ -250,7 +250,7 @@ class Config(dict):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 96,
+          "detail": {
+            "line": "         :param silent: Ignore the file if it doesn't exist."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 97,
+          "detail": {
+            "line": "         :param mode: Mode to open the file. Defaults to \"r\"."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 98,
+          "detail": {
+            "line": "         :return: ``True`` if the file was loaded successfully."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 99,
+          "detail": {
+            "line": "-"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 100,
+          "detail": {
+            "line": "+        "
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 101,
+          "detail": {
+            "line": "         .. versionadded:: 2.0"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 102,
+          "detail": {
+            "line": "         \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 103,
+          "detail": {
+            "line": "         filename = os.path.join(self.root_path, filename)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 104,
+          "detail": {
+            "line": "@@ -258,7 +258,7 @@ class Config(dict):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 105,
+          "detail": {
+            "line": "             with open(filename, mode=mode) as f:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 106,
+          "detail": {
+            "line": "                 obj = load(f)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 107,
+          "detail": {
+            "line": "         except OSError as e:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 108,
+          "detail": {
+            "line": "-            if silent and e.errno in (errno.ENOENT, errno.EISDIR):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 109,
+          "detail": {
+            "line": "+            if silent and e.errno in (errno.ENOENT, errno.EISDIR, errno.ENOTDIR):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 110,
+          "detail": {
+            "line": "                 return False"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 112,
+          "detail": {
+            "line": "             e.strerror = f\"Unable to load configuration file ({e.strerror})\""
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: src/flask/config.py:180\nerror: src/flask/config.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-7746",
+      "gold_file": "astropy/wcs/wcs.py",
+      "reply_bytes": 0,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "no_blocks",
+          "message": "reply contains no FILE/SEARCH/REPLACE blocks"
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-14995",
+      "gold_file": "astropy/nddata/mixins/ndarithmetic.py",
+      "reply_bytes": 0,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "no_blocks",
+          "message": "reply contains no FILE/SEARCH/REPLACE blocks"
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-11133",
+      "gold_file": "django/http/response.py",
+      "reply_bytes": 0,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "no_blocks",
+          "message": "reply contains no FILE/SEARCH/REPLACE blocks"
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-16816",
+      "gold_file": "django/contrib/admin/checks.py",
+      "reply_bytes": 0,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "no_blocks",
+          "message": "reply contains no FILE/SEARCH/REPLACE blocks"
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23913",
+      "gold_file": "lib/matplotlib/legend.py",
+      "reply_bytes": 1795,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 1,
+          "detail": {
+            "line": "diff --git a/lib/matplotlib/legend.py b/lib/matplotlib/legend.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 2,
+          "detail": {
+            "line": "index 1a2b3c4d5e..6f7g8h9i0j 100644"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 3,
+          "detail": {
+            "line": "--- a/lib/matplotlib/legend.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 4,
+          "detail": {
+            "line": "+++ b/lib/matplotlib/legend.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 5,
+          "detail": {
+            "line": "@@ -165,6 +165,7 @@ class Legend(Artist):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 6,
+          "detail": {
+            "line": "         \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 7,
+          "detail": {
+            "line": "         Place a legend on the axes at location loc."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 8,
+          "detail": {
+            "line": "         \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 9,
+          "detail": {
+            "line": "+        self.draggable = False"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 11,
+          "detail": {
+            "line": "         self.codes = {'best': 0, **AnchoredOffsetbox.codes}"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 12,
+          "detail": {
+            "line": "         self.zorder = 5"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 13,
+          "detail": {
+            "line": "@@ -204,6 +205,10 @@ class Legend(Artist):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 14,
+          "detail": {
+            "line": "             self._update_bbox_to_anchor(loc_in_canvas)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 17,
+          "detail": {
+            "line": "+_docstring.interpd.update(draggable=\"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 18,
+          "detail": {
+            "line": "+draggable : bool, default: False"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 19,
+          "detail": {
+            "line": "+    Make the legend draggable."
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 20,
+          "detail": {
+            "line": "+\"\"\")"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 22,
+          "detail": {
+            "line": " _docstring.interpd.update(_legend_kw_doc=\"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 23,
+          "detail": {
+            "line": " loc : str or pair of floats, default: :rc:`legend.loc` ('best' for axes, \\"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 24,
+          "detail": {
+            "line": "@@ -305,6 +310,9 @@ class Legend(Artist):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 25,
+          "detail": {
+            "line": "         self._handler_map = handler_map"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 26,
+          "detail": {
+            "line": "         self._set_artist_props()"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 28,
+          "detail": {
+            "line": "+        if draggable:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 29,
+          "detail": {
+            "line": "+            DraggableLegend(self, use_blit=False, update=\"loc\")"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 30,
+          "detail": {
+            "line": "+"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 31,
+          "detail": {
+            "line": "     def _set_artist_props(self):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 32,
+          "detail": {
+            "line": "         \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 33,
+          "detail": {
+            "line": "         Set the artist props from the kwargs.  This is called once at init time"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 34,
+          "detail": {
+            "line": "@@ -312,6 +320,7 @@ class Legend(Artist):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 35,
+          "detail": {
+            "line": "         \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 36,
+          "detail": {
+            "line": "         self.set_edgecolor(self._edgecolor)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 37,
+          "detail": {
+            "line": "         self.set_facecolor(self._facecolor)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 38,
+          "detail": {
+            "line": "+        self.set_draggable(self.draggable)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 40,
+          "detail": {
+            "line": "     def get_children(self):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 41,
+          "detail": {
+            "line": "         \"\"\"Return a list of artists that make up the legend.\"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 42,
+          "detail": {
+            "line": "@@ -400,6 +409,14 @@ class Legend(Artist):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 43,
+          "detail": {
+            "line": "         \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 44,
+          "detail": {
+            "line": "         return self._handler_map"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 46,
+          "detail": {
+            "line": "+    def set_draggable(self, draggable):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 47,
+          "detail": {
+            "line": "+        \"\"\"Set whether the legend is draggable.\"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 48,
+          "detail": {
+            "line": "+        self.draggable = draggable"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 49,
+          "detail": {
+            "line": "+"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 50,
+          "detail": {
+            "line": "+    def get_draggable(self):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 51,
+          "detail": {
+            "line": "+        \"\"\"Get whether the legend is draggable.\"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 52,
+          "detail": {
+            "line": "+        return self.draggable"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 53,
+          "detail": {
+            "line": "+"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 54,
+          "detail": {
+            "line": "     def _get_handle(self, orig_handle, handler_map=None):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 55,
+          "detail": {
+            "line": "         \"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 56,
+          "detail": {
+            "line": "         Get the legend handle for the original handle."
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: lib/matplotlib/legend.py:165\nerror: lib/matplotlib/legend.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23563",
+      "gold_file": "lib/mpl_toolkits/mplot3d/art3d.py",
+      "reply_bytes": 0,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "no_blocks",
+          "message": "reply contains no FILE/SEARCH/REPLACE blocks"
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-2848",
+      "gold_file": "seaborn/_oldcore.py",
+      "reply_bytes": 1820,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 1,
+          "detail": {
+            "line": "diff --git a/seaborn/_oldcore.py b/seaborn/_oldcore.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 2,
+          "detail": {
+            "line": "index 3a5b8c9..4b6d7f1 100644"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 3,
+          "detail": {
+            "line": "--- a/seaborn/_oldcore.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 4,
+          "detail": {
+            "line": "+++ b/seaborn/_oldcore.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 5,
+          "detail": {
+            "line": "@@ -164,6 +164,10 @@ class HueMapping(SemanticMapping):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 6,
+          "detail": {
+            "line": "                 levels, lookup_table = self.categorical_mapping("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 7,
+          "detail": {
+            "line": "                     data, palette, order,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 8,
+          "detail": {
+            "line": "                 )"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 9,
+          "detail": {
+            "line": "+            elif map_type == \"categorical\" and order is not None:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 10,
+          "detail": {
+            "line": "+                levels = order"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 11,
+          "detail": {
+            "line": "+                lookup_table = {level: self.lookup_table[level] for level in order if level in self.lookup_table}"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 12,
+          "detail": {
+            "line": "+                levels, lookup_table = self.categorical_mapping(pd.Series(levels), palette, order)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 14,
+          "detail": {
+            "line": "             # --- Option 3: datetime mapping"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 16,
+          "detail": {
+            "line": "@@ -184,6 +188,10 @@ class HueMapping(SemanticMapping):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 17,
+          "detail": {
+            "line": "                 levels, lookup_table = self.categorical_mapping("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 18,
+          "detail": {
+            "line": "                     list(data), palette, order,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 19,
+          "detail": {
+            "line": "                 )"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 20,
+          "detail": {
+            "line": "+            elif map_type == \"categorical\" and order is not None:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 21,
+          "detail": {
+            "line": "+                levels = order"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 22,
+          "detail": {
+            "line": "+                lookup_table = {level: self.lookup_table[level] for level in order if level in self.lookup_table}"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 23,
+          "detail": {
+            "line": "+                levels, lookup_table = self.categorical_mapping(pd.Series(levels), palette, order)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 25,
+          "detail": {
+            "line": "             self.map_type = map_type"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 26,
+          "detail": {
+            "line": "             self.lookup_table = lookup_table"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 27,
+          "detail": {
+            "line": "@@ -204,6 +212,10 @@ class HueMapping(SemanticMapping):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 28,
+          "detail": {
+            "line": "                 levels, lookup_table = self.categorical_mapping("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 29,
+          "detail": {
+            "line": "                     data, palette, order,"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 30,
+          "detail": {
+            "line": "                 )"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 31,
+          "detail": {
+            "line": "+            elif map_type == \"categorical\" and order is not None:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 32,
+          "detail": {
+            "line": "+                levels = order"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 33,
+          "detail": {
+            "line": "+                lookup_table = {level: self.lookup_table[level] for level in order if level in self.lookup_table}"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 34,
+          "detail": {
+            "line": "+                levels, lookup_table = self.categorical_mapping(pd.Series(levels), palette, order)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 36,
+          "detail": {
+            "line": "         self.map_type = map_type"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 37,
+          "detail": {
+            "line": "         self.lookup_table = lookup_table"
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: seaborn/_oldcore.py:184\nerror: seaborn/_oldcore.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3010",
+      "gold_file": "seaborn/_stats/regression.py",
+      "reply_bytes": 794,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 1,
+          "detail": {
+            "line": "diff --git a/seaborn/_stats/regression.py b/seaborn/_stats/regression.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 2,
+          "detail": {
+            "line": "index 3a2b4c5..4d6e7f8 100644"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 3,
+          "detail": {
+            "line": "--- a/seaborn/_stats/regression.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 4,
+          "detail": {
+            "line": "+++ b/seaborn/_stats/regression.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 5,
+          "detail": {
+            "line": "@@ -28,6 +28,7 @@ class PolyFit(Stat):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 6,
+          "detail": {
+            "line": "         x = data[\"x\"]"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 7,
+          "detail": {
+            "line": "         y = data[\"y\"]"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 8,
+          "detail": {
+            "line": "         if x.nunique() <= self.order:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 9,
+          "detail": {
+            "line": "+            x = x.dropna()"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 10,
+          "detail": {
+            "line": "+            y = y.dropna()"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 11,
+          "detail": {
+            "line": "             # TODO warn?"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 12,
+          "detail": {
+            "line": "             xx = yy = []"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 13,
+          "detail": {
+            "line": "         else:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 14,
+          "detail": {
+            "line": "@@ -35,7 +36,7 @@ class PolyFit(Stat):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 15,
+          "detail": {
+            "line": "             xx = np.linspace(x.min(), x.max(), self.gridsize)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 16,
+          "detail": {
+            "line": "             yy = np.polyval(p, xx)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 18,
+          "detail": {
+            "line": "-        return pd.DataFrame(dict(x=xx, y=yy))"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 19,
+          "detail": {
+            "line": "+        return pd.DataFrame(dict(x=xx, y=yy)).dropna()"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 21,
+          "detail": {
+            "line": "     # TODO we should have a way of identifying the method that will be applied"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 22,
+          "detail": {
+            "line": "     # and then only define __call__ on a base-class of stats with this pattern"
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": true,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/mwaskom__seaborn-3010/kaggle_32b_full.diff:13\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "pallets__flask-5063",
+      "gold_file": "src/flask/cli.py",
+      "reply_bytes": 1719,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 1,
+          "detail": {
+            "line": "diff --git a/src/flask/cli.py b/src/flask/cli.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 2,
+          "detail": {
+            "line": "index 3a5f9b4..b2c7d8e 100644"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 3,
+          "detail": {
+            "line": "--- a/src/flask/cli.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 4,
+          "detail": {
+            "line": "+++ b/src/flask/cli.py"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 5,
+          "detail": {
+            "line": "@@ -335,6 +335,7 @@ def get_command(ctx, name):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 6,
+          "detail": {
+            "line": "         )"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 8,
+          "detail": {
+            "line": "     @click.pass_context"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 9,
+          "detail": {
+            "line": "+    @with_appcontext"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 10,
+          "detail": {
+            "line": "     def list_routes(ctx):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 11,
+          "detail": {
+            "line": "         \"\"\"Show all registered routes.\"\"\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 12,
+          "detail": {
+            "line": "         rules = sorted(current_app.url_map.iter_rules(), key=attrgetter(\"rule\"))"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 13,
+          "detail": {
+            "line": "@@ -342,10 +343,16 @@ def list_routes(ctx):"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 14,
+          "detail": {
+            "line": "         if not rules:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 15,
+          "detail": {
+            "line": "             click.echo(\"No routes are registered for the application.\")"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 16,
+          "detail": {
+            "line": "             return"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 17,
+          "detail": {
+            "line": "-        rows = [(rule.endpoint, \", \".join(rule.methods), rule.rule) for rule in rules]"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 18,
+          "detail": {
+            "line": "-        headers = (\"Endpoint\", \"Methods\", \"Rule\")"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 19,
+          "detail": {
+            "line": "+"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 20,
+          "detail": {
+            "line": "+        rows = []"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 21,
+          "detail": {
+            "line": "+        for rule in rules:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 22,
+          "detail": {
+            "line": "+            domain = rule.subdomain + '.' + current_app.config['SERVER_NAME'] if rule.subdomain else current_app.config['SERVER_NAME']"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 23,
+          "detail": {
+            "line": "+            rows.append((domain, rule.endpoint, \", \".join(rule.methods), rule.rule))"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 24,
+          "detail": {
+            "line": "+        headers = (\"Domain\", \"Endpoint\", \"Methods\", \"Rule\")"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 25,
+          "detail": {
+            "line": "+"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 26,
+          "detail": {
+            "line": "         widths = tuple(max(len(x) for x in col) for col in zip(*rows))"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 27,
+          "detail": {
+            "line": "         rule_col = \"{:\" + str(widths[3]) + \"}\""
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 28,
+          "detail": {
+            "line": "+"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 29,
+          "detail": {
+            "line": "         click.echo(\" * Tip: There are .env or .flaskenv files present. Do \\\"pip install python-dotenv\\\" to use them.\")"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 30,
+          "detail": {
+            "line": "         click.echo()"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 31,
+          "detail": {
+            "line": "         click.echo_via_pager("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 32,
+          "detail": {
+            "line": "             u\"\\n\".join("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 33,
+          "detail": {
+            "line": "                 ["
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 34,
+          "detail": {
+            "line": "                     u\"  \".join("
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 35,
+          "detail": {
+            "line": "-                        click.style(str(c).ljust(widths[i]), fg=\"cyan\" if i == 0 else None)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 36,
+          "detail": {
+            "line": "+                        click.style(str(c).ljust(widths[i]), fg=\"cyan\" if i in (0, 1) else None)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 37,
+          "detail": {
+            "line": "                         for i, c in enumerate(row)"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 38,
+          "detail": {
+            "line": "                     )"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 39,
+          "detail": {
+            "line": "                     for row in [headers] + rows"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 40,
+          "detail": {
+            "line": "                 ]"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 41,
+          "detail": {
+            "line": "             )"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 42,
+          "detail": {
+            "line": "         )"
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: src/flask/cli.py:335\nerror: src/flask/cli.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "psf__requests-2674",
+      "gold_file": "requests/adapters.py",
+      "reply_bytes": 0,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "no_blocks",
+          "message": "reply contains no FILE/SEARCH/REPLACE blocks"
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    }
+  ]
+}

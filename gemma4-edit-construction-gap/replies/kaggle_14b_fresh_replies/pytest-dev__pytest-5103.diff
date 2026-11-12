@@ -1,0 +1,98 @@
+diff --git a/src/_pytest/assertion/rewrite.py b/src/_pytest/assertion/rewrite.py
+index 1234567..89abcdef 100644
+--- a/src/_pytest/assertion/rewrite.py
++++ b/src/_pytest/assertion/rewrite.py
+@@ -924,6 +924,7 @@ class AssertionRewriter(ast.NodeTransformer):
+         fail_save = self.on_failure
+         levels = len(boolop.values) - 1
+         self.push_format_context()
++        unroll = False
+         # Process each operand, short-circuting if needed.
+         for i, v in enumerate(boolop.values):
+             if i:
+@@ -931,6 +932,10 @@ class AssertionRewriter(ast.NodeTransformer):
+                 self.on_failure = fail_inner
+             self.push_format_context()
+             res, expl = self.visit(v)
++            if isinstance(v, ast.GeneratorExp) or isinstance(v, ast.ListComp):
++                unroll = True
++                res, expl = self.unroll_iterable(v)
++
+             body.append(ast.Assign([ast.Name(res_var, ast.Store())], res))
+             expl_format = self.pop_format_context(ast.Str(expl))
+             call = ast_Call(app, [expl_format], [])
+@@ -940,6 +945,20 @@ class AssertionRewriter(ast.NodeTransformer):
+                 cond = ast.UnaryOp(ast.Not(), cond)
+             inner = []
+             self.statements.append(ast.If(cond, inner, []))
++            if unroll:
++                for j, val in enumerate(v.elt.elts):
++                    inner.append(ast.Assign([ast.Name(f"val_{j}", ast.Store())], val))
++                    inner.append(ast.Expr(ast_Call(app, [ast.Str(f"val_{j} = {expl}"), ast.Name(f"val_{j}", ast.Load())], [])))
++                unroll = False
++            else:
++                self.statements = body = inner
+         self.statements = save
+         self.on_failure = fail_save
+         expl_template = self.helper("_format_boolop", expl_list, ast.Num(is_or))
+@@ -957,6 +976,22 @@ class AssertionRewriter(ast.NodeTransformer):
+         return res, pattern % (operand_expl,)
+ 
+     def visit_BinOp(self, binop):
++        if isinstance(binop.left, ast.GeneratorExp) or isinstance(binop.left, ast.ListComp):
++            binop.left, _ = self.unroll_iterable(binop.left)
++        if isinstance(binop.right, ast.GeneratorExp) or isinstance(binop.right, ast.ListComp):
++            binop.right, _ = self.unroll_iterable(binop.right)
++
+         symbol = binop_map[binop.op.__class__]
+         left_expr, left_expl = self.visit(binop.left)
+         right_expr, right_expl = self.visit(binop.right)
+@@ -974,6 +1009,22 @@ class AssertionRewriter(ast.NodeTransformer):
+         return res, outer_expl
+ 
+     def visit_Call_35(self, call):
++        if isinstance(call.args[0], ast.GeneratorExp) or isinstance(call.args[0], ast.ListComp):
++            call.args[0], _ = self.unroll_iterable(call.args[0])
++        for keyword in call.keywords:
++            if isinstance(keyword.value, ast.GeneratorExp) or isinstance(keyword.value, ast.ListComp):
++                keyword.value, _ = self.unroll_iterable(keyword.value)
++
+         new_func, func_expl = self.visit(call.func)
+         arg_expls = []
+         new_args = []
+@@ -1001,6 +1052,22 @@ class AssertionRewriter(ast.NodeTransformer):
+         return res, outer_expl
+ 
+     def visit_Call_legacy(self, call):
++        if isinstance(call.args[0], ast.GeneratorExp) or isinstance(call.args[0], ast.ListComp):
++            call.args[0], _ = self.unroll_iterable(call.args[0])
++        for keyword in call.keywords:
++            if isinstance(keyword.value, ast.GeneratorExp) or isinstance(keyword.value, ast.ListComp):
++                keyword.value, _ = self.unroll_iterable(keyword.value)
++
+         new_func, func_expl = self.visit(call.func)
+         arg_expls = []
+         new_args = []
+@@ -1028,6 +1095,22 @@ class AssertionRewriter(ast.NodeTransformer):
+         return res, outer_expl
+ 
+     def visit_Attribute(self, attr):
++        if isinstance(attr.value, ast.GeneratorExp) or isinstance(attr.value, ast.ListComp):
++            attr.value, _ = self.unroll_iterable(attr.value)
++
+         if not isinstance(attr.ctx, ast.Load):
+             return self.generic_visit(attr)
+         value, value_expl = self.visit(attr.value)
+@@ -1045,6 +1128,22 @@ class AssertionRewriter(ast.NodeTransformer):
+         return res, expl
+ 
+     def visit_Compare(self, comp):
++        if isinstance(comp.left, ast.GeneratorExp) or isinstance(comp.left, ast.ListComp):
++            comp.left, _ = self.unroll_iterable(comp.left)
++        for i, next_operand in enumerate(comp.comparators):
++            if isinstance(next_operand, ast.GeneratorExp) or isinstance(next_operand, ast.ListComp):
++                comp.comparators[i], _ = self.unroll_iterable(next_operand)
++
+         self.push_format_context()
+         left_res, left_expl = self.visit(comp.left)
+        

@@ -1,0 +1,18 @@
+diff --git a/lib/matplotlib/figure.py b/lib/matplotlib/figure.py
+--- a/lib/matplotlib/figure.py
++++ b/lib/matplotlib/figure.py
+@@ -927,10 +927,10 @@ def clear(self, keep_observers=False):
+         self.suppressComposite = None
+ 
+         # first clear the axes in any subfigures
+-        for subfig in self.subfigs:
+-            subfig.clear(keep_observers=keep_observers)
+-        self.subfigs = []
+-
++        for subfig in self.subfigs[:]:
++            subfig.clear(keep_observers=keep_observers)
++            self.subfigs.remove(subfig)
++
+         for ax in tuple(self.axes):  # Iterate over the copy.
+             ax.clear()
+             self.delaxes(ax)  # Remove ax from self._axstack.

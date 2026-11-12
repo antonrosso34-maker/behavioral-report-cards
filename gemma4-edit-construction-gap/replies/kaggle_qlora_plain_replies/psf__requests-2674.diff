@@ -1,0 +1,52 @@
+diff --git a/requests/adapters.py b/requests/adapters.py
+--- a/requests/adapters.py
++++ b/requests/adapters.py
+@@ -1,4 +1,4 @@
+-# -*- coding: utf-8 -*-
++# -*- coding: utf-8 -*-
+ 
+ """
+ requests.adapters
+@@ -10,7 +10,7 @@
+ from .packages.urllib3.response import HTTPResponse
+ from .packages.urllib3.util import Timeout as TimeoutSauce
+ from .packages.urllib3.util.retry import Retry
+-from .compat import urlparse, basestring
++from .compat import urlparse, basestring, urldefragauth
+ from .utils import (DEFAULT_CA_BUNDLE_PATH, get_encoding_from_headers,
+                     prepend_scheme_if_needed, get_auth_from_url)
+ from .structures import CaseInsensitiveDict
+@@ -18,7 +18,7 @@
+ from .packages.urllib3.exceptions import ConnectTimeoutError
+ from .packages.urllib3.exceptions import HTTPError as _HTTPError
+ from .packages.urllib3.exceptions import MaxRetryError
+-from .packages.urllib3.exceptions import ProxyError as _ProxyError
++from .packages.urllib3.exceptions import ProxyError as _ProxyError, DecodeError
+ from .packages.urllib3.exceptions import ProtocolError
+ from .packages.urllib3.exceptions import ReadTimeoutError
+ from .packages.urllib3.exceptions import SSLError as _SSLError
+@@ -26,7 +26,7 @@
+ from .cookies import extract_cookies_to_jar
+ from .exceptions import (ConnectionError, ConnectTimeout, ReadTimeout, SSLError,
+                          ProxyError, RetryError)
+-from .auth import _basic_auth_str
++from .auth import _basic_auth_str, _basic_auth_str_from_url
+ 
+ DEFAULT_POOLBLOCK = False
+ DEFAULT_POOLSIZE = 10
+@@ -102,6 +102,7 @@ def send(self, request, stream=False, timeout=None, verify=True, cert=None, proxie
+             low_conn.send(hex(len(i))[2:].encode('utf-8'))
+             low_conn.send(b'\r\n')
+             low_conn.send(i)
++            low_conn.send(b'\r\n')
+         low_conn.send(b'0\r\n\r\n')
+ 
+         r = low_conn.getresponse()
+@@ -111,6 +112,7 @@ def send(self, request, stream=False, timeout=None, verify=True, cert=None, proxie
+         except:
+             # If we hit any problems here, clean up the connection.
+             # Then, reraise so that we can handle the actual exception.
++            low_conn.close()
+             raise
+ 
+         return self.build_response(request, resp)

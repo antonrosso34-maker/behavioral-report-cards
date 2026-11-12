@@ -1,0 +1,36 @@
+diff --git a/astropy/modeling/separable.py b/astropy/modeling/separable.py
+index 1234567..89abcde 100644
+--- a/astropy/modeling/separable.py
++++ b/astropy/modeling/separable.py
+@@ -152,7 +152,7 @@ def _coord_matrix(model, pos, noutp):
+     if isinstance(model, Mapping):
+         axes = []
+         for i in model.mapping:
+-            axis = np.zeros((model.n_inputs,))
++            axis = np.zeros((noutp,))
+             axis[i] = 1
+             axes.append(axis)
+         m = np.vstack(axes)
+@@ -161,7 +161,7 @@ def _coord_matrix(model, pos, noutp):
+         mat = np.zeros((noutp, model.n_inputs))
+         if pos == 'left':
+             mat[: model.n_outputs, :model.n_inputs] = m
+-        else:
++        elif pos == 'right':
+             mat[-model.n_outputs:, -model.n_inputs:] = m
+         return mat
+     if not model.separable:
+@@ -170,7 +170,7 @@ def _coord_matrix(model, pos, noutp):
+         if pos == 'left':
+             mat[:model.n_outputs, : model.n_inputs] = 1
+         else:
+-            mat[-model.n_outputs:, -model.n_inputs:] = 1
++            mat[-model.n_outputs:, -model.n_inputs:] = 1
+     else:
+         mat = np.zeros((noutp, model.n_inputs))
+ 
+@@ -180,7 +180,7 @@ def _coord_matrix(model, pos, noutp):
+         if pos == 'right':
+             mat = np.roll(mat, (noutp - model.n_outputs))
+     return mat
+-

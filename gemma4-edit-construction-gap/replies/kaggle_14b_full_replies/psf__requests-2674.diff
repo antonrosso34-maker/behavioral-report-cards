@@ -1,0 +1,42 @@
+diff --git a/requests/adapters.py b/requests/adapters.py
+index 1234567..89abcde 100644
+--- a/requests/adapters.py
++++ b/requests/adapters.py
+@@ -102,6 +102,8 @@ from .packages.urllib3.exceptions import ConnectTimeoutError
+ from .packages.urllib3.exceptions import HTTPError as _HTTPError
+ from .packages.urllib3.exceptions import MaxRetryError
+ from .packages.urllib3.exceptions import ProxyError as _ProxyError
++from .packages.urllib3.exceptions import DecodeError
++from .packages.urllib3.exceptions import TimeoutError as _TimeoutError
+ from .packages.urllib3.exceptions import ProtocolError
+ from .packages.urllib3.exceptions import ReadTimeoutError
+ from .packages.urllib3.exceptions import SSLError as _SSLError
+@@ -200,6 +202,8 @@ class HTTPAdapter(BaseAdapter):
+         self._pool_connections = pool_connections
+         self._pool_maxsize = pool_maxsize
+         self._pool_block = pool_block
++        self._decode_error = DecodeError
++        self._timeout_error = _TimeoutError
+
+         super(HTTPAdapter, self).__init__()
+
+@@ -300,6 +304,8 @@ class HTTPAdapter(BaseAdapter):
+         except (ProtocolError, socket.error) as err:
+             raise ConnectionError(err, request=request)
+
+         except MaxRetryError as e:
++            if isinstance(e.reason, self._decode_error):
++                raise self._decode_error(e, request=request)
+             if isinstance(e.reason, ConnectTimeoutError):
+                 raise ConnectTimeout(e, request=request)
+
+@@ -310,6 +316,8 @@ class HTTPAdapter(BaseAdapter):
+             if isinstance(e.reason, ResponseError):
+                 raise RetryError(e, request=request)
+
++            if isinstance(e.reason, self._timeout_error):
++                raise self._timeout_error(e, request=request)
+             raise ConnectionError(e, request=request)
+
+         except _ProxyError as e:
+             raise ProxyError(e)

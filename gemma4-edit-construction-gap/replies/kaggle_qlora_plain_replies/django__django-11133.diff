@@ -1,0 +1,123 @@
+diff --git a/django/http/response.py b/django/http/response.py
+--- a/django/http/response.py
++++ b/django/http/response.py
+@@ -1,4 +1,4 @@
+-import datetime
++import io
+ import json
+ import mimetypes
+ import os
+@@ -10,6 +10,7 @@
+ from urllib.parse import quote, urlparse
+ 
+ from django.conf import settings
++from django.core.exceptions import SuspiciousOperation
+ from django.core import signals, signing
+ from django.core.serializers.json import DjangoJSONEncoder
+ from django.http.cookie import SimpleCookie
+@@ -114,6 +115,10 @@ def __init__(self, content_type=None, status=None, reason=None, charset=None):
+         self._charset = charset
+         if content_type is None:
+             content_type = 'text/html; charset=%s' % self.charset
++        elif isinstance(content_type, bytes):
++            # Content-Type should be a string, not bytes.
++            raise SuspiciousOperation(
++                'Content-Type should be a string, not bytes.')
+         self['Content-Type'] = content_type
+ 
+     @property
+@@ -122,6 +127,10 @@ def charset(self):
+         if self._charset is not None:
+             return self._charset
+         content_type = self.get('Content-Type', '')
++        if isinstance(content_type, bytes):
++            # Content-Type should be a string, not bytes.
++            raise SuspiciousOperation(
++                'Content-Type should be a string, not bytes.')
+         matched = _charset_from_content_type_re.search(content_type)
+         if matched:
+             # Extract the charset and strip its double quotes
+@@ -130,6 +139,10 @@ def charset(self):
+         return settings.DEFAULT_CHARSET
+ 
+     @charset.setter
++    def charset(self, value):
++        if isinstance(value, bytes):
++            # Content-Type should be a string, not bytes.
++            raise SuspiciousOperation(
++                'Content-Type should be a string, not bytes.')
+         self._charset = value
+ 
+     def serialize_headers(self):
+@@ -140,6 +153,10 @@ def serialize_headers(self):
+             return val if isinstance(val, bytes) else val.encode(encoding)
+ 
+         headers = [
++            # Ensure header keys and values are bytes.
++            (to_bytes(key, 'ascii') if isinstance(key, str) else key,
++             to_bytes(value, 'latin-1') if isinstance(value, str) else value)
++            for key, value in self._headers.values()
+         ]
+         return b'\r\n'.join(headers)
+ 
+@@ -150,6 +167,10 @@ def __bytes__(self):
+             return val if isinstance(val, bytes) else val.encode(encoding)
+ 
+         headers = [
++            # Ensure header keys and values are bytes.
++            (to_bytes(key, 'ascii') if isinstance(key, str) else key,
++             to_bytes(value, 'latin-1') if isinstance(value, str) else value)
++            for key, value in self._headers.values()
+         ]
+         return b'\r\n'.join(headers)
+ 
+@@ -160,6 +181,10 @@ def __bytes__(self):
+             return val if isinstance(val, bytes) else val.encode(encoding)
+ 
+         headers = [
++            # Ensure header keys and values are bytes.
++            (to_bytes(key, 'ascii') if isinstance(key, str) else key,
++             to_bytes(value, 'latin-1') if isinstance(value, str) else value)
++            for key, value in self._headers.values()
+         ]
+         return b'\r\n'.join(headers)
+ 
+@@ -170,6 +195,10 @@ def __bytes__(self):
+             return val if isinstance(val, bytes) else val.encode(encoding)
+ 
+         headers = [
++            # Ensure header keys and values are bytes.
++            (to_bytes(key, 'ascii') if isinstance(key, str) else key,
++             to_bytes(value, 'latin-1') if isinstance(value, str) else value)
++            for key, value in self._headers.values()
+         ]
+         return b'\r\n'.join(headers)
+ 
+@@ -180,6 +209,10 @@ def __bytes__(self):
+             return val if isinstance(val, bytes) else val.encode(encoding)
+ 
+         headers = [
++            # Ensure header keys and values are bytes.
++            (to_bytes(key, 'ascii') if isinstance(key, str) else key,
++             to_bytes(value, 'latin-1') if isinstance(value, str) else value)
++            for key, value in self._headers.values()
+         ]
+         return b'\r\n'.join(headers)
+ 
+@@ -190,6 +223,10 @@ def __bytes__(self):
+             return val if isinstance(val, bytes) else val.encode(encoding)
+ 
+         headers = [
++            # Ensure header keys and values are bytes.
++            (to_bytes(key, 'ascii') if isinstance(key, str) else key,
++             to_bytes(value, 'latin-1') if isinstance(value, str) else value)
++            for key, value in self._headers.values()
+         ]
+         return b'\r\n'.join(headers)
+ 
+@@ -200,6 +237,10 @@ def __bytes__(self):
+             return val if isinstance(val, bytes) else val.encode(encoding)
+ 
+         headers = [
++            # Ensure header keys and values are bytes.
++            (to_bytes(key, 'ascii') if

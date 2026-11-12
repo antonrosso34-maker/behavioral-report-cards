@@ -1,0 +1,12 @@
+diff --git a/lib/mpl_toolkits/mplot3d/art3d.py b/lib/mpl_toolkits/mplot3d/art3d.py
+--- a/lib/mpl_toolkits/mplot3d/art3d.py
++++ b/lib/mpl_toolkits/mplot3d/art3d.py
+@@ -830,7 +830,7 @@ def get_facecolor(self):
+     def get_edgecolor(self):
+         return self._edgecolors2d
+ 
+-    def get_facecolor(self):
++    def get_facecolor(self, *args, **kwargs):
+         return self._facecolors2d
+ 
+     def get_edgecolor(self, *args, **kwargs):

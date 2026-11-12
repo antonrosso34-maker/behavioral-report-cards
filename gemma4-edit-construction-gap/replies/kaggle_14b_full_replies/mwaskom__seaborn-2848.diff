@@ -1,0 +1,24 @@
+diff --git a/seaborn/_oldcore.py b/seaborn/_oldcore.py
+index 1234567..89abcde 100644
+--- a/seaborn/_oldcore.py
++++ b/seaborn/_oldcore.py
+@@ -109,6 +109,10 @@ class _ColorMapper:
+             # --- Option 1: numeric mapping with a matplotlib colormap
+             if map_type == "numeric":
+                 data = pd.to_numeric(data)
++                # Filter data to only include values in hue_order
++                if order is not None:
++                    data = data[data.isin(order)]
+                 levels, lookup_table, norm, cmap = self.numeric_mapping(
+                     data, palette, norm,
+                 )
+@@ -201,6 +205,10 @@ class _ColorMapper:
+             # --- Option 2: categorical mapping using seaborn palette
+             elif map_type == "categorical":
+                 cmap = norm = None
++                # Filter data to only include values in hue_order
++                if order is not None:
++                    data = data[data.isin(order)]
+                 levels, lookup_table = self.categorical_mapping(
+                     data, palette, order,
+                 )

@@ -1,0 +1,27 @@
+diff --git a/src/flask/config.py b/src/flask/config.py
+index 1234567..89abcdef 100644
+--- a/src/flask/config.py
++++ b/src/flask/config.py
+@@ -167,13 +167,14 @@ class Config(dict):
+         :param silent: Ignore the file if it doesn't exist.
+         :return: ``True`` if the file was loaded successfully.
+ 
+-        .. versionadded:: 2.0
++        .. versionadded:: 2.0.1
+         """
+         filename = os.path.join(self.root_path, filename)
+ 
+         try:
+-            with open(filename) as f:
++            with open(filename, mode=mode) as f:
+                 obj = load(f)
+         except OSError as e:
+             if silent and e.errno in (errno.ENOENT, errno.EISDIR):
+@@ -182,6 +183,7 @@ class Config(dict):
+ 
+             e.strerror = f"Unable to load configuration file ({e.strerror})"
+             raise
++        except TypeError as e:
++            raise TypeError(f"File must be opened in binary mode, e.g. use `open('foo.toml', 'rb')`") from e
+ 
+         return self.from_mapping(obj)

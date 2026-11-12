@@ -1,0 +1,592 @@
+{
+  "tag": "14b_sr",
+  "results": "C:\\Users\\Anton\\AppData\\Local\\Temp\\kilo\\kaggle_14b_sr_out\\results_sr.json",
+  "rows": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "gold_file": "astropy/modeling/separable.py",
+      "reply_bytes": 2780,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "noop_edit",
+          "message": "SEARCH and REPLACE are identical",
+          "path": "astropy/modeling/separable.py",
+          "reply_line": 1
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-6938",
+      "gold_file": "astropy/io/fits/fitsrec.py",
+      "reply_bytes": 434,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "astropy/io/fits/fitsrec.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 1250,
+              "end": 1276,
+              "lines": "1250:             if len(value) > starts[col_idx + 1] - starts[col_idx]:\n1251:                 raise ValueError(\n1252:                     \"Value {!r} does not fit into the output's itemsize of \"\n1253:                     \"{}.\".format(value, spans[col_idx]))\n1254: \n1255:             if trailing_decimal and value[0] == ' ':\n1256:                 # We have some extra space in the field for the trailing\n1257:                 # decimal point\n1258:                 value = value[1:] + '.'\n1259: \n1260:             output_field[jdx] = value\n1261: \n1262:         # Replace exponent separator in floating point numbers\n1263:         if 'D' in format:\n1264:             output_field.replace(encode_ascii('E'), encode_ascii('D'))\n1265: \n1266: \n1267: def _get_recarray_field(array, key):\n1268:     \"\"\"\n1269:     Compatibility function for using the recarray base class's field method.\n1270:     This incorporates the legacy functionality of returning string arrays as\n1271:     Numeric-style chararray objects.\n1272:     \"\"\"\n1273: \n1274:     # Numpy >= 1.10.dev recarray no longer returns chararrays for strings\n1275:     # This is currently needed for backwards-compatibility and for\n1276:     # automatic truncation of trailing whitespace"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-12589",
+      "gold_file": "django/db/models/sql/query.py",
+      "reply_bytes": 187,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "django/db/models/sql/query.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 1935,
+              "end": 1959,
+              "lines": "1935:                     annotation_class = annotation.__class__\n1936:                     msg = (\n1937:                         '`alias=None` must be added to the signature of '\n1938:                         '%s.%s.get_group_by_cols().'\n1939:                     ) % (annotation_class.__module__, annotation_class.__qualname__)\n1940:                     warnings.warn(msg, category=RemovedInDjango40Warning)\n1941:                     group_by_cols = annotation.get_group_by_cols()\n1942:                 else:\n1943:                     if not allow_aliases:\n1944:                         alias = None\n1945:                     group_by_cols = annotation.get_group_by_cols(alias=alias)\n1946:                 group_by.extend(group_by_cols)\n1947:         self.group_by = tuple(group_by)\n1948: \n1949:     def add_select_related(self, fields):\n1950:         \"\"\"\n1951:         Set up the select_related data structure so that we only select\n1952:         certain related models (as opposed to all models, when\n1953:         self.select_related=True).\n1954:         \"\"\"\n1955:         if isinstance(self.select_related, bool):\n1956:             field_dict = {}\n1957:         else:\n1958:             field_dict = self.select_related\n1959:         for field in fields:"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-12856",
+      "gold_file": "django/db/models/base.py",
+      "reply_bytes": 3168,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "django/db/models/base.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 2,
+              "end": 26,
+              "lines": "2: import inspect\n3: import warnings\n4: from functools import partialmethod\n5: from itertools import chain\n6: \n7: import django\n8: from django.apps import apps\n9: from django.conf import settings\n10: from django.core import checks\n11: from django.core.exceptions import (\n12:     NON_FIELD_ERRORS, FieldDoesNotExist, FieldError, MultipleObjectsReturned,\n13:     ObjectDoesNotExist, ValidationError,\n14: )\n15: from django.db import (\n16:     DEFAULT_DB_ALIAS, DJANGO_VERSION_PICKLE_KEY, DatabaseError, connection,\n17:     connections, router, transaction,\n18: )\n19: from django.db.models import (\n20:     NOT_PROVIDED, ExpressionWrapper, IntegerField, Max, Value,\n21: )\n22: from django.db.models.constants import LOOKUP_SEP\n23: from django.db.models.constraints import CheckConstraint, UniqueConstraint\n24: from django.db.models.deletion import CASCADE, Collector\n25: from django.db.models.fields.related import (\n26:     ForeignObjectRel, OneToOneField, lazy_related_operation, resolve_relation,"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25433",
+      "gold_file": "lib/matplotlib/figure.py",
+      "reply_bytes": 1951,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "lib/matplotlib/figure.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 3514,
+              "end": 3540,
+              "lines": "3514:         finally:\n3515:             self.set_layout_engine(None)\n3516: \n3517: \n3518: def figaspect(arg):\n3519:     \"\"\"\n3520:     Calculate the width and height for a figure with a specified aspect ratio.\n3521: \n3522:     While the height is taken from :rc:`figure.figsize`, the width is\n3523:     adjusted to match the desired aspect ratio. Additionally, it is ensured\n3524:     that the width is in the range [4., 16.] and the height is in the range\n3525:     [2., 16.]. If necessary, the default height is adjusted to ensure this.\n3526: \n3527:     Parameters\n3528:     ----------\n3529:     arg : float or 2D array\n3530:         If a float, this defines the aspect ratio (i.e. the ratio height /\n3531:         width).\n3532:         In case of an array the aspect ratio is number of rows / number of\n3533:         columns, so that the array could be fitted in the figure undistorted.\n3534: \n3535:     Returns\n3536:     -------\n3537:     width, height : float\n3538:         The figure size in inches.\n3539: \n3540:     Notes"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23562",
+      "gold_file": "lib/mpl_toolkits/mplot3d/art3d.py",
+      "reply_bytes": 358,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "lib/mpl_toolkits/mplot3d/art3d.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 857,
+              "end": 885,
+              "lines": "857:         try:\n858:             self._facecolor3d = mcolors.to_rgba_array(\n859:                 self._facecolor3d, self._alpha)\n860:         except (AttributeError, TypeError, IndexError):\n861:             pass\n862:         try:\n863:             self._edgecolors = mcolors.to_rgba_array(\n864:                     self._edgecolor3d, self._alpha)\n865:         except (AttributeError, TypeError, IndexError):\n866:             pass\n867:         self.stale = True\n868: \n869:     def get_facecolor(self):\n870:         return self._facecolors2d\n871: \n872:     def get_edgecolor(self):\n873:         return self._edgecolors2d\n874: \n875: \n876: def poly_collection_2d_to_3d(col, zs=0, zdir='z'):\n877:     \"\"\"Convert a PolyCollection to a Poly3DCollection object.\"\"\"\n878:     segments_3d, codes = _paths_to_3d_segments_with_codes(\n879:             col.get_paths(), zs, zdir)\n880:     col.__class__ = Poly3DCollection\n881:     col.set_verts_and_codes(segments_3d, codes)\n882:     col.set_3d_properties()\n883: \n884: \n885: def juggle_axes(xs, ys, zs, zdir):"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3407",
+      "gold_file": "seaborn/axisgrid.py",
+      "reply_bytes": 125,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "seaborn/axisgrid.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 1,
+              "end": 24,
+              "lines": "1: from __future__ import annotations\n2: from itertools import product\n3: from inspect import signature\n4: import warnings\n5: from textwrap import dedent\n6: \n7: import numpy as np\n8: import pandas as pd\n9: import matplotlib as mpl\n10: import matplotlib.pyplot as plt\n11: \n12: from ._oldcore import VectorPlotter, variable_type, categorical_order\n13: from ._compat import share_axis, get_legend_handles\n14: from . import utils\n15: from .utils import (\n16:     adjust_legend_subtitles, _check_argument, _draw_figure, _disable_autolayout\n17: )\n18: from .palettes import color_palette, blend_palette\n19: from ._docstrings import (\n20:     DocstringComponents,\n21:     _core_docs,\n22: )\n23: \n24: __all__ = [\"FacetGrid\", \"PairGrid\", \"JointGrid\", \"pairplot\", \"jointplot\"]"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3190",
+      "gold_file": "seaborn/_core/scales.py",
+      "reply_bytes": 188,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "seaborn/_core/scales.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 1,
+              "end": 24,
+              "lines": "1: from __future__ import annotations\n2: import re\n3: from copy import copy\n4: from collections.abc import Sequence\n5: from dataclasses import dataclass\n6: from functools import partial\n7: from typing import Any, Callable, Tuple, Optional, ClassVar\n8: \n9: import numpy as np\n10: import matplotlib as mpl\n11: from matplotlib.ticker import (\n12:     Locator,\n13:     Formatter,\n14:     AutoLocator,\n15:     AutoMinorLocator,\n16:     FixedLocator,\n17:     LinearLocator,\n18:     LogLocator,\n19:     SymmetricalLogLocator,\n20:     MaxNLocator,\n21:     MultipleLocator,\n22:     EngFormatter,\n23:     FuncFormatter,\n24:     LogFormatterSciNotation,"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pallets__flask-4045",
+      "gold_file": "src/flask/blueprints.py",
+      "reply_bytes": 1548,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "src/flask/blueprints.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 18,
+              "end": 42,
+              "lines": "18: \n19: if t.TYPE_CHECKING:\n20:     from .app import Flask\n21: \n22: DeferredSetupFunction = t.Callable[[\"BlueprintSetupState\"], t.Callable]\n23: \n24: \n25: class BlueprintSetupState:\n26:     \"\"\"Temporary holder object for registering a blueprint with the\n27:     application.  An instance of this class is created by the\n28:     :meth:`~flask.Blueprint.make_setup_state` method and later passed\n29:     to all register callback functions.\n30:     \"\"\"\n31: \n32:     def __init__(\n33:         self,\n34:         blueprint: \"Blueprint\",\n35:         app: \"Flask\",\n36:         options: t.Any,\n37:         first_registration: bool,\n38:     ) -> None:\n39:         #: a reference to the current application\n40:         self.app = app\n41: \n42:         #: a reference to the blueprint that created this setup state."
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pallets__flask-4992",
+      "gold_file": "src/flask/config.py",
+      "reply_bytes": 447,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 18,
+          "detail": {
+            "line": "<<<<<<< SEARCH"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 19,
+          "detail": {
+            "line": "    with open(filename) as f:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 20,
+          "detail": {
+            "line": "======="
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 21,
+          "detail": {
+            "line": "    with open(filename, mode) as f:"
+          }
+        },
+        {
+          "code": "unexpected_text",
+          "message": "expected 'FILE: <path>' but found other text",
+          "reply_line": 22,
+          "detail": {
+            "line": ">>>>>>> REPLACE"
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-7746",
+      "gold_file": "astropy/wcs/wcs.py",
+      "reply_bytes": 2971,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "astropy/wcs/wcs.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 144,
+              "end": 168,
+              "lines": "144:                 keysel_flags |= _wcs.WCSHDR_PIXLIST\n145:             else:\n146:                 raise ValueError(\n147:                     \"keysel must be a list of 'image', 'binary' \" +\n148:                     \"and/or 'pixel'\")\n149:     else:\n150:         keysel_flags = -1\n151: \n152:     return keysel_flags\n153: \n154: \n155: class NoConvergence(Exception):\n156:     \"\"\"\n157:     An error class used to report non-convergence and/or divergence\n158:     of numerical methods. It is used to report errors in the\n159:     iterative solution used by\n160:     the :py:meth:`~astropy.wcs.WCS.all_world2pix`.\n161: \n162:     Attributes\n163:     ----------\n164: \n165:     best_solution : `numpy.ndarray`\n166:         Best solution achieved by the numerical method.\n167: \n168:     accuracy : `numpy.ndarray`"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-14995",
+      "gold_file": "astropy/nddata/mixins/ndarithmetic.py",
+      "reply_bytes": 1061,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "astropy/nddata/mixins/ndarithmetic.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 504,
+              "end": 539,
+              "lines": "504: \n505:         kwds :\n506:             Additional parameters given to ``handle_mask``.\n507: \n508:         Returns\n509:         -------\n510:         result_mask : any type\n511:             If only one mask was present this mask is returned.\n512:             If neither had a mask ``None`` is returned. Otherwise\n513:             ``handle_mask`` must create (and copy) the returned mask.\n514:         \"\"\"\n515:         # If only one mask is present we need not bother about any type checks\n516:         if (\n517:             self.mask is None and operand is not None and operand.mask is None\n518:         ) or handle_mask is None:\n519:             return None\n520:         elif self.mask is None and operand is not None:\n521:             # Make a copy so there is no reference in the result.\n522:             return deepcopy(operand.mask)\n523:         elif operand is None:\n524:             return deepcopy(self.mask)\n525:         else:\n526:             # Now lets calculate the resulting mask (operation enforces copy)\n527:             return handle_mask(self.mask, operand.mask, **kwds)\n528: \n529:     def _arithmetic_wcs(self, operation, operand, compare_wcs, **kwds):\n530:         \"\"\"\n531:         Calculate the resulting wcs.\n532: \n533:         There is actually no calculation involved but it is a good place to\n534:         compare wcs information of both operands. This is currently not working\n535:         properly with `~astropy.wcs.WCS` (which is the suggested class for\n536:         storing as wcs property) but it will not break it neither.\n537: \n538:         Parameters\n539:         ----------"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-11133",
+      "gold_file": "django/http/response.py",
+      "reply_bytes": 1619,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "django/http/response.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 294,
+              "end": 334,
+              "lines": "294:             'cls': self.__class__.__name__,\n295:             'status_code': self.status_code,\n296:             'content_type': self._content_type_for_repr,\n297:         }\n298: \n299:     def serialize(self):\n300:         \"\"\"Full HTTP message, including headers, as a bytestring.\"\"\"\n301:         return self.serialize_headers() + b'\\r\\n\\r\\n' + self.content\n302: \n303:     __bytes__ = serialize\n304: \n305:     @property\n306:     def content(self):\n307:         return b''.join(self._container)\n308: \n309:     @content.setter\n310:     def content(self, value):\n311:         # Consume iterators upon assignment to allow repeated iteration.\n312:         if hasattr(value, '__iter__') and not isinstance(value, (bytes, str)):\n313:             content = b''.join(self.make_bytes(chunk) for chunk in value)\n314:             if hasattr(value, 'close'):\n315:                 try:\n316:                     value.close()\n317:                 except Exception:\n318:                     pass\n319:         else:\n320:             content = self.make_bytes(value)\n321:         # Create a list of properly encoded bytestrings to support write().\n322:         self._container = [content]\n323: \n324:     def __iter__(self):\n325:         return iter(self._container)\n326: \n327:     def write(self, content):\n328:         self._container.append(self.make_bytes(content))\n329: \n330:     def tell(self):\n331:         return len(self.content)\n332: \n333:     def getvalue(self):\n334:         return self.content"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-16816",
+      "gold_file": "django/contrib/admin/checks.py",
+      "reply_bytes": 1780,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "django/contrib/admin/checks.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 11,
+              "end": 35,
+              "lines": "11: from django.db.models.expressions import Combinable\n12: from django.forms.models import BaseModelForm, BaseModelFormSet, _get_foreign_key\n13: from django.template import engines\n14: from django.template.backends.django import DjangoTemplates\n15: from django.utils.module_loading import import_string\n16: \n17: \n18: def _issubclass(cls, classinfo):\n19:     \"\"\"\n20:     issubclass() variant that doesn't raise an exception if cls isn't a\n21:     class.\n22:     \"\"\"\n23:     try:\n24:         return issubclass(cls, classinfo)\n25:     except TypeError:\n26:         return False\n27: \n28: \n29: def _contains_subclass(class_path, candidate_paths):\n30:     \"\"\"\n31:     Return whether or not a dotted class path (or a subclass of that class) is\n32:     found in a list of candidate paths.\n33:     \"\"\"\n34:     cls = import_string(class_path)\n35:     for path in candidate_paths:"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23913",
+      "gold_file": "lib/matplotlib/legend.py",
+      "reply_bytes": 183,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "lib/matplotlib/legend.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 1,
+              "end": 24,
+              "lines": "1: \"\"\"\n2: The legend module defines the Legend class, which is responsible for\n3: drawing legends associated with axes and/or figures.\n4: \n5: .. important::\n6: \n7:     It is unlikely that you would ever create a Legend instance manually.\n8:     Most users would normally create a legend via the `~.Axes.legend`\n9:     function. For more details on legends there is also a :doc:`legend guide\n10:     </tutorials/intermediate/legend_guide>`.\n11: \n12: The `Legend` class is a container of legend handles and legend texts.\n13: \n14: The legend handler map specifies how to create legend handles from artists\n15: (lines, patches, etc.) in the axes or figures. Default legend handlers are\n16: defined in the :mod:`~matplotlib.legend_handler` module. While not all artist\n17: types are covered by the default legend handlers, custom legend handlers can be\n18: defined to support arbitrary objects.\n19: \n20: See the :doc:`legend guide </tutorials/intermediate/legend_guide>` for more\n21: information.\n22: \"\"\"\n23: \n24: import itertools"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23563",
+      "gold_file": "lib/mpl_toolkits/mplot3d/art3d.py",
+      "reply_bytes": 509,
+      "sr_ok": true,
+      "sr_issues": [],
+      "strict": true,
+      "lenient": false,
+      "apply_error": "",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-2848",
+      "gold_file": "seaborn/_oldcore.py",
+      "reply_bytes": 506,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "seaborn/_oldcore.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 109,
+              "end": 138,
+              "lines": "109: \n110:             # --- Option 1: numeric mapping with a matplotlib colormap\n111: \n112:             if map_type == \"numeric\":\n113: \n114:                 data = pd.to_numeric(data)\n115:                 levels, lookup_table, norm, cmap = self.numeric_mapping(\n116:                     data, palette, norm,\n117:                 )\n118: \n119:             # --- Option 2: categorical mapping using seaborn palette\n120: \n121:             elif map_type == \"categorical\":\n122: \n123:                 cmap = norm = None\n124:                 levels, lookup_table = self.categorical_mapping(\n125:                     data, palette, order,\n126:                 )\n127: \n128:             # --- Option 3: datetime mapping\n129: \n130:             else:\n131:                 # TODO this needs actual implementation\n132:                 cmap = norm = None\n133:                 levels, lookup_table = self.categorical_mapping(\n134:                     # Casting data to list to handle differences in the way\n135:                     # pandas and numpy represent datetime64 data\n136:                     list(data), palette, order,\n137:                 )\n138: "
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3010",
+      "gold_file": "seaborn/_stats/regression.py",
+      "reply_bytes": 695,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "seaborn/_stats/regression.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 12,
+              "end": 44,
+              "lines": "12:     \"\"\"\n13:     Fit a polynomial of the given order and resample data onto predicted curve.\n14:     \"\"\"\n15:     # This is a provisional class that is useful for building out functionality.\n16:     # It may or may not change substantially in form or dissappear as we think\n17:     # through the organization of the stats subpackage.\n18: \n19:     order: int = 2\n20:     gridsize: int = 100\n21: \n22:     def _fit_predict(self, data):\n23: \n24:         x = data[\"x\"]\n25:         y = data[\"y\"]\n26:         if x.nunique() <= self.order:\n27:             # TODO warn?\n28:             xx = yy = []\n29:         else:\n30:             p = np.polyfit(x, y, self.order)\n31:             xx = np.linspace(x.min(), x.max(), self.gridsize)\n32:             yy = np.polyval(p, xx)\n33: \n34:         return pd.DataFrame(dict(x=xx, y=yy))\n35: \n36:     # TODO we should have a way of identifying the method that will be applied\n37:     # and then only define __call__ on a base-class of stats with this pattern\n38: \n39:     def __call__(self, data, groupby, orient, scales):\n40: \n41:         return (\n42:             groupby\n43:             .apply(data.dropna(subset=[\"x\", \"y\"]), self._fit_predict)\n44:         )"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pallets__flask-5063",
+      "gold_file": "src/flask/cli.py",
+      "reply_bytes": 1355,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "src/flask/cli.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 1009,
+              "end": 1046,
+              "lines": "1009:     ignored_methods = set(() if all_methods else (\"HEAD\", \"OPTIONS\"))\n1010: \n1011:     if sort in (\"endpoint\", \"rule\"):\n1012:         rules = sorted(rules, key=attrgetter(sort))\n1013:     elif sort == \"methods\":\n1014:         rules = sorted(rules, key=lambda rule: sorted(rule.methods))  # type: ignore\n1015: \n1016:     rule_methods = [\n1017:         \", \".join(sorted(rule.methods - ignored_methods))  # type: ignore\n1018:         for rule in rules\n1019:     ]\n1020: \n1021:     headers = (\"Endpoint\", \"Methods\", \"Rule\")\n1022:     widths = (\n1023:         max(len(rule.endpoint) for rule in rules),\n1024:         max(len(methods) for methods in rule_methods),\n1025:         max(len(rule.rule) for rule in rules),\n1026:     )\n1027:     widths = [max(len(h), w) for h, w in zip(headers, widths)]\n1028:     row = \"{{0:<{0}}}  {{1:<{1}}}  {{2:<{2}}}\".format(*widths)\n1029: \n1030:     click.echo(row.format(*headers).strip())\n1031:     click.echo(row.format(*(\"-\" * width for width in widths)))\n1032: \n1033:     for rule, methods in zip(rules, rule_methods):\n1034:         click.echo(row.format(rule.endpoint, methods, rule.rule).rstrip())\n1035: \n1036: \n1037: cli = FlaskGroup(\n1038:     name=\"flask\",\n1039:     help=\"\"\"\\\n1040: A general utility script for Flask applications.\n1041: \n1042: An application to load must be given with the '--app' option,\n1043: 'FLASK_APP' environment variable, or with a 'wsgi.py' or 'app.py' file\n1044: in the current directory.\n1045: \"\"\",\n1046: )"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "psf__requests-2674",
+      "gold_file": "requests/adapters.py",
+      "reply_bytes": 842,
+      "sr_ok": false,
+      "sr_issues": [
+        {
+          "code": "edit_not_found",
+          "message": "SEARCH text does not occur in the base file",
+          "path": "requests/adapters.py",
+          "reply_line": 1,
+          "detail": {
+            "closest_span": {
+              "start": 1,
+              "end": 14,
+              "lines": "1: # -*- coding: utf-8 -*-\n2: \n3: \"\"\"\n4: requests.adapters\n5: ~~~~~~~~~~~~~~~~~\n6: \n7: This module contains the transport adapters that Requests uses to define\n8: and maintain connections.\n9: \"\"\"\n10: \n11: import socket\n12: \n13: from .models import Response\n14: from .packages.urllib3.poolmanager import PoolManager, proxy_from_url"
+            }
+          }
+        }
+      ],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: No valid patches in input (allow with \"--allow-empty\")\n",
+      "gold_hit": false,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    }
+  ]
+}

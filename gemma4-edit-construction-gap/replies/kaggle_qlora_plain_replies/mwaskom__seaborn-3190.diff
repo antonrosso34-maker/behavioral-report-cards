@@ -1,0 +1,12 @@
+diff --git a/seaborn/_core/scales.py b/seaborn/_core/scales.py
+--- a/seaborn/_core/scales.py
++++ b/seaborn/_core/scales.py
+@@ -349,7 +349,7 @@ def _setup(
+             a = forward(vmin)
+             b = forward(vmax) - forward(vmin)
+ 
+-            def normalize(x):
++            def normalize(x: ArrayLike) -> ArrayLike:
+                 return (x - a) / b
+ 
+         else:

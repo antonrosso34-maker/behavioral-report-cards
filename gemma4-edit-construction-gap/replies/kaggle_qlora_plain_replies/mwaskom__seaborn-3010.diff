@@ -1,0 +1,111 @@
+diff --git a/seaborn/_stats/regression.py b/seaborn/_stats/regression.py
+--- a/seaborn/_stats/regression.py
++++ b/seaborn/_stats/regression.py
+@@ -1,4 +1,5 @@
+ from __future__ import annotations
++from typing import Any, Dict, List, Optional, Union
+ 
+ from dataclasses import dataclass
+ 
+@@ -10,10 +11,10 @@
+     """
+     # This is a provisional class that is useful for building out functionality.
+     # It may or may not change substantially in form or dissappear as we think
+-    # through the organization of the stats subpackage.
++    # through the organization of the stats subpackage. It may also be useful
++    # to consider a more general interface for this kind of functionality.
+ 
+-    order: int = 2
+-    gridsize: int = 100
++    order: int = 2  # Degree of the polynomial to fit
++    gridsize: int = 100  # Number of points on the fitted curve
+ 
+     def _fit_predict(self, data):
+ 
+@@ -22,10 +23,10 @@
+         y = data["y"]
+         if x.nunique() <= self.order:
+             # TODO warn?
+-            xx = yy = []
++            xx = yy = np.array([])
+         else:
+-            p = np.polyfit(x, y, self.order)
+-            xx = np.linspace(x.min(), x.max(), self.gridsize)
++            p = np.polyfit(x.dropna(), y.dropna(), self.order)
++            xx = np.linspace(x.min(), x.max(), self.gridsize, endpoint=True)
+             yy = np.polyval(p, xx)
+ 
+         return pd.DataFrame(dict(x=xx, y=yy))
+@@ -34,10 +35,10 @@
+     # TODO we should have a way of identifying the method that will be applied
+     # and then only define __call__ on a base-class of stats with this pattern
+ 
+-    def __call__(self, data, groupby, orient, scales):
++    def __call__(self, data: pd.DataFrame, groupby: Any, orient: str, scales: Dict[str, Any]) -> pd.DataFrame:
+ 
+-        return groupby.apply(data, self._fit_predict)
++        return groupby.apply(self._fit_predict, data=data)
+ 
+-@dataclass
++@dataclass(frozen=True)
+ class OLSFit(Stat):
+     """
+     Fit a linear model and resample data onto predicted curve.
+@@ -45,10 +46,10 @@
+     # through the organization of the stats subpackage. It may also be useful
+     # to consider a more general interface for this kind of functionality.
+ 
+-    order: int = 2  # Degree of the polynomial to fit
+-    gridsize: int = 100  # Number of points on the fitted curve
++    order: int = 2  # Degree of the polynomial to fit
++    gridsize: int = 100  # Number of points on the fitted curve
+ 
+-    def __call__(self, data, groupby, orient, scales):
++    def __call__(self, data: pd.DataFrame, groupby: Any, orient: str, scales: Dict[str, Any]) -> pd.DataFrame:
+ 
+         # TODO: handle the case where the data is not a DataFrame
+         # TODO: handle the case where the data is not a DataFrame
+@@ -60,10 +61,10 @@
+         # TODO: handle the case where the data is not a DataFrame
+         # TODO: handle the case where the data is not a DataFrame
+         # TODO: handle the case where the data is not a DataFrame
+-        return groupby.apply(data, self._fit_predict)
++        return groupby.apply(self._fit_predict, data=data)
+ 
+-    def _fit_predict(self, data):
++    def _fit_predict(self, data: pd.DataFrame) -> pd.DataFrame:
+ 
+-        x = data["x"]
++        x = data["x"].dropna()
+         y = data["y"]
+ 
+         # TODO: handle the case where the data is not a DataFrame
+@@ -71,10 +72,10 @@
+         # TODO: handle the case where the data is not a DataFrame
+         # TODO: handle the case where the data is not a DataFrame
+         # TODO: handle the case where the data is not a DataFrame
+-        if x.nunique() <= self.order:
++        if x.nunique() <= self.order or y.nunique() <= self.order:
+             # TODO warn?
+-            xx = yy = []
+-        else:
++            xx = yy = np.array([])
++        else:
+             # Fit a linear model
+             model = np.polyfit(x, y, self.order)
+             # Resample data onto predicted curve
+@@ -82,10 +83,10 @@
+             # Resample data onto predicted curve
+             xx = np.linspace(x.min(), x.max(), self.gridsize, endpoint=True)
+             yy = np.polyval(model, xx)
+-        return pd.DataFrame(dict(x=xx, y=yy))
++        return pd.DataFrame({"x": xx, "y": yy})
+ 
+-    def _fit_predict(self, data):
++    def _fit_predict(self, data: pd.DataFrame) -> pd.DataFrame:
+ 
+-        x = data["x"]
++        x = data["x"].dropna()
+         y = data["y"]
+ 
+        

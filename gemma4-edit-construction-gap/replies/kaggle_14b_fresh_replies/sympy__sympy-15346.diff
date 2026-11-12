@@ -1,0 +1,34 @@
+diff --git a/sympy/simplify/trigsimp.py b/sympy/simplify/trigsimp.py
+index 1234567..89abcde 100644
+--- a/sympy/simplify/trigsimp.py
++++ b/sympy/simplify/trigsimp.py
+@@ -1103,6 +1103,10 @@ def trigsimp(e, method='fu', **kwargs):
+     if e != old and e.is_Mul and e.args[0].is_Rational:
+         # redistribute leading coeff on 2-arg Add
+         e = Mul(*e.as_coeff_Mul())
++    # Simplify trigonometric expressions with Rational arguments
++    if e != old and e.has(TrigonometricFunction) and e.has(Rational):
++        e = _simplify_trig_with_rational(e)
+     return e
+ 
+ 
+@@ -1190,6 +1194,20 @@ def _eapply(func, e, cond=None):
+     return e.func(*[
+         _eapply(func, ei) if (cond is None or cond(ei)) else ei
+         for ei in e.args])
++
++
++def _simplify_trig_with_rational(e):
++    """Simplify trigonometric expressions with Rational arguments."""
++    from sympy import sin, cos, Rational
++    if e.is_Mul:
++        args = [arg.simplify() if arg.has(sin, cos) and arg.has(Rational) else arg for arg in e.args]
++        return Mul(*args)
++    elif e.is_Add:
++        args = [arg.simplify() if arg.has(sin, cos) and arg.has(Rational) else arg for arg in e.args]
++        return Add(*args)
++    else:
++        return e
++
++
++trigsimp.register_simplifier(_simplify_trig_with_rational)

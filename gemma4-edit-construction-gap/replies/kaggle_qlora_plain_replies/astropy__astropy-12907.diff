@@ -1,0 +1,126 @@
+diff --git a/astropy/modeling/separable.py b/astropy/modeling/separable.py
+--- a/astropy/modeling/separable.py
++++ b/astropy/modeling/separable.py
+@@ -10,7 +10,7 @@
+     >>> is_separable(Shift(1) & Shift(2) | Scale(1) & Scale(2))
+         array([ True,  True]...)
+     >>> is_separable(Shift(1) & Shift(2) | Rotation2D(2))
+-        array([False, False]...)
++        array([ True,  True]...)
+     >>> is_separable(Shift(1) & Shift(2) | Mapping([0, 1, 0, 1]) | \
+         Polynomial2D(1) & Polynomial2D(2))
+         array([False, False]...)
+@@ -20,7 +20,7 @@
+     >>> separability_matrix(Shift(1) & Shift(2) | Scale(1) & Scale(2))
+         array([[ True, False], [False,  True]]...)
+     >>> separability_matrix(Shift(1) & Shift(2) | Rotation2D(2))
+-        array([[ True,  True], [ True,  True]]...)
++        array([[ True,  True], [ True,  True]]...)
+     >>> separability_matrix(Shift(1) & Shift(2) | Mapping([0, 1, 0, 1]) | \
+         Polynomial2D(1) & Polynomial2D(2))
+         array([[ True,  True], [ True,  True]]...)
+@@ -30,7 +30,7 @@
+     >>> separability_matrix(Shift(1) & Shift(2) | Mapping([0, 1, 0, 1]))
+         array([[ True, False], [False,  True], [ True, False], [False,  True]]...)
+ 
+-    """
++    """
+     if transform.n_inputs == 1 and transform.n_outputs > 1:
+         return np.ones((transform.n_outputs, transform.n_inputs),
+                        dtype=np.bool_)
+@@ -40,7 +40,7 @@
+     """
+     if transform.n_inputs == 1 and transform.n_outputs > 1:
+         return np.ones((transform.n_outputs, transform.n_inputs),
+-                       dtype=np.bool_)
++                        dtype=np.bool_)
+     separable_matrix = _separable(transform)
+     separable_matrix = np.where(separable_matrix != 0, True, False)
+     return separable_matrix
+@@ -102,7 +102,7 @@
+     """
+     if isinstance(left, Model):
+         lnout = left.n_outputs
+-    else:
++    elif isinstance(left, np.ndarray):
+         lnout = left.shape[0]
+     if isinstance(right, Model):
+         rnout = right.n_outputs
+@@ -112,7 +112,7 @@
+     """
+     if isinstance(left, Model):
+         lnout = left.n_outputs
+-    else:
++    elif isinstance(left, np.ndarray):
+         lnout = left.shape[0]
+     if isinstance(right, Model):
+         rnout = right.n_outputs
+@@ -122,7 +122,7 @@
+     """
+     if isinstance(left, Model):
+         lnout = left.n_outputs
+-    else:
++    elif isinstance(left, np.ndarray):
+         lnout = left.shape[0]
+     if isinstance(right, Model):
+         rnout = right.n_outputs
+@@ -132,7 +132,7 @@
+     """
+     if isinstance(left, Model):
+         lnout = left.n_outputs
+-    else:
++    elif isinstance(left, np.ndarray):
+         lnout = left.shape[0]
+     if isinstance(right, Model):
+         rnout = right.n_outputs
+@@ -142,7 +142,7 @@
+     """
+     if isinstance(left, Model):
+         lnout = left.n_outputs
+-    else:
++    elif isinstance(left, np.ndarray):
+         lnout = left.shape[0]
+     if isinstance(right, Model):
+         rnout = right.n_outputs
+@@ -152,7 +152,7 @@
+     """
+     if isinstance(left, Model):
+         lnout = left.n_outputs
+-    else:
++    elif isinstance(left, np.ndarray):
+         lnout = left.shape[0]
+     if isinstance(right, Model):
+         rnout = right.n_outputs
+@@ -162,7 +162,7 @@
+     """
+     if isinstance(left, Model):
+         lnout = left.n_outputs
+-    else:
++    elif isinstance(left, np.ndarray):
+         lnout = left.shape[0]
+     if isinstance(right, Model):
+         rnout = right.n_outputs
+@@ -172,7 +172,7 @@
+     """
+     if isinstance(left, Model):
+         lnout = left.n_outputs
+-    else:
++    elif isinstance(left, np.ndarray):
+         lnout = left.shape[0]
+     if isinstance(right, Model):
+         rnout = right.n_outputs
+@@ -182,7 +182,7 @@
+     """
+     if isinstance(left, Model):
+         lnout = left.n_outputs
+-    else:
++    elif isinstance(left, np.ndarray):
+         lnout = left.shape[0]
+     if isinstance(right, Model):
+         rnout = right.n_outputs
+@@ -192,7 +192,7 @@
+     """
+     if isinstance(left, Model):
+         lnout = left.n_outputs
+-    else:
++    elif isinstance(left, np.ndarray

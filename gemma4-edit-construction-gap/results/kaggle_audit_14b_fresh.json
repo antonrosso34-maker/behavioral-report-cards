@@ -1,0 +1,306 @@
+{
+  "tag": "14b_fresh",
+  "results": "C:\\Users\\Anton\\AppData\\Local\\Temp\\kilo\\kaggle_14b_fresh_out\\results_fresh.json",
+  "rows": [
+    {
+      "instance_id": "astropy__astropy-14182",
+      "gold_file": "astropy/io/ascii/rst.py",
+      "reply_bytes": 762,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/astropy__astropy-14182/kaggle_14b_fresh.diff:26\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-14365",
+      "gold_file": "astropy/io/ascii/qdp.py",
+      "reply_bytes": 2905,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/astropy__astropy-14365/kaggle_14b_fresh.diff:20\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-13658",
+      "gold_file": "django/core/management/__init__.py",
+      "reply_bytes": 3992,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch fragment without header at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/django__django-13658/kaggle_14b_fresh.diff:68: @@ -390,7 +390,7 @@ class ManagementUtility:\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-14534",
+      "gold_file": "django/forms/boundfield.py",
+      "reply_bytes": 4865,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/django__django-14534/kaggle_14b_fresh.diff:116\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25332",
+      "gold_file": "lib/matplotlib/cbook.py",
+      "reply_bytes": 2150,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/matplotlib__matplotlib-25332/kaggle_14b_fresh.diff:25\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26011",
+      "gold_file": "lib/matplotlib/axis.py",
+      "reply_bytes": 3141,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/matplotlib__matplotlib-26011/kaggle_14b_fresh.diff:22\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "psf__requests-1963",
+      "gold_file": "requests/sessions.py",
+      "reply_bytes": 3294,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: requests/sessions.py:300\nerror: requests/sessions.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "psf__requests-3362",
+      "gold_file": "requests/utils.py",
+      "reply_bytes": 2533,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/psf__requests-3362/kaggle_14b_fresh.diff:14\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pydata__xarray-3364",
+      "gold_file": "xarray/core/concat.py",
+      "reply_bytes": 1752,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/pydata__xarray-3364/kaggle_14b_fresh.diff:18\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pydata__xarray-4094",
+      "gold_file": "xarray/core/dataarray.py",
+      "reply_bytes": 652,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/pydata__xarray-4094/kaggle_14b_fresh.diff:15\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7114",
+      "gold_file": "pylint/lint/expand_modules.py",
+      "reply_bytes": 3026,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/pylint-dev__pylint-7114/kaggle_14b_fresh.diff:14\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7993",
+      "gold_file": "pylint/reporters/text.py",
+      "reply_bytes": 1144,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: pylint/reporters/text.py:213\nerror: pylint/reporters/text.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5103",
+      "gold_file": "src/_pytest/assertion/rewrite.py",
+      "reply_bytes": 4724,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/pytest-dev__pytest-5103/kaggle_14b_fresh.diff:37\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pytest-dev__pytest-8365",
+      "gold_file": "src/_pytest/tmpdir.py",
+      "reply_bytes": 343,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": true,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/pytest-dev__pytest-8365/kaggle_14b_fresh.diff:12\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11040",
+      "gold_file": "sklearn/neighbors/base.py",
+      "reply_bytes": 935,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/scikit-learn__scikit-learn-11040/kaggle_14b_fresh.diff:25\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13241",
+      "gold_file": "sklearn/decomposition/kernel_pca.py",
+      "reply_bytes": 1257,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/scikit-learn__scikit-learn-13241/kaggle_14b_fresh.diff:28\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7738",
+      "gold_file": "sphinx/ext/napoleon/docstring.py",
+      "reply_bytes": 460,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": true,
+      "lenient": true,
+      "apply_error": "",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8506",
+      "gold_file": "sphinx/domains/std.py",
+      "reply_bytes": 954,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: sphinx/domains/std.py:157\nerror: sphinx/domains/std.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-15346",
+      "gold_file": "sympy/simplify/trigsimp.py",
+      "reply_bytes": 1258,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": true,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/sympy__sympy-15346/kaggle_14b_fresh.diff:14\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-18199",
+      "gold_file": "sympy/ntheory/residue_ntheory.py",
+      "reply_bytes": 522,
+      "sr_ok": false,
+      "sr_issues": [],
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: sympy/ntheory/residue_ntheory.py:703\nerror: sympy/ntheory/residue_ntheory.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    }
+  ]
+}

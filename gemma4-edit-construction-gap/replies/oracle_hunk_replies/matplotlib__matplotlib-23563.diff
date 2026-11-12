@@ -1,0 +1,30 @@
+diff --git a/lib/mpl_toolkits/mplot3d/art3d.py b/lib/mpl_toolkits/mplot3d/art3d.py
+--- a/lib/mpl_toolkits/mplot3d/art3d.py
++++ b/lib/mpl_toolkits/mplot3d/art3d.py
+@@ -34,7 +34,7 @@
+         """
+         Keyword arguments are passed onto :func:`~matplotlib.lines.Line2D`.
+         """
+         super().__init__([], [], *args, **kwargs)
+-        self._verts3d = xs, ys, zs
++        self._verts3d = (xs, ys, zs)
+ 
+     def set_3d_properties(self, zs=0, zdir='z'):
+         xs = self.get_xdata()
+@@ -42,7 +42,7 @@
+         zs = np.broadcast_to(zs, len(xs))
+         self._verts3d = juggle_axes(xs, ys, zs, zdir)
+         self.stale = True
+ 
+     def set_data_3d(self, *args):
+         """
+@@ -56,7 +56,7 @@
+         if len(args) == 1:
+             self._verts3d = args[0]
+         else:
+-            self._verts3d = args
++            self._verts3d = args
+         self.stale = True
+ 
+     def get_data_3d(self):
+```

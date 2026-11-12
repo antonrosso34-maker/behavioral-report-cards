@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "The Edit-Construction Gap: One 14B Success and the 2.3B Floor"
+authors:
+  - family-names: Rosso
+    given-names: Anton
+date-released: 2026-11-12
+license: Apache-2.0
+url: "https://github.com/antonrosso34-maker/behavioral-report-cards/tree/main/gemma4-edit-construction-gap"
+abstract: "A frozen 20-task audit of 4-bit Gemma 4 E2B repository patching, with retrieval/repair, oracle-file, and Qwen scale/QLoRA controls. The 2.3B floor is zero test-verified semantic passes; a 14B Qwen oracle closes one edit (seaborn-3010) but fails 19/20."

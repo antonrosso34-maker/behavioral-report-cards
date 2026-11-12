@@ -1,0 +1,266 @@
+{
+  "tag": "14b_full",
+  "results": "C:\\Users\\Anton\\AppData\\Local\\Temp\\kilo\\kaggle_14b_full\\results.json",
+  "rows": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "gold_file": "astropy/modeling/separable.py",
+      "reply_bytes": 1305,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/astropy__astropy-12907/kaggle_14b_full.diff:36\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-6938",
+      "gold_file": "astropy/io/fits/fitsrec.py",
+      "reply_bytes": 458,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/astropy__astropy-6938/kaggle_14b_full.diff:10\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-12589",
+      "gold_file": "django/db/models/sql/query.py",
+      "reply_bytes": 1457,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/django__django-12589/kaggle_14b_full.diff:28\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-12856",
+      "gold_file": "django/db/models/base.py",
+      "reply_bytes": 916,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/django__django-12856/kaggle_14b_full.diff:24\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25433",
+      "gold_file": "lib/matplotlib/figure.py",
+      "reply_bytes": 352,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/matplotlib__matplotlib-25433/kaggle_14b_full.diff:10\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23562",
+      "gold_file": "lib/mpl_toolkits/mplot3d/art3d.py",
+      "reply_bytes": 423,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: lib/mpl_toolkits/mplot3d/art3d.py:633\nerror: lib/mpl_toolkits/mplot3d/art3d.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3407",
+      "gold_file": "seaborn/axisgrid.py",
+      "reply_bytes": 428,
+      "strict": true,
+      "lenient": true,
+      "apply_error": "",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3190",
+      "gold_file": "seaborn/_core/scales.py",
+      "reply_bytes": 539,
+      "strict": false,
+      "lenient": true,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/mwaskom__seaborn-3190/kaggle_14b_full.diff:15\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "pallets__flask-4045",
+      "gold_file": "src/flask/blueprints.py",
+      "reply_bytes": 5050,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/pallets__flask-4045/kaggle_14b_full.diff:12\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "pallets__flask-4992",
+      "gold_file": "src/flask/config.py",
+      "reply_bytes": 967,
+      "strict": false,
+      "lenient": true,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/pallets__flask-4992/kaggle_14b_full.diff:19\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-7746",
+      "gold_file": "astropy/wcs/wcs.py",
+      "reply_bytes": 671,
+      "strict": true,
+      "lenient": true,
+      "apply_error": "",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-14995",
+      "gold_file": "astropy/nddata/mixins/ndarithmetic.py",
+      "reply_bytes": 3901,
+      "strict": false,
+      "lenient": true,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/astropy__astropy-14995/kaggle_14b_full.diff:16\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "django__django-11133",
+      "gold_file": "django/http/response.py",
+      "reply_bytes": 633,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: django/http/response.py:300\nerror: django/http/response.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "django__django-16816",
+      "gold_file": "django/contrib/admin/checks.py",
+      "reply_bytes": 1076,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/django__django-16816/kaggle_14b_full.diff:25\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23913",
+      "gold_file": "lib/matplotlib/legend.py",
+      "reply_bytes": 835,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: lib/matplotlib/legend.py:570\nerror: lib/matplotlib/legend.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23563",
+      "gold_file": "lib/mpl_toolkits/mplot3d/art3d.py",
+      "reply_bytes": 446,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch failed: lib/mpl_toolkits/mplot3d/art3d.py:131\nerror: lib/mpl_toolkits/mplot3d/art3d.py: patch does not apply\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-2848",
+      "gold_file": "seaborn/_oldcore.py",
+      "reply_bytes": 1072,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/mwaskom__seaborn-2848/kaggle_14b_full.diff:14\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3010",
+      "gold_file": "seaborn/_stats/regression.py",
+      "reply_bytes": 570,
+      "strict": true,
+      "lenient": true,
+      "apply_error": "",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "environment-limited"
+      }
+    },
+    {
+      "instance_id": "pallets__flask-5063",
+      "gold_file": "src/flask/cli.py",
+      "reply_bytes": 2198,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/pallets__flask-5063/kaggle_14b_full.diff:31\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    },
+    {
+      "instance_id": "psf__requests-2674",
+      "gold_file": "requests/adapters.py",
+      "reply_bytes": 1848,
+      "strict": false,
+      "lenient": false,
+      "apply_error": "error: patch fragment without header at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/psf__requests-2674/kaggle_14b_full.diff:32: @@ -310,6 +316,8 @@ class HTTPAdapter(BaseAdapter):\n",
+      "gold_hit": true,
+      "tests": {
+        "test": "not-run",
+        "reason": "patch-not-applied"
+      }
+    }
+  ]
+}

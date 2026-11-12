@@ -1,0 +1,122 @@
+diff --git a/django/forms/boundfield.py b/django/forms/boundfield.py
+index 1234567..89abcde 100644
+--- a/django/forms/boundfield.py
++++ b/django/forms/boundfield.py
+@@ -250,7 +250,7 @@ class BoundWidget:
+     def id_for_label(self):
+         return 'id_%s_%s' % (self.data['name'], self.data['index'])
+ 
+-    @property
++    def id_for_label(self):
+         return self.data['attrs']['id']
+ 
+     @property
+@@ -260,7 +260,7 @@ class BoundWidget:
+         return self.data['label']
+ 
+ @html_safe
+-class BoundField:
++class BoundField:
+     "A Field plus data"
+     def __init__(self, form, field, name):
+         self.form = form
+@@ -300,7 +300,7 @@ class BoundField:
+         """
+         widget = widget or self.field.widget
+         if self.field.localize:
+-            widget.is_localized = True
++            widget.is_localized = True
+         attrs = attrs or {}
+         attrs = self.build_widget_attrs(attrs, widget)
+         if self.auto_id and 'id' not in widget.attrs:
+@@ -310,7 +310,7 @@ class BoundField:
+             attrs.setdefault('id', self.html_initial_id if only_initial else self.auto_id)
+         return widget.render(
+             name=self.html_initial_name if only_initial else self.html_name,
+-            value=self.value(),
++            value=self.value(),
+             attrs=attrs,
+             renderer=self.form.renderer,
+         )
+@@ -320,7 +320,7 @@ class BoundField:
+         """
+         Return a string of HTML for representing this as an <input type="text">.
+         """
+-        return self.as_widget(TextInput(), attrs, **kwargs)
++        return self.as_widget(TextInput(), attrs, **kwargs)
+ 
+     def as_textarea(self, attrs=None, **kwargs):
+         """Return a string of HTML for representing this as a <textarea>."""
+@@ -330,7 +330,7 @@ class BoundField:
+         """
+         Return a string of HTML for representing this as an <input type="hidden">.
+         """
+-        return self.as_widget(self.field.hidden_widget(), attrs, **kwargs)
++        return self.as_widget(self.field.hidden_widget(), attrs, **kwargs)
+ 
+     @property
+     def data(self):
+@@ -340,7 +340,7 @@ class BoundField:
+         """
+         Return the data for this BoundField, or None if it wasn't given.
+         """
+-        return self.form._widget_data_value(self.field.widget, self.html_name)
++        return self.form._widget_data_value(self.field.widget, self.html_name)
+ 
+     def value(self):
+         """
+@@ -350,7 +350,7 @@ class BoundField:
+         """
+         data = self.initial
+         if self.form.is_bound:
+-            data = self.field.bound_data(self.data, data)
++            data = self.field.bound_data(self.data, data)
+         return self.field.prepare_value(data)
+ 
+     def _has_changed(self):
+@@ -360,7 +360,7 @@ class BoundField:
+         field = self.field
+         if field.show_hidden_initial:
+             hidden_widget = field.hidden_widget()
+-            initial_value = self.form._widget_data_value(
++            initial_value = self.form._widget_data_value(
+                 hidden_widget, self.html_initial_name,
+             )
+             try:
+@@ -370,7 +370,7 @@ class BoundField:
+                 # Always assume data has changed if validation fails.
+                 return True
+         else:
+-            initial_value = self.initial
++            initial_value = self.initial
+         return field.has_changed(initial_value, self.data)
+ 
+     def label_tag(self, contents=None, attrs=None, label_suffix=None):
+@@ -380,7 +380,7 @@ class BoundField:
+         """
+         contents = contents or self.label
+         if label_suffix is None:
+-            label_suffix = (self.field.label_suffix if self.field.label_suffix is not None
++            label_suffix = (self.field.label_suffix if self.field.label_suffix is not None
+                             else self.form.label_suffix)
+         # Only add the suffix if the label does not end in punctuation.
+         # Translators: If found as last label character, these punctuation
+@@ -390,7 +390,7 @@ class BoundField:
+         if label_suffix and contents and contents[-1] not in _(':?.!'):
+             contents = format_html('{}{}', contents, label_suffix)
+         widget = self.field.widget
+-        id_ = widget.attrs.get('id') or self.auto_id
++        id_ = widget.attrs.get('id') or self.auto_id
+         if id_:
+             id_for_label = widget.id_for_label(id_)
+             if id_for_label:
+@@ -400,7 +400,7 @@ class BoundField:
+                 attrs = {**(attrs or {}), 'for': id_for_label}
+             if self.field.required and hasattr(self.form, 'required_css_class'):
+                 attrs = attrs or {}
+@@ -410,7 +410,7 @@ class BoundField:
+                 else:
+                     attrs['class'] = self.form.required_css_class
+             attrs = flatatt(attrs) if attrs else ''
+-            contents = format_html('<label{}>{}</label>', attrs, contents)
++           

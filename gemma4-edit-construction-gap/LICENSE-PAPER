@@ -1,0 +1,11 @@
+SPDX-License-Identifier: CC-BY-4.0
+
+The paper, data, aggregate results, and figures in this directory are
+licensed under the Creative Commons Attribution 4.0 International License
+(CC BY 4.0): https://creativecommons.org/licenses/by/4.0/legalcode
+
+The Python scripts in `harness/` are licensed under the Apache License 2.0;
+see `LICENSE`.
+
+No model weights, raw hidden-test content, gold patches, or repository
+snapshots are included.

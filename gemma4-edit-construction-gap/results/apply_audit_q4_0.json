@@ -1,0 +1,562 @@
+[
+  {
+    "id": "astropy__astropy-12907",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: patch failed: astropy/modeling/separable.py:13\nerror: astropy/modeling/separable.py: patch does not apply\n"
+  },
+  {
+    "id": "astropy__astropy-12907",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "astropy__astropy-12907",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "astropy__astropy-12907",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: patch failed: astropy/modeling/separable.py:123\nerror: astropy/modeling/separable.py: patch does not apply\n"
+  },
+  {
+    "id": "astropy__astropy-6938",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "astropy__astropy-6938",
+    "arm": "gemma4_retrieval",
+    "strict": true,
+    "recount": true,
+    "err": ""
+  },
+  {
+    "id": "astropy__astropy-6938",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "astropy__astropy-6938",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "django__django-12589",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: django/tests/test_models.py: No such file or directory\n"
+  },
+  {
+    "id": "django__django-12589",
+    "arm": "gemma4_retrieval",
+    "strict": true,
+    "recount": true,
+    "err": ""
+  },
+  {
+    "id": "django__django-12589",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "django__django-12589",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: patch failed: django/db/models/sql/query.py:1234\nerror: django/db/models/sql/query.py: patch does not apply\n"
+  },
+  {
+    "id": "django__django-12856",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "django__django-12856",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "django__django-12856",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "django__django-12856",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "matplotlib__matplotlib-25433",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "matplotlib__matplotlib-25433",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "matplotlib__matplotlib-25433",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: lib/matplotlib/widgets/range_slider.py: No such file or directory\n"
+  },
+  {
+    "id": "matplotlib__matplotlib-25433",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: matplotlib/matplotlib/widgets/range_slider.py: No such file or directory\n"
+  },
+  {
+    "id": "matplotlib__matplotlib-23562",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: matplotlib/matplotlib/tests/test_3d_plot.py: No such file or directory\n"
+  },
+  {
+    "id": "matplotlib__matplotlib-23562",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: patch failed: lib/matplotlib/backend_bases.py:10\nerror: lib/matplotlib/backend_bases.py: patch does not apply\n"
+  },
+  {
+    "id": "matplotlib__matplotlib-23562",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "matplotlib__matplotlib-23562",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "mwaskom__seaborn-3407",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "mwaskom__seaborn-3407",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "mwaskom__seaborn-3407",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "mwaskom__seaborn-3407",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "mwaskom__seaborn-3190",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "mwaskom__seaborn-3190",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "mwaskom__seaborn-3190",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "mwaskom__seaborn-3190",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "pallets__flask-4045",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "pallets__flask-4045",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "pallets__flask-4045",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: pallets/flask/blueprints.py: No such file or directory\n"
+  },
+  {
+    "id": "pallets__flask-4045",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: pallets/flask/blueprints.py: No such file or directory\n"
+  },
+  {
+    "id": "pallets__flask-4992",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "pallets__flask-4992",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "pallets__flask-4992",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: patch fragment without header at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/arc"
+  },
+  {
+    "id": "pallets__flask-4992",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "astropy__astropy-7746",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "astropy__astropy-7746",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: patch failed: astropy/wcs/wcs.py:1351\nerror: astropy/wcs/wcs.py: patch does not apply\n"
+  },
+  {
+    "id": "astropy__astropy-7746",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "astropy__astropy-7746",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "astropy__astropy-14995",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "astropy__astropy-14995",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": true,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "astropy__astropy-14995",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "astropy__astropy-14995",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: patch failed: astropy/nddata/nddata.py:123\nerror: astropy/nddata/nddata.py: patch does not apply\n"
+  },
+  {
+    "id": "django__django-11133",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "django__django-11133",
+    "arm": "gemma4_retrieval",
+    "strict": true,
+    "recount": true,
+    "err": ""
+  },
+  {
+    "id": "django__django-11133",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "django__django-11133",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "django__django-16816",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "django__django-16816",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "django__django-16816",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "django__django-16816",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "matplotlib__matplotlib-23913",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: patch fragment without header at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/arc"
+  },
+  {
+    "id": "matplotlib__matplotlib-23913",
+    "arm": "gemma4_retrieval",
+    "strict": true,
+    "recount": true,
+    "err": ""
+  },
+  {
+    "id": "matplotlib__matplotlib-23913",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "matplotlib__matplotlib-23913",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "matplotlib__matplotlib-23563",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "matplotlib__matplotlib-23563",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "matplotlib__matplotlib-23563",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "matplotlib__matplotlib-23563",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: matplotlib/axes/_base.py: No such file or directory\n"
+  },
+  {
+    "id": "mwaskom__seaborn-2848",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "mwaskom__seaborn-2848",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "mwaskom__seaborn-2848",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "mwaskom__seaborn-2848",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "mwaskom__seaborn-3010",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "mwaskom__seaborn-3010",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: seaborn/seaborn/_stats/regression.py: No such file or directory\n"
+  },
+  {
+    "id": "mwaskom__seaborn-3010",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "mwaskom__seaborn-3010",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "pallets__flask-5063",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: patch fragment without header at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/arc"
+  },
+  {
+    "id": "pallets__flask-5063",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "pallets__flask-5063",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "pallets__flask-5063",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "psf__requests-2674",
+    "arm": "gemma4_baseline",
+    "strict": false,
+    "recount": false,
+    "err": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/rep"
+  },
+  {
+    "id": "psf__requests-2674",
+    "arm": "gemma4_retrieval",
+    "strict": false,
+    "recount": false,
+    "err": "error: patch fragment without header at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/arc"
+  },
+  {
+    "id": "psf__requests-2674",
+    "arm": "q3km",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  {
+    "id": "psf__requests-2674",
+    "arm": "mx",
+    "strict": false,
+    "recount": false,
+    "err": "error: No valid patches in input (allow with \"--allow-empty\")\n"
+  }
+]

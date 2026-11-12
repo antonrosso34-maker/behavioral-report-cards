@@ -1,0 +1,234 @@
+{
+  "model": "gemma-4-E2B-it-qat-UD-Q4_K_XL",
+  "arm": "oracle-file",
+  "tasks": [
+    {
+      "instance_id": "django__django-16816",
+      "repo": "django/django",
+      "latency_s": 29.724,
+      "usage": {
+        "completion_tokens": 726,
+        "prompt_tokens": 2263,
+        "total_tokens": 2989,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "gold_file": "django/contrib/admin/checks.py",
+      "strict": false,
+      "lenient": true,
+      "first_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/django__django-16816/oracle_tmp.diff:16\n",
+      "prompt_chars": 7846,
+      "repair_strict": false,
+      "repair_lenient": true,
+      "repair_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/django__django-16816/oracle_tmp.diff:12\n",
+      "repair_latency_s": 23.267,
+      "repair_usage": {
+        "completion_tokens": 605,
+        "prompt_tokens": 3115,
+        "total_tokens": 3720,
+        "prompt_tokens_details": {
+          "cached_tokens": 2258
+        }
+      },
+      "reply_bytes": 2319,
+      "has_diff": true
+    },
+    {
+      "instance_id": "django__django-12589",
+      "repo": "django/django",
+      "latency_s": 13.117,
+      "usage": {
+        "completion_tokens": 245,
+        "prompt_tokens": 2182,
+        "total_tokens": 2427,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "gold_file": "django/db/models/sql/query.py",
+      "strict": true,
+      "lenient": true,
+      "first_error": "",
+      "prompt_chars": 7524,
+      "reply_bytes": 925,
+      "has_diff": true
+    },
+    {
+      "instance_id": "astropy__astropy-12907",
+      "repo": "astropy/astropy",
+      "latency_s": 13.701,
+      "usage": {
+        "completion_tokens": 166,
+        "prompt_tokens": 3308,
+        "total_tokens": 3474,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "gold_file": "astropy/modeling/separable.py",
+      "strict": true,
+      "lenient": true,
+      "first_error": "",
+      "prompt_chars": 11490,
+      "reply_bytes": 544,
+      "has_diff": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23913",
+      "repo": "matplotlib/matplotlib",
+      "latency_s": 11.272,
+      "usage": {
+        "completion_tokens": 140,
+        "prompt_tokens": 2779,
+        "total_tokens": 2919,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "gold_file": "lib/matplotlib/legend.py",
+      "strict": true,
+      "lenient": true,
+      "first_error": "",
+      "prompt_chars": 10957,
+      "reply_bytes": 438,
+      "has_diff": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23563",
+      "repo": "matplotlib/matplotlib",
+      "latency_s": 18.558,
+      "usage": {
+        "completion_tokens": 382,
+        "prompt_tokens": 2461,
+        "total_tokens": 2843,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "gold_file": "lib/mpl_toolkits/mplot3d/art3d.py",
+      "strict": false,
+      "lenient": true,
+      "first_error": "error: patch fragment without header at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/matplotlib__matplotlib-23563/oracle_tmp.diff:15: @@ -42,7 +42,7 @@\n",
+      "prompt_chars": 6960,
+      "repair_strict": false,
+      "repair_lenient": true,
+      "repair_error": "error: patch fragment without header at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/matplotlib__matplotlib-23563/oracle_tmp.diff:14: @@ -42,7 +42,7 @@\n",
+      "repair_latency_s": 14.001,
+      "repair_usage": {
+        "completion_tokens": 362,
+        "prompt_tokens": 2988,
+        "total_tokens": 3350,
+        "prompt_tokens_details": {
+          "cached_tokens": 2456
+        }
+      },
+      "reply_bytes": 911,
+      "has_diff": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25433",
+      "repo": "matplotlib/matplotlib",
+      "latency_s": 9.273,
+      "usage": {
+        "completion_tokens": 187,
+        "prompt_tokens": 1498,
+        "total_tokens": 1685,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "gold_file": "lib/matplotlib/figure.py",
+      "strict": false,
+      "lenient": false,
+      "first_error": "error: patch failed: lib/matplotlib/figure.py:101\nerror: lib/matplotlib/figure.py: patch does not apply\n",
+      "prompt_chars": 5354,
+      "repair_strict": false,
+      "repair_lenient": false,
+      "repair_error": "error: patch failed: lib/matplotlib/figure.py:101\nerror: lib/matplotlib/figure.py: patch does not apply\n",
+      "repair_latency_s": 6.915,
+      "repair_usage": {
+        "completion_tokens": 187,
+        "prompt_tokens": 1747,
+        "total_tokens": 1934,
+        "prompt_tokens_details": {
+          "cached_tokens": 1493
+        }
+      },
+      "reply_bytes": 628,
+      "has_diff": true
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3407",
+      "repo": "mwaskom/seaborn",
+      "latency_s": 16.897,
+      "usage": {
+        "completion_tokens": 371,
+        "prompt_tokens": 2021,
+        "total_tokens": 2392,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "gold_file": "seaborn/axisgrid.py",
+      "strict": false,
+      "lenient": true,
+      "first_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/mwaskom__seaborn-3407/oracle_tmp.diff:12\n",
+      "prompt_chars": 6642,
+      "repair_strict": false,
+      "repair_lenient": true,
+      "repair_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/mwaskom__seaborn-3407/oracle_tmp.diff:12\n",
+      "repair_latency_s": 12.403,
+      "repair_usage": {
+        "completion_tokens": 322,
+        "prompt_tokens": 2524,
+        "total_tokens": 2846,
+        "prompt_tokens_details": {
+          "cached_tokens": 2016
+        }
+      },
+      "reply_bytes": 1073,
+      "has_diff": true
+    },
+    {
+      "instance_id": "pallets__flask-4045",
+      "repo": "pallets/flask",
+      "latency_s": 24.647,
+      "usage": {
+        "completion_tokens": 254,
+        "prompt_tokens": 5481,
+        "total_tokens": 5735,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "gold_file": "src/flask/blueprints.py",
+      "strict": false,
+      "lenient": true,
+      "first_error": "error: corrupt patch at C:/Users/Anton/.lmstudio/apps/bionic/projects/d49037d8-47f4-5808-9028-c707de117f8f/workspace/LLM intagration/harness/architect/queue/repo_comp_40/work/pallets__flask-4045/oracle_tmp.diff:12\n",
+      "prompt_chars": 21810,
+      "repair_strict": true,
+      "repair_lenient": true,
+      "repair_error": "",
+      "repair_latency_s": 8.491,
+      "repair_usage": {
+        "completion_tokens": 190,
+        "prompt_tokens": 5865,
+        "total_tokens": 6055,
+        "prompt_tokens_details": {
+          "cached_tokens": 5476
+        }
+      },
+      "reply_bytes": 679,
+      "has_diff": true
+    }
+  ]
+}

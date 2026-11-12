@@ -1,0 +1,129 @@
+diff --git a/src/flask/blueprints.py b/src/flask/blueprints.py
+index 1234567..89abcde 100644
+--- a/src/flask/blueprints.py
++++ b/src/flask/blueprints.py
+@@ -102,6 +102,10 @@ class BlueprintSetupState:
+         self.url_prefix = url_prefix
+
+     def add_url_rule(
++        self,
+         rule: str,
+         endpoint: t.Optional[str] = None,
+         view_func: t.Optional[t.Callable] = None,
+@@ -110,6 +114,10 @@ class BlueprintSetupState:
+         if self.url_prefix is not None:
+             if rule:
+                 rule = "/".join((self.url_prefix.rstrip("/"), rule.lstrip("/")))
++            else:
++                rule = self.url_prefix
+         options.setdefault("subdomain", self.subdomain)
+         if endpoint is None:
+             endpoint = _endpoint_from_view_func(view_func)  # type: ignore
+@@ -120,6 +128,10 @@ class BlueprintSetupState:
+         self.app.add_url_rule(
+             rule,
+             f"{self.name_prefix}{self.blueprint.name}.{endpoint}",
++            view_func,
++            defaults=defaults,
++            **options,
+         )
+ 
+ class Blueprint(Scaffold):
+@@ -200,6 +212,10 @@ class Blueprint(Scaffold):
+         self.deferred_functions: t.List[DeferredSetupFunction] = []
+ 
+         if url_defaults is None:
++            url_defaults = {}
++
+         self.url_values_defaults = url_defaults
+         self.cli_group = cli_group
+         self._blueprints: t.List[t.Tuple["Blueprint", dict]] = []
+@@ -210,6 +226,10 @@ class Blueprint(Scaffold):
+         return self.warn_on_modifications and self._got_registered_once
+ 
+     def record(self, func: t.Callable) -> None:
++        if self._got_registered_once and self.warn_on_modifications:
++            from warnings import warn
++
++            warn(
++                Warning(
++                    "The blueprint was already registered once but is"
++                    " getting modified now. These changes will not show"
++                    " up."
++                )
++            )
+         self.deferred_functions.append(func)
+ 
+     def record_once(self, func: t.Callable) -> None:
+@@ -220,6 +242,10 @@ class Blueprint(Scaffold):
+         def wrapper(state: BlueprintSetupState) -> None:
+             if state.first_registration:
+                 func(state)
++
++        return self.record(update_wrapper(wrapper, func))
+ 
+     def make_setup_state(
+         self, app: "Flask", options: dict, first_registration: bool = False
+@@ -230,6 +256,10 @@ class Blueprint(Scaffold):
+         return BlueprintSetupState(self, app, options, first_registration)
+ 
+     def register_blueprint(self, blueprint: "Blueprint", **options: t.Any) -> None:
++        self._blueprints.append((blueprint, options))
+ 
+     def register(self, app: "Flask", options: dict) -> None:
+@@ -240,6 +270,10 @@ class Blueprint(Scaffold):
+         first_registration = False
+ 
+         if self.name in app.blueprints:
++            assert app.blueprints[self.name] is self, (
++                "A name collision occurred between blueprints"
++                f" {self!r} and {app.blueprints[self.name]!r}."
++                f" Both share the same name {self.name!r}."
++                f" Blueprints that are created on the fly need unique"
++                f" names."
++            )
+         else:
+             app.blueprints[self.name] = self
+             first_registration = True
+@@ -250,6 +284,10 @@ class Blueprint(Scaffold):
+         self._got_registered_once = True
+         state = self.make_setup_state(app, options, first_registration)
+ 
++        if self.has_static_folder:
++            state.add_url_rule(
++                f"{self.static_url_path}/<path:filename>",
++                view_func=self.send_static_file,
++                endpoint="static",
++            )
+ 
+         # Merge blueprint data into parent.
+         if first_registration:
+@@ -260,6 +298,10 @@ class Blueprint(Scaffold):
+             def extend(bp_dict, parent_dict):
+                 for key, values in bp_dict.items():
+                     key = self.name if key is None else f"{self.name}.{key}"
++
++                    parent_dict[key].extend(values)
+ 
+             for key, value in self.error_handler_spec.items():
+                 key = self.name if key is None else f"{self.name}.{key}"
+@@ -270,6 +312,10 @@ class Blueprint(Scaffold):
+                     exc_class: func for exc_class, func in code_values.items()
+                 }
+                 for code, code_values in value.items()
+             }
++            app.error_handler_spec[key] = value
+ 
+             for endpoint, func in self.view_functions.items():
+                 app.view_functions[endpoint] = func
+@@ -280,6 +326,10 @@ class Blueprint(Scaffold):
+             extend(self.before_request_funcs, app.before_request_funcs)
+             extend(self.after_request_funcs, app.after_request_funcs)
+             extend(
++                self.teardown_request_funcs,
++                app.teardown_request_funcs,
++            )
+             extend(
+                 self.url_default_functions,
+                 app.url_default_functions,
+@@ -290,6 +340,10 @@ class Blueprint

@@ -1,0 +1,99 @@
+diff --git a/src/flask/cli.py b/src/flask/cli.py
+--- a/src/flask/cli.py
++++ b/src/flask/cli.py
+@@ -1000,10 +1000,11 @@ def routes_command(sort: str, all_methods: bool) -> None:
+     if sort in ("endpoint", "rule"):
+         rules = sorted(rules, key=attrgetter(sort))
+     elif sort == "methods":
+-        rules = sorted(rules, key=lambda rule: sorted(rule.methods))  # type: ignore
++        rules = sorted(rules, key=lambda rule: sorted(rule.methods - ignored_methods))  # type: ignore
+ 
+     rule_methods = [
+-        ", ".join(sorted(rule.methods - ignored_methods))  # type: ignore
++        ", ".join(sorted(rule.methods - ignored_methods))  # type: ignore
++        for rule in rules
+     ]
+ 
+     headers = ("Endpoint", "Methods", "Rule")
+@@ -1011,7 +1012,7 @@ def routes_command(sort: str, all_methods: bool) -> None:
+     widths = [max(len(h), w) for h, w in zip(headers, widths)]
+     row = "{{0:<{0}}}  {{1:<{1}}}  {{2:<{2}}}".format(*widths)
+ 
+-    click.echo(row.format(*headers).strip())
++    click.echo(row.format(*headers))
+     click.echo(row.format(*("-" * width for width in widths)))
+ 
+     for rule, methods in zip(rules, rule_methods):
+@@ -1020,6 +1021,10 @@ def routes_command(sort: str, all_methods: bool) -> None:
+         click.echo(row.format(rule.endpoint, methods, rule.rule).rstrip())
+ 
+ 
++@click.command("subdomain-routes", short_help="Show the routes for the app.")
++@click.pass_context
++@with_appcontext
++def subdomain_routes_command(ctx: click.Context) -> None:
++    """Show all registered routes with endpoints and methods."""
+     rules = list(current_app.url_map.iter_rules())
+     if not rules:
+         click.echo("No routes were registered.")
+@@ -1030,10 +1035,11 @@ def subdomain_routes_command(ctx: click.Context) -> None:
+     if sort in ("endpoint", "rule"):
+         rules = sorted(rules, key=attrgetter(sort))
+     elif sort == "methods":
+-        rules = sorted(rules, key=lambda rule: sorted(rule.methods))  # type: ignore
++        rules = sorted(rules, key=lambda rule: sorted(rule.methods - ignored_methods))  # type: ignore
+ 
+     rule_methods = [
+-        ", ".join(sorted(rule.methods - ignored_methods))  # type: ignore
++        ", ".join(sorted(rule.methods - ignored_methods))  # type: ignore
++        for rule in rules
+     ]
+ 
+     headers = ("Endpoint", "Methods", "Rule")
+@@ -1041,7 +1047,7 @@ def subdomain_routes_command(ctx: click.Context) -> None:
+     widths = [max(len(h), w) for h, w in zip(headers, widths)]
+     row = "{{0:<{0}}}  {{1:<{1}}}  {{2:<{2}}}".format(*widths)
+ 
+-    click.echo(row.format(*headers).strip())
++    click.echo(row.format(*headers))
+     click.echo(row.format(*("-" * width for width in widths)))
+ 
+     for rule, methods in zip(rules, rule_methods):
+@@ -1050,6 +1056,10 @@ def subdomain_routes_command(ctx: click.Context) -> None:
+         click.echo(row.format(rule.endpoint, methods, rule.rule).rstrip())
+ 
+ 
++cli.add_command(subdomain_routes_command, "subdomain-routes")
++
++
+ def main() -> None:
+     cli.main()
+ 
+diff --git a/src/flask/cli.py b/src/flask/cli.py
+--- a/src/flask/cli.py
++++ b/src/flask/cli.py
+@@ -1000,10 +1000,11 @@ def routes_command(sort: str, all_methods: bool) -> None:
+     if sort in ("endpoint", "rule"):
+         rules = sorted(rules, key=attrgetter(sort))
+     elif sort == "methods":
+-        rules = sorted(rules, key=lambda rule: sorted(rule.methods))  # type: ignore
++        rules = sorted(rules, key=lambda rule: sorted(rule.methods - ignored_methods))  # type: ignore
+ 
+     rule_methods = [
+-        ", ".join(sorted(rule.methods - ignored_methods))  # type: ignore
++        ", ".join(sorted(rule.methods - ignored_methods))  # type: ignore
++        for rule in rules
+     ]
+ 
+     headers = ("Endpoint", "Methods", "Rule")
+@@ -1011,7 +1012,7 @@ def routes_command(sort: str, all_methods: bool) -> None:
+     widths = [max(len(h), w) for h, w in zip(headers, widths)]
+     row = "{{0:<{0}}}  {{1:<{1}}}  {{2:<{2}}}".format(*widths)
+ 
+-    click.echo(row.format(*headers).strip())
++    click.echo(row.format(*headers))
+     click.echo(row.format(*("-" * width for width in widths)))
+ 
+     for rule, methods in zip(rules, rule_methods):
+@@ -1020,6 +1021,10 @@ def routes_command(sort: str, all_methods: bool) -> None:
+         click.echo(row.format(rule

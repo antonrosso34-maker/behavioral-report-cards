@@ -1,0 +1,13 @@
+diff --git a/lib/mpl_toolkits/mplot3d/art3d.py b/lib/mpl_toolkits/mplot3d/art3d.py
+index 1234567..89abcde 100644
+--- a/lib/mpl_toolkits/mplot3d/art3d.py
++++ b/lib/mpl_toolkits/mplot3d/art3d.py
+@@ -633,7 +633,7 @@ class Poly3DCollection(PolyCollection):
+         return self._facecolors2d
+     get_facecolor = get_facecolors
+ 
+-    def get_facecolor(self):
++    def get_facecolors(self):
+         return self._facecolors2d
+ 
+     def get_edgecolor(self):

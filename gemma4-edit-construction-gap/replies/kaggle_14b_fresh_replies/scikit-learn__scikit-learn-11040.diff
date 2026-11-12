@@ -1,0 +1,25 @@
+diff --git a/sklearn/neighbors/base.py b/sklearn/neighbors/base.py
+index 1234567..89abcdef 100644
+--- a/sklearn/neighbors/base.py
++++ b/sklearn/neighbors/base.py
+@@ -218,6 +218,10 @@ class NeighborsBase(BaseEstimator):
+         self._tree = None
+         self._fit_method = 'brute'
+         return self
++
++        if not isinstance(self.n_neighbors, int) or self.n_neighbors < 0:
++            raise ValueError("n_neighbors must be a non-negative integer. Got %s" % self.n_neighbors)
++
+ 
+         self._fit_method = self.algorithm
+         self._fit_X = X
+@@ -376,6 +380,10 @@ class KNeighborsMixin(object):
+         if n_neighbors is None:
+             n_neighbors = self.n_neighbors
+ 
++        if not isinstance(n_neighbors, int) or n_neighbors < 0:
++            raise ValueError("n_neighbors must be a non-negative integer. Got %s" % n_neighbors)
++
+         if X is not None:
+             query_is_train = False
+             X = check_array(X, accept_sparse='csr')

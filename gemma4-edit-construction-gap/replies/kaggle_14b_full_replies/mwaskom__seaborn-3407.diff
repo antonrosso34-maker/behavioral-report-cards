@@ -1,0 +1,13 @@
+diff --git a/seaborn/axisgrid.py b/seaborn/axisgrid.py
+index 1234567..89abcde 100644
+--- a/seaborn/axisgrid.py
++++ b/seaborn/axisgrid.py
+@@ -1488,7 +1488,7 @@ class PairGrid(Grid):
+                 plt.sca(ax)
+ 
+             vector = self.data[var]
+-            if self._hue_var is not None:
++            if self._hue_var is not None and var in self.data.columns:
+                 hue = self.data[self._hue_var]
+             else:
+                 hue = None

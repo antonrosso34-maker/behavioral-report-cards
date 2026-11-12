@@ -1,0 +1,25 @@
+diff --git a/django/db/models/base.py b/django/db/models/base.py
+--- a/django/db/models/base.py
++++ b/django/db/models/base.py
+@@ -1900,6 +1900,10 @@ def check(cls, **kwargs):
+                 for field_name in constraint.fields:
+                     if field_name not in cls._meta.get_fields_with_model_names():
+                         errors.append(
++                            checks.Error(
++                                'Field "%s" does not exist in model "%s".'
++                                % (field_name, cls.__name__),
++                                hint=None,
+                                 obj=cls,
+                                 id='models.E012',
+                             )
+@@ -1910,6 +1914,10 @@ def check(cls, **kwargs):
+                 for field_name in constraint.fields:
+                     if field_name not in cls._meta.get_fields_with_model_names():
+                         errors.append(
++                            checks.Error(
++                                'Field "%s" does not exist in model "%s".'
++                                % (field_name, cls.__name__),
++                                hint=None,
+                                 obj=cls,
+                                 id='models.E012',
+                             )

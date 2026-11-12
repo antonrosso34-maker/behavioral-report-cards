@@ -1,0 +1,446 @@
+{
+  "model": "gemma-4-E2B-it-qat-UD-Q4_K_XL",
+  "split": "fresh20_20261112",
+  "tasks": [
+    {
+      "instance_id": "astropy__astropy-14182",
+      "repo": "astropy/astropy",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 43.62
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "astropy/table/table.py",
+          "astropy/modeling/core.py",
+          "astropy/units/core.py"
+        ],
+        "latency_s": 11.737,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 8.527
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-14365",
+      "repo": "astropy/astropy",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 10.326
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "astropy/io/fits/column.py",
+          "astropy/table/table.py",
+          "astropy/io/votable/tree.py"
+        ],
+        "latency_s": 13.699,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 5.862
+      }
+    },
+    {
+      "instance_id": "django__django-13658",
+      "repo": "django/django",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 8.018
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "django/db/models/fields/__init__.py",
+          "django/db/models/sql/query.py",
+          "django/db/models/fields/related.py"
+        ],
+        "latency_s": 15.153,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 8.872
+      }
+    },
+    {
+      "instance_id": "django__django-14534",
+      "repo": "django/django",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 5.537
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "django/db/models/fields/__init__.py",
+          "django/contrib/admin/options.py",
+          "django/db/models/fields/related.py"
+        ],
+        "latency_s": 12.456,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 6.331
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25332",
+      "repo": "matplotlib/matplotlib",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 18.63
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "lib/matplotlib/pyplot.py",
+          "lib/matplotlib/figure.py",
+          "lib/matplotlib/backend_bases.py"
+        ],
+        "latency_s": 14.227,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 5.364
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26011",
+      "repo": "matplotlib/matplotlib",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 6.904
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "lib/matplotlib/axes/_base.py",
+          "lib/matplotlib/widgets.py",
+          "lib/matplotlib/axis.py"
+        ],
+        "latency_s": 12.682,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 7.572
+      }
+    },
+    {
+      "instance_id": "psf__requests-1963",
+      "repo": "psf/requests",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 9.304
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": true,
+        "retrieved": [
+          "test_requests.py",
+          "requests/sessions.py",
+          "requests/packages/urllib3/connectionpool.py"
+        ],
+        "latency_s": 18.279,
+        "repair_strict": false,
+        "repair_lenient": true,
+        "repair_latency_s": 13.891
+      }
+    },
+    {
+      "instance_id": "psf__requests-3362",
+      "repo": "psf/requests",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 3.941
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "requests/models.py",
+          "requests/utils.py",
+          "requests/packages/urllib3/response.py"
+        ],
+        "latency_s": 21.115,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 17.602
+      }
+    },
+    {
+      "instance_id": "pydata__xarray-3364",
+      "repo": "pydata/xarray",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 5.005
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "xarray/core/dataset.py",
+          "xarray/core/combine.py",
+          "xarray/core/dataarray.py"
+        ],
+        "latency_s": 16.845,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 19.909
+      }
+    },
+    {
+      "instance_id": "pydata__xarray-4094",
+      "repo": "pydata/xarray",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 13.559
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "xarray/core/dataset.py",
+          "xarray/core/dataarray.py",
+          "xarray/core/variable.py"
+        ],
+        "latency_s": 10.986,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 7.62
+      }
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7114",
+      "repo": "pylint-dev/pylint",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 17.306
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "pylint/checkers/variables.py",
+          "pylint/lint/pylinter.py",
+          "pylint/checkers/imports.py"
+        ],
+        "latency_s": 12.444,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 6.668
+      }
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7993",
+      "repo": "pylint-dev/pylint",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 8.843
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "pylint/lint/pylinter.py",
+          "pylint/checkers/variables.py",
+          "pylint/checkers/typecheck.py"
+        ],
+        "latency_s": 10.015,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 4.931
+      }
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5103",
+      "repo": "pytest-dev/pytest",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 17.075
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "testing/python/fixtures.py",
+          "testing/python/metafunc.py",
+          "testing/python/collect.py"
+        ],
+        "latency_s": 23.667,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 18.807
+      }
+    },
+    {
+      "instance_id": "pytest-dev__pytest-8365",
+      "repo": "pytest-dev/pytest",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 5.301
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "src/_pytest/fixtures.py",
+          "src/_pytest/python.py",
+          "src/_pytest/pytester.py"
+        ],
+        "latency_s": 12.697,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 3.838
+      }
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11040",
+      "repo": "scikit-learn/scikit-learn",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 6.28
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "sklearn/utils/estimator_checks.py",
+          "sklearn/cross_validation.py",
+          "sklearn/model_selection/_validation.py"
+        ],
+        "latency_s": 22.228,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 19.596
+      }
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13241",
+      "repo": "scikit-learn/scikit-learn",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 20.351
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": true,
+        "retrieved": [
+          "sklearn/gaussian_process/kernels.py",
+          "sklearn/decomposition/dict_learning.py",
+          "sklearn/linear_model/coordinate_descent.py"
+        ],
+        "latency_s": 19.231,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 9.053
+      }
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7738",
+      "repo": "sphinx-doc/sphinx",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 4.779
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "sphinx/domains/cpp.py",
+          "sphinx/builders/html/__init__.py",
+          "sphinx/domains/c.py"
+        ],
+        "latency_s": 20.176,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 14.982
+      }
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8506",
+      "repo": "sphinx-doc/sphinx",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 3.576
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "sphinx/ext/autodoc/__init__.py",
+          "sphinx/search/tr.py",
+          "sphinx/writers/latex.py"
+        ],
+        "latency_s": 16.517,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 11.239
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-15346",
+      "repo": "sympy/sympy",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 41.512
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "sympy/polys/polytools.py",
+          "sympy/matrices/matrices.py",
+          "sympy/printing/latex.py"
+        ],
+        "latency_s": 9.686,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 3.663
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-18199",
+      "repo": "sympy/sympy",
+      "single": {
+        "strict": false,
+        "lenient": false,
+        "latency_s": 5.417
+      },
+      "retrieval": {
+        "strict": false,
+        "lenient": false,
+        "retrieved": [
+          "sympy/integrals/rubi/utility_function.py",
+          "sympy/integrals/rubi/constraints.py",
+          "sympy/solvers/solveset.py"
+        ],
+        "latency_s": 15.461,
+        "repair_strict": false,
+        "repair_lenient": false,
+        "repair_latency_s": 9.749
+      }
+    }
+  ]
+}

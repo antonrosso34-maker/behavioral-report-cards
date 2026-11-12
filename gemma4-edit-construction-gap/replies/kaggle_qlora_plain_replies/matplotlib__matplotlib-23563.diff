@@ -1,0 +1,24 @@
+diff --git a/lib/mpl_toolkits/mplot3d/art3d.py b/lib/mpl_toolkits/mplot3d/art3d.py
+--- a/lib/mpl_toolkits/mplot3d/art3d.py
++++ b/lib/mpl_toolkits/mplot3d/art3d.py
+@@ -170,7 +170,7 @@ def draw(self, renderer):
+         self.set_data(xs, ys)
+         super().draw(renderer)
+ 
+-    def get_tightbbox(self, renderer=None):
++    def get_tightbbox(self, renderer):
+         # Overwriting the 2d Text behavior which is not valid for 3d.
+         # For now, just return None to exclude from layout calculation.
+         return None
+diff --git a/lib/mpl_toolkits/mplot3d/line3d.py b/lib/mpl_toolkits/mplot3d/line3d.py
+--- a/lib/mpl_toolkits/mplot3d/line3d.py
++++ b/lib/mpl_toolkits/mplot3d/line3d.py
+@@ -10,7 +10,7 @@ def __init__(self, xs, ys, zs, *args, **kwargs):
+         """
+         Keyword arguments are passed onto :func:`~matplotlib.lines.Line2D`.
+         """
+-        super().__init__([], [], *args, **kwargs)
++        super().__init__([], [], *args, **kwargs)
+         self._verts3d = xs, ys, zs
+ 
+     def set_3d_properties(self, zs=0, zdir='z'):

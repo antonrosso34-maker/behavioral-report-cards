@@ -1,0 +1,60 @@
+diff --git a/django/contrib/admin/checks.py b/django/contrib/admin/checks.py
+--- a/django/contrib/admin/checks.py
++++ b/django/contrib/admin/checks.py
+@@ -31,7 +31,7 @@
+         try:
+             field = obj.model._meta.get_field(item)
+         except FieldDoesNotExist:
+             try:
+                 field = getattr(obj.model, item)
+             except AttributeError:
+                 return [
+@@ -51,7 +51,7 @@
+         if isinstance(field, models.ManyToManyField) or (
+             getattr(field, "rel", None) and field.rel.field.many_to_one
+         ):
+             return [
+                 checks.Error(
+                     f"The value of '{label}' must not be a many-to-many field or a "
+                     f"reverse foreign key.",
+                     obj=obj.__class__,
+                     id="admin.E109",
+                 )
+             ]
+         return []
+ 
+     def _check_list_display_links(self, obj):
+         """Check that list_display_links is a unique subset of list_display."""
+         from django.contrib.admin.options import ModelAdmin
+ 
+         if obj.list_display_links is None:
+             return []
+         elif not isinstance(obj.list_display_links, (list, tuple)):
+             return must_be(
+                 "a list, a tuple, or None",
+                 option="list_display_links",
+                 obj=obj,
+                 id="admin.E110",
+             )
+         # Check only if ModelAdmin.get_list_display() isn't overridden.
+         elif obj.get_list_display.__func__ is ModelAdmin.get_list_display:
+             return list(
+                 chain.from_iterable(
+                     self._check_list_display_links_item(
+                         obj, field_name, "list_display_links[%d]" % index
+                     )
+                     for index, field_name in enumerate(obj.list_display_links)
+                 )
+             )
+         return []
+ 
+     def _check_list_display_links_item(self, obj, field_name, label):
+         if field_name not in obj.list_display:
+             return [
+                 checks.Error(
+                     "The value of '%s' refers to '%s', which is not defined in "
+                     "'list_display'." % (label, field_name),
+                     obj=obj.__class__,
+                     id="admin.E111",
+             )
+```

@@ -1,0 +1,25 @@
+diff --git a/django/db/models/base.py b/django/db/models/base.py
+index 1234567..89abcde 100644
+--- a/django/db/models/base.py
++++ b/django/db/models/base.py
+@@ -1900,6 +1900,15 @@ def check(cls, **kwargs):
+                 "A constraint won't be created. Silence this "
+                 "warning if you don't care about it."
+             ),
++            obj=cls,
++            id='models.W038',
++        )
++    )
++    for constraint in cls._meta.constraints:
++        if isinstance(constraint, UniqueConstraint):
++            for field_name in constraint.fields:
++                if field_name not in cls._meta.get_fields():
++                    errors.append(
++                        checks.Error(
++                            f"Field '{field_name}' in UniqueConstraint does not exist.",
++                            obj=cls,
++                            id='models.E012',
++                        )
++                    )
+     return errors
+```

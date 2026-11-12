@@ -1,0 +1,20 @@
+diff --git a/src/flask/config.py b/src/flask/config.py
+--- a/src/flask/config.py
++++ b/src/flask/config.py
+@@ -100,7 +100,7 @@ def from_file(
+         :param load: A callable that takes a file handle and returns a
+             mapping of loaded data from the file.
+         :type load: ``Callable[[Reader], Mapping]`` where ``Reader``
+-            implements a ``read`` method.
++            implements a ``read`` method. The file handle is opened in text mode.
+         :param silent: Ignore the file if it doesn't exist.
+         :return: ``True`` if the file was loaded successfully.
+ 
+@@ -110,6 +110,7 @@ def from_file(
+         filename = os.path.join(self.root_path, filename)
+ 
+         try:
++            with open(filename, mode="r") as f:
+             obj = load(f)
+         except OSError as e:
+             if silent and e.errno in (errno.ENOENT, errno.EISDIR):

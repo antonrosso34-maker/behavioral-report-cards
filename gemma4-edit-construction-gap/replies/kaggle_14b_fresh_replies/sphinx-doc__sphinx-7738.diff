@@ -1,0 +1,13 @@
+diff --git a/sphinx/ext/napoleon/docstring.py b/sphinx/ext/napoleon/docstring.py
+index 1234567..89abcde 100644
+--- a/sphinx/ext/napoleon/docstring.py
++++ b/sphinx/ext/napoleon/docstring.py
+@@ -300,7 +300,7 @@ class GoogleDocstring(BaseDocstring):
+         if name.endswith('_'):
+             name = name[:-1] + r'\_'
+ 
+-        if name[:2] == '**':
++        if name.startswith('**'):
+             return r'\*\*' + name[2:]
+         elif name[:1] == '*':
+             return r'\*' + name[1:]

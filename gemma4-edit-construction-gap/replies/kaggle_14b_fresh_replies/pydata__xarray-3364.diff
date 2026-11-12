@@ -1,0 +1,46 @@
+diff --git a/xarray/core/concat.py b/xarray/core/concat.py
+index 1234567..89abcde 100644
+--- a/xarray/core/concat.py
++++ b/xarray/core/concat.py
+@@ -10,6 +10,7 @@
+ from .alignment import align
+ from .merge import _VALID_COMPAT, unique_variable
+ from .variable import IndexVariable, Variable, as_variable
++from .variable import concat as concat_vars, full_like
+ from .variable import concat as concat_vars
+
+
+@@ -123,6 +124,7 @@ def concat(
+     fill_value=dtypes.NA,
+     join="outer",
+     ignore_missing=False,  # New parameter to ignore missing variables
+ ):
+     """Concatenate xarray objects along a new or existing dimension.
+@@ -200,6 +202,10 @@ def _dataset_concat(
+     concat_over, equals, concat_dim_lengths = _calc_concat_over(
+         datasets, dim, dim_names, data_vars, coords, compat
+     )
++
++    if ignore_missing:
++        concat_over = concat_over.intersection(set(datasets[0].variables))
++
+     # determine which variables to merge, and then merge them according to compat
+     variables_to_merge = (coord_names | data_names) - concat_over - dim_names
+
+@@ -260,6 +266,14 @@ def _dataset_concat(
+             combined = concat_vars(vars, dim, positions)
+             assert isinstance(combined, Variable)
+             result_vars[k] = combined
++        except KeyError:
++            if ignore_missing:
++                # Fill missing variables with NaN
++                result_vars[k] = full_like(
++                    datasets[0].variables[k],
++                    fill_value,
++                    dims=datasets[0].variables[k].dims,
++                    shape=datasets[0].variables[k].shape
++                )
++            else:
++                raise ValueError("%r is not present in all datasets." % k)
+
+     result = Dataset(result_vars, attrs=result_attrs)
