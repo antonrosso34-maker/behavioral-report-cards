@@ -1,6 +1,6 @@
-# The Edit-Construction Gap: One 14B Success and the 2.3B Floor
+# Patch Applicability in a Local 4-Bit Gemma 4 Agent: A Two-Split Audit
 
-**A frozen 20-task audit, an oracle-file control, and a scale boundary**
+**Applicability is not correctness**
 
 This is the public artifact release for the Gemma 4 Developer Agent Paper Track submission. The paper itself is submitted as a Kaggle Writeup; this release contains the audit harness, frozen splits, aggregate results, and saved model replies for verifiability.
 
@@ -18,11 +18,11 @@ This is the public artifact release for the Gemma 4 Developer Agent Paper Track 
 | Gemma 4 E2B 4-bit, oracle file | 3/8 first-turn | 7/8 | 0/8 |
 | Qwen2.5-Coder-14B 4-bit, oracle file | 3/20 | 6/20 | **1/20** (seaborn-3010) |
 | Qwen2.5-Coder-32B 4-bit, oracle file | 0/20 | 1/20 | 0/20 |
-| Qwen2.5-Coder-14B 4-bit, search/replace | 1/20 | 0/20 | 0/20 |
+| Qwen2.5-Coder-14B 4-bit, search/replace | 1/20 | 0/20 | 0/20 |`n`n*S/R: 1/20 strict (`matplotlib-23563`, environment-limited), 0/20 lenient; 19/20 blocks rejected as `edit_not_found` or no-op.*
 | Qwen2.5-Coder-14B 4-bit, fresh split | 1/20 | 3/20 | 0/20 |
 | Qwen2.5-Coder-7B, 300-example QLoRA | 3/20 | 3/20 | 0/20 |
 
-The frozen-split retrieval gain (0/20 → 6/20 strict, p=0.031) did not replicate on a fresh 20-task split (0/20 strict). The only test-verified semantic pass is a 14B Qwen2.5-Coder oracle patch for `mwaskom__seaborn-3010`, which passes the target test under pandas 2.2.3; the gold patch passes too. The 2.3B model is the deployment floor; the 14B success is an existence proof, not a general solution.
+The frozen-split retrieval gain (0/20 → 6/20 strict, p=0.031) did not replicate on a fresh 20-task split (0/20 strict). The six strict applies are 0 verified passes, 1 tested failure, and 5 strict applies without a test verdict. The only test-verified semantic pass is a 14B Qwen comparison case for `mwaskom__seaborn-3010`; it is one cross-family anecdote, not a scale result.
 
 ## What is included
 
