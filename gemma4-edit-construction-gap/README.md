@@ -4,7 +4,7 @@
 
 This is the public artifact release for the Gemma 4 Developer Agent Paper Track submission. The paper itself is submitted as a Kaggle Writeup; this release contains the audit harness, frozen splits, aggregate results, and saved model replies for verifiability.
 
-- **Figure:** [figures/fig1_applicability_semantic.svg](figures/fig1_applicability_semantic.svg)
+- **Figure:** [figures/fig1_applicability_semantic.png](figures/fig1_applicability_semantic.png)
 - **Frozen split:** [harness/split_20.json](harness/split_20.json)
 - **Fresh split:** [harness/split_fresh_20.json](harness/split_fresh_20.json)
 - **License:** Apache-2.0 for code; CC BY 4.0 for the paper and data. See [LICENSE](LICENSE) and [LICENSE-PAPER](LICENSE-PAPER).
