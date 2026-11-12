@@ -28,7 +28,8 @@ The frozen-split retrieval gain (0/20 → 6/20 strict, p=0.031) did not replicat
 
 ## What is included
 
-- `paper.md`, `paper.html` — the final paper (2,754 words, 17 references).
+The paper is submitted as a Kaggle Writeup; its full text is not in this release. The artifacts below support verifiability.
+
 - `harness/` — single-shot and retrieval runners, oracle runner, scorer, and the frozen/fresh split files.
 - `results/` — aggregate audits for the 2.3B arms, the 14B/32B/S/R/fresh/QLoRA controls, and the oracle/fresh splits.
 - `replies/` — saved model replies for the 14B, 14B fresh, 7B QLoRA, and 2.3B oracle arms. No hidden tests or gold patches are included.
